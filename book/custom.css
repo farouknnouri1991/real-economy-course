@@ -1,0 +1,47 @@
+/* Guide to the Real Economy — Custom Styles */
+
+/* Typography */
+body {
+  font-family: "Georgia", "Times New Roman", serif;
+  line-height: 1.7;
+}
+
+h1, h2, h3 { font-family: "Helvetica Neue", Arial, sans-serif; }
+
+/* Callout customisation */
+.callout-important .callout-title { font-weight: 700; }
+.callout-tip { border-left-color: #2e7d32; }
+.callout-caution { border-left-color: #e65100; }
+
+/* Epigraph (blockquote at chapter start) */
+blockquote {
+  font-style: italic;
+  color: #555;
+  border-left: 3px solid #bbb;
+  padding-left: 1em;
+  margin: 1.5em 2em;
+}
+
+/* Map section */
+.unnumbered { color: #444; font-style: italic; }
+
+/* Tables */
+table { font-size: 0.9em; }
+th { background: #f5f5f5; }
+
+/* Site edition: keep the book readable and provide a discreet route back. */
+.book-site-return {
+  background: #173f4f;
+  color: #fff;
+  display: block;
+  font-size: 0.82rem;
+  font-weight: 650;
+  padding: 0.55rem 1rem;
+  text-align: center;
+  text-decoration: none;
+}
+.book-site-return:hover,
+.book-site-return:focus {
+  background: #0f2f3b;
+  color: #fff;
+}
