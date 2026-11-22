@@ -688,44 +688,77 @@ The book’s permanent acquisitions
 <section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
   <div class="reader-feedback__heading">
     <p class="reader-feedback__eyebrow">Reader feedback</p>
-    <h2 id="reader-feedback-title">Comment on this page</h2>
-    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+    <h2 id="reader-feedback-title">Comment on this page or a specific passage</h2>
+    <p>Select text anywhere in the chapter. A private comment box will open next to the passage and attach the exact quotation and its location. You can also use the form below for a general page comment. Nothing is published automatically.</p>
   </div>
   <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
-    <div class="reader-feedback__grid">
-      <label for="feedback-first-name">First name
-        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+    <div class="reader-feedback__form-bar">
+      <p class="reader-feedback__form-title" id="feedback-form-title">Comment on this page</p>
+      <button class="reader-feedback__close" id="feedback-close" type="button" hidden="" aria-label="Close passage comment">Close</button>
+    </div>
+    <div class="reader-feedback__selection" id="reader-feedback-selection" aria-live="polite">
+      <p class="reader-feedback__selection-label">Passage</p>
+      <p class="reader-feedback__selection-empty" id="feedback-selection-empty">No passage selected — this will be a general page comment.</p>
+      <div class="reader-feedback__selection-content" id="feedback-selection-content" hidden="">
+        <p class="reader-feedback__selection-location" id="feedback-selection-location"></p>
+        <blockquote id="feedback-selection-quote" class="blockquote"></blockquote>
+        <button class="reader-feedback__clear-selection" id="feedback-clear-selection" type="button">Remove passage</button>
+      </div>
+    </div>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="5" required="" maxlength="5000" placeholder="Explain your comment, correction or question."></textarea>
+    </label>
+    <div class="reader-feedback__profile-summary" id="feedback-profile-summary" hidden="">
+      <p>Commenting as <strong id="feedback-profile-name"></strong><span id="feedback-profile-meta"></span></p>
+      <div>
+        <button id="feedback-profile-change" type="button">Change</button>
+        <button id="feedback-profile-forget" type="button">Forget on this device</button>
+      </div>
+    </div>
+    <div class="reader-feedback__profile-fields" id="feedback-profile-fields">
+      <div class="reader-feedback__grid">
+        <label for="feedback-first-name">First name
+          <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+        </label>
+        <label for="feedback-last-name">Last name
+          <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+        </label>
+      </div>
+      <label for="feedback-category">Category
+        <select id="feedback-category" name="category" required="">
+          <option value="" selected="" disabled="">Select the description that fits best</option>
+          <option value="Economist">Economist</option>
+          <option value="Researcher or academic">Researcher or academic</option>
+          <option value="University teacher">University teacher</option>
+          <option value="Student">Student</option>
+          <option value="Public-policy practitioner">Public-policy practitioner</option>
+          <option value="Other reader">Other reader</option>
+        </select>
       </label>
-      <label for="feedback-last-name">Last name
-        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      <label for="feedback-email">Email address <span>— kept private</span>
+        <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+      </label>
+      <label class="reader-feedback__remember" for="feedback-remember">
+        <input id="feedback-remember" type="checkbox" value="yes">
+        <span>Remember my details on this device. Do not use this option on a shared computer.</span>
       </label>
     </div>
-    <label for="feedback-category">Category
-      <select id="feedback-category" name="category" required="">
-        <option value="" selected="" disabled="">Select the description that fits best</option>
-        <option value="Economist">Economist</option>
-        <option value="Researcher or academic">Researcher or academic</option>
-        <option value="University teacher">University teacher</option>
-        <option value="Student">Student</option>
-        <option value="Public-policy practitioner">Public-policy practitioner</option>
-        <option value="Other reader">Other reader</option>
-      </select>
-    </label>
-    <label for="feedback-email">Email address <span>— kept private</span>
-      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
-    </label>
-    <label for="feedback-message">Comment
-      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
-    </label>
     <input id="feedback-page-title" name="page_title" type="hidden">
     <input id="feedback-page-url" name="page_url" type="hidden">
+    <input id="feedback-section-title" name="section_title" type="hidden">
+    <input id="feedback-section-id" name="section_id" type="hidden">
+    <input id="feedback-selected-text" name="selected_text" type="hidden">
+    <input id="feedback-selection-prefix" name="selection_prefix" type="hidden">
+    <input id="feedback-selection-suffix" name="selection_suffix" type="hidden">
+    <input id="feedback-selection-start" name="selection_start" type="hidden">
+    <input id="feedback-selection-end" name="selection_end" type="hidden">
     <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
     <label class="reader-feedback__consent" for="feedback-consent">
       <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
       <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
     </label>
     <div class="reader-feedback__actions">
-      <button type="submit">Send comment</button>
+      <button type="submit">Send privately</button>
       <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
     </div>
   </form>
