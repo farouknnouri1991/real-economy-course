@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch17-economic-geography.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,8 +78,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,6 +265,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -297,44 +464,45 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-carte-ch17eg" id="toc-sec-carte-ch17eg" class="nav-link active" data-scroll-target="#sec-carte-ch17eg">The Map</a></li>
-  <li><a href="#sec-pionniers-ch17eg" id="toc-sec-pionniers-ch17eg" class="nav-link" data-scroll-target="#sec-pionniers-ch17eg"><span class="header-section-number">20</span> Part I — The Long-Ignored Dimension: Space and Its Pioneers</a>
+  <li><a href="#sec-pionniers-ch17eg" id="toc-sec-pionniers-ch17eg" class="nav-link" data-scroll-target="#sec-pionniers-ch17eg">Part I — The Long-Ignored Dimension: Space and Its Pioneers</a>
   <ul class="collapse">
-  <li><a href="#sec-thunen-ch17eg" id="toc-sec-thunen-ch17eg" class="nav-link" data-scroll-target="#sec-thunen-ch17eg"><span class="header-section-number">20.1</span> Von Thünen: land rent and the urban rings</a></li>
-  <li><a href="#sec-weber-ch17eg" id="toc-sec-weber-ch17eg" class="nav-link" data-scroll-target="#sec-weber-ch17eg"><span class="header-section-number">20.2</span> Weber, Christaller, and industrial location</a></li>
+  <li><a href="#sec-thunen-ch17eg" id="toc-sec-thunen-ch17eg" class="nav-link" data-scroll-target="#sec-thunen-ch17eg">Von Thünen: land rent and the urban rings</a></li>
+  <li><a href="#sec-weber-ch17eg" id="toc-sec-weber-ch17eg" class="nav-link" data-scroll-target="#sec-weber-ch17eg">Weber, Christaller, and industrial location</a></li>
   </ul></li>
-  <li><a href="#sec-marshall-ch17eg" id="toc-sec-marshall-ch17eg" class="nav-link" data-scroll-target="#sec-marshall-ch17eg"><span class="header-section-number">21</span> Part II — Marshall’s Economics of Agglomeration</a>
+  <li><a href="#sec-marshall-ch17eg" id="toc-sec-marshall-ch17eg" class="nav-link" data-scroll-target="#sec-marshall-ch17eg">Part II — Marshall’s Economics of Agglomeration</a>
   <ul class="collapse">
-  <li><a href="#sec-trinite-ch17eg" id="toc-sec-trinite-ch17eg" class="nav-link" data-scroll-target="#sec-trinite-ch17eg"><span class="header-section-number">21.1</span> The three forces</a></li>
-  <li><a href="#sec-dp-ch17eg" id="toc-sec-dp-ch17eg" class="nav-link" data-scroll-target="#sec-dp-ch17eg"><span class="header-section-number">21.2</span> Duranton and Puga’s microfoundations</a></li>
-  <li><a href="#sec-lucas-ch17eg" id="toc-sec-lucas-ch17eg" class="nav-link" data-scroll-target="#sec-lucas-ch17eg"><span class="header-section-number">21.3</span> Lucas and human capital externalities</a></li>
+  <li><a href="#sec-trinite-ch17eg" id="toc-sec-trinite-ch17eg" class="nav-link" data-scroll-target="#sec-trinite-ch17eg">The three forces</a></li>
+  <li><a href="#sec-dp-ch17eg" id="toc-sec-dp-ch17eg" class="nav-link" data-scroll-target="#sec-dp-ch17eg">Duranton and Puga’s microfoundations</a></li>
+  <li><a href="#sec-lucas-ch17eg" id="toc-sec-lucas-ch17eg" class="nav-link" data-scroll-target="#sec-lucas-ch17eg">Lucas and human capital externalities</a></li>
   </ul></li>
-  <li><a href="#sec-neg-ch17eg" id="toc-sec-neg-ch17eg" class="nav-link" data-scroll-target="#sec-neg-ch17eg"><span class="header-section-number">22</span> Part III — The New Economic Geography: Concentration Without Natural Advantage</a>
+  <li><a href="#sec-neg-ch17eg" id="toc-sec-neg-ch17eg" class="nav-link" data-scroll-target="#sec-neg-ch17eg">Part III — The New Economic Geography: Concentration Without Natural Advantage</a>
   <ul class="collapse">
-  <li><a href="#sec-krugman-ch17eg" id="toc-sec-krugman-ch17eg" class="nav-link" data-scroll-target="#sec-krugman-ch17eg"><span class="header-section-number">22.1</span> Krugman’s turn: increasing returns and core-periphery</a></li>
-  <li><a href="#sec-venables-ch17eg" id="toc-sec-venables-ch17eg" class="nav-link" data-scroll-target="#sec-venables-ch17eg"><span class="header-section-number">22.2</span> Venables and vertical linkages without migration</a></li>
-  <li><a href="#sec-cloche-ch17eg" id="toc-sec-cloche-ch17eg" class="nav-link" data-scroll-target="#sec-cloche-ch17eg"><span class="header-section-number">22.3</span> The bell curve of transport costs</a></li>
+  <li><a href="#sec-krugman-ch17eg" id="toc-sec-krugman-ch17eg" class="nav-link" data-scroll-target="#sec-krugman-ch17eg">Krugman’s turn: increasing returns and core-periphery</a></li>
+  <li><a href="#sec-venables-ch17eg" id="toc-sec-venables-ch17eg" class="nav-link" data-scroll-target="#sec-venables-ch17eg">Venables and vertical linkages without migration</a></li>
+  <li><a href="#sec-cloche-ch17eg" id="toc-sec-cloche-ch17eg" class="nav-link" data-scroll-target="#sec-cloche-ch17eg">The bell curve of transport costs</a></li>
   </ul></li>
-  <li><a href="#sec-cumulatif-ch17eg" id="toc-sec-cumulatif-ch17eg" class="nav-link" data-scroll-target="#sec-cumulatif-ch17eg"><span class="header-section-number">23</span> Part IV — Cumulative Causation and the Political Cost of Territorial Inequality</a>
+  <li><a href="#sec-cumulatif-ch17eg" id="toc-sec-cumulatif-ch17eg" class="nav-link" data-scroll-target="#sec-cumulatif-ch17eg">Part IV — Cumulative Causation and the Political Cost of Territorial Inequality</a>
   <ul class="collapse">
-  <li><a href="#sec-myrdal-ch17eg" id="toc-sec-myrdal-ch17eg" class="nav-link" data-scroll-target="#sec-myrdal-ch17eg"><span class="header-section-number">23.1</span> Myrdal: backwash, spread, and circular divergence</a></li>
-  <li><a href="#sec-kaldor-ch17eg" id="toc-sec-kaldor-ch17eg" class="nav-link" data-scroll-target="#sec-kaldor-ch17eg"><span class="header-section-number">23.2</span> Kaldor and the productivity premium of manufacturing</a></li>
-  <li><a href="#sec-rodriguez-ch17eg" id="toc-sec-rodriguez-ch17eg" class="nav-link" data-scroll-target="#sec-rodriguez-ch17eg"><span class="header-section-number">23.3</span> Rodríguez-Pose: the political economy of territorial abandonment</a></li>
+  <li><a href="#sec-myrdal-ch17eg" id="toc-sec-myrdal-ch17eg" class="nav-link" data-scroll-target="#sec-myrdal-ch17eg">Myrdal: backwash, spread, and circular divergence</a></li>
+  <li><a href="#sec-kaldor-ch17eg" id="toc-sec-kaldor-ch17eg" class="nav-link" data-scroll-target="#sec-kaldor-ch17eg">Kaldor and the productivity premium of manufacturing</a></li>
+  <li><a href="#sec-rodriguez-ch17eg" id="toc-sec-rodriguez-ch17eg" class="nav-link" data-scroll-target="#sec-rodriguez-ch17eg">Rodríguez-Pose: the political economy of territorial abandonment</a></li>
   </ul></li>
-  <li><a href="#sec-maroc-ch17eg" id="toc-sec-maroc-ch17eg" class="nav-link" data-scroll-target="#sec-maroc-ch17eg"><span class="header-section-number">24</span> Part V — Morocco’s Territorial Economy: An Anatomy</a>
+  <li><a href="#sec-maroc-ch17eg" id="toc-sec-maroc-ch17eg" class="nav-link" data-scroll-target="#sec-maroc-ch17eg">Part V — Morocco’s Territorial Economy: An Anatomy</a>
   <ul class="collapse">
-  <li><a href="#sec-colonial-ch17eg" id="toc-sec-colonial-ch17eg" class="nav-link" data-scroll-target="#sec-colonial-ch17eg"><span class="header-section-number">24.1</span> The colonial origin of the coastal concentration</a></li>
-  <li><a href="#sec-axe-ch17eg" id="toc-sec-axe-ch17eg" class="nav-link" data-scroll-target="#sec-axe-ch17eg"><span class="header-section-number">24.2</span> The Casablanca-Tanger axis: Morocco’s economic heart</a></li>
-  <li><a href="#sec-regionalisation-ch17eg" id="toc-sec-regionalisation-ch17eg" class="nav-link" data-scroll-target="#sec-regionalisation-ch17eg"><span class="header-section-number">24.3</span> The advanced regionalisation and its limits</a></li>
-  <li><a href="#sec-hierarchie-ch17eg" id="toc-sec-hierarchie-ch17eg" class="nav-link" data-scroll-target="#sec-hierarchie-ch17eg"><span class="header-section-number">24.4</span> Morocco’s urban hierarchy and its fractures</a></li>
-  <li><a href="#sec-politique-territoriale-ch17eg" id="toc-sec-politique-territoriale-ch17eg" class="nav-link" data-scroll-target="#sec-politique-territoriale-ch17eg"><span class="header-section-number">24.5</span> What territorial policy can and cannot do</a></li>
+  <li><a href="#sec-colonial-ch17eg" id="toc-sec-colonial-ch17eg" class="nav-link" data-scroll-target="#sec-colonial-ch17eg">The colonial origin of the coastal concentration</a></li>
+  <li><a href="#sec-axe-ch17eg" id="toc-sec-axe-ch17eg" class="nav-link" data-scroll-target="#sec-axe-ch17eg">The Casablanca-Tanger axis: Morocco’s economic heart</a></li>
+  <li><a href="#sec-regionalisation-ch17eg" id="toc-sec-regionalisation-ch17eg" class="nav-link" data-scroll-target="#sec-regionalisation-ch17eg">The advanced regionalisation and its limits</a></li>
+  <li><a href="#sec-hierarchie-ch17eg" id="toc-sec-hierarchie-ch17eg" class="nav-link" data-scroll-target="#sec-hierarchie-ch17eg">Morocco’s urban hierarchy and its fractures</a></li>
+  <li><a href="#sec-politique-territoriale-ch17eg" id="toc-sec-politique-territoriale-ch17eg" class="nav-link" data-scroll-target="#sec-politique-territoriale-ch17eg">What territorial policy can and cannot do</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch17eg" id="toc-sec-concl-ch17eg" class="nav-link" data-scroll-target="#sec-concl-ch17eg"><span class="header-section-number">25</span> Conclusion: Space, Power, and the Territorial Bargain</a></li>
-  <li><a href="#sec-biblio-ch17eg" id="toc-sec-biblio-ch17eg" class="nav-link" data-scroll-target="#sec-biblio-ch17eg"><span class="header-section-number">26</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch17eg" id="toc-sec-concl-ch17eg" class="nav-link" data-scroll-target="#sec-concl-ch17eg">Conclusion: Space, Power, and the Territorial Bargain</a></li>
+  <li><a href="#sec-biblio-ch17eg" id="toc-sec-biblio-ch17eg" class="nav-link" data-scroll-target="#sec-biblio-ch17eg">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch15-inequality-distribution.html">Part IV — International Economics and the Long Run</a></li><li class="breadcrumb-item"><a href="./ch17-economic-geography.html"><span class="chapter-number">19</span>&nbsp; <span class="chapter-title">Chapter 17 — Economic Geography: Why Place Still Matters</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -392,10 +560,10 @@ The guiding thread of this chapter
 <p>The chapter advances in five movements. First, the classical pioneers of spatial analysis. Second, Marshall’s economies of agglomeration and their modern microfoundations. Third, the new economic geography of Krugman and Venables. Fourth, the heterodox tradition of cumulative causation from Myrdal to Rodríguez-Pose. Fifth, the Moroccan case: anatomy of a coastal economy, colonial origin, cumulative dynamics, and what territorial policy can and cannot do.</p>
 <hr>
 </section>
-<section id="sec-pionniers-ch17eg" class="level1" data-number="20">
-<h1 data-number="20"><span class="header-section-number">20</span> Part I — The Long-Ignored Dimension: Space and Its Pioneers</h1>
-<section id="sec-thunen-ch17eg" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="sec-thunen-ch17eg"><span class="header-section-number">20.1</span> Von Thünen: land rent and the urban rings</h2>
+<section id="sec-pionniers-ch17eg" class="level1">
+<h1>Part I — The Long-Ignored Dimension: Space and Its Pioneers</h1>
+<section id="sec-thunen-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-thunen-ch17eg">Von Thünen: land rent and the urban rings</h2>
 <p>The first systematic analysis of economic space was the work of a German landowner, Johann Heinrich von Thünen, who published <em>The Isolated State</em> in 1826. Imagining a single city at the centre of a uniform fertile plain, no rivers, no roads, no natural advantages anywhere, he asked how agricultural activities would arrange themselves around it. His answer founded all subsequent spatial economics.</p>
 <p>Each farmer faces a tradeoff between the price received for produce in the city market and the cost of transporting it there. Heavy, perishable, or costly-to-transport goods, fresh milk, vegetables, must be produced close to the centre. Goods that survive long transport, timber in von Thünen’s era, now wheat, then extensive livestock, can locate further out. The result: concentric rings of activity, each dominated by the agricultural use willing to pay most for proximity. The mechanism generating these rings is <strong>land rent</strong>, the premium that land commands by virtue of its proximity to the market.</p>
 <p>The concept of <strong>bid rent</strong>, the maximum rent an activity is willing to pay at each distance from the centre, is von Thünen’s deepest contribution. Each activity has a bid rent curve that declines with distance (farther from the market, more transport cost erodes potential profit). At each point in space, the activity with the highest bid rent occupies the land. The rings emerge not from any planner’s decision but from the competitive allocation of land among activities with different transport cost sensitivities.</p>
@@ -414,18 +582,18 @@ The Casablanca neighbourhood as a von Thünen ring system
 </div>
 <p>Von Thünen’s model is static and stylised, a single city, no roads, uniform geography. Its importance lies not in its realism but in its logic: it demonstrated that the spatial organisation of economic activity obeys rational principles that can be analysed and, to some degree, predicted. This insight is the foundation on which all subsequent spatial economics built.</p>
 </section>
-<section id="sec-weber-ch17eg" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="sec-weber-ch17eg"><span class="header-section-number">20.2</span> Weber, Christaller, and industrial location</h2>
+<section id="sec-weber-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-weber-ch17eg">Weber, Christaller, and industrial location</h2>
 <p>Alfred Weber (1909) extended von Thünen’s logic from agriculture to industrial location, asking where a factory minimising total transport costs, for raw materials inward and for finished products outward, would locate. His model identified the <strong>locational triangle</strong>: given the locations of raw material sources and the product market, the optimal factory location minimises the weighted distances, with weights determined by the transport costs per unit of each material and product.</p>
 <p>Weber’s additional insight was the concept of <strong>agglomeration factors</strong>, forces pulling firms toward each other beyond simple transport minimisation. Firms sharing a pool of skilled labour, specialised suppliers, or infrastructure can reduce costs by locating together even when pure transport minimisation would suggest dispersion. This is the first systematic formulation of what Marshall would elaborate as economies of agglomeration.</p>
 <p>Walter Christaller (1933) addressed the spatial organisation of markets and services, showing that under stylised assumptions of uniform demand distribution and transport costs, market areas would organise into hexagonal hierarchies, the central place theory. Large centres providing many services emerge, surrounded by smaller centres providing fewer, in a self-similar hierarchical pattern. The theory is elegant; its predictions are approximately visible in Morocco’s urban hierarchy: Casablanca at the apex, regional metropoles (Rabat, Marrakech, Fès, Tanger) at the next level, provincial centres, and small rural market towns below. Real urban systems are messier, but the hierarchical pattern that central place theory predicts is recognisable.</p>
 <hr>
 </section>
 </section>
-<section id="sec-marshall-ch17eg" class="level1" data-number="21">
-<h1 data-number="21"><span class="header-section-number">21</span> Part II — Marshall’s Economics of Agglomeration</h1>
-<section id="sec-trinite-ch17eg" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="sec-trinite-ch17eg"><span class="header-section-number">21.1</span> The three forces</h2>
+<section id="sec-marshall-ch17eg" class="level1">
+<h1>Part II — Marshall’s Economics of Agglomeration</h1>
+<section id="sec-trinite-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-trinite-ch17eg">The three forces</h2>
 <p>Alfred Marshall, writing about the industrial districts of 19th-century England, cutlery in Sheffield, textiles in Lancashire, pottery in the Potteries, identified three distinct mechanisms through which geographic concentration creates productivity advantages that isolated firms cannot replicate. These three mechanisms remain the foundational framework for understanding why and how industrial clusters generate competitive advantage.</p>
 <p><strong>Shared inputs and infrastructure</strong>: clustered firms can jointly support specialised suppliers, services, and infrastructure that no individual firm could sustain alone. A single automobile assembler in an isolated location cannot justify a specialised tooling firm, a quality testing laboratory, or a logistics provider with automotive-specific capabilities. A hundred firms in the same valley can. The fixed costs of specialisation are spread across a larger demand base, making available to all what none could afford individually. Morocco’s Tanger Automotive City illustrates this: the concentration of over 250 equipment suppliers in the Tanger-Kénitra corridor has generated specialised service firms, IATF auditors, automotive chemistry suppliers, moulds and tooling workshops, that would not exist without the cluster density.</p>
 <p><strong>Labour market pooling</strong>: when many firms in the same industry locate together, they create a thick labour market that benefits both employers and workers. Employers can find the specific skills they need without training from scratch; workers can move between firms without geographic uprooting when a firm contracts or their skills evolve. The cluster reduces the risk of mismatches: an employer who needs fifty automotive wiring technicians can find them; a worker who loses a job at one supplier can find another without leaving the region. This pooling is one of the strongest empirically documented agglomeration benefits in industrial district studies across Europe and Asia.</p>
@@ -444,39 +612,39 @@ The barber of the aeronautics cluster
 </div>
 </div>
 </section>
-<section id="sec-dp-ch17eg" class="level2" data-number="21.2">
-<h2 data-number="21.2" class="anchored" data-anchor-id="sec-dp-ch17eg"><span class="header-section-number">21.2</span> Duranton and Puga’s microfoundations</h2>
+<section id="sec-dp-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-dp-ch17eg">Duranton and Puga’s microfoundations</h2>
 <p>Gilles Duranton and Diego Puga (2004) reformulated Marshall’s trinity in precise microfoundational terms as <strong>sharing, matching, and learning</strong>, making each mechanism empirically measurable and theoretically tractable.</p>
 <p><strong>Sharing</strong> encompasses not only shared infrastructure and suppliers but the sharing of gains from specialisation that increasing returns make possible only at scale. When demand from clustered firms creates sufficient volume for a supplier to operate at minimum efficient scale, the supplier can charge lower prices and provide higher quality, benefits that would not exist without the cluster demand.</p>
 <p><strong>Matching</strong> formalises the labour market pooling benefit: thick markets generate better matches between workers’ skills and firms’ requirements, reducing the wage premium that firms must pay for scarce specialised skills and the wage penalty that workers accept for taking less-than-ideal positions. The empirical evidence on matching quality in thick labour markets is strong: metropolitan areas show higher levels of productivity even after controlling for industry composition, partly because they generate better employer-employee matches.</p>
 <p><strong>Learning</strong> is the most recently formalised of the three mechanisms and the most consequential for development. Agglomeration accelerates the transmission of knowledge between firms and workers through mechanisms including: spin-off entrepreneurship (employees of successful firms who start their own); labour mobility (workers carrying skills from firm to firm); social interaction (the informal knowledge circulation Marshall described); and competitive pressure (firms that can observe competitors’ practices must innovate to survive). Learning effects make clusters dynamically productive, not just statically efficient.</p>
 </section>
-<section id="sec-lucas-ch17eg" class="level2" data-number="21.3">
-<h2 data-number="21.3" class="anchored" data-anchor-id="sec-lucas-ch17eg"><span class="header-section-number">21.3</span> Lucas and human capital externalities</h2>
+<section id="sec-lucas-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-lucas-ch17eg">Lucas and human capital externalities</h2>
 <p>Robert Lucas (1988) asked a deceptively simple question that connects agglomeration theory to growth theory: why does an identically educated worker earn more in a large metropolitan area than in a small town? His answer: <strong>human capital externalities</strong>. When educated, skilled people concentrate, they make each other more productive through informal learning, imitation of the best, idea confrontation, and knowledge spillovers that nobody charges for. Productivity depends not only on one’s own human capital but on the average human capital of one’s environment.</p>
 <p>This insight has a profound implication: cities are not just sites where existing productivity manifests, they are engines of human capital accumulation and therefore of long-run growth. The concentration of talent in a location generates a learning environment that progressively raises the productivity of everyone within it. Kaldor’s Verdoorn mechanism and Lucas’s human capital externalities converge on the same point: agglomeration is dynamically self-reinforcing, and the cities that attract skilled workers become progressively more attractive to skilled workers.</p>
 <p>For Morocco’s territorial policy, the Lucas mechanism generates a specific challenge: if the Atlantic coastal corridor has accumulated sufficient human capital density to trigger self-reinforcing productivity dynamics, dispersing economic activity to the interior without also dispersing the human capital that makes those dynamics possible will be insufficient. Infrastructure investment alone does not relocate the knowledge communities that give agglomeration its productivity premium.</p>
 <hr>
 </section>
 </section>
-<section id="sec-neg-ch17eg" class="level1" data-number="22">
-<h1 data-number="22"><span class="header-section-number">22</span> Part III — The New Economic Geography: Concentration Without Natural Advantage</h1>
-<section id="sec-krugman-ch17eg" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="sec-krugman-ch17eg"><span class="header-section-number">22.1</span> Krugman’s turn: increasing returns and core-periphery</h2>
+<section id="sec-neg-ch17eg" class="level1">
+<h1>Part III — The New Economic Geography: Concentration Without Natural Advantage</h1>
+<section id="sec-krugman-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-krugman-ch17eg">Krugman’s turn: increasing returns and core-periphery</h2>
 <p>Paul Krugman’s 1991 <em>Geography and Trade</em> was the founding text of the new economic geography (NEG) and the work for which he received the Nobel Prize in 2008. Its intellectual achievement was demonstrating that geographic concentration, cities, industrial clusters, core-periphery structures, can emerge from symmetric geographies through purely economic mechanisms, requiring no pre-existing natural advantage.</p>
 <p>Krugman’s model combines three ingredients: increasing returns at the firm level (larger firms produce at lower average cost), transport costs between regions (sending goods costs something), and labour mobility. From these three elements, a <strong>core-periphery equilibrium</strong> emerges endogenously. The circular causation is precise:</p>
 <p>Firms prefer to locate in large markets, close to many customers, they save transport costs and exploit scale economies better. But markets are large where many workers and consumers are. And workers prefer to locate where many firms are, there they find employment, higher wages, and access to a larger variety of consumer goods (which raises their real income). Firms and workers seek each other. An initially small advantage in one region triggers this positive feedback: slightly more firms attract slightly more workers, whose spending deepens the market, attracting more firms. The concentration snowballs.</p>
 <p>Krugman identifies two specific forces driving this concentration. The <strong>home market effect</strong>: a region that is slightly larger attracts more than proportionally the increasing-returns activities that want to be near a large market. The <strong>price index effect</strong>: the more producers there are in a region, the lower the price index of manufactures (fewer goods need to be transported in), which raises workers’ real wages, attracting more workers. Together these forces generate the concentration once initiated.</p>
 <p>The critical implication is intellectual and political: if concentration can arise from symmetry through circular causation, it can in principle be initiated in any location by a sufficiently large coordinated intervention. There is no geographic inevitability, only history and its path dependencies. This gives territorial policy a theoretical foundation: place-based interventions can in principle launch the virtuous circle that concentration itself has not spontaneously generated.</p>
 </section>
-<section id="sec-venables-ch17eg" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="sec-venables-ch17eg"><span class="header-section-number">22.2</span> Venables and vertical linkages without migration</h2>
+<section id="sec-venables-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-venables-ch17eg">Venables and vertical linkages without migration</h2>
 <p>Anthony Venables extended the NEG framework to explain agglomeration through <strong>vertical linkages between firms</strong> rather than through worker migration, a crucial adaptation for developing countries where workers may not be geographically mobile.</p>
 <p>If firms buy inputs from and sell outputs to each other, each wants to be near its customers (reducing output transport costs) and near its suppliers (reducing input transport costs). These linkages create a force toward agglomeration that operates even without any worker relocation. Firms in a cluster benefit from proximity to the other firms in the cluster, and this clustering is self-reinforcing: more firms in the location mean better backward and forward linkage access for every firm, attracting still more firms.</p>
 <p>This vertical linkage mechanism is the economic engine behind Morocco’s automotive supplier cluster. Renault’s Tanger installation was itself a Midwife-state intervention. But once Renault was installed, tier-1 suppliers followed to be near their largest customer. Tier-2 suppliers followed to be near tier-1 suppliers. Logistics providers, quality service firms, and specialised recruiters followed the whole cluster. None of this required workers to migrate, it required firms to respond rationally to proximity advantages. Venables’s model describes precisely this cascade.</p>
 </section>
-<section id="sec-cloche-ch17eg" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="sec-cloche-ch17eg"><span class="header-section-number">22.3</span> The bell curve of transport costs</h2>
+<section id="sec-cloche-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cloche-ch17eg">The bell curve of transport costs</h2>
 <p>The NEG delivers a counter-intuitive result on transport costs that has direct implications for infrastructure investment. When transport costs are very high, each region must produce locally for local consumption, activity is dispersed because nothing can travel. When they are very low, location barely matters, firms can serve any market from anywhere, and dispersion can prevail because congestion costs are avoided. In the intermediate range, where transport is costly enough that proximity to markets matters, but cheap enough that trade can occur, concentration is strongest.</p>
 <p>The bell curve: as transport costs fall from very high to intermediate levels, concentration increases. As they fall further toward zero, concentration may decrease. This means that infrastructure investment that reduces transport costs does not automatically disperse activity toward lagging regions. It may, depending on the pre-existing cost level, strengthen the already-concentrated core by improving its access to peripheral markets, the <strong>tunnel effect</strong>: the infrastructure connects without irrigating, and activity flows toward the pole rather than away from it.</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
@@ -495,57 +663,57 @@ Morocco’s road infrastructure and the tunnel risk
 <hr>
 </section>
 </section>
-<section id="sec-cumulatif-ch17eg" class="level1" data-number="23">
-<h1 data-number="23"><span class="header-section-number">23</span> Part IV — Cumulative Causation and the Political Cost of Territorial Inequality</h1>
-<section id="sec-myrdal-ch17eg" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="sec-myrdal-ch17eg"><span class="header-section-number">23.1</span> Myrdal: backwash, spread, and circular divergence</h2>
+<section id="sec-cumulatif-ch17eg" class="level1">
+<h1>Part IV — Cumulative Causation and the Political Cost of Territorial Inequality</h1>
+<section id="sec-myrdal-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-myrdal-ch17eg">Myrdal: backwash, spread, and circular divergence</h2>
 <p>Gunnar Myrdal’s <em>Economic Theory and Underdeveloped Regions</em> (1957) articulated the heterodox critique of spatial equilibrium before Krugman formalised it mathematically. Myrdal’s central concept is <strong>circular cumulative causation</strong>: an initial advantage triggers a self-reinforcing spiral that deepens rather than self-correcting.</p>
 <p>A region that attracts an industrial investment attracts workers, whose spending supports local commerce, whose taxes finance schools and roads, which attract further investment. Success breeds success. Simultaneously, a region that loses activities loses its young, sees its shops close, its public services decline, its tax base shrink, which discourages further investment. Failure breeds failure. Far from the neoclassical convergence story, where capital flows to low-wage regions, raising wages there while reducing them in the high-wage core, Myrdal observes divergence that self-perpetuates.</p>
 <p>Myrdal distinguishes <strong>backwash effects</strong>, the processes through which the prosperous region drains the periphery of capital, talent, and youth, from <strong>spread effects</strong>, the processes through which metropolitan prosperity creates demand for peripheral products and diffuses technical knowledge. The decisive question is which dominates. For poorly integrated developing economies, Myrdal’s answer is clear: backwash systematically dominates spread. Markets left to themselves do not reduce territorial inequality; they compound it. Only deliberate public intervention can reverse the cumulative logic.</p>
 <p>The Myrdal mechanism operates visibly in Morocco’s interior regions. Young people leave for Casablanca, Tanger, or Europe, reducing the human capital of origin regions. Their remittances finance consumption but not investment. The best local enterprises grow until they outgrow the local market, then relocate their headquarters to Casablanca. Public services, schools, hospitals, administrative capacity, are proportionally weaker where tax bases are smaller. Each of these processes, individually rational, collectively deepens the gap that no spontaneous market process corrects.</p>
 </section>
-<section id="sec-kaldor-ch17eg" class="level2" data-number="23.2">
-<h2 data-number="23.2" class="anchored" data-anchor-id="sec-kaldor-ch17eg"><span class="header-section-number">23.2</span> Kaldor and the productivity premium of manufacturing</h2>
+<section id="sec-kaldor-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kaldor-ch17eg">Kaldor and the productivity premium of manufacturing</h2>
 <p>Nicholas Kaldor’s regional economics adds the sectoral dimension to Myrdal’s territorial one. Industries differ not just in current productivity but in their <strong>accumulation dynamics</strong>: activities with increasing returns grow more productive as they expand (Verdoorn’s Law), while activities with diminishing or constant returns do not. Regions specialised in manufacturing accumulate productivity advantages over time; regions specialised in agriculture and extractive activities do not.</p>
 <p>The implication for territorial inequality: regions that by historical accident or policy choice captured manufacturing activity experience cumulative productivity growth. Regions left with agriculture and services experience relative stagnation. The gap between them is not a snapshot of relative efficiency but an accumulating divergence, the spatial expression of the sectoral productivity differentials that Chapter 11 analysed.</p>
 <p>For Morocco’s territorial policy, Kaldor’s insight reinforces the limitations of infrastructure-alone approaches. Building roads into agricultural interior regions without simultaneously building manufacturing activity in those regions will not generate the productivity dynamics that reduce territorial inequality sustainably. The transport infrastructure is a necessary condition for economic diversification; it is not a sufficient one.</p>
 </section>
-<section id="sec-rodriguez-ch17eg" class="level2" data-number="23.3">
-<h2 data-number="23.3" class="anchored" data-anchor-id="sec-rodriguez-ch17eg"><span class="header-section-number">23.3</span> Rodríguez-Pose: the political economy of territorial abandonment</h2>
+<section id="sec-rodriguez-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-rodriguez-ch17eg">Rodríguez-Pose: the political economy of territorial abandonment</h2>
 <p>Andrés Rodríguez-Pose’s 2018 paper “The Revenge of the Places That Don’t Matter” documented a phenomenon that gave political urgency to the territorial economics literature. Systematically analysing voting patterns in Europe and the United States, he showed that the political support for Brexit, for Trump, for various European populisms, was geographically concentrated in the regions that had been “left behind” by the knowledge economy’s spatial concentration, smaller cities and rural areas that had lost manufacturing employment without acquiring the high-skill service jobs that concentrated in metropolitan centres.</p>
 <p>The mechanism: territorial polarisation creates populations whose legitimate economic grievances, declining local employment, deteriorating public services, loss of the community identity associated with industrial employment, are not addressed by the mainstream political economy consensus focused on aggregate national efficiency. These populations eventually vote for disruptive alternatives, not because they are irrational but because their rational economic interests have been systematically excluded from the political conversation.</p>
 <p>This mechanism is not uniquely European or American. Morocco’s political geography shows analogous patterns: the regions of the Rif, the Oriental, and interior rural areas that have been economically marginalised have demonstrated significant political discontent (the Hirak Rif movement of 2016-2017 is the most visible recent example). The territorial dimension of that discontent, the perception that investment and opportunity concentrate in the littoral while interior regions are drained, is real and empirically documented. The lesson Rodríguez-Pose draws: territorial cohesion is not only an equity issue but a national political stability and social contract issue. A country that abandons its peripheries eventually pays a political price.</p>
 <hr>
 </section>
 </section>
-<section id="sec-maroc-ch17eg" class="level1" data-number="24">
-<h1 data-number="24"><span class="header-section-number">24</span> Part V — Morocco’s Territorial Economy: An Anatomy</h1>
-<section id="sec-colonial-ch17eg" class="level2" data-number="24.1">
-<h2 data-number="24.1" class="anchored" data-anchor-id="sec-colonial-ch17eg"><span class="header-section-number">24.1</span> The colonial origin of the coastal concentration</h2>
+<section id="sec-maroc-ch17eg" class="level1">
+<h1>Part V — Morocco’s Territorial Economy: An Anatomy</h1>
+<section id="sec-colonial-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-colonial-ch17eg">The colonial origin of the coastal concentration</h2>
 <p>Morocco’s macrocephaly, the concentration of economic activity on the Atlantic coast while vast interior and southern territories remain marginal, is not a natural outcome of geography. It is the accumulated result of a deliberately engineered colonial spatial economy and seventy years of path-dependent investment decisions.</p>
 <p>The French Protectorate (1912-1956), under Lyautey’s urban planning vision, made a geographic allocation decision that shaped Morocco’s spatial economy for the century that followed: the distinction between <em>le Maroc utile</em> (the fertile Atlantic plains, the coast, the major cities) and <em>le Maroc inutile</em> (the mountains, the arid south, the pre-Saharan zones). This distinction was not a geographic description; it was a political allocation of infrastructure investment, capital, and institutional capacity. Casablanca’s port was built and systematically expanded as the export terminal for the colonial economy. The Atlantic plains were equipped with irrigation infrastructure, modern agriculture, and processing industry. The interior was left with minimal infrastructure, serving primarily as a labour reservoir and a space of administrative control.</p>
 <p>Myrdal’s cumulative causation did the rest. Once the Atlantic coast was endowed with superior port access, road networks, industrial infrastructure, and administrative density, every subsequent investor rationally preferred it. The preference was individually rational and collectively self-reinforcing: Casablanca attracted firms because firms were there; firms were there because Casablanca attracted firms. Independence in 1956 transferred political sovereignty without reversing the spatial economy that colonialism had engineered. The post-independence state, inheriting the infrastructure and institutional framework the Protectorate had built, continued to invest disproportionately in the already-equipped littoral, rationally responding to the higher expected returns that prior investment had created there.</p>
 </section>
-<section id="sec-axe-ch17eg" class="level2" data-number="24.2">
-<h2 data-number="24.2" class="anchored" data-anchor-id="sec-axe-ch17eg"><span class="header-section-number">24.2</span> The Casablanca-Tanger axis: Morocco’s economic heart</h2>
+<section id="sec-axe-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-axe-ch17eg">The Casablanca-Tanger axis: Morocco’s economic heart</h2>
 <p>Contemporary Morocco’s economic geography is defined by the concentration of activity along two axes. The primary axis runs from Casablanca northward through Rabat, Kénitra, and Larache to Tanger, the industrial and administrative spine of the country. The secondary axis runs from Casablanca southward to El Jadida and Safi, where the phosphate-fertiliser industrial complex is concentrated.</p>
 <p>The Grand Casablanca-Settat region alone generates approximately 33% of national GDP while hosting approximately 20% of the population, a productivity ratio that measures the cumulative advantage of concentration. Add the Rabat-Salé-Kénitra and Tanger-Tétouan-Al Hoceïma regions, and the Atlantic north accounts for approximately 60% of national GDP on approximately 10% of national territory. At the other end of the spectrum, Drâa-Tafilalet, Guelmim-Oued Noun, and Laâyoune-Sakia El Hamra combined generate approximately 3-4% of GDP on roughly 60% of national territory.</p>
 <p>This extreme territorial concentration is not just an inequality of outcomes, it is a structural constraint on national development. An economy in which most of the educated population, most of the productive capital, most of the financial system, and most of the institutional capacity is concentrated in 10% of the territory is structurally fragile: vulnerable to shocks in that 10%, unable to mobilise the resources of the other 90%, and persistently generating the outmigration dynamics that deplete the periphery to feed the core.</p>
 </section>
-<section id="sec-regionalisation-ch17eg" class="level2" data-number="24.3">
-<h2 data-number="24.3" class="anchored" data-anchor-id="sec-regionalisation-ch17eg"><span class="header-section-number">24.3</span> The advanced regionalisation and its limits</h2>
+<section id="sec-regionalisation-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-regionalisation-ch17eg">The advanced regionalisation and its limits</h2>
 <p>Morocco’s 2011 Constitution and the 2015 Advanced Regionalisation law formalised an ambitious territorial governance reform: twelve regions with elected councils, substantial transferred competencies, and a Fonds de Mise à Niveau Sociale to finance social investment in lagging regions. The reform is structurally sound: effective territorial development requires governance capacity and accountability structures at the regional level, not just national agency programmes.</p>
 <p>But structural reform does not automatically reverse cumulative causation. The reform’s effectiveness depends on whether regions have sufficient fiscal autonomy and administrative capacity to design and implement genuinely territorial economic strategies, not just execute centrally designed programmes. The current reality: regional councils have significantly expanded political legitimacy, but fiscal autonomy and administrative capacity remain limited relative to the ambition. Regional presidents lead councils with electoral mandates but often depend on national budget transfers for the majority of investment resources, limiting their ability to design territorially differentiated strategies.</p>
 <p>Three conditions would make advanced regionalisation an effective instrument for territorial rebalancing. <strong>Fiscal decentralisation</strong>: genuine own-source revenues for regional councils (a share of VAT collected in the region, a regional property tax, user fees) would create the fiscal autonomy needed for genuine strategic choices. <strong>Administrative capacity building</strong>: the regions that most need territorial rebalancing are those with the weakest administrative capacity, an inverse relationship that national programmes must address by prioritising capability building in lagging regions. <strong>Productive investment alignment</strong>: infrastructure investment in lagging regions must be accompanied by coordinated productive investment, supplier development programmes, technical training aligned with identified industrial opportunities, and competitive financing for regional champions, to avoid the tunnel effect that roads without production can produce.</p>
 </section>
-<section id="sec-hierarchie-ch17eg" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="sec-hierarchie-ch17eg"><span class="header-section-number">24.4</span> Morocco’s urban hierarchy and its fractures</h2>
+<section id="sec-hierarchie-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-hierarchie-ch17eg">Morocco’s urban hierarchy and its fractures</h2>
 <p>Morocco’s urban system follows a hierarchical pattern broadly consistent with central place theory but distorted by the colonial spatial economy and subsequent path-dependent investment choices. At the apex sits Casablanca, Africa’s third-largest financial centre and the continent’s most important industrial agglomeration west of Cairo. The secondary tier of regional metropoles (Rabat-Salé, Tanger, Marrakech, Fès, Meknès, Agadir) functions as the administrative and service centres that central place theory predicts, though their economic weight is disproportionate to their service-provision logic because Morocco’s regional economy requires these cities to compensate for the underdevelopment of intermediate urban centres.</p>
 <p>The most analytically significant fracture in Morocco’s urban hierarchy is the relative weakness of second-tier industrial cities. Countries that have successfully industrialised broadly (Germany, Japan, South Korea, Northern Italy) typically have a dense network of medium-sized cities with specialised industrial identities, what Alfred Marshall observed in England’s industrial districts. Morocco’s interior lacks this network: cities of 200,000 to 500,000 population in the interior (Meknès, Oujda, Beni Mellal, Settat) function primarily as commercial and administrative centres with limited industrial identity.</p>
 <p>This weakness is not geographic destiny, it is a consequence of investment patterns. The PAI’s automotive cluster development was deliberately concentrated in Tanger and Kénitra, both in the Atlantic corridor where existing infrastructure made assembly economics most compelling. A geographically distributed industrial policy, locating at least some cluster development in interior cities where land costs, congestion costs, and living costs are substantially lower, would simultaneously reduce the Atlantic coast’s congestion premium and begin building the industrial capability networks that interior cities need.</p>
 </section>
-<section id="sec-politique-territoriale-ch17eg" class="level2" data-number="24.5">
-<h2 data-number="24.5" class="anchored" data-anchor-id="sec-politique-territoriale-ch17eg"><span class="header-section-number">24.5</span> What territorial policy can and cannot do</h2>
+<section id="sec-politique-territoriale-ch17eg" class="level2">
+<h2 class="anchored" data-anchor-id="sec-politique-territoriale-ch17eg">What territorial policy can and cannot do</h2>
 <p>Morocco’s advanced regionalisation law of 2015 has produced genuine political progress: twelve elected regional councils with expanded mandates, a Fonds de Mise à Niveau Sociale, and a stated ambition for differentiated territorial development. The question is whether this institutional architecture can actually reverse the cumulative causation logic that has concentrated economic activity on the coast for over a century.</p>
 <p>Three realistic expectations. <strong>Infrastructure investment changes accessibility, not comparative advantage automatically.</strong> The National Investment Charter’s territorial incentive zones, the TNSA (premium investment incentives in underequipped provinces), and the programmes d’appui au développement territorial are necessary conditions for interior development. They are not sufficient conditions: without a coherent industrial policy that identifies specific productive activities with genuine potential in each region, and that builds the institutional capability to support those activities, infrastructure creates connectivity without development.</p>
 <p><strong>Education and health investment in lagging regions generates the human capital that businesses need.</strong> Sustained investment in secondary and vocational education quality in interior and mountain regions would, over a generation, create the pools of technically competent workers that attract manufacturing investment to non-coastal locations. This is the Lucasian insight applied to territorial policy: human capital density is the precondition for the agglomeration externalities that make locations attractive.</p>
@@ -553,8 +721,8 @@ Morocco’s road infrastructure and the tunnel risk
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch17eg" class="level1" data-number="25">
-<h1 data-number="25"><span class="header-section-number">25</span> Conclusion: Space, Power, and the Territorial Bargain</h1>
+<section id="sec-concl-ch17eg" class="level1">
+<h1>Conclusion: Space, Power, and the Territorial Bargain</h1>
 <p>Geography is not destiny, but neither is it optional. Three conclusions structure this chapter’s contribution.</p>
 <p><strong>Agglomeration creates value and generates exclusion simultaneously.</strong> Marshall’s mechanisms are real: the Tanger automotive cluster is more productive because of agglomeration. But the same mechanisms that make the cluster productive also drain interior Morocco of young engineers, technical talent, and entrepreneurial initiative. The productivity gains of the core and the opportunity costs of the periphery are opposite faces of the same dynamic.</p>
 <p><strong>Cumulative causation is the enemy of spontaneous convergence.</strong> Myrdal and Kaldor showed decades before Krugman’s formalism that markets in concentrated economies do not self-correct toward territorial equality. They self-reinforce toward territorial inequality. Reversing this requires deliberate policy, not as an alternative to market efficiency but as the institutional condition for an equity that markets structurally fail to produce.</p>
@@ -582,8 +750,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch17eg" class="level1 appendix" data-number="26">
-<h1 class="appendix" data-number="26"><span class="header-section-number">26</span> Further Reading</h1>
+<section id="sec-biblio-ch17eg" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Krugman, P. (1991). <em>Geography and Trade</em>. MIT Press.</strong> The founding text of the new economic geography. Accessible and enormously influential.</p>
 <p><strong>Fujita, M., Krugman, P. and Venables, A. (1999). <em>The Spatial Economy</em>. MIT Press.</strong> The theoretical synthesis. Technical but comprehensive.</p>
 <p><strong>Myrdal, G. (1957). <em>Economic Theory and Underdeveloped Regions</em>. Duckworth.</strong> The heterodox alternative. Short, clear, and as relevant today as when written.</p>
@@ -595,8 +763,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1001,8 +1228,8 @@ What this chapter should leave with the reader
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="./ch16-intl-political-economy.html" class="pagination-link" aria-label="Chapter 16 — International Political Economy: Markets, States, and Power">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span>
+      <a href="./ch16-intl-political-economy.html" class="pagination-link" aria-label="Chapter 16 — International Political Economy">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
@@ -1015,13 +1242,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1030,5 +1257,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

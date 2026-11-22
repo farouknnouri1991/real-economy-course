@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch05-regulation-state.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,43 +493,44 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch05" id="toc-sec-carte-ch05" class="nav-link active" data-scroll-target="#sec-carte-ch05">The Map</a></li>
-  <li><a href="#sec-politique-concurrence-ch05" id="toc-sec-politique-concurrence-ch05" class="nav-link" data-scroll-target="#sec-politique-concurrence-ch05"><span class="header-section-number">8</span> Part I — The Economics and Politics of Competition Policy</a>
+  <li><a href="#sec-politique-concurrence-ch05" id="toc-sec-politique-concurrence-ch05" class="nav-link" data-scroll-target="#sec-politique-concurrence-ch05">Part I — The Economics and Politics of Competition Policy</a>
   <ul class="collapse">
-  <li><a href="#sec-pouvoir-marche-ch05" id="toc-sec-pouvoir-marche-ch05" class="nav-link" data-scroll-target="#sec-pouvoir-marche-ch05"><span class="header-section-number">8.1</span> Market power: definition, sources, and social costs</a></li>
-  <li><a href="#sec-trois-inefficiences-ch05" id="toc-sec-trois-inefficiences-ch05" class="nav-link" data-scroll-target="#sec-trois-inefficiences-ch05"><span class="header-section-number">8.2</span> Three forms of inefficiency</a></li>
-  <li><a href="#sec-doctrines-ch05" id="toc-sec-doctrines-ch05" class="nav-link" data-scroll-target="#sec-doctrines-ch05"><span class="header-section-number">8.3</span> Doctrines of competition policy</a></li>
+  <li><a href="#sec-pouvoir-marche-ch05" id="toc-sec-pouvoir-marche-ch05" class="nav-link" data-scroll-target="#sec-pouvoir-marche-ch05">Market power: definition, sources, and social costs</a></li>
+  <li><a href="#sec-trois-inefficiences-ch05" id="toc-sec-trois-inefficiences-ch05" class="nav-link" data-scroll-target="#sec-trois-inefficiences-ch05">Three forms of inefficiency</a></li>
+  <li><a href="#sec-doctrines-ch05" id="toc-sec-doctrines-ch05" class="nav-link" data-scroll-target="#sec-doctrines-ch05">Doctrines of competition policy</a></li>
   </ul></li>
-  <li><a href="#sec-boite-outils-ch05" id="toc-sec-boite-outils-ch05" class="nav-link" data-scroll-target="#sec-boite-outils-ch05"><span class="header-section-number">9</span> Part II — The Toolkit: Defining Markets, Measuring Concentration, Qualifying Abuses</a>
+  <li><a href="#sec-boite-outils-ch05" id="toc-sec-boite-outils-ch05" class="nav-link" data-scroll-target="#sec-boite-outils-ch05">Part II — The Toolkit: Defining Markets, Measuring Concentration, Qualifying Abuses</a>
   <ul class="collapse">
-  <li><a href="#sec-marche-pertinent-ch05" id="toc-sec-marche-pertinent-ch05" class="nav-link" data-scroll-target="#sec-marche-pertinent-ch05"><span class="header-section-number">9.1</span> Relevant market definition</a></li>
-  <li><a href="#sec-hhi-ch05" id="toc-sec-hhi-ch05" class="nav-link" data-scroll-target="#sec-hhi-ch05"><span class="header-section-number">9.2</span> The HHI: measuring concentration</a></li>
-  <li><a href="#sec-ententes-ch05" id="toc-sec-ententes-ch05" class="nav-link" data-scroll-target="#sec-ententes-ch05"><span class="header-section-number">9.3</span> Cartels and anticompetitive agreements</a></li>
-  <li><a href="#sec-abus-ch05" id="toc-sec-abus-ch05" class="nav-link" data-scroll-target="#sec-abus-ch05"><span class="header-section-number">9.4</span> Abuse of dominant position</a></li>
-  <li><a href="#sec-concentrations-ch05" id="toc-sec-concentrations-ch05" class="nav-link" data-scroll-target="#sec-concentrations-ch05"><span class="header-section-number">9.5</span> Merger control</a></li>
-  <li><a href="#sec-restrictions-verticales-ch05" id="toc-sec-restrictions-verticales-ch05" class="nav-link" data-scroll-target="#sec-restrictions-verticales-ch05"><span class="header-section-number">9.6</span> Vertical restraints: ambivalent instruments</a></li>
-  <li><a href="#sec-aides-etat-ch05" id="toc-sec-aides-etat-ch05" class="nav-link" data-scroll-target="#sec-aides-etat-ch05"><span class="header-section-number">9.7</span> State aid and industrial policy: the competition-development tension</a></li>
+  <li><a href="#sec-marche-pertinent-ch05" id="toc-sec-marche-pertinent-ch05" class="nav-link" data-scroll-target="#sec-marche-pertinent-ch05">Relevant market definition</a></li>
+  <li><a href="#sec-hhi-ch05" id="toc-sec-hhi-ch05" class="nav-link" data-scroll-target="#sec-hhi-ch05">The HHI: measuring concentration</a></li>
+  <li><a href="#sec-ententes-ch05" id="toc-sec-ententes-ch05" class="nav-link" data-scroll-target="#sec-ententes-ch05">Cartels and anticompetitive agreements</a></li>
+  <li><a href="#sec-abus-ch05" id="toc-sec-abus-ch05" class="nav-link" data-scroll-target="#sec-abus-ch05">Abuse of dominant position</a></li>
+  <li><a href="#sec-concentrations-ch05" id="toc-sec-concentrations-ch05" class="nav-link" data-scroll-target="#sec-concentrations-ch05">Merger control</a></li>
+  <li><a href="#sec-restrictions-verticales-ch05" id="toc-sec-restrictions-verticales-ch05" class="nav-link" data-scroll-target="#sec-restrictions-verticales-ch05">Vertical restraints: ambivalent instruments</a></li>
+  <li><a href="#sec-aides-etat-ch05" id="toc-sec-aides-etat-ch05" class="nav-link" data-scroll-target="#sec-aides-etat-ch05">State aid and industrial policy: the competition-development tension</a></li>
   </ul></li>
-  <li><a href="#sec-reseaux-ch05" id="toc-sec-reseaux-ch05" class="nav-link" data-scroll-target="#sec-reseaux-ch05"><span class="header-section-number">10</span> Part III — Network Industries: Where Competition Is Structurally Impossible</a>
+  <li><a href="#sec-reseaux-ch05" id="toc-sec-reseaux-ch05" class="nav-link" data-scroll-target="#sec-reseaux-ch05">Part III — Network Industries: Where Competition Is Structurally Impossible</a>
   <ul class="collapse">
-  <li><a href="#sec-monopole-naturel-ch05" id="toc-sec-monopole-naturel-ch05" class="nav-link" data-scroll-target="#sec-monopole-naturel-ch05"><span class="header-section-number">10.1</span> The natural monopoly problem</a></li>
-  <li><a href="#sec-boucle-locale-ch05" id="toc-sec-boucle-locale-ch05" class="nav-link" data-scroll-target="#sec-boucle-locale-ch05"><span class="header-section-number">10.2</span> The local loop as a regulatory laboratory</a></li>
-  <li><a href="#sec-capture-anrt-ch05" id="toc-sec-capture-anrt-ch05" class="nav-link" data-scroll-target="#sec-capture-anrt-ch05"><span class="header-section-number">10.3</span> The ANRT case: a political economy of regulatory capture</a></li>
+  <li><a href="#sec-monopole-naturel-ch05" id="toc-sec-monopole-naturel-ch05" class="nav-link" data-scroll-target="#sec-monopole-naturel-ch05">The natural monopoly problem</a></li>
+  <li><a href="#sec-boucle-locale-ch05" id="toc-sec-boucle-locale-ch05" class="nav-link" data-scroll-target="#sec-boucle-locale-ch05">The local loop as a regulatory laboratory</a></li>
+  <li><a href="#sec-capture-anrt-ch05" id="toc-sec-capture-anrt-ch05" class="nav-link" data-scroll-target="#sec-capture-anrt-ch05">The ANRT case: a political economy of regulatory capture</a></li>
   </ul></li>
-  <li><a href="#sec-etat-ch05" id="toc-sec-etat-ch05" class="nav-link" data-scroll-target="#sec-etat-ch05"><span class="header-section-number">11</span> Part IV — The State as Economic Actor: Foundations, Instruments, and Limits</a>
+  <li><a href="#sec-etat-ch05" id="toc-sec-etat-ch05" class="nav-link" data-scroll-target="#sec-etat-ch05">Part IV — The State as Economic Actor: Foundations, Instruments, and Limits</a>
   <ul class="collapse">
-  <li><a href="#sec-fausse-dichotomie-ch05" id="toc-sec-fausse-dichotomie-ch05" class="nav-link" data-scroll-target="#sec-fausse-dichotomie-ch05"><span class="header-section-number">11.1</span> Beyond the false dichotomy</a></li>
-  <li><a href="#sec-defaillances-ch05" id="toc-sec-defaillances-ch05" class="nav-link" data-scroll-target="#sec-defaillances-ch05"><span class="header-section-number">11.2</span> The four market failures and their instruments</a></li>
-  <li><a href="#sec-redistribution-ch05" id="toc-sec-redistribution-ch05" class="nav-link" data-scroll-target="#sec-redistribution-ch05"><span class="header-section-number">11.3</span> Redistribution and the Moroccan social contract</a></li>
-  <li><a href="#sec-stabilisation-ch05" id="toc-sec-stabilisation-ch05" class="nav-link" data-scroll-target="#sec-stabilisation-ch05"><span class="header-section-number">11.4</span> Stabilisation: managing cycles in a constrained economy</a></li>
-  <li><a href="#sec-etat-entrepreneur-ch05" id="toc-sec-etat-entrepreneur-ch05" class="nav-link" data-scroll-target="#sec-etat-entrepreneur-ch05"><span class="header-section-number">11.5</span> The state as entrepreneur: OCP, CDG, MASEN</a></li>
+  <li><a href="#sec-fausse-dichotomie-ch05" id="toc-sec-fausse-dichotomie-ch05" class="nav-link" data-scroll-target="#sec-fausse-dichotomie-ch05">Beyond the false dichotomy</a></li>
+  <li><a href="#sec-defaillances-ch05" id="toc-sec-defaillances-ch05" class="nav-link" data-scroll-target="#sec-defaillances-ch05">The four market failures and their instruments</a></li>
+  <li><a href="#sec-redistribution-ch05" id="toc-sec-redistribution-ch05" class="nav-link" data-scroll-target="#sec-redistribution-ch05">Redistribution and the Moroccan social contract</a></li>
+  <li><a href="#sec-stabilisation-ch05" id="toc-sec-stabilisation-ch05" class="nav-link" data-scroll-target="#sec-stabilisation-ch05">Stabilisation: managing cycles in a constrained economy</a></li>
+  <li><a href="#sec-etat-entrepreneur-ch05" id="toc-sec-etat-entrepreneur-ch05" class="nav-link" data-scroll-target="#sec-etat-entrepreneur-ch05">The state as entrepreneur: OCP, CDG, MASEN</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch05" id="toc-sec-concl-ch05" class="nav-link" data-scroll-target="#sec-concl-ch05"><span class="header-section-number">12</span> Conclusion: Institutions That Must Be Built</a></li>
-  <li><a href="#sec-biblio-ch05" id="toc-sec-biblio-ch05" class="nav-link" data-scroll-target="#sec-biblio-ch05"><span class="header-section-number">13</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch05" id="toc-sec-concl-ch05" class="nav-link" data-scroll-target="#sec-concl-ch05">Conclusion: Institutions That Must Be Built</a></li>
+  <li><a href="#sec-biblio-ch05" id="toc-sec-biblio-ch05" class="nav-link" data-scroll-target="#sec-biblio-ch05">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch01-what-economics-is.html">Part I — The Microeconomic Foundation</a></li><li class="breadcrumb-item"><a href="./ch05-regulation-state.html"><span class="chapter-number">7</span>&nbsp; <span class="chapter-title">Chapter 5 — Regulation, Competition Policy, and the State</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -418,10 +586,10 @@ The guiding thread of this chapter
 <p>The chapter proceeds in four movements. First, the analytical foundations of competition policy: why market power is costly, how to measure it, and which doctrines guide its treatment. Second, the toolkit: relevant market definition, concentration indices, the typology of abuses, and merger control, with the Moroccan institutional landscape throughout. Third, the economics of network industries, where competition is structurally impossible and regulation must replace the market as the organising principle. Fourth, the broader theory of the state: market failures, the instruments of public intervention, and the state’s own failure modes, with a sustained focus on Morocco’s specific configuration.</p>
 <hr>
 </section>
-<section id="sec-politique-concurrence-ch05" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Part I — The Economics and Politics of Competition Policy</h1>
-<section id="sec-pouvoir-marche-ch05" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-pouvoir-marche-ch05"><span class="header-section-number">8.1</span> Market power: definition, sources, and social costs</h2>
+<section id="sec-politique-concurrence-ch05" class="level1">
+<h1>Part I — The Economics and Politics of Competition Policy</h1>
+<section id="sec-pouvoir-marche-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pouvoir-marche-ch05">Market power: definition, sources, and social costs</h2>
 <p>Market power is the capacity of a firm to maintain a price durably above marginal cost without losing all its customers. This is the symptom: the gap P &gt; MC. But understanding it requires going beyond the symptom to the mechanisms that make it possible.</p>
 <p>A useful taxonomy distinguishes three levers. The <strong>strategic lever</strong> is active: the firm adopts deliberate behaviours to exclude or weaken competitors. Intel offered conditional rebates to distributors conditional on not purchasing AMD processors above a certain threshold, a practice the EU Court of Justice sanctioned in 2017. Microsoft tied its Internet Explorer browser to Windows to exclude Netscape. These behaviours do not reflect earned competitive superiority; they represent deliberate exclusion strategies.</p>
 <p>The <strong>structural lever</strong> is passive: the firm benefits from an advantageous position it did not create but has no incentive to correct. Maroc Telecom controls the local loop, the last kilometre of copper cable connecting households to the telephone network. Neither Orange nor Inwi can bypass this inherited asset. Even with political will for competition, physical network access is conditioned on Maroc Telecom’s cooperation. This is structural power.</p>
@@ -441,15 +609,15 @@ The only petrol station in 50 kilometres
 </div>
 </div>
 </section>
-<section id="sec-trois-inefficiences-ch05" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-trois-inefficiences-ch05"><span class="header-section-number">8.2</span> Three forms of inefficiency</h2>
+<section id="sec-trois-inefficiences-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-trois-inefficiences-ch05">Three forms of inefficiency</h2>
 <p>Market power generates three types of social cost with very different empirical magnitudes.</p>
 <p><strong>Allocative inefficiency</strong> is the most formalised: the Harberger triangle of lost surplus from transactions that would have occurred under competition but do not under monopoly. Empirical estimates of this triangle tend to be modest (a few percent of GDP), which led some economists to dismiss competition policy as economically marginal. This modesty partly reflects the difficulty of estimating counterfactual competitive markets, and partly reflects a real limitation: Harberger’s triangle is not the main social cost of monopoly.</p>
 <p><strong>Productive inefficiency</strong> (Leibenstein’s X-inefficiency, 1966) is less formalised but often more important in practice. An uncontested monopoly has no strong incentive to minimise costs, improve processes, or invest in training. Managerial slack accumulates. Studies of public enterprises in monopoly situations, liberalised by competitive reforms, have consistently documented productivity gains of 10 to 30% from exposure to competition alone, far exceeding Harberger triangle estimates. The welfare loss from an unchallenged cement or telecom monopoly is not primarily the deadweight triangle; it is the stagnation of productivity, the quality plateau, and the absence of process innovation that competitive pressure would have forced.</p>
 <p><strong>Dynamic inefficiency</strong> is the most contested. Does an uncontested monopoly have the right incentives to innovate? Kenneth Arrow (1962) argued no: competition is the motor of innovation because it creates permanent pressure for improvement. A monopolist already earning maximum profits from existing technology has less incentive to cannibalise those profits with a new product. Schumpeter argued the opposite: monopoly rents finance the R&amp;D that atomised markets cannot generate. This debate still structures decisions on patents, technology mergers, and industrial policy. The practical lesson is that competition policy must be sector-specific: sanctioning cement cartels (where innovation is marginal and price competition directly beneficial to consumers) obeys a different logic from evaluating a pharmaceutical merger where R&amp;D incentives matter more than short-run prices.</p>
 </section>
-<section id="sec-doctrines-ch05" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="sec-doctrines-ch05"><span class="header-section-number">8.3</span> Doctrines of competition policy</h2>
+<section id="sec-doctrines-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-doctrines-ch05">Doctrines of competition policy</h2>
 <p>Competition policy tools are not politically neutral. The doctrine adopted determines what counts as harm, what counts as evidence, and what remedy is proportionate.</p>
 <p><strong>The Chicago School</strong> has dominated American antitrust since the 1980s. Its core principle: the sole objective of competition policy is consumer welfare, measured by prices. Any practice that does not immediately reduce consumer welfare (does not raise prices) must be tolerated, even if it concentrates market power. This approach drove massive deregulation in American air transport, telecoms, and energy in the 1980s, and produced relative passivity toward the major mergers of 1990-2010 on the theory that large firm efficiency offsets concentration risk.</p>
 <p><strong>The European approach</strong> has been more resistant to pure consumerism. It gives greater weight to market structure (competition as an institution to protect in itself), effects on small businesses and suppliers, and long-run dynamics (innovation, diversity, resilience). This doctrinal difference explains divergent decisions like GE-Honeywell (2001), and the repeated condemnations of Google by the European Commission (2017, 2018, 2019, totalling over 8 billion euros in fines) for behaviours the American authorities did not sanction.</p>
@@ -471,17 +639,17 @@ What doctrine for Morocco?
 <hr>
 </section>
 </section>
-<section id="sec-boite-outils-ch05" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Part II — The Toolkit: Defining Markets, Measuring Concentration, Qualifying Abuses</h1>
-<section id="sec-marche-pertinent-ch05" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sec-marche-pertinent-ch05"><span class="header-section-number">9.1</span> Relevant market definition</h2>
+<section id="sec-boite-outils-ch05" class="level1">
+<h1>Part II — The Toolkit: Defining Markets, Measuring Concentration, Qualifying Abuses</h1>
+<section id="sec-marche-pertinent-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-marche-pertinent-ch05">Relevant market definition</h2>
 <p>Every competition case begins with the same question: what is the market at issue? Without a precise market definition, it is impossible to measure concentration, evaluate market power, or judge whether a behaviour is anticompetitive.</p>
 <p>The relevant market has two dimensions. The <strong>product market</strong> asks: which goods and services constitute a coherent competitive space? Products are in the same market if consumers regard them as sufficiently close substitutes that a price increase in one diverts significant demand toward the other. The <strong>geographic market</strong> asks: over what territory does competition actually operate? Cement is not a national market in Morocco, it is a regional market, because the high transport cost relative to unit value means that a cement plant in Settat does not effectively compete with one in Agadir.</p>
 <p>The standard tool for market definition is the <strong>SSNIP test</strong> (Small but Significant Non-transitory Increase in Price). The question posed: if a hypothetical monopolist raised the price of this product by 5-10% permanently, would this increase be profitable? If yes, consumers have no easy substitutes and the product constitutes a market by itself. If no, enough consumers would switch to substitutes to make the increase unprofitable, and those substitutes must be included in the relevant market. The process is repeated, progressively expanding the product set, until a hypothetical monopoly price increase becomes profitable. The relevant market is then defined.</p>
 <p>Applied to cement in Morocco: if LafargeHolcim raised prices by 8% in the Casablanca region, would regional clients (real estate developers, wholesalers, artisans) turn to cement from Settat or Meknès? Given transport costs, probably not, unless the price difference is very large. Conclusion: the relevant market for cement in Morocco is regional, not national. Each cement plant is quasi-monopolistic in its natural zone of influence. National concentration measures (HHI ~3,300) <em>underestimate</em> the actual concentration on regional markets, the precise reality the Conseil de la Concurrence should integrate into its sectoral analyses.</p>
 </section>
-<section id="sec-hhi-ch05" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-hhi-ch05"><span class="header-section-number">9.2</span> The HHI: measuring concentration</h2>
+<section id="sec-hhi-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-hhi-ch05">The HHI: measuring concentration</h2>
 <p>Once the market is defined, concentration is measured by the <strong>Herfindahl-Hirschman Index (HHI)</strong>: the sum of the squares of all firms’ market shares.</p>
 <p><span class="math display">\[HHI = \sum_{i=1}^{n} s_i^2 \qquad \text{(in %, ranging from 0 to 10,000)}\]</span></p>
 <p>Standard thresholds from the American Horizontal Merger Guidelines: below 1,500 is unconcentrated; 1,500 to 2,500 is moderately concentrated; above 2,500 is highly concentrated. The <em>change</em> in HHI from a merger matters as much as the level: a merger that increases HHI by more than 200 points in an already concentrated market systematically triggers a detailed review.</p>
@@ -555,30 +723,30 @@ Concentration in major Moroccan oligopolistic markets
 </div>
 </div>
 </section>
-<section id="sec-ententes-ch05" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="sec-ententes-ch05"><span class="header-section-number">9.3</span> Cartels and anticompetitive agreements</h2>
+<section id="sec-ententes-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ententes-ch05">Cartels and anticompetitive agreements</h2>
 <p>The most clear-cut violation of competition law is the cartel: an agreement between competitors to fix prices, allocate markets, or restrict output. Cartels produce the same welfare loss as monopoly, prices above marginal cost, deadweight loss, without even the potential justification of economies of scale or innovation rents.</p>
 <p>The analytical difficulty is the distinction between explicit collusion (which is illegal and prosecuted) and tacit coordination (which produces similar outcomes but through parallel rational responses to common market signals, without provable communication). Two telecom operators do not need to telephone each other to maintain similar prices on premium packages. They observe each other’s publicly announced tariffs, know that price cuts will provoke an immediate response, and value their future profit streams enough not to trigger a destructive price war. This parallel behaviour is the Nash equilibrium of a repeated game, economically equivalent to coordination, legally very difficult to prove as an agreement.</p>
 <p><strong>Leniency programmes</strong> address this prosecutorial difficulty by offering partial or complete immunity from fines to the first participant who confesses and cooperates. The mathematical logic is compelling: if a cartel member knows that one of her partners might confess and receive immunity, her incentive to confess first increases sharply. This creates a prisoner’s dilemma <em>within</em> the cartel, destabilising the collusion from within. The European Commission’s leniency programme, introduced in 1996, triggered a wave of cartel disclosures and fines that have collectively exceeded 10 billion euros — the most effective anti-cartel instrument ever deployed. The Conseil de la Concurrence introduced a leniency programme in Morocco with Law 104-12, though it has not yet produced major cartel disclosures, in part because the legal culture of approaching competition authorities with self-incriminating evidence is still developing and the programme’s protections are not yet fully tested in adversarial proceedings.</p>
 <p>The most instructive Moroccan case study for cartel analysis is the hydrocarbons fuel distribution sector. The Conseil de la Concurrence’s 2013 inquiry found that the pricing structures of the major fuel distributors (Afriquia/Akwa, TotalEnergies, Shell/Vivo Energy) exhibited a remarkable degree of price parallelism that its economic analysis found difficult to explain solely through common cost structures. The distributors set prices simultaneously, with near-identical changes on the same dates, despite having different logistics networks, different import arrangements, and different geographic footprints. The Conseil stopped short of proving explicit coordination — the evidence threshold for explicit cartel finding is high — but recommended structural remedies including price transparency obligations and closer monitoring of price formation mechanisms. The case illustrates both the analytical power of the relevant market and HHI framework applied to a concentrated distribution market, and the institutional limits of a young authority still building its evidentiary toolkit.</p>
 </section>
-<section id="sec-abus-ch05" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-abus-ch05"><span class="header-section-number">9.4</span> Abuse of dominant position</h2>
+<section id="sec-abus-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-abus-ch05">Abuse of dominant position</h2>
 <p>Where a cartel is an agreement between competitors, an abuse of dominant position is a unilateral behaviour by a firm that exploits its market power to harm competition. The legal framework in Morocco (Article 7 of Law 104-12) broadly follows Article 102 of the TFEU: prohibiting the abuse, not the dominant position itself.</p>
 <p><strong>Predatory pricing</strong> involves accepting temporary losses to eliminate an existing competitor, then raising prices once the competitor has exited. Legal qualification requires demonstrating both that prices were below a relevant cost measure and that post-exit recoupment was realistically anticipated. The American Airlines/Braniff case is the paradigmatic documented instance: AA reduced prices on contested routes to below variable cost until Braniff went bankrupt, then restored prices. The internal communications of AA, explicitly referencing “putting Braniff out of business,” provided the strongest evidence.</p>
 <p><strong>Conditional rebates</strong> grant substantial discounts to customers who supply themselves exclusively (or near-exclusively) from the dominant firm. In appearance, this rewards loyalty. In reality, if the rebate is calibrated to make it unprofitable for the customer to source even part of its needs from a competitor, it functions as an imposed exclusive dealing arrangement. This is the precise behaviour for which Intel was condemned in Europe.</p>
 <p><strong>Margin squeeze</strong> occurs in vertically structured markets when a dominant firm controls an upstream infrastructure and sets access prices to that infrastructure at levels that make downstream competition from efficient rivals impossible. Maroc Telecom was sanctioned by the ANRT in January 2020, a fine of 3.3 billion dirhams, precisely for practices of this type: the terms on which it provided access to its copper local loop made effective ADSL market entry by Inwi and Orange economically unviable.</p>
 </section>
-<section id="sec-concentrations-ch05" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="sec-concentrations-ch05"><span class="header-section-number">9.5</span> Merger control</h2>
+<section id="sec-concentrations-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-concentrations-ch05">Merger control</h2>
 <p>Mergers between firms can be pro-competitive (economies of scale, technological complementarities, improved distribution) or anti-competitive (eliminating a competitor, raising entry barriers, facilitating tacit coordination). The logic of merger control is a comparative welfare analysis: authorise mergers where efficiency gains outweigh competitive harms; block or condition those where the net effect on consumers is negative.</p>
 <p>The European standard, Significant Impediment to Effective Competition (SIEC), asks whether the merger would create or reinforce a dominant position liable to significantly impede effective competition.</p>
 <p>Mergers harm competition through two distinct mechanisms. <strong>Unilateral effects</strong> arise when the merged entity can profitably raise prices without triggering a competitive response from remaining rivals, because the two merging firms competed most closely and their combination removes the constraint they exerted on each other. <strong>Coordinated effects</strong> arise when the merger makes tacit coordination among the remaining competitors more stable, by increasing symmetry in market shares or costs, reducing the number of independent decision-makers, or eliminating a competitive “maverick” whose independent behaviour had disciplined pricing.</p>
 <p>When a merger raises competition concerns but delivers genuine efficiencies, authorities may approve it subject to <strong>remedies</strong>. Behavioural remedies impose ongoing obligations on the merged entity (access obligations, non-discrimination requirements, licensing commitments). Structural remedies, specifically divestiture of assets or businesses, are generally preferred because they are self-executing rather than requiring continuous monitoring by a regulator. The LafargeHolcim global merger (2015) required the divestiture of several country operations to obtain European approval; the Moroccan operations were part of this global restructuring, demonstrating that mergers decided at global corporate level carry regulatory implications for the Moroccan market.</p>
 <p>For Morocco, the most significant structural gap in merger control is the notification threshold. Law 104-12 requires merger notification when combined Moroccan turnover of the parties exceeds 750 million MAD. This threshold may be too high to capture acquisitions that are significant in Moroccan market terms but fall below it. A private equity fund acquiring a mid-sized regional food distribution chain may create a dominant position in its local market while remaining under the radar of merger review. The Conseil de la Concurrence has noted the importance of threshold calibration and sector-specific review mechanisms for highly concentrated markets. Without these tools, concentrated market structures can solidify before the regulatory framework develops the capacity to address them.</p>
 </section>
-<section id="sec-restrictions-verticales-ch05" class="level2" data-number="9.6">
-<h2 data-number="9.6" class="anchored" data-anchor-id="sec-restrictions-verticales-ch05"><span class="header-section-number">9.6</span> Vertical restraints: ambivalent instruments</h2>
+<section id="sec-restrictions-verticales-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-restrictions-verticales-ch05">Vertical restraints: ambivalent instruments</h2>
 <p>Competition policy typically focuses on horizontal behaviours between competitors. But a large share of market power operates in a different dimension: the vertical relationship between actors at different levels of the supply chain: manufacturers and distributors, producers and retailers, platforms and merchants.</p>
 <p><strong>Vertical restraints</strong> are contractual clauses that limit the commercial freedom of upstream or downstream partners. A manufacturer who imposes a minimum resale price on distributors. A car importer who forbids dealerships from selling other brands. A platform that imposes its pricing terms on merchants who operate through it. These clauses are neither agreements between competitors nor mergers; they have their own analytical logic.</p>
 <p>The difficulty is their fundamental <strong>ambivalence</strong>: the same vertical restraint can be pro-competitive in one context and anticompetitive in another. This is why competition doctrine has progressively abandoned the <em>per se</em> approach (illegal by nature) in favour of case-by-case effects analysis.</p>
@@ -598,18 +766,18 @@ Auto distribution in Morocco: a vertical market under tension
 </div>
 </div>
 </section>
-<section id="sec-aides-etat-ch05" class="level2" data-number="9.7">
-<h2 data-number="9.7" class="anchored" data-anchor-id="sec-aides-etat-ch05"><span class="header-section-number">9.7</span> State aid and industrial policy: the competition-development tension</h2>
+<section id="sec-aides-etat-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-aides-etat-ch05">State aid and industrial policy: the competition-development tension</h2>
 <p>Competition policy in developed economies typically prohibits state aid that distorts competition on common markets. But for developing economies, the relationship between competition policy and industrial policy is more complex. State support for industrial development, precisely because it confers advantages on certain firms, creates competitive distortions that the standard framework would condemn.</p>
 <p>This tension is not abstract. Morocco’s automotive and aeronautics industrial strategy rested on targeted incentives: free zones with tax holidays, subsidised land at Tanger Med and Kenitra, investment premiums, training subsidies for new entrants. These are, technically, state aids that give recipient firms advantages over competitors who did not receive them. Were they anticompetitive? Yes, in the narrow sense. Were they beneficial for Morocco’s industrial development? Also yes, if the result is a productive ecosystem that would not have emerged without the initial support.</p>
 <p>The standard economic resolution distinguishes between aids that correct genuine market failures (financing learning curves during the infancy period of new industries, when private capital cannot be assembled because the risk is too high) and aids that simply redistribute rents to politically connected incumbents. The former has an efficiency justification even in competition law terms; the latter is pure rent protection. The practical difficulty is that the distinction is genuinely hard to make in real time , which is why conditional performance discipline (export requirements, domestic content escalation, sunset clauses on preferences) is essential to prevent infant industry support from becoming permanent protection.</p>
 <hr>
 </section>
 </section>
-<section id="sec-reseaux-ch05" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Part III — Network Industries: Where Competition Is Structurally Impossible</h1>
-<section id="sec-monopole-naturel-ch05" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="sec-monopole-naturel-ch05"><span class="header-section-number">10.1</span> The natural monopoly problem</h2>
+<section id="sec-reseaux-ch05" class="level1">
+<h1>Part III — Network Industries: Where Competition Is Structurally Impossible</h1>
+<section id="sec-monopole-naturel-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-monopole-naturel-ch05">The natural monopoly problem</h2>
 <p>Competition policy assumes that competitive market structures can be maintained or restored. In certain sectors this assumption is structurally false: the economics of the industry make competition impossible or socially undesirable.</p>
 <p>A <strong>natural monopoly</strong> exists when a single firm can supply total market demand at lower cost than two or more firms could. The condition is sub-additivity of costs: <span class="math inline">\(C(q_1 + q_2) &lt; C(q_1) + C(q_2)\)</span>. This typically holds when fixed costs are very high and marginal costs are very low, the precise situation of infrastructure networks in transport, energy, water, and telecoms.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -630,16 +798,16 @@ Why electricity reaches the isolated village
 <p><span class="math display">\[\frac{P_i - MC_i}{P_i} = \frac{\lambda}{|\varepsilon_i|}\]</span></p>
 <p>The intuition: to cover fixed costs, prices must exceed marginal cost somewhere. Distribute that excess across segments to minimise the total quantity of transactions lost. Tax inelastic segments (which will not much reduce consumption in response to higher prices) and spare elastic segments (which would reduce consumption sharply). Morocco’s ONEE applies a rough version of this logic in electricity: low initial tariff blocks for small consumers (social access goal combined with low demand elasticity among the poor), higher tariff blocks for larger consumers.</p>
 </section>
-<section id="sec-boucle-locale-ch05" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="sec-boucle-locale-ch05"><span class="header-section-number">10.2</span> The local loop as a regulatory laboratory</h2>
+<section id="sec-boucle-locale-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-boucle-locale-ch05">The local loop as a regulatory laboratory</h2>
 <p>Morocco’s fixed telecommunications market offers one of the richest case studies available for the economics of network regulation. It illustrates how infrastructure inherited from a public monopoly becomes the source of durable structural market power, and how regulatory tools attempt, with variable success, to restore competitive conditions.</p>
 <p>A fixed telephone network is a hierarchically layered infrastructure. The <strong>core network</strong> carries long-distance traffic, relatively cheap and already broadly interconnected internationally. The <strong>backhaul</strong> (collection network) links local nodes to the core, more expensive but technically accessible to multiple actors. The <strong>local loop</strong>, the last kilometre connecting each household or business to a local exchange, is the decisive layer. This is what economists call a <strong>structural bottleneck</strong>: expensive to deploy, not economically duplicable, and historically controlled by the heir to the public monopoly.</p>
 <p>Maroc Telecom inherited the entire Moroccan copper network built during the decades of the public monopoly. No competitor can reasonably build a parallel copper network: the civil engineering alone (trenches, conduits, cabling) would represent several dozen billion dirhams of investment in a technology already technologically superseded. This is the essence of network natural monopoly.</p>
 <p><strong>Unbundling</strong> is the regulatory obligation requiring the dominant operator to lease access to its local loop to alternative operators at regulated prices and technical conditions. Orange and Inwi can install their own equipment in Maroc Telecom’s exchanges and offer ADSL services directly to end customers, without using Maroc Telecom’s retail services. This is the model that enabled alternative operators to emerge in Europe from the 2000s.</p>
 <p><strong>Functional separation</strong> goes further: it imposes an organisational separation between the infrastructure management unit and the commercial entities selling services to end customers, eliminating the incentive to discriminate internally against competitors. The paradigmatic case is Openreach in the UK: British Telecom was required to create Openreach as a distinct entity managing network access in a non-discriminatory way for all operators, including BT’s own retail subsidiaries. The UK broadband market became one of the most competitive in Europe as a result.</p>
 </section>
-<section id="sec-capture-anrt-ch05" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="sec-capture-anrt-ch05"><span class="header-section-number">10.3</span> The ANRT case: a political economy of regulatory capture</h2>
+<section id="sec-capture-anrt-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-capture-anrt-ch05">The ANRT case: a political economy of regulatory capture</h2>
 <p>The evolution of Morocco’s telecommunications regulator from 1999 to 2009 is a textbook illustration of regulatory capture theory, and one of the richest documented cases of institutional degradation in African regulatory history.</p>
 <p><strong>Act I (1999): Credible regulation.</strong> The creation of the ANRT under the management of Mustafa Terrab represented a genuine institutional rupture. The second mobile licence auction, competitive, transparent, internationally open, raised 1.1 billion dollars, signalling to investors worldwide that Morocco had built a credible regulator willing to enforce rules even against the incumbent. Meditel entered the market, prices fell 30-50%, penetration accelerated. Regulatory credibility had measurable economic value.</p>
 <p><strong>Act II (2001): The erosion begins.</strong> Terrab’s resignation in 2001, under political pressure after decisions imposing asymmetric obligations on Maroc Telecom, was not merely an individual episode. In the language of capture theory, the ANRT had become too effective at its mission of contestability: too credible in its willingness to threaten incumbent rents. The response of entrenched interests was not to contest individual ANRT decisions but to modify the institutional rules giving the agency its independence. The ANRT preserved its formal powers; it lost the political backing to exercise them.</p>
@@ -663,10 +831,10 @@ Terrab’s resignation: more than a personal episode
 <hr>
 </section>
 </section>
-<section id="sec-etat-ch05" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Part IV — The State as Economic Actor: Foundations, Instruments, and Limits</h1>
-<section id="sec-fausse-dichotomie-ch05" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="sec-fausse-dichotomie-ch05"><span class="header-section-number">11.1</span> Beyond the false dichotomy</h2>
+<section id="sec-etat-ch05" class="level1">
+<h1>Part IV — The State as Economic Actor: Foundations, Instruments, and Limits</h1>
+<section id="sec-fausse-dichotomie-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fausse-dichotomie-ch05">Beyond the false dichotomy</h2>
 <p>The public debate on the state in the economy is almost always badly framed. One side sees government intervention as a source of distortions, rents, and inefficiency, prescribing “let the market work.” The other sees the market as an inequality machine, prescribing expanded public prerogatives. These are caricatures that conceal the real question.</p>
 <p>Markets do not operate in a vacuum. They operate in legal institutions, property rights, contract enforcement systems, competition rules, and infrastructure that someone must build and maintain. That someone is, in the last instance, the state. The real question is not quantitative (more or less state) but qualitative: which state, for which problems, with what capabilities, at what cost, and with what distributional effects?</p>
 <p>Richard Musgrave’s (1959) three-branch framework provides the analytical organisation: the <strong>allocative branch</strong> corrects market failures in resource allocation; the <strong>redistributive branch</strong> modifies the primary income and wealth distribution produced by markets; the <strong>stabilisation branch</strong> conducts macroeconomic policy to attenuate business cycle fluctuations. These three branches have different instruments, different time horizons, and different theoretical justifications.</p>
@@ -684,8 +852,8 @@ Ibn Khaldoun’s fiscal insight and its modern interpretation
 </div>
 </div>
 </section>
-<section id="sec-defaillances-ch05" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="sec-defaillances-ch05"><span class="header-section-number">11.2</span> The four market failures and their instruments</h2>
+<section id="sec-defaillances-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-defaillances-ch05">The four market failures and their instruments</h2>
 <p><strong>Externalities</strong> are effects of an economic decision on third parties not involved in the transaction, without compensation. They justify intervention not to redistribute but to align private and social incentives.</p>
 <p>The Pigouvian response is a corrective tax: set the tax equal to the marginal social damage, making the firm internalise the full social cost of its activity. Morocco’s water stress makes this particularly concrete. Intensive irrigation in the Souss-Massa generates a severe negative externality on shared aquifers: each farmer extracts from a common water table without internalising the depletion cost imposed on neighbours and future generations. Moroccan agricultural water prices, heavily subsidised, systematically undervalue the scarcity that intensive agriculture is creating. The result is a trajectory toward aquifer exhaustion that no individual rational farmer has an incentive to halt, because the private cost of conservation exceeds its private benefit even though the social cost of depletion far exceeds the social benefit of current extraction.</p>
 <p>Ronald Coase proposed an alternative response in <em>The Problem of Social Cost</em> (1960): if property rights are well defined and transaction costs are low, parties can negotiate a private solution without state intervention. Assign the downstream farmers the right to clean water, and the upstream factory will be forced to compensate them or invest in depollution. The Coase theorem says the outcome will be efficient regardless of the initial rights allocation, provided transaction costs are negligible. The practical implication is not “let markets self-regulate”: it is “define property rights carefully to enable negotiation.” The state remains indispensable for defining and enforcing those rights.</p>
@@ -709,8 +877,8 @@ The hanout’s credit book and the limits of formal finance
 <p>Elinor Ostrom’s Nobel Prize-winning work (<em>Governing the Commons</em>, 1990) demonstrated a third path: communities can develop effective institutional rules for managing common resources collectively, without either privatisation or state imposition. Her design principles for successful commons governance (clearly defined user boundaries, rules adapted to local conditions, collective choice arrangements, monitoring, graduated sanctions) describe institutions that already exist in many forms. Morocco’s southern oasis irrigation systems, the <em>khettaras</em> and their associated communal water sharing rules, are examples of effective informal institutions managing a common pool resource that neither market nor state constructed, maintained over generations by communities with direct stakes in their survival.</p>
 <p><strong>Natural monopolies</strong> require continuous regulation where competition policy’s case-by-case enforcement is insufficient. This is the subject of Part III above.</p>
 </section>
-<section id="sec-redistribution-ch05" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="sec-redistribution-ch05"><span class="header-section-number">11.3</span> Redistribution and the Moroccan social contract</h2>
+<section id="sec-redistribution-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-redistribution-ch05">Redistribution and the Moroccan social contract</h2>
 <p>The redistributive function of the state addresses a different question from allocation: not where the market fails to maximise the size of the pie, but how the pie is divided. These are logically independent questions. A perfectly efficient market can produce a very unequal distribution. The correction of that inequality is not a market failure correction; it is a social and political choice about the acceptable range of outcomes in a given society.</p>
 <p>Morocco’s redistributive instruments include direct taxation (income tax, corporate tax), indirect taxation (TVA, excise taxes), transfers (AMO health insurance, family allowances, Ramed, Tayssir conditional cash transfers), and in-kind services (free public education, subsidised water and electricity). The recent 2021-2025 social protection reform, generalising health insurance, family allowances, and expanded unemployment coverage, represents Morocco’s most significant expansion of its redistributive capacity in a generation, moving from a relatively narrow system covering primarily formal employment toward a more universal coverage model.</p>
 <p>The ambition is real, but implementation faces the fundamental challenge of a high-informality economy: how do you extend social insurance to workers whose employment relationship is not documented and whose incomes are not reported to tax authorities? The Registre Social Unifié (RSU), a centralised household database designed to enable targeted social transfers, is the institutional response. Its practical coverage remains incomplete, its updating mechanisms slow, and the political economy of means-testing in a society where informal income is genuinely hard to verify creates systematic under-coverage of the most vulnerable. Morocco’s fiscal structure compounds the redistribution challenge: the income tax base is narrow, most fiscal revenue comes from formal wage earners and the TVA, which is regressive, while the informal economy largely escapes both. The result is that the formal worker bears a disproportionate fiscal burden relative to informal operators at the same income level, creating the systemic incentive for informality that tax policy must simultaneously finance social protection and reduce. This circularity, where informality reduces the fiscal base funding the social services whose absence makes informality attractive, is one of Morocco’s deepest structural economic tensions.</p>
@@ -729,14 +897,14 @@ Why recognising state failures is not naive liberalism
 </div>
 </div>
 </section>
-<section id="sec-stabilisation-ch05" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="sec-stabilisation-ch05"><span class="header-section-number">11.4</span> Stabilisation: managing cycles in a constrained economy</h2>
+<section id="sec-stabilisation-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-stabilisation-ch05">Stabilisation: managing cycles in a constrained economy</h2>
 <p>Musgrave’s third branch of public finance addresses the management of macroeconomic cycles. Markets have no automatic mechanism for correcting demand shortfalls: a contraction can become self-sustaining through the paradox of thrift: each actor rationally cuts spending in response to uncertainty, but the simultaneous spending reductions of all actors deepen the recession, validating the pessimistic expectations that triggered the cuts. The state can break this spiral through active fiscal policy (public spending increases, tax reductions) or through automatic stabilisers (unemployment insurance, progressive taxation that reduces revenues faster than activity falls without any new political decision).</p>
 <p>Morocco’s stabilisation capacity is structurally constrained. Automatic stabilisers are weak: unemployment insurance covers less than 10% of the workforce (the formal sector minority), income tax progressivity operates on a narrow base, and the informal economy is largely outside the automatic stabiliser circuit. Discretionary fiscal policy faces an external constraint: borrowing on international markets in dollars or euros exposes Morocco to global interest rate fluctuations and to the evaluations of credit rating agencies (Ba1/BB+ in 2023). Each rating downgrade raises the cost of sovereign borrowing by dozens of basis points, limiting the fiscal space for counter-cyclical spending.</p>
 <p>The COVID-19 crisis illustrated both Morocco’s responsiveness and its structural limits. The Special COVID Fund (33 billion MAD), guarantees to enterprises (Damane Relance, Damane Oxygène), and the extension of emergency aid to informal workers were deployed faster than many observers expected. But under-coverage of the informal sector (50% of employment) and imprecise targeting of transfers revealed the absence of the real-time social information system that effective crisis stabilisation requires. These lacunae are now the main drivers of the 2021-2025 social protection reform: RSU, generalised AMO, and expanded unemployment insurance are not merely redistribution instruments — they are the infrastructure for future stabilisation capacity.</p>
 </section>
-<section id="sec-etat-entrepreneur-ch05" class="level2" data-number="11.5">
-<h2 data-number="11.5" class="anchored" data-anchor-id="sec-etat-entrepreneur-ch05"><span class="header-section-number">11.5</span> The state as entrepreneur: OCP, CDG, MASEN</h2>
+<section id="sec-etat-entrepreneur-ch05" class="level2">
+<h2 class="anchored" data-anchor-id="sec-etat-entrepreneur-ch05">The state as entrepreneur: OCP, CDG, MASEN</h2>
 <p>Morocco’s state is not primarily a regulator and redistributor, it is also a direct economic actor of the first importance. Understanding this role requires moving beyond the standard market-failure correction framework.</p>
 <p>The <strong>Caisse de Dépôt et de Gestion (CDG)</strong> is the largest institutional investor in Morocco, managing long-term savings from public pension funds, civil servant retirement, and notarial deposits. With assets exceeding 200 billion dirhams, the CDG deploys capital in infrastructure, real estate, tourism, and financial markets with investment horizons inaccessible to private capital markets. It has funded projects, including major tourism zones, university infrastructure, and urban renewal, that private financing could not have assembled at the required scale and horizon.</p>
 <p><strong>OCP</strong> is the world’s largest phosphate exporter and a quasi-sovereign enterprise that captures national rents from a geological endowment. Its strategic pivot from raw rock extraction to integrated fertiliser production, the Jorf Fertilizer Hub, the African agri-nutrition development strategy, is not a private firm diversifying; it is a national institution deciding how to transform a finite resource endowment into durable productive capabilities. Mazzucato’s framework (Chapter 3) applies precisely here: the public risk-bearing that built OCP’s chemical processing capacity created the conditions for private value capture downstream.</p>
@@ -744,8 +912,8 @@ Why recognising state failures is not naive liberalism
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch05" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Conclusion: Institutions That Must Be Built</h1>
+<section id="sec-concl-ch05" class="level1">
+<h1>Conclusion: Institutions That Must Be Built</h1>
 <p>This chapter has established three foundational points that run through all subsequent analysis.</p>
 <p><strong>Competition is not a natural state of markets, it is an institution to be built and maintained.</strong> Firms rationally seek to escape competition through strategic, structural, and informational levers. The tendency toward concentration is not an accident; it is a structural feature of capitalism that requires continuous institutional counterweight. The Conseil de la Concurrence’s decisions, on Lafarge-Holcim, hydrocarbons, the Pharmacists’ Order, and Maroc Telecom, represent the construction of that institutional counterweight, however imperfect and incomplete.</p>
 <p><strong>Network industries require a different framework from competition policy.</strong> Where competition is structurally impossible, continuous regulation must replace market discipline. The ANRT’s 2020 decision against Maroc Telecom, arriving fifteen years after regulatory credibility had been undermined, illustrates both that reconstruction is possible and that it is costly in lost competitive dynamism.</p>
@@ -772,8 +940,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch05" class="level1 appendix" data-number="13">
-<h1 class="appendix" data-number="13"><span class="header-section-number">13</span> Further Reading</h1>
+<section id="sec-biblio-ch05" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Stigler, G. (1971). “The Theory of Economic Regulation.” <em>Bell Journal of Economics</em>.</strong> The founding paper of capture theory. Short, provocative, and still unsurpassed as a statement of the basic mechanism.</p>
 <p><strong>Tirole, J. (2017). <em>Economics for the Common Good</em>. Princeton University Press.</strong> The most accessible synthesis of Tirole’s work on regulation, competition, financial markets, and climate. Written for a general educated audience without sacrificing rigour.</p>
 <p><strong>Evans, P. (1995). <em>Embedded Autonomy: States and Industrial Transformation</em>. Princeton University Press.</strong> The analysis of how developmental states manage the tension between embeddedness in industrial sectors and autonomy from their interests. Essential for understanding the OCP, CDG, and MASEN model.</p>
@@ -787,8 +955,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1207,13 +1434,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1222,5 +1449,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

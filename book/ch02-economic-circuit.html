@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch02-economic-circuit.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,41 +493,42 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch02" id="toc-sec-carte-ch02" class="nav-link active" data-scroll-target="#sec-carte-ch02">The Map</a></li>
-  <li><a href="#sec-circuit-ch02" id="toc-sec-circuit-ch02" class="nav-link" data-scroll-target="#sec-circuit-ch02"><span class="header-section-number">5</span> Part I — The Economic Circuit: The Round of Expenditures and Incomes</a>
+  <li><a href="#sec-circuit-ch02" id="toc-sec-circuit-ch02" class="nav-link" data-scroll-target="#sec-circuit-ch02">Part I — The Economic Circuit: The Round of Expenditures and Incomes</a>
   <ul class="collapse">
-  <li><a href="#sec-cinq-agents-ch02" id="toc-sec-cinq-agents-ch02" class="nav-link" data-scroll-target="#sec-cinq-agents-ch02"><span class="header-section-number">5.1</span> Five agents, five roles</a></li>
-  <li><a href="#sec-menages-ch02" id="toc-sec-menages-ch02" class="nav-link" data-scroll-target="#sec-menages-ch02"><span class="header-section-number">5.2</span> Households: passive owners, savers, workers</a></li>
-  <li><a href="#sec-firme-active-ch02" id="toc-sec-firme-active-ch02" class="nav-link" data-scroll-target="#sec-firme-active-ch02"><span class="header-section-number">5.3</span> The firm: the active agent of the circuit</a></li>
-  <li><a href="#sec-circularite-ch02" id="toc-sec-circularite-ch02" class="nav-link" data-scroll-target="#sec-circularite-ch02"><span class="header-section-number">5.4</span> The circularity and its blockages</a></li>
+  <li><a href="#sec-cinq-agents-ch02" id="toc-sec-cinq-agents-ch02" class="nav-link" data-scroll-target="#sec-cinq-agents-ch02">Five agents, five roles</a></li>
+  <li><a href="#sec-menages-ch02" id="toc-sec-menages-ch02" class="nav-link" data-scroll-target="#sec-menages-ch02">Households: passive owners, savers, workers</a></li>
+  <li><a href="#sec-firme-active-ch02" id="toc-sec-firme-active-ch02" class="nav-link" data-scroll-target="#sec-firme-active-ch02">The firm: the active agent of the circuit</a></li>
+  <li><a href="#sec-circularite-ch02" id="toc-sec-circularite-ch02" class="nav-link" data-scroll-target="#sec-circularite-ch02">The circularity and its blockages</a></li>
   </ul></li>
-  <li><a href="#sec-pib-ch02" id="toc-sec-pib-ch02" class="nav-link" data-scroll-target="#sec-pib-ch02"><span class="header-section-number">6</span> Part II — Measuring Production: Value Added and GDP</a>
+  <li><a href="#sec-pib-ch02" id="toc-sec-pib-ch02" class="nav-link" data-scroll-target="#sec-pib-ch02">Part II — Measuring Production: Value Added and GDP</a>
   <ul class="collapse">
-  <li><a href="#sec-valeur-ajoutee-ch02" id="toc-sec-valeur-ajoutee-ch02" class="nav-link" data-scroll-target="#sec-valeur-ajoutee-ch02"><span class="header-section-number">6.1</span> Value added: eliminating double-counting</a></li>
-  <li><a href="#sec-trois-lectures-ch02" id="toc-sec-trois-lectures-ch02" class="nav-link" data-scroll-target="#sec-trois-lectures-ch02"><span class="header-section-number">6.2</span> The three readings of GDP</a></li>
-  <li><a href="#sec-identites-ch02" id="toc-sec-identites-ch02" class="nav-link" data-scroll-target="#sec-identites-ch02"><span class="header-section-number">6.3</span> The circuit’s accounting identities</a></li>
+  <li><a href="#sec-valeur-ajoutee-ch02" id="toc-sec-valeur-ajoutee-ch02" class="nav-link" data-scroll-target="#sec-valeur-ajoutee-ch02">Value added: eliminating double-counting</a></li>
+  <li><a href="#sec-trois-lectures-ch02" id="toc-sec-trois-lectures-ch02" class="nav-link" data-scroll-target="#sec-trois-lectures-ch02">The three readings of GDP</a></li>
+  <li><a href="#sec-identites-ch02" id="toc-sec-identites-ch02" class="nav-link" data-scroll-target="#sec-identites-ch02">The circuit’s accounting identities</a></li>
   </ul></li>
-  <li><a href="#sec-nominal-reel-ch02" id="toc-sec-nominal-reel-ch02" class="nav-link" data-scroll-target="#sec-nominal-reel-ch02"><span class="header-section-number">7</span> Part III — Nominal and Real: The Distinction That Changes Everything</a>
+  <li><a href="#sec-nominal-reel-ch02" id="toc-sec-nominal-reel-ch02" class="nav-link" data-scroll-target="#sec-nominal-reel-ch02">Part III — Nominal and Real: The Distinction That Changes Everything</a>
   <ul class="collapse">
-  <li><a href="#sec-illusion-monetaire-ch02" id="toc-sec-illusion-monetaire-ch02" class="nav-link" data-scroll-target="#sec-illusion-monetaire-ch02"><span class="header-section-number">7.1</span> The trap of monetary illusion</a></li>
-  <li><a href="#sec-stocks-flux-ch02" id="toc-sec-stocks-flux-ch02" class="nav-link" data-scroll-target="#sec-stocks-flux-ch02"><span class="header-section-number">7.2</span> Stocks and flows: photograph versus film</a></li>
+  <li><a href="#sec-illusion-monetaire-ch02" id="toc-sec-illusion-monetaire-ch02" class="nav-link" data-scroll-target="#sec-illusion-monetaire-ch02">The trap of monetary illusion</a></li>
+  <li><a href="#sec-stocks-flux-ch02" id="toc-sec-stocks-flux-ch02" class="nav-link" data-scroll-target="#sec-stocks-flux-ch02">Stocks and flows: photograph versus film</a></li>
   </ul></li>
-  <li><a href="#sec-inflation-ch02" id="toc-sec-inflation-ch02" class="nav-link" data-scroll-target="#sec-inflation-ch02"><span class="header-section-number">8</span> Part IV — Inflation: Measuring the Loss of Monetary Value</a>
+  <li><a href="#sec-inflation-ch02" id="toc-sec-inflation-ch02" class="nav-link" data-scroll-target="#sec-inflation-ch02">Part IV — Inflation: Measuring the Loss of Monetary Value</a>
   <ul class="collapse">
-  <li><a href="#sec-ipc-ch02" id="toc-sec-ipc-ch02" class="nav-link" data-scroll-target="#sec-ipc-ch02"><span class="header-section-number">8.1</span> How it is measured: the consumer price index</a></li>
-  <li><a href="#sec-visages-inflation-ch02" id="toc-sec-visages-inflation-ch02" class="nav-link" data-scroll-target="#sec-visages-inflation-ch02"><span class="header-section-number">8.2</span> The faces of inflation</a></li>
+  <li><a href="#sec-ipc-ch02" id="toc-sec-ipc-ch02" class="nav-link" data-scroll-target="#sec-ipc-ch02">How it is measured: the consumer price index</a></li>
+  <li><a href="#sec-visages-inflation-ch02" id="toc-sec-visages-inflation-ch02" class="nav-link" data-scroll-target="#sec-visages-inflation-ch02">The faces of inflation</a></li>
   </ul></li>
-  <li><a href="#sec-limites-pib-ch02" id="toc-sec-limites-pib-ch02" class="nav-link" data-scroll-target="#sec-limites-pib-ch02"><span class="header-section-number">9</span> Part V — What GDP Does Not Say</a>
+  <li><a href="#sec-limites-pib-ch02" id="toc-sec-limites-pib-ch02" class="nav-link" data-scroll-target="#sec-limites-pib-ch02">Part V — What GDP Does Not Say</a>
   <ul class="collapse">
-  <li><a href="#sec-angles-morts-ch02" id="toc-sec-angles-morts-ch02" class="nav-link" data-scroll-target="#sec-angles-morts-ch02"><span class="header-section-number">9.1</span> Four blind spots</a></li>
-  <li><a href="#sec-kuznets-ch02" id="toc-sec-kuznets-ch02" class="nav-link" data-scroll-target="#sec-kuznets-ch02"><span class="header-section-number">9.2</span> The warning that was there from the start</a></li>
+  <li><a href="#sec-angles-morts-ch02" id="toc-sec-angles-morts-ch02" class="nav-link" data-scroll-target="#sec-angles-morts-ch02">Four blind spots</a></li>
+  <li><a href="#sec-kuznets-ch02" id="toc-sec-kuznets-ch02" class="nav-link" data-scroll-target="#sec-kuznets-ch02">The warning that was there from the start</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch02" id="toc-sec-concl-ch02" class="nav-link" data-scroll-target="#sec-concl-ch02"><span class="header-section-number">10</span> Conclusion: Counting Is Already Judging</a></li>
-  <li><a href="#sec-biblio-ch02" id="toc-sec-biblio-ch02" class="nav-link" data-scroll-target="#sec-biblio-ch02"><span class="header-section-number">11</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch02" id="toc-sec-concl-ch02" class="nav-link" data-scroll-target="#sec-concl-ch02">Conclusion: Counting Is Already Judging</a></li>
+  <li><a href="#sec-biblio-ch02" id="toc-sec-biblio-ch02" class="nav-link" data-scroll-target="#sec-biblio-ch02">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch01-what-economics-is.html">Part I — The Microeconomic Foundation</a></li><li class="breadcrumb-item"><a href="./ch02-economic-circuit.html"><span class="chapter-number">4</span>&nbsp; <span class="chapter-title">Chapter 2 — The Economic Circuit and How We Measure It</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -411,8 +579,8 @@ The guiding thread of this chapter
 </div>
 <hr>
 </section>
-<section id="sec-circuit-ch02" class="level1" data-number="5">
-<h1 data-number="5"><span class="header-section-number">5</span> Part I — The Economic Circuit: The Round of Expenditures and Incomes</h1>
+<section id="sec-circuit-ch02" class="level1">
+<h1>Part I — The Economic Circuit: The Round of Expenditures and Incomes</h1>
 <p>What economists call the <em>economic circuit</em> is simply the round of expenditures, incomes, and production that connects all actors in an economy. To analyse this round, actors are sorted into categories, each with a distinct role: households, firms, the state, banks and finance, and the rest of the world.</p>
 <p>This round functions concretely only because there exist also <strong>rules of coordination</strong>, institutions: contracts, accounting norms, legal rules, commercial practices, that translate mutual trust into reproducible acts. When a firm pays wages, a supplier delivers on credit, a bank extends a working capital loan, or a household buys imported goods, each of these acts rests on rules that extend well beyond the immediate parties. Without them, every economic relationship would be unique and non-reproducible, and the modern economy would not exist.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -428,8 +596,8 @@ The circuit is your day
 <p>In the morning, Karim takes a taxi to work in Casablanca; he spends, the driver earns income. He works at a textile firm, which will pay him a wage at the end of the month. At lunchtime he buys a sandwich from a street vendor, who will in turn pay her supplier. In the evening, his rent transfer reaches his landlord, who uses it to repay a mortgage to his bank. In one day, the same dirham has passed from hand to hand, becoming in turn an expenditure for one and income for another. Multiply by 37 million people and you have the economic circuit. Nobody orchestrates it; it holds through millions of small gestures linked by trust and rules.</p>
 </div>
 </div>
-<section id="sec-cinq-agents-ch02" class="level2" data-number="5.1">
-<h2 data-number="5.1" class="anchored" data-anchor-id="sec-cinq-agents-ch02"><span class="header-section-number">5.1</span> Five agents, five roles</h2>
+<section id="sec-cinq-agents-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cinq-agents-ch02">Five agents, five roles</h2>
 <p>Five broad categories of agents play distinct roles in the circuit, and understanding their asymmetries is as important as knowing their labels.</p>
 <p><strong>Households</strong> supply labour, receive incomes (wages and distributed profits), and choose between consuming and saving. But they are not simply “consumer wallets”: they <em>own</em> firms, directly or indirectly through financial assets: shares, bonds, pension funds, life insurance policies. This ownership is the source of the second type of income: profit distributed to those who hold titles to firms’ earnings.</p>
 <p><strong>Firms</strong> produce, invest, hire, set prices, and organise internal coordination. They are controlled by their owner-households and their managers, a relationship governed by conventions of corporate governance that Chapter 3 analyses in depth. The firm is the circuit’s active agent: it is firms that decide when to invest, when to hire, and when to cut. These decisions propagate through the entire circuit.</p>
@@ -437,22 +605,22 @@ The circuit is your day
 <p><strong>Banks and finance</strong> transform household savings into credit for firms and sometimes households, manage liquidity and risk, and intermediate the circuit’s monetary dimension. They are the key intermediaries, and their behaviour, whether to expand or contract credit, shapes the amplitude of cycles.</p>
 <p><strong>The rest of the world</strong> exports, imports, and circulates capital, linking the national economy to a globalised set of conventions. For Morocco, this fifth agent is structurally decisive: the economy runs a persistent current account deficit, financed by remittances from Moroccans abroad, tourism receipts, and foreign capital inflows. This dependency on external financing is one of the structural vulnerabilities that economic policy must manage.</p>
 </section>
-<section id="sec-menages-ch02" class="level2" data-number="5.2">
-<h2 data-number="5.2" class="anchored" data-anchor-id="sec-menages-ch02"><span class="header-section-number">5.2</span> Households: passive owners, savers, workers</h2>
+<section id="sec-menages-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-menages-ch02">Households: passive owners, savers, workers</h2>
 <p>A household in economics is not a family in the anthropological sense. It is a <em>unit of decision</em>: one or more individuals who jointly decide how much to consume, save, and work. This simplification allows the household to be treated as a single agent, despite the real conflicts that exist within couples and families, about spending priorities, risk tolerance, or the allocation of domestic labour.</p>
 <p>Household income comes from two radically different sources. <strong>Wages</strong>: the household supplies labour to the firm, which employs and remunerates it. This is income one “earns” through negotiation, job search, and skill development; the household is here relatively active. <strong>Distributed profits</strong>: the household owns claims on firms through financial titles; a share of profits accrues to it proportionally. It has done nothing to earn this income as owner, beyond holding the title and waiting.</p>
 <p>These two sources explain a macroeconomic reality that is often overlooked: <strong>in aggregate, households are net savers</strong>. They receive more income than they spend, because the profits they receive as shareholders must go somewhere. They could consume them; in practice, a large part is saved, feeding the financing of investment throughout the economy.</p>
 <p>As owners, <strong>households are largely passive</strong>. A shareholder holding 0.001% of a listed company has no power over investment decisions, hiring, or pricing. She receives a dividend, or not. If she dislikes the management, she can sell, but she cannot direct. Real control belongs to managers, boards, and large funds. Even the owner of a small family business faces this asymmetry: if she manages it herself, she becomes a manager and shifts roles; if she delegates, she reverts to passivity. The distinction between <em>ownership</em> and <em>control</em> is one of the central questions of firm theory, explored in Chapter 3.</p>
 </section>
-<section id="sec-firme-active-ch02" class="level2" data-number="5.3">
-<h2 data-number="5.3" class="anchored" data-anchor-id="sec-firme-active-ch02"><span class="header-section-number">5.3</span> The firm: the active agent of the circuit</h2>
+<section id="sec-firme-active-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-firme-active-ch02">The firm: the active agent of the circuit</h2>
 <p>This passivity of households contrasts with the activity of firms. The firm is asymmetric relative to the other agents for three reasons that are consequential for macroeconomics.</p>
 <p><strong>It initiates investment expenditure.</strong> Machines, software, buildings, logistics infrastructure: all of this is decided by firms before being financed. When a firm anticipates a fall in demand and postpones its investment plans, distributed incomes fall, consumption contracts, and demand actually falls: the prophecy becomes self-fulfilling. This is why investment is the most volatile component of GDP and the primary driver of cyclical fluctuations.</p>
 <p><strong>It bears irreversibilities.</strong> Unlike households, which adjust consumption relatively quickly, the firm carries fixed costs (factories, equipment) and path dependencies (accumulated learning, long-term contracts, reputation). These irreversibilities amplify cycles in both directions: in upturns, prior investment commitments generate momentum; in downturns, firms with heavy fixed-cost structures face acute pressure.</p>
 <p><strong>It coordinates.</strong> Through hierarchy, contracts, payment terms, and inventory management, the firm organises thousands of decisions that, without it, would need to pass through as many separate markets. This coordination function is why firms exist at all, a question to which Chapter 3 returns in depth.</p>
 </section>
-<section id="sec-circularite-ch02" class="level2" data-number="5.4">
-<h2 data-number="5.4" class="anchored" data-anchor-id="sec-circularite-ch02"><span class="header-section-number">5.4</span> The circularity and its blockages</h2>
+<section id="sec-circularite-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-circularite-ch02">The circularity and its blockages</h2>
 <p>The loop expenditure → income → expenditure is not a smooth merry-go-round. It has two simultaneous faces: a <em>real</em> side (goods and services circulating) and a <em>monetary</em> side (payments and receipts). These two faces can fall out of phase.</p>
 <p>A firm can sell goods (a positive real flow) yet face a cash shortage if its clients pay on ninety-day terms. The real flow is positive; the monetary flow is blocked. This is why payment delays, working capital management, and access to short-term credit are not operational details: they are at the heart of firm survival, particularly for Morocco’s SMEs, which typically face longer payment cycles from large corporate clients than from their own suppliers, creating a structural squeeze.</p>
 <p><strong>Circuit leakages</strong> are the points where the loop jams. When savings do not transform into investment, through hoarding or debt repayment, expenditure falls without productive justification. When imports rise without compensating exports, national income “leaks” abroad. When taxes are collected but not re-injected through public spending, or when banks stop lending, financing is severed. And when expectations turn pessimistic, firms and households simultaneously defer expenditure, creating exactly the contraction they feared.</p>
@@ -460,11 +628,11 @@ The circuit is your day
 <hr>
 </section>
 </section>
-<section id="sec-pib-ch02" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Part II — Measuring Production: Value Added and GDP</h1>
+<section id="sec-pib-ch02" class="level1">
+<h1>Part II — Measuring Production: Value Added and GDP</h1>
 <p>How does one measure what an economy produces? The answer passes through a simple but subtle concept: value added.</p>
-<section id="sec-valeur-ajoutee-ch02" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="sec-valeur-ajoutee-ch02"><span class="header-section-number">6.1</span> Value added: eliminating double-counting</h2>
+<section id="sec-valeur-ajoutee-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-valeur-ajoutee-ch02">Value added: eliminating double-counting</h2>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -480,8 +648,8 @@ The price of bread, step by step
 </div>
 <p>Why not simply add up the revenues of all firms? Because the same thing would be counted multiple times. Wheat is counted when the farmer sells it, again when it is in the flour, again when it is in the bread. Value added corrects this double-counting by retaining, at each stage, only what was genuinely added. The sum of value added across all firms in the economy reconstitutes GDP.</p>
 </section>
-<section id="sec-trois-lectures-ch02" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="sec-trois-lectures-ch02"><span class="header-section-number">6.2</span> The three readings of GDP</h2>
+<section id="sec-trois-lectures-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-trois-lectures-ch02">The three readings of GDP</h2>
 <p>Gross Domestic Product — the sum of value added across all resident producing units, can be read three equivalent ways. Three perspectives on the same reality.</p>
 <table class="caption-top table">
 <colgroup>
@@ -517,8 +685,8 @@ The price of bread, step by step
 <p>These three readings are <em>identities</em>: they coincide by construction of the national accounts. The firm appears in each: as a production unit, as a distributor of incomes, and as the agent that decides investment expenditure. The equivalence is not approximate, it is exact, because every act of production is simultaneously an act of income distribution and an act of supply that will be met by some form of final demand.</p>
 <p>Consider a three-firm economy: Firm A (farming) sells wheat for 100 dirhams with no intermediate inputs, adding 100 dirhams. Firm B (the mill) buys 100 dirhams of wheat and sells 160 dirhams of flour, adding 60. Firm C (the bakery) buys 160 dirhams of flour and sells 300 dirhams of bread, adding 140. Total value added is 300 dirhams. If wages across all three firms total 200 dirhams and profits total 100 dirhams, the income approach also yields 300. And if households buy 300 dirhams of bread as the economy’s sole final good, the expenditure approach confirms it. Three descriptions, one reality.</p>
 </section>
-<section id="sec-identites-ch02" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="sec-identites-ch02"><span class="header-section-number">6.3</span> The circuit’s accounting identities</h2>
+<section id="sec-identites-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-identites-ch02">The circuit’s accounting identities</h2>
 <p>The circuit condenses into a small number of identities that every economist carries:</p>
 <p><span class="math display">\[\text{GDP} = C + I + G + (X - M)\]</span></p>
 <p><span class="math display">\[\text{National savings } (S) = \text{GDP} - C - G = I + (X - M)\]</span></p>
@@ -540,11 +708,11 @@ Morocco: an open economy with a structural deficit
 <hr>
 </section>
 </section>
-<section id="sec-nominal-reel-ch02" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Part III — Nominal and Real: The Distinction That Changes Everything</h1>
+<section id="sec-nominal-reel-ch02" class="level1">
+<h1>Part III — Nominal and Real: The Distinction That Changes Everything</h1>
 <p>When Morocco’s GDP “increases by 6%”, is this because more goods and services are being produced, or simply because prices have risen? Confusing the two leads to serious errors that recur throughout public economic debate.</p>
-<section id="sec-illusion-monetaire-ch02" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="sec-illusion-monetaire-ch02"><span class="header-section-number">7.1</span> The trap of monetary illusion</h2>
+<section id="sec-illusion-monetaire-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-illusion-monetaire-ch02">The trap of monetary illusion</h2>
 <p>A <strong>nominal</strong> quantity is measured at current prices, the prices prevailing at the moment of measurement. A <strong>real</strong> quantity is corrected for inflation, measured at constant prices. The difference is not technical: it separates genuine wealth from illusion.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -563,8 +731,8 @@ The pay rise that was not one
 <p><span class="math display">\[\text{Real GDP} = \frac{\text{Nominal GDP}}{\text{Deflator}} \times 100\]</span></p>
 <p>The deflator measures the average price evolution of everything produced. Real growth, the only growth that matters for welfare, is the growth in GDP once price increases are removed. A country whose nominal GDP rises 10% with 10% inflation has not grown at all in real terms: it produces the same goods and services, sold at higher prices.</p>
 </section>
-<section id="sec-stocks-flux-ch02" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="sec-stocks-flux-ch02"><span class="header-section-number">7.2</span> Stocks and flows: photograph versus film</h2>
+<section id="sec-stocks-flux-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-stocks-flux-ch02">Stocks and flows: photograph versus film</h2>
 <p>A final foundational distinction, source of countless confusions in public debate: a <strong>flow</strong> is measured <em>over a period</em>, annual GDP, a monthly wage, quarterly investment. A <strong>stock</strong> is measured <em>at a point in time</em>, public debt on 31 December, a firm’s capital, a household’s accumulated savings.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -583,11 +751,11 @@ The bathtub
 <hr>
 </section>
 </section>
-<section id="sec-inflation-ch02" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Part IV — Inflation: Measuring the Loss of Monetary Value</h1>
+<section id="sec-inflation-ch02" class="level1">
+<h1>Part IV — Inflation: Measuring the Loss of Monetary Value</h1>
 <p>Inflation is the general and sustained rise in the price level. It is not the increase in the price of a particular good, a tomato spike after a drought, but the overall movement that erodes, month by month, what a dirham can purchase.</p>
-<section id="sec-ipc-ch02" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-ipc-ch02"><span class="header-section-number">8.1</span> How it is measured: the consumer price index</h2>
+<section id="sec-ipc-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ipc-ch02">How it is measured: the consumer price index</h2>
 <p>The HCP monitors each month the price of a representative “basket” of what an average Moroccan household consumes: food, housing, transport, health, clothing, communications. The evolution of the cost of this basket gives the <strong>Consumer Price Index (CPI)</strong>, and its annual rate of variation is the inflation rate.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -603,25 +771,25 @@ The household basket
 </div>
 </div>
 </section>
-<section id="sec-visages-inflation-ch02" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-visages-inflation-ch02"><span class="header-section-number">8.2</span> The faces of inflation</h2>
+<section id="sec-visages-inflation-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-visages-inflation-ch02">The faces of inflation</h2>
 <p>Inflation has several origins, and diagnosing which is operating matters enormously for policy. <strong>Demand-pull inflation</strong> arises when aggregate expenditure exceeds productive capacity: too much money chasing too few goods. <strong>Cost-push inflation</strong> originates in rising production costs, energy, wages, imported inputs, that firms pass through into their prices; this is what Morocco experienced in 2022, when global energy and grain prices surged in the wake of the Russian invasion of Ukraine. <strong>Imported inflation</strong> strikes open economies dependent on world markets: when oil and wheat prices rise internationally, Morocco imports their inflation directly, regardless of domestic demand conditions.</p>
 <p>Bank Al-Maghrib targets low and stable inflation, around 2%. Not zero, because a slight inflation lubricates the economy, it facilitates adjustments in relative prices and wages, and distances the economy from the opposite danger of deflation, where falling prices encourage the deferral of purchases and can trigger a depressive spiral. The monetary policy mechanisms through which BAM pursues this target, the policy rate, reserve requirements, communication strategy, are analysed in Chapter 7.</p>
 <hr>
 </section>
 </section>
-<section id="sec-limites-pib-ch02" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Part V — What GDP Does Not Say</h1>
+<section id="sec-limites-pib-ch02" class="level1">
+<h1>Part V — What GDP Does Not Say</h1>
 <p>GDP is a precious instrument. But it is an instrument, not a truth. Confusing it with a nation’s well-being is one of the most common errors in public economic debate, and the confusion is sometimes convenient for those who wish to avoid asking harder questions.</p>
-<section id="sec-angles-morts-ch02" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sec-angles-morts-ch02"><span class="header-section-number">9.1</span> Four blind spots</h2>
+<section id="sec-angles-morts-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-angles-morts-ch02">Four blind spots</h2>
 <p><strong>Unpaid labour.</strong> Domestic work, raising children, caring for elderly relatives, managing a household, keeps society functioning but does not appear in GDP, because it is not paid. Carried out overwhelmingly by women, it represents an immense invisible economy. A revealing paradox: if one were to hire paid workers for these same tasks, GDP would rise, even though the actual work performed would not have changed. The paradox exposes a conceptual problem: GDP measures monetary transactions, not economic activity.</p>
 <p><strong>The informal economy.</strong> In Morocco, between 30% and 40% of activity partially escapes the official accounts. Measured GDP therefore understates real production, and official statistics see only part of what people actually experience and produce. The HCP has developed satellite estimates, but by definition the informal economy resists complete measurement. This means that growth figures in Morocco must be interpreted with awareness that a significant share of economic reality is systematically undercounted.</p>
 <p><strong>Distribution.</strong> GDP per capita is an average. If all the growth accrues to a few, the average rises while the majority stagnates. A country can “grow richer” according to GDP while most of its inhabitants experience no improvement. Morocco’s growth record over the past two decades illustrates this tension: respectable average growth rates have been accompanied by persistent structural unemployment, deep rural-urban inequalities, and a gender participation gap that removes much of the female labour force from paid activity. The tools for measuring distribution, the Lorenz curve, the Gini coefficient, income shares, are developed in Chapter 15.</p>
 <p><strong>The environment and resource depletion.</strong> GDP counts production but not the destruction that accompanies it. Overexploiting an aquifer, exhausting a fishery, polluting a river: all of this can <em>raise</em> GDP today while destroying tomorrow’s wealth. GDP adds what is produced without subtracting what is damaged. For Morocco, where rain-fed agriculture depends on fragile aquifer systems and the phosphate extraction model consumes non-renewable national patrimony, this blind spot is not merely an academic concern.</p>
 </section>
-<section id="sec-kuznets-ch02" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-kuznets-ch02"><span class="header-section-number">9.2</span> The warning that was there from the start</h2>
+<section id="sec-kuznets-ch02" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kuznets-ch02">The warning that was there from the start</h2>
 <p>The person who contributed most to creating GDP as a statistical aggregate in the 1930s issued the warning himself. Simon Kuznets told the United States Congress in 1934 that “the welfare of a nation can scarcely be inferred from a measurement of national income.” Nearly a century later, the warning remains as valid as ever. GDP answers the question “how much do we produce?” It does not answer “are we living better?”, “for whom?”, or “at what cost to the future?”</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -640,8 +808,8 @@ The indicator that constructs what it measures
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch02" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Conclusion: Counting Is Already Judging</h1>
+<section id="sec-concl-ch02" class="level1">
+<h1>Conclusion: Counting Is Already Judging</h1>
 <p>This chapter has laid the shared language that all subsequent economic analysis will require. Three essential acquisitions.</p>
 <p><strong>The economy is a circuit, not a collection of isolated individuals.</strong> One agent’s expenditure is another’s income; the loop holds through invisible institutions and can seize up through insufficient effective demand. Understanding this circularity means understanding why an economy can stall even when productive resources exist, why the problem is sometimes not capacity but coordination.</p>
 <p><strong>Measuring production requires rigour.</strong> Value added eliminates double-counting; GDP reads three equivalent ways; and the nominal/real distinction separates genuine wealth from the illusion of rising prices. Without these tools, one confuses a price increase with a production increase, a higher nominal wage with higher purchasing power.</p>
@@ -670,8 +838,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch02" class="level1 appendix" data-number="11">
-<h1 class="appendix" data-number="11"><span class="header-section-number">11</span> Further Reading</h1>
+<section id="sec-biblio-ch02" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Kuznets, S. (1934). <em>National Income, 1929–1932</em>. Report to the US Congress.</strong> The document in which the creator of national income accounting issued his famous warning about the limits of the measure he had helped build.</p>
 <p><strong>Stiglitz, J., Sen, A., and Fitoussi, J.-P. (2009). <em>Mismeasuring Our Lives: Why GDP Doesn’t Add Up</em>.</strong> The contemporary reference on GDP’s limits, commissioned by the French government. Accessible and wide-ranging.</p>
 <p><strong>Keynes, J.M. (1936). <em>The General Theory of Employment, Interest and Money</em>.</strong> For the concept of effective demand and the blockage of the circuit. Chapters 8–11 are the core of the macroeconomic mechanism introduced here.</p>
@@ -682,8 +850,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1102,13 +1329,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1117,5 +1344,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

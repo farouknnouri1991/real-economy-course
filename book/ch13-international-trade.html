@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch13-international-trade.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,8 +78,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,6 +265,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -297,49 +464,50 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-carte-ch13" id="toc-sec-carte-ch13" class="nav-link active" data-scroll-target="#sec-carte-ch13">The Map</a></li>
-  <li><a href="#sec-ricardo-ch13" id="toc-sec-ricardo-ch13" class="nav-link" data-scroll-target="#sec-ricardo-ch13"><span class="header-section-number">16</span> Part I — Ricardo and Comparative Advantage: The Logic and Its Limits</a>
+  <li><a href="#sec-ricardo-ch13" id="toc-sec-ricardo-ch13" class="nav-link" data-scroll-target="#sec-ricardo-ch13">Part I — Ricardo and Comparative Advantage: The Logic and Its Limits</a>
   <ul class="collapse">
-  <li><a href="#sec-avantage-comparatif-ch13" id="toc-sec-avantage-comparatif-ch13" class="nav-link" data-scroll-target="#sec-avantage-comparatif-ch13"><span class="header-section-number">16.1</span> The foundational argument</a></li>
-  <li><a href="#sec-limites-ricardo-ch13" id="toc-sec-limites-ricardo-ch13" class="nav-link" data-scroll-target="#sec-limites-ricardo-ch13"><span class="header-section-number">16.2</span> Ricardo’s conditions and limits</a></li>
+  <li><a href="#sec-avantage-comparatif-ch13" id="toc-sec-avantage-comparatif-ch13" class="nav-link" data-scroll-target="#sec-avantage-comparatif-ch13">The foundational argument</a></li>
+  <li><a href="#sec-limites-ricardo-ch13" id="toc-sec-limites-ricardo-ch13" class="nav-link" data-scroll-target="#sec-limites-ricardo-ch13">Ricardo’s conditions and limits</a></li>
   </ul></li>
-  <li><a href="#sec-theories-ch13" id="toc-sec-theories-ch13" class="nav-link" data-scroll-target="#sec-theories-ch13"><span class="header-section-number">17</span> Part II — Factor Endowments, Increasing Returns, and Firm Heterogeneity</a>
+  <li><a href="#sec-theories-ch13" id="toc-sec-theories-ch13" class="nav-link" data-scroll-target="#sec-theories-ch13">Part II — Factor Endowments, Increasing Returns, and Firm Heterogeneity</a>
   <ul class="collapse">
-  <li><a href="#sec-ho-ch13" id="toc-sec-ho-ch13" class="nav-link" data-scroll-target="#sec-ho-ch13"><span class="header-section-number">17.1</span> Heckscher-Ohlin: factor endowments determine trade patterns</a></li>
-  <li><a href="#sec-krugman-ch13" id="toc-sec-krugman-ch13" class="nav-link" data-scroll-target="#sec-krugman-ch13"><span class="header-section-number">17.2</span> Krugman and the new trade theory</a></li>
-  <li><a href="#sec-melitz-ch13" id="toc-sec-melitz-ch13" class="nav-link" data-scroll-target="#sec-melitz-ch13"><span class="header-section-number">17.3</span> Melitz and firm heterogeneity: not all firms trade</a></li>
+  <li><a href="#sec-ho-ch13" id="toc-sec-ho-ch13" class="nav-link" data-scroll-target="#sec-ho-ch13">Heckscher-Ohlin: factor endowments determine trade patterns</a></li>
+  <li><a href="#sec-krugman-ch13" id="toc-sec-krugman-ch13" class="nav-link" data-scroll-target="#sec-krugman-ch13">Krugman and the new trade theory</a></li>
+  <li><a href="#sec-melitz-ch13" id="toc-sec-melitz-ch13" class="nav-link" data-scroll-target="#sec-melitz-ch13">Melitz and firm heterogeneity: not all firms trade</a></li>
   </ul></li>
-  <li><a href="#sec-structuraliste-ch13" id="toc-sec-structuraliste-ch13" class="nav-link" data-scroll-target="#sec-structuraliste-ch13"><span class="header-section-number">18</span> Part III — The Structuralist Challenge: Power in Trade</a>
+  <li><a href="#sec-structuraliste-ch13" id="toc-sec-structuraliste-ch13" class="nav-link" data-scroll-target="#sec-structuraliste-ch13">Part III — The Structuralist Challenge: Power in Trade</a>
   <ul class="collapse">
-  <li><a href="#sec-prebisch-ch13" id="toc-sec-prebisch-ch13" class="nav-link" data-scroll-target="#sec-prebisch-ch13"><span class="header-section-number">18.1</span> Prebisch-Singer and the terms of trade</a></li>
-  <li><a href="#sec-emmanuel-ch13" id="toc-sec-emmanuel-ch13" class="nav-link" data-scroll-target="#sec-emmanuel-ch13"><span class="header-section-number">18.2</span> Emmanuel’s unequal exchange</a></li>
-  <li><a href="#sec-amin-ch13" id="toc-sec-amin-ch13" class="nav-link" data-scroll-target="#sec-amin-ch13"><span class="header-section-number">18.3</span> Samir Amin and accumulation on a world scale</a></li>
-  <li><a href="#sec-rodney-ch13" id="toc-sec-rodney-ch13" class="nav-link" data-scroll-target="#sec-rodney-ch13"><span class="header-section-number">18.4</span> Rodney and the historical construction of underdevelopment</a></li>
+  <li><a href="#sec-prebisch-ch13" id="toc-sec-prebisch-ch13" class="nav-link" data-scroll-target="#sec-prebisch-ch13">Prebisch-Singer and the terms of trade</a></li>
+  <li><a href="#sec-emmanuel-ch13" id="toc-sec-emmanuel-ch13" class="nav-link" data-scroll-target="#sec-emmanuel-ch13">Emmanuel’s unequal exchange</a></li>
+  <li><a href="#sec-amin-ch13" id="toc-sec-amin-ch13" class="nav-link" data-scroll-target="#sec-amin-ch13">Samir Amin and accumulation on a world scale</a></li>
+  <li><a href="#sec-rodney-ch13" id="toc-sec-rodney-ch13" class="nav-link" data-scroll-target="#sec-rodney-ch13">Rodney and the historical construction of underdevelopment</a></li>
   </ul></li>
-  <li><a href="#sec-instruments-ch13" id="toc-sec-instruments-ch13" class="nav-link" data-scroll-target="#sec-instruments-ch13"><span class="header-section-number">19</span> Part IV — Trade Policy Instruments and Their Political Economy</a>
+  <li><a href="#sec-instruments-ch13" id="toc-sec-instruments-ch13" class="nav-link" data-scroll-target="#sec-instruments-ch13">Part IV — Trade Policy Instruments and Their Political Economy</a>
   <ul class="collapse">
-  <li><a href="#sec-outils-ch13" id="toc-sec-outils-ch13" class="nav-link" data-scroll-target="#sec-outils-ch13"><span class="header-section-number">19.1</span> The standard toolkit: tariffs, quotas, subsidies</a></li>
-  <li><a href="#sec-omc-ch13" id="toc-sec-omc-ch13" class="nav-link" data-scroll-target="#sec-omc-ch13"><span class="header-section-number">19.2</span> WTO disciplines and the developmental space</a></li>
-  <li><a href="#sec-rodrik-ch13" id="toc-sec-rodrik-ch13" class="nav-link" data-scroll-target="#sec-rodrik-ch13"><span class="header-section-number">19.3</span> Rodrik’s trilemma: the political limits of hyperglobalisation</a></li>
-  <li><a href="#sec-inegalites-ch13" id="toc-sec-inegalites-ch13" class="nav-link" data-scroll-target="#sec-inegalites-ch13"><span class="header-section-number">19.4</span> Trade and within-country inequality</a></li>
+  <li><a href="#sec-outils-ch13" id="toc-sec-outils-ch13" class="nav-link" data-scroll-target="#sec-outils-ch13">The standard toolkit: tariffs, quotas, subsidies</a></li>
+  <li><a href="#sec-omc-ch13" id="toc-sec-omc-ch13" class="nav-link" data-scroll-target="#sec-omc-ch13">WTO disciplines and the developmental space</a></li>
+  <li><a href="#sec-rodrik-ch13" id="toc-sec-rodrik-ch13" class="nav-link" data-scroll-target="#sec-rodrik-ch13">Rodrik’s trilemma: the political limits of hyperglobalisation</a></li>
+  <li><a href="#sec-inegalites-ch13" id="toc-sec-inegalites-ch13" class="nav-link" data-scroll-target="#sec-inegalites-ch13">Trade and within-country inequality</a></li>
   </ul></li>
-  <li><a href="#sec-maroc-ch13" id="toc-sec-maroc-ch13" class="nav-link" data-scroll-target="#sec-maroc-ch13"><span class="header-section-number">20</span> Part V — Morocco in the World Economy</a>
+  <li><a href="#sec-maroc-ch13" id="toc-sec-maroc-ch13" class="nav-link" data-scroll-target="#sec-maroc-ch13">Part V — Morocco in the World Economy</a>
   <ul class="collapse">
-  <li><a href="#sec-structure-ch13" id="toc-sec-structure-ch13" class="nav-link" data-scroll-target="#sec-structure-ch13"><span class="header-section-number">20.1</span> Trade structure: what Morocco exports, to whom, and why</a></li>
-  <li><a href="#sec-tdl-ch13" id="toc-sec-tdl-ch13" class="nav-link" data-scroll-target="#sec-tdl-ch13"><span class="header-section-number">20.2</span> Morocco’s terms of trade: a long-term analysis</a></li>
-  <li><a href="#sec-deficit-ch13" id="toc-sec-deficit-ch13" class="nav-link" data-scroll-target="#sec-deficit-ch13"><span class="header-section-number">20.3</span> The structural commercial deficit</a></li>
-  <li><a href="#sec-accord-ue-ch13" id="toc-sec-accord-ue-ch13" class="nav-link" data-scroll-target="#sec-accord-ue-ch13"><span class="header-section-number">20.4</span> The EU association agreement: balance sheet</a></li>
-  <li><a href="#sec-cbam-ch13" id="toc-sec-cbam-ch13" class="nav-link" data-scroll-target="#sec-cbam-ch13"><span class="header-section-number">20.5</span> The CBAM as strategic constraint and opportunity</a></li>
-  <li><a href="#sec-integration-ch13" id="toc-sec-integration-ch13" class="nav-link" data-scroll-target="#sec-integration-ch13"><span class="header-section-number">20.6</span> Regional integration: creation vs diversion and the integration calculus</a></li>
-  <li><a href="#sec-afcfta-ch13" id="toc-sec-afcfta-ch13" class="nav-link" data-scroll-target="#sec-afcfta-ch13"><span class="header-section-number">20.7</span> Morocco, Africa, and the AfCFTA</a></li>
+  <li><a href="#sec-structure-ch13" id="toc-sec-structure-ch13" class="nav-link" data-scroll-target="#sec-structure-ch13">Trade structure: what Morocco exports, to whom, and why</a></li>
+  <li><a href="#sec-tdl-ch13" id="toc-sec-tdl-ch13" class="nav-link" data-scroll-target="#sec-tdl-ch13">Morocco’s terms of trade: a long-term analysis</a></li>
+  <li><a href="#sec-deficit-ch13" id="toc-sec-deficit-ch13" class="nav-link" data-scroll-target="#sec-deficit-ch13">The structural commercial deficit</a></li>
+  <li><a href="#sec-accord-ue-ch13" id="toc-sec-accord-ue-ch13" class="nav-link" data-scroll-target="#sec-accord-ue-ch13">The EU association agreement: balance sheet</a></li>
+  <li><a href="#sec-cbam-ch13" id="toc-sec-cbam-ch13" class="nav-link" data-scroll-target="#sec-cbam-ch13">The CBAM as strategic constraint and opportunity</a></li>
+  <li><a href="#sec-integration-ch13" id="toc-sec-integration-ch13" class="nav-link" data-scroll-target="#sec-integration-ch13">Regional integration: creation vs diversion and the integration calculus</a></li>
+  <li><a href="#sec-afcfta-ch13" id="toc-sec-afcfta-ch13" class="nav-link" data-scroll-target="#sec-afcfta-ch13">Morocco, Africa, and the AfCFTA</a></li>
   </ul></li>
-  <li><a href="#sec-vrai-debat-ch13" id="toc-sec-vrai-debat-ch13" class="nav-link" data-scroll-target="#sec-vrai-debat-ch13"><span class="header-section-number">21</span> Part VI — The Real Debate: Which Trade Policy?</a></li>
-  <li><a href="#sec-concl-ch13" id="toc-sec-concl-ch13" class="nav-link" data-scroll-target="#sec-concl-ch13"><span class="header-section-number">22</span> Conclusion: Trade as Power and Possibility</a></li>
-  <li><a href="#sec-biblio-ch13" id="toc-sec-biblio-ch13" class="nav-link" data-scroll-target="#sec-biblio-ch13"><span class="header-section-number">23</span> Further Reading</a></li>
+  <li><a href="#sec-vrai-debat-ch13" id="toc-sec-vrai-debat-ch13" class="nav-link" data-scroll-target="#sec-vrai-debat-ch13">Part VI — The Real Debate: Which Trade Policy?</a></li>
+  <li><a href="#sec-concl-ch13" id="toc-sec-concl-ch13" class="nav-link" data-scroll-target="#sec-concl-ch13">Conclusion: Trade as Power and Possibility</a></li>
+  <li><a href="#sec-biblio-ch13" id="toc-sec-biblio-ch13" class="nav-link" data-scroll-target="#sec-biblio-ch13">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch10-growth-development.html">Part III — Development, Transformation, and Industrial Strategy</a></li><li class="breadcrumb-item"><a href="./ch13-international-trade.html"><span class="chapter-number">15</span>&nbsp; <span class="chapter-title">Chapter 13 — International Trade: Theory, False Debates, and Commercial Sovereignty</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -396,10 +564,10 @@ The guiding thread of this chapter
 <p>The chapter advances in seven movements. First, the classical foundations: Ricardo’s comparative advantage, its logic, its conditions, and its limits. Second, the factor-endowment extension: Heckscher-Ohlin, the Leontief paradox, and what they reveal about why trade theory oversimplifies. Third, the new trade theory: Krugman’s increasing returns and intra-industry trade, Melitz’s firm heterogeneity, and why most trade is not between unlike partners. Fourth, the structuralist challenge: Prebisch, Emmanuel, Amin, and the terms-of-trade thesis. Fifth, the trade policy toolkit and its political economy: from tariffs to WTO disciplines to CBAM. Sixth, Rodrik’s trilemma and the political limits of hyperglobalisation. Seventh, Morocco in the world economy: the structure of exports and imports, the EU association agreement, the AfCFTA, and the strategic challenges of the coming decade.</p>
 <hr>
 </section>
-<section id="sec-ricardo-ch13" class="level1" data-number="16">
-<h1 data-number="16"><span class="header-section-number">16</span> Part I — Ricardo and Comparative Advantage: The Logic and Its Limits</h1>
-<section id="sec-avantage-comparatif-ch13" class="level2" data-number="16.1">
-<h2 data-number="16.1" class="anchored" data-anchor-id="sec-avantage-comparatif-ch13"><span class="header-section-number">16.1</span> The foundational argument</h2>
+<section id="sec-ricardo-ch13" class="level1">
+<h1>Part I — Ricardo and Comparative Advantage: The Logic and Its Limits</h1>
+<section id="sec-avantage-comparatif-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-avantage-comparatif-ch13">The foundational argument</h2>
 <p>David Ricardo’s 1817 demonstration is one of economics’ genuine intellectual achievements, and one of its most misused policy prescriptions.</p>
 <p>The canonical example: England and Portugal, cloth and wine. Suppose Portugal is absolutely more efficient at producing both goods (it takes fewer labour hours per unit of wine and per unit of cloth in Lisbon than in London. Adam Smith’s logic would conclude that no exchange should occur: Portugal should produce everything). Ricardo shows this is wrong.</p>
 <p>What matters is not absolute efficiency but <strong>relative efficiency</strong>, the cost of producing one good in terms of the other. If Portugal is relatively more efficient at wine (its wine-cloth productivity ratio is higher), it should specialise in wine and import cloth. England, even less efficient at both, is relatively less disadvantaged in cloth, and should specialise in cloth and import wine. Both countries gain: Portugal frees labour from its less-advantaged cloth production for more wine, and England frees labour from its more-disadvantaged wine production for more cloth. Total output of both goods increases; both countries consume more.</p>
@@ -418,8 +586,8 @@ Maître Alami and her secretary
 </div>
 <p>The formal logic is clear. Comparative advantage arises from differences in <strong>opportunity cost</strong> across countries: England’s opportunity cost of producing one unit of cloth (how much wine must be foregone) is lower than Portugal’s. Trade allows each country to specialise where its opportunity cost is lowest, expanding the joint production frontier. The gains from trade are real: they represent additional output made possible by specialisation that autarky precludes.</p>
 </section>
-<section id="sec-limites-ricardo-ch13" class="level2" data-number="16.2">
-<h2 data-number="16.2" class="anchored" data-anchor-id="sec-limites-ricardo-ch13"><span class="header-section-number">16.2</span> Ricardo’s conditions and limits</h2>
+<section id="sec-limites-ricardo-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-limites-ricardo-ch13">Ricardo’s conditions and limits</h2>
 <p>The intellectual honesty that the model demands requires stating explicitly what it assumes, and what it therefore cannot say.</p>
 <p><strong>Labour is the only factor, perfectly mobile internally but immobile internationally.</strong> In reality, capital is internationally mobile, and its flow to low-wage economies dissolves the static comparative advantage argument. If German capital moves to Morocco because wages are lower, the static equilibrium shifts continuously in ways the one-period model cannot capture.</p>
 <p><strong>Specialisation is static.</strong> Ricardo treats comparative advantage as given. But a comparative advantage in phosphates or cotton does not imply that a country should specialise there permanently. These are activities with limited learning externalities, low economic complexity, and tendentially unfavourable terms of trade (the Prebisch-Singer thesis). A country that permanently specialises in its current comparative advantage forgoes the structural transformation that long-run development requires.</p>
@@ -430,10 +598,10 @@ Maître Alami and her secretary
 <hr>
 </section>
 </section>
-<section id="sec-theories-ch13" class="level1" data-number="17">
-<h1 data-number="17"><span class="header-section-number">17</span> Part II — Factor Endowments, Increasing Returns, and Firm Heterogeneity</h1>
-<section id="sec-ho-ch13" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="sec-ho-ch13"><span class="header-section-number">17.1</span> Heckscher-Ohlin: factor endowments determine trade patterns</h2>
+<section id="sec-theories-ch13" class="level1">
+<h1>Part II — Factor Endowments, Increasing Returns, and Firm Heterogeneity</h1>
+<section id="sec-ho-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ho-ch13">Heckscher-Ohlin: factor endowments determine trade patterns</h2>
 <p>Eli Heckscher (1919) and Bertil Ohlin (1933) extended Ricardo by introducing multiple factors of production. Their prediction: countries export goods whose production uses intensively their most abundant, and therefore cheapest, factor. A capital-abundant country exports capital-intensive goods. A labour-abundant country exports labour-intensive goods.</p>
 <p>The theorem generates the <strong>Factor Price Equalisation</strong> corollary: if trade occurs under H-O conditions, factor prices (wages, returns to capital) should converge across trading partners, because the increased demand for each country’s abundant factor bids up its price while competition in traded goods limits its divergence. Free trade, in this model, is a substitute for factor mobility: it achieves the same global allocation without labour migration or capital flows.</p>
 <p>In 1953, Wassily Leontief subjected this prediction to empirical test. Using US input-output tables, he calculated the factor intensity of American exports and imports. The result was shocking: the United States, capital-abundant by any measure, exported labour-intensive goods and imported capital-intensive goods, the exact opposite of what H-O predicted. The <strong>Leontief Paradox</strong> was never fully resolved; proposed explanations include the high quality of American human capital (embodied in “labour”), technology differences not captured by raw factor counts, and consumer preference differences. But its deeper lesson: the real world’s trade patterns are too complex for two-factor models to explain.</p>
@@ -453,25 +621,25 @@ Endowments are not natural — they are constructed
 </div>
 </div>
 </section>
-<section id="sec-krugman-ch13" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="sec-krugman-ch13"><span class="header-section-number">17.2</span> Krugman and the new trade theory</h2>
+<section id="sec-krugman-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-krugman-ch13">Krugman and the new trade theory</h2>
 <p>The H-O model predicts that trade occurs between <em>unlike</em> partners, capital-abundant with labour-abundant, technology-rich with resource-rich. The empirical reality of 20th-century trade was the opposite: most trade was between <em>similar</em> countries, rich countries with rich countries, Germany with France, the US with Japan, exchanging similar goods (BMWs for Toyotas, French wine for Italian wine).</p>
 <p>Paul Krugman’s 1979 paper introduced <strong>increasing returns and monopolistic competition</strong> to explain this intra-industry trade. When production exhibits increasing returns to scale, firms that expand their scale reduce their costs. This gives large firms a systematic cost advantage over small ones, but it also means that market equilibria involve firms of different scales coexisting through product differentiation, different varieties of similar goods. Countries trade these varieties with each other not because of cost differences (comparative advantage) but because each country’s producers have developed different varieties, and consumers value variety.</p>
 <p>The model generates two powerful results. First, trade increases variety available to consumers in each country, raising welfare even when no comparative advantage difference exists. Second, trade allows firms to exploit increasing returns by accessing larger markets, reducing long-run average cost, a welfare gain independent of variety. These gains exist <em>in addition</em> to comparative advantage gains, and they can be large in industries with substantial scale economies.</p>
 <p>Krugman’s model explains the geography of trade between similar economies and the pattern of industrial specialisation within countries, why Cologne has chemicals, Stuttgart has automobiles, and Munich has financial services, not because of natural endowments but because of historical accidents amplified by increasing returns (a theme extending the New Economic Geography of Chapter 6).</p>
 </section>
-<section id="sec-melitz-ch13" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="sec-melitz-ch13"><span class="header-section-number">17.3</span> Melitz and firm heterogeneity: not all firms trade</h2>
+<section id="sec-melitz-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-melitz-ch13">Melitz and firm heterogeneity: not all firms trade</h2>
 <p>Marc Melitz (2003) added a further dimension that earlier theories ignored: within any industry, firms are heterogeneous in their productivity. When trade barriers fall, the most productive firms can profitably export; less productive firms serve only the domestic market; and the least productive firms, exposed to import competition without being efficient enough to offset the pressure, exit. The selection effect of trade liberalisation thus simultaneously generates productivity gains (through exit of low-productivity firms and expansion of high-productivity exporters) and distributional effects (workers in exiting firms lose jobs).</p>
 <p>The Melitz model predicts that export behaviour is concentrated in a small number of the most productive firms, a prediction well-supported by firm-level trade data across countries. It also predicts that trade liberalisation will be productivity-enhancing even without comparative advantage differences, through a reallocation mechanism: resources shift from less to more productive firms within industries.</p>
 <p>For Morocco, the Melitz mechanism is directly observable. In the automotive sector, only the most capable local suppliers, those who invested in IATF 16949 certification, quality management systems, and just-in-time delivery capabilities, successfully export or supply exporting assemblers. Less capable firms serve only the domestic market. Trade exposure is therefore simultaneously a productivity filter (selecting the most capable firms) and a source of potential job losses for workers displaced from less competitive firms, which is precisely why trade policy must be accompanied by active labour market policy, not treated as welfare-neutral.</p>
 <hr>
 </section>
 </section>
-<section id="sec-structuraliste-ch13" class="level1" data-number="18">
-<h1 data-number="18"><span class="header-section-number">18</span> Part III — The Structuralist Challenge: Power in Trade</h1>
-<section id="sec-prebisch-ch13" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="sec-prebisch-ch13"><span class="header-section-number">18.1</span> Prebisch-Singer and the terms of trade</h2>
+<section id="sec-structuraliste-ch13" class="level1">
+<h1>Part III — The Structuralist Challenge: Power in Trade</h1>
+<section id="sec-prebisch-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-prebisch-ch13">Prebisch-Singer and the terms of trade</h2>
 <p>Raúl Prebisch, working at CEPAL (the UN Economic Commission for Latin America) in the late 1940s, and Hans Singer independently, formulated the thesis that has structured development economics debates ever since: the <strong>secular deterioration of the terms of trade</strong> for primary commodity exporters relative to manufactured goods importers.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -490,28 +658,28 @@ The uncle from Barcelona and the development paradox
 <p>The ISI (Import Substitution Industrialisation) policy prescribed by CEPAL as the response to this diagnosis produced real results in the 1950s-1970s: Latin America industrialised, diversified, and reduced primary commodity dependence. It also showed its limits: protected industries remained uncompetitive, the export sector stagnated, and debt accumulated to finance public investment prepared the crises of the 1980s. The lesson is not that Prebisch was wrong about the diagnosis, the terms-of-trade deterioration has been empirically documented over long periods for many commodity groups, but that the ISI solution was insufficiently disciplined: not enough performance conditionality on protected industries, not enough export orientation, not enough investment in human capital.</p>
 <p>For Morocco, the Prebisch-Singer lens has direct operational relevance. OCP’s strategic transformation, from raw rock to phosphoric acid to DAP to customised NPK formulations and now toward battery materials, is the operationalisation of the structuralist prescription: move up the value chain before the commodity terms of trade deteriorate further. The structuralist diagnosis and the product space strategy of Chapter 9 converge on the same industrial policy conclusion.</p>
 </section>
-<section id="sec-emmanuel-ch13" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="sec-emmanuel-ch13"><span class="header-section-number">18.2</span> Emmanuel’s unequal exchange</h2>
+<section id="sec-emmanuel-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-emmanuel-ch13">Emmanuel’s unequal exchange</h2>
 <p>Arghiri Emmanuel (<em>L’Échange Inégal</em>, 1969) proposed a more radical structural explanation of trade asymmetry rooted in the labour theory of value. His thesis: when a Moroccan textile worker and a German machinery operator both work one hour, and the Moroccan is paid ten times less, the international exchange of t-shirts for machines at market prices transfers value from Morocco to Germany, not through fraud or political manipulation but through the structure of differential wage levels.</p>
 <p>The intuition: if a Moroccan worker produces the same hourly value as a German worker but is paid 10% of the German wage, then Moroccan goods embody far more labour per unit of price than German goods. An exchange at world market prices is an exchange of many hours of Moroccan labour for few hours of German labour. The exchange is “equal” by market prices; it is structurally unequal by labour content.</p>
 <p>Emmanuel’s critics are numerous and not without force: the labour theory of value is contested; capital mobility may equalise profit rates rather than wage rates; the correlation between development and wages may run from productivity differences to wages rather than from wages to value transfer. But the empirical observation that the integration of low-wage economies into world trade consistently generates less value retention per worker than the integration of high-wage economies is robust regardless of the theoretical framework used to explain it.</p>
 </section>
-<section id="sec-amin-ch13" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="sec-amin-ch13"><span class="header-section-number">18.3</span> Samir Amin and accumulation on a world scale</h2>
+<section id="sec-amin-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-amin-ch13">Samir Amin and accumulation on a world scale</h2>
 <p>Samir Amin (<em>Accumulation on a World Scale</em>, 1970) synthesised the structuralist tradition into a comprehensive account of how global market integration reproduces rather than resolves underdevelopment. Peripheral economies, integrated into the world market through colonialism, developed productive structures oriented toward exporting to the centre rather than satisfying domestic needs. This <strong>extroverted articulation</strong> perpetuates dependence: primary exports finance manufactured imports, foreign subsidiary profits are repatriated to the centre, and local capital accumulates in the least transformative sectors.</p>
 <p>The distinction Amin draws between centre accumulation (self-centred, articulating capital goods production with mass consumption) and peripheral accumulation (extroverted, articulating primary export with luxury goods for a narrow elite) is analytically powerful even for those who reject his prescriptions. For Morocco, the extroverted structure he describes is visible in the concentration of modern productive activity in export sectors (automotive, aerospace, phosphates) while domestic consumption demand is partly served by imports and domestic investment is partly oriented toward real estate rather than productive manufacturing.</p>
 </section>
-<section id="sec-rodney-ch13" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="sec-rodney-ch13"><span class="header-section-number">18.4</span> Rodney and the historical construction of underdevelopment</h2>
+<section id="sec-rodney-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-rodney-ch13">Rodney and the historical construction of underdevelopment</h2>
 <p>Walter Rodney (<em>How Europe Underdeveloped Africa</em>, 1972) contributed the historical dimension: colonial trade structures did not merely reflect existing differences in development, they deliberately constructed underdevelopment. Colonial economies were restructured to export raw materials while minimising local processing, preventing the formation of national industries that would compete with European manufactures. Colonial fiscal structures (taxes payable only in cash, forcing wage labour), transport infrastructure (roads and railways oriented toward export ports rather than internal integration), and educational systems (training clerks, not engineers) systematically organised dependence.</p>
 <p>For Morocco, this historical angle is not abstract. The Protectorate (1912-1956) left structural legacies: dualism between modern export agriculture and subsistence farming, concentration of capital in foreign hands progressively transferred to a narrow national elite, communications infrastructure oriented toward Atlantic and Mediterranean ports rather than territorial integration, and an educational system that prioritised urban francophone elites over rural populations. These legacies do not disappear by independence decree, they continue to constrain economic policy choices.</p>
 <hr>
 </section>
 </section>
-<section id="sec-instruments-ch13" class="level1" data-number="19">
-<h1 data-number="19"><span class="header-section-number">19</span> Part IV — Trade Policy Instruments and Their Political Economy</h1>
-<section id="sec-outils-ch13" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="sec-outils-ch13"><span class="header-section-number">19.1</span> The standard toolkit: tariffs, quotas, subsidies</h2>
+<section id="sec-instruments-ch13" class="level1">
+<h1>Part IV — Trade Policy Instruments and Their Political Economy</h1>
+<section id="sec-outils-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-outils-ch13">The standard toolkit: tariffs, quotas, subsidies</h2>
 <p>Trade policy instruments operate through three basic mechanisms: affecting the relative price of imports, limiting the quantity of imports, or changing the relative profitability of domestic versus imported production.</p>
 <p>A <strong>tariff</strong> (customs duty) raises the price of an imported good by levying a charge at the border, either <em>ad valorem</em> (a percentage of value) or specific (a fixed amount per unit). The welfare analysis is standard: the tariff raises domestic producer surplus (domestic producers sell at the protected higher price), reduces consumer surplus (domestic consumers pay more), generates government revenue (the tariff collected), and creates a deadweight loss (transactions that would have occurred at the lower world price but do not at the higher tariff-inclusive price). The net domestic welfare effect depends on whether the tariff revenue plus producer surplus gain exceeds the consumer surplus loss plus deadweight loss. For a small country that cannot affect world prices, a tariff is almost always welfare-reducing in static terms. For a large country that can improve its terms of trade by reducing import demand, an <em>optimal tariff</em> exists that improves national welfare, but at the expense of trade partners, producing a globally inefficient outcome.</p>
 <p>A <strong>quota</strong> limits the physical quantity of imports rather than raising their price. Unlike a tariff, a quota does not generate government revenue: the price difference between the restricted import price and the world price accrues as rent to whoever holds the import licence. The allocation of quota rents is therefore a political economy question: who gets the licence to import at the lower world price and sell at the higher domestic price. This is precisely why import quotas are a particularly fertile ground for rent-seeking and corruption.</p>
@@ -530,8 +698,8 @@ The anti-dumping duty and its political economy
 </div>
 </div>
 </section>
-<section id="sec-omc-ch13" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="sec-omc-ch13"><span class="header-section-number">19.2</span> WTO disciplines and the developmental space</h2>
+<section id="sec-omc-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-omc-ch13">WTO disciplines and the developmental space</h2>
 <p>The World Trade Organisation, established in 1995 as the institutional successor to GATT, embeds a comprehensive set of disciplines on national trade policy. Its core principles, Most Favoured Nation (equal treatment across all trading partners), National Treatment (imported goods treated like domestic ones once in-country), binding tariff commitments, and prohibition of most subsidies, substantially limit the trade policy toolkit available to developing countries.</p>
 <p>The most consequential constraints for development policy are:</p>
 <p><strong>TRIPS (Trade-Related Intellectual Property Rights)</strong>: extending patent, copyright, and trade secret protection globally. For pharmaceutical access, this means developing countries cannot produce generic versions of patented medicines without paying royalties or triggering litigation, a concern that became acute during the HIV/AIDS crisis in Africa in the 1990s and resurfaced during COVID-19 with vaccine IP.</p>
@@ -539,8 +707,8 @@ The anti-dumping duty and its political economy
 <p><strong>Rules of origin</strong>: in preferential trade agreements, these determine what share of a product must be produced domestically (or within the agreement territory) to qualify for preferential tariff treatment. For Morocco’s automotive sector, the rules of origin in the EU Association Agreement determine whether Renault’s Tanger-assembled vehicles qualify as “Moroccan” for tariff purposes. The transition to electric vehicles is tightening these rules: the EU is requiring a progressively higher share of battery and electronic content to be produced within the EU or in a partner country with equivalent provisions, potentially requiring Morocco to localise battery manufacturing to maintain preferential access.</p>
 <p><strong>Agricultural Special and Differential Treatment</strong>: officially preserving developing countries’ policy space in agriculture, but in practice inconsistently applied and often overridden by conditionality in bilateral agreements.</p>
 </section>
-<section id="sec-rodrik-ch13" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="sec-rodrik-ch13"><span class="header-section-number">19.3</span> Rodrik’s trilemma: the political limits of hyperglobalisation</h2>
+<section id="sec-rodrik-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-rodrik-ch13">Rodrik’s trilemma: the political limits of hyperglobalisation</h2>
 <p>Dani Rodrik’s most influential political economy insight is the <strong>globalisation trilemma</strong>: deep international economic integration, national sovereignty, and democratic governance are mutually incompatible, no more than two can be simultaneously maintained at maximum levels.</p>
 <p>Deep economic integration requires that national policies converge: product standards, labour regulations, financial rules, intellectual property protections must be harmonised to eliminate barriers to trade and investment. This harmonisation reduces national policy space, the ability of democratic majorities to choose their own economic arrangements. If a European majority wants stricter environmental standards and a Moroccan government wants more investment flexibility, deep integration forces a choice: harmonise (which means one policy space wins), maintain national divergence (which limits trade depth), or limit democratic override of economic rules (which is what WTO dispute settlement, ISDS arbitration, and IMF conditionality effectively do).</p>
 <p>The Bretton Woods compromise (Rodrik’s terminology for the 1945-1971 period) maintained national policy space, limited capital mobility, and allowed embedded liberalism: countries could use Keynesian demand management and social welfare states while trading in goods. The Washington Consensus of the 1980s-1990s flipped the priority: deep financial integration, capital account liberalisation, and structural adjustment conditionality sacrificed national policy space and democratic choice in the name of market efficiency. The result was the financial crises of Mexico (1994), Asia (1997), Russia (1998), Argentina (2001), and the European periphery (2010-2012).</p>
@@ -560,18 +728,18 @@ Morocco and the trilemma
 </div>
 <hr>
 </section>
-<section id="sec-inegalites-ch13" class="level2" data-number="19.4">
-<h2 data-number="19.4" class="anchored" data-anchor-id="sec-inegalites-ch13"><span class="header-section-number">19.4</span> Trade and within-country inequality</h2>
+<section id="sec-inegalites-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-inegalites-ch13">Trade and within-country inequality</h2>
 <p>One dimension the traditional trade theory debate underemphasises is the distributional effects of trade <em>within</em> countries, not just between them. The H-O model’s Stolper-Samuelson theorem predicts that trade liberalisation in a labour-abundant developing country should raise wages for unskilled workers (the abundant factor whose demand increases with trade) while reducing returns to capital, making free trade egalitarian in developing countries.</p>
 <p>Reality has been more complex. The Autor-Dorn-Hanson (2013) analysis of the “China shock” on American labour markets documented that regions specialised in industries suddenly competing with Chinese imports experienced persistent wage depression and unemployment: not the smooth factor reallocation H-O predicts. The adjustment process is slower, more painful, and geographically concentrated than aggregate efficiency analysis suggests.</p>
 <p>For Morocco, trade liberalisation under the EU Association Agreement has had distributional effects that aggregate welfare analysis misses. Textile workers displaced by Asian competition in the 2000s did not seamlessly transition to automotive assembly in Tanger or aerospace work in Casablanca, partly because the jobs were in different cities, partly because skills requirements differed substantially, and partly because the pace of formal job creation in growing sectors did not match the pace of destruction in declining ones. Trade adjustment is a social and political process, not only an economic one: it requires active policy responses (retraining, relocation support, income bridges) that Morocco’s social protection system is not yet equipped to provide at adequate scale. Building those mechanisms is not separate from trade policy, it is the political condition for sustaining the openness that serves Morocco’s development interests.</p>
 <hr>
 </section>
 </section>
-<section id="sec-maroc-ch13" class="level1" data-number="20">
-<h1 data-number="20"><span class="header-section-number">20</span> Part V — Morocco in the World Economy</h1>
-<section id="sec-structure-ch13" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="sec-structure-ch13"><span class="header-section-number">20.1</span> Trade structure: what Morocco exports, to whom, and why</h2>
+<section id="sec-maroc-ch13" class="level1">
+<h1>Part V — Morocco in the World Economy</h1>
+<section id="sec-structure-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-structure-ch13">Trade structure: what Morocco exports, to whom, and why</h2>
 <p>Morocco’s trade openness rate (exports plus imports as a share of GDP) exceeds 80%, placing it among the most open economies at its income level. But aggregate openness conceals a structure that reveals both the successes and the vulnerabilities of Morocco’s economic model.</p>
 <p><strong>Phosphates and derivatives</strong> represent 20-30% of total exports depending on the year, making OCP Group Morocco’s largest single export earner. The gradual shift from raw phosphate rock (lowest value) to phosphoric acid and then to DAP, MAP, and customised NPK fertilisers represents the most successful functional upgrading in Morocco’s export history, from periphery commodity toward specialised industrial product. The next frontier: battery cathode materials from LFP chemistry, positioning Moroccan phosphate in the electric vehicle supply chain.</p>
 <p><strong>Automotive</strong> became Morocco’s leading manufactured export sector in under a decade. The Renault-Tanger and Stellantis-Kénitra investments transformed Morocco’s export composition: automotive exports reached approximately 157.6 billion dirhams in 2024, representing 35% of total goods exports. This integration is genuine, Morocco is a real node in EU automotive supply chains, but it is also fragile to the electric vehicle transition for the reasons Chapter 10 examined.</p>
@@ -579,42 +747,42 @@ Morocco and the trilemma
 <p><strong>Textiles and garments</strong> have declined in relative importance under Asian competition but retain significance in the fast fashion segment where Morocco’s proximity to European retailers provides a logistical advantage in short-cycle production.</p>
 <p><strong>Tourism</strong> (approximately 8-10% of GDP in good years) and <strong>MRE remittances</strong> (approximately 8% of GDP in 2024, one of the most stable foreign currency sources) do not appear in merchandise trade but are essential to the current account balance.</p>
 </section>
-<section id="sec-tdl-ch13" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="sec-tdl-ch13"><span class="header-section-number">20.2</span> Morocco’s terms of trade: a long-term analysis</h2>
+<section id="sec-tdl-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-tdl-ch13">Morocco’s terms of trade: a long-term analysis</h2>
 <p>Morocco’s terms of trade, the ratio of its export prices to its import prices, trace a structurally relevant pattern over the past three decades. When phosphate prices are high (as in 2007-2008 and 2021-2022), Morocco’s terms of trade improve substantially, generating windfall export revenues that improve the current account balance and fiscal position. When phosphate prices are low and energy prices are high (as during most of the 2010s), the terms of trade deteriorate, transferring real income out of Morocco through the unfavourable exchange of goods.</p>
 <p>This volatility is the practical manifestation of the Prebisch-Singer dynamics: a country dependent on a primary commodity for a significant share of its export revenues faces terms-of-trade cycles that transmit directly into macroeconomic instability. The 2021-2022 commodity supercycle illustrates this from the positive side: phosphate price surges generated exceptional OCP profits and improved Morocco’s fiscal and current account positions significantly. The 2014-2016 commodity price collapse illustrates the negative side: reduced phosphate revenues, combined with declining remittances, widened the current account deficit despite other sectors’ improvement.</p>
 <p>The long-run terms-of-trade trend matters for strategic planning. If the Prebisch-Singer hypothesis holds for phosphates over the next two to three decades, which is uncertain given both the EV battery demand for LFP chemistry and the competitive dynamics of the fertiliser market, Morocco’s export revenue per tonne will need to be supplemented by volume growth and product upgrading. OCP’s strategy of moving up the value chain is precisely the response that maintains export value even if unit commodity prices face long-run pressure.</p>
 </section>
-<section id="sec-deficit-ch13" class="level2" data-number="20.3">
-<h2 data-number="20.3" class="anchored" data-anchor-id="sec-deficit-ch13"><span class="header-section-number">20.3</span> The structural commercial deficit</h2>
+<section id="sec-deficit-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-deficit-ch13">The structural commercial deficit</h2>
 <p>Morocco’s goods trade is structurally deficitaire: imports consistently exceed exports, with the coverage rate at approximately 59.8% in 2024 (meaning goods exports cover only 59.8% of goods imports). The deficit is financed by tourism receipts, MRE remittances, and FDI inflows, all sources exposed to external shocks.</p>
 <p>The deficit’s composition matters more than its level. <strong>Energy products</strong> represent approximately 25-35% of total imports in most years, a structural vulnerability to hydrocarbon prices. The Russia-Ukraine war of 2022 demonstrated this brutally: Morocco’s energy import bill surged, contributing to the inflationary shock of 2022-2023 and widening the current account deficit. The renewable energy transition is therefore simultaneously a climate policy, an industrial policy, and a balance of payments policy.</p>
 <p><strong>Capital goods and semi-processed materials</strong> represent approximately 40% of imports, the sign of an industrialising economy that imports machines and inputs to produce. This category is ambivalent: some represents productive investment that will generate future exports; some represents technological dependence that deepens rather than reduces over time.</p>
 <p><strong>Food imports</strong> (principally cereals) reflect the food security vulnerability that Morocco’s climatic variability imposes. Morocco imports approximately 50% of its wheat consumption in average years, and substantially more in drought years. The Black Sea corridor disruption of 2022 revealed this dependence acutely; the Génération Green strategy’s objectives include reducing this vulnerability through domestic cereal yield improvement and crop diversification.</p>
 </section>
-<section id="sec-accord-ue-ch13" class="level2" data-number="20.4">
-<h2 data-number="20.4" class="anchored" data-anchor-id="sec-accord-ue-ch13"><span class="header-section-number">20.4</span> The EU association agreement: balance sheet</h2>
+<section id="sec-accord-ue-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-accord-ue-ch13">The EU association agreement: balance sheet</h2>
 <p>The Maroc-EU Association Agreement (2000) created a progressive free trade zone for industrial goods. Its balance is genuinely mixed, which is the honest assessment that partisans on both sides tend to resist.</p>
 <p>The <strong>gains</strong>: preferential access to the world’s largest single market has been a significant driver of the automotive and aerospace cluster development. European quality and standards requirements have forced genuine quality upgrading in food exports, textile manufacturing, and industrial production. The regulatory alignment required by association has improved governance in several regulatory domains.</p>
 <p>The <strong>costs</strong>: sectors that lost tariff protection, segments of the food processing industry, some textile manufacturers, experienced competitive shocks they were not prepared for. The trade agreement’s industrial goods liberalisation was not accompanied by the adjustment assistance that would have allowed displaced workers to transition to new sectors.</p>
 <p>The <strong>asymmetry</strong>: the Association Agreement was designed primarily around European interests in accessing the Moroccan market for manufactured goods and services, and in securing Moroccan cooperation on migration and security. Morocco’s interests in agricultural access were partially accommodated but subject to seasonal quotas and phytosanitary restrictions that limit competitive expansion. The negotiating dynamic reflected the structural power asymmetry between a large, wealthy, institutionally dense bloc and a medium-income country dependent on European market access.</p>
 <p>The <strong>ALECA</strong> (Deep and Comprehensive Free Trade Agreement), in negotiation since 2013, would extend liberalisation to services, public procurement, investment, and intellectual property. The potential gains in services access are real; the risks in regulatory sovereignty are also real and have not been adequately debated publicly in Morocco.</p>
 </section>
-<section id="sec-cbam-ch13" class="level2" data-number="20.5">
-<h2 data-number="20.5" class="anchored" data-anchor-id="sec-cbam-ch13"><span class="header-section-number">20.5</span> The CBAM as strategic constraint and opportunity</h2>
+<section id="sec-cbam-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cbam-ch13">The CBAM as strategic constraint and opportunity</h2>
 <p>The EU’s Carbon Border Adjustment Mechanism (CBAM), operational from 2026, levies a carbon cost on imports of cement, steel, aluminium, fertilisers, and hydrogen according to their carbon intensity. For Morocco, the OCP dimension is most immediate: OCP exports several hundred million euros of phosphate fertilisers to the EU annually. If OCP cannot demonstrate a credible decarbonation trajectory, the CBAM will increase the cost of Moroccan fertilisers in the European market, potentially at the benefit of competitors operating under different regulatory frameworks.</p>
 <p>The strategic response is clear and represents one of Morocco’s most consequential industrial policy opportunities. OCP’s fertiliser production uses significant energy, primarily for the Haber-Bosch process that produces ammonia from nitrogen and hydrogen. If that hydrogen is produced from renewable electricity (green hydrogen) rather than from natural gas (grey hydrogen), the carbon content of Moroccan fertilisers falls dramatically. Morocco’s exceptional renewable energy resources make this decarbonation economically viable at lower cost than in most competing production locations.</p>
 <p>This pathway, from grey ammonia to green ammonia, using Moroccan renewable electricity, producing CBAM-compliant fertilisers, would simultaneously satisfy European carbon requirements, reduce OCP’s own carbon exposure, create demand for Moroccan renewable electricity, and build the green ammonia production capability that is a prerequisite for green hydrogen export to Europe. The CBAM is therefore not merely a threat to be managed: it is a regulatory signal that, responded to strategically, accelerates Morocco’s green industrial transition along a commercially motivated pathway that the EU itself is funding through carbon pricing.</p>
 </section>
-<section id="sec-integration-ch13" class="level2" data-number="20.6">
-<h2 data-number="20.6" class="anchored" data-anchor-id="sec-integration-ch13"><span class="header-section-number">20.6</span> Regional integration: creation vs diversion and the integration calculus</h2>
+<section id="sec-integration-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-integration-ch13">Regional integration: creation vs diversion and the integration calculus</h2>
 <p>Regional trade agreements occupy the institutional space between autarky and free trade. Jacob Viner’s (1950) framework provides the essential analytical distinction: a regional agreement <strong>creates trade</strong> when it allows a member country to substitute cheaper regional imports for more expensive domestic production, and <strong>diverts trade</strong> when it displaces imports from more efficient non-member countries in favour of less efficient regional partners who benefit from preferential tariffs.</p>
 <p>The welfare implications are clear: trade creation raises welfare (more efficient allocation); trade diversion reduces it (the preference artificially advantages an inefficient regional partner over a more efficient world-market producer). A regional agreement is net beneficial when trade creation exceeds trade diversion, which depends on how competitive member economies are relative to each other and to the rest of the world, and how large the existing tariff barriers are.</p>
 <p>For Morocco’s EU association agreement, this framework generates a nuanced assessment. <strong>Trade creation</strong>: Morocco has access to European capital goods, technology, and intermediate products at below-tariff cost, enabling more efficient domestic production and assembly. <strong>Trade diversion</strong>: Morocco imports some European agricultural and manufactured goods at preferential terms when globally cheaper alternatives exist from Asia or Latin America, a pure welfare loss from trade diversion. The net balance is positive because the created trade, the automotive and aerospace GVC integration that the association framework enabled, substantially outweighs the diverted trade. But the analysis must be done sector by sector, not as a single aggregate assessment.</p>
 <p>The <strong>dynamic gains</strong> from regional integration often exceed the static Viner trade creation-diversion balance. By committing Morocco to European product standards, regulatory disciplines, and transparency requirements, the Association Agreement created institutional infrastructure that private investors (European and non-European alike) use to evaluate Morocco’s commercial credibility. The regulatory alignment effect generates ongoing investment attraction that does not appear in static trade creation calculations.</p>
 </section>
-<section id="sec-afcfta-ch13" class="level2" data-number="20.7">
-<h2 data-number="20.7" class="anchored" data-anchor-id="sec-afcfta-ch13"><span class="header-section-number">20.7</span> Morocco, Africa, and the AfCFTA</h2>
+<section id="sec-afcfta-ch13" class="level2">
+<h2 class="anchored" data-anchor-id="sec-afcfta-ch13">Morocco, Africa, and the AfCFTA</h2>
 <p>The African Continental Free Trade Area (AfCFTA), operational since 2021, represents the world’s largest preferential trade area by country membership (55 states) and one of the most significant structural opportunities for Morocco’s medium-term commercial strategy.</p>
 <p>Morocco’s geographic position, two hours by air from Lagos, Dakar, and Abidjan, its logistics infrastructure (Tanger Med, Africa’s leading port by container volume), and its industrial capabilities (automotive components, agri-food processing, chemicals, financial services) position it as a natural hub for African manufacturing and distribution under the AfCFTA framework.</p>
 <p>The barriers to realising this potential are substantial but specific:</p>
@@ -637,8 +805,8 @@ Tanger Med as gateway to Africa: the logistics opportunity
 <hr>
 </section>
 </section>
-<section id="sec-vrai-debat-ch13" class="level1" data-number="21">
-<h1 data-number="21"><span class="header-section-number">21</span> Part VI — The Real Debate: Which Trade Policy?</h1>
+<section id="sec-vrai-debat-ch13" class="level1">
+<h1>Part VI — The Real Debate: Which Trade Policy?</h1>
 <p>The intellectual history surveyed in this chapter arrives at a conclusion that breaks the false binary between “free trade good” and “protectionism good.”</p>
 <p>The historical record is unambiguous on one point: every successful industrialiser protected its nascent industries during the development phase. Britain protected textiles for centuries. The United States maintained the world’s highest average tariff rates during its 19th-century industrialisation. Germany under List. Japan under MITI. Korea and Taiwan under their developmental states. The free trade prescription that the WTO and the Washington Consensus embedded in global governance is what these countries preached <em>after</em> reaching the summit, not what they practised on the way up.</p>
 <p>But the historical record is equally unambiguous on a second point: protection without performance conditionality generates rents rather than capabilities. For every South Korea that protected its semiconductor industry and produced globally competitive chips, there are dozens of developing countries that protected industries for decades without ever producing competitive firms. The difference was institutional discipline: conditional protection with performance requirements, and credible removal of protection for non-performers.</p>
@@ -646,8 +814,8 @@ Tanger Med as gateway to Africa: the logistics opportunity
 <p>For Morocco specifically, three principles follow. <strong>Defend productive space</strong> in sectors where learning externalities are real, automotive components, aerospace, green technology, through instruments that WTO rules permit (public procurement, R&amp;D subsidies, zone infrastructure, training co-investment). <strong>Use trade agreements strategically</strong> rather than passively, the AfCFTA and the EU relationship are not just market access agreements but platforms for building industrial ecosystems and acquiring regulatory credibility. <strong>Address the structural deficit</strong> not through blanket protectionism but through targeted import substitution in strategic inputs (green energy replacing hydrocarbon imports, fertiliser inputs to reduce food vulnerability) that simultaneously strengthen Morocco’s current account and build productive capability.</p>
 <hr>
 </section>
-<section id="sec-concl-ch13" class="level1" data-number="22">
-<h1 data-number="22"><span class="header-section-number">22</span> Conclusion: Trade as Power and Possibility</h1>
+<section id="sec-concl-ch13" class="level1">
+<h1>Conclusion: Trade as Power and Possibility</h1>
 <p>Three tensions structure the economics of international trade, and navigating them requires the kind of context-sensitive, institutionally grounded analysis that neither free-trade orthodoxy nor reflexive protectionism can provide.</p>
 <p><strong>Gains versus distribution</strong>: trade creates aggregate gains through specialisation and scale economies. But the distribution of those gains depends on the structure of production, the balance of bargaining power, and the institutional framework. The Prebisch-Singer diagnosis, that commodity-exporting peripheries transfer value to manufacturing centres, is not a counsel of despair. It is a specification of the structural change required to escape the transfer.</p>
 <p><strong>Efficiency versus capability</strong>: the static efficiency of free trade (comparative advantage) and the dynamic capability-building of managed trade (infant industry protection) are not permanently in tension, but they require sequencing. The right question is not which to choose permanently but how to navigate the transition from comparative advantage as it currently exists to comparative advantage as it should be built.</p>
@@ -675,8 +843,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch13" class="level1 appendix" data-number="23">
-<h1 class="appendix" data-number="23"><span class="header-section-number">23</span> Further Reading</h1>
+<section id="sec-biblio-ch13" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Ricardo, D. (1817). <em>Principles of Political Economy</em>, Chapter 7.</strong> The original statement. Still one of the most elegant demonstrations in the history of economic thought.</p>
 <p><strong>Krugman, P. (1979). “Increasing Returns, Monopolistic Competition, and International Trade.” <em>Journal of International Economics</em>.</strong> The paper that launched the new trade theory. Short and technically accessible.</p>
 <p><strong>Melitz, M. (2003). “The Impact of Trade on Intra-Industry Reallocations and Aggregate Industry Productivity.” <em>Econometrica</em>.</strong> The founding paper of the heterogeneous firms trade model. Technical but fundamental.</p>
@@ -691,8 +859,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1111,13 +1338,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1126,5 +1353,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

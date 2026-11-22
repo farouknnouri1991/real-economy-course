@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch18-strategies-integration.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,8 +78,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,6 +265,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -297,44 +464,45 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-carte-ch18si" id="toc-sec-carte-ch18si" class="nav-link active" data-scroll-target="#sec-carte-ch18si">The Map</a></li>
-  <li><a href="#sec-smile-ch18si" id="toc-sec-smile-ch18si" class="nav-link" data-scroll-target="#sec-smile-ch18si"><span class="header-section-number">21</span> Part I — Morocco in Global Value Chains: The Smile Curve Analysis</a>
+  <li><a href="#sec-smile-ch18si" id="toc-sec-smile-ch18si" class="nav-link" data-scroll-target="#sec-smile-ch18si">Part I — Morocco in Global Value Chains: The Smile Curve Analysis</a>
   <ul class="collapse">
-  <li><a href="#sec-sourire-ch18si" id="toc-sec-sourire-ch18si" class="nav-link" data-scroll-target="#sec-sourire-ch18si"><span class="header-section-number">21.1</span> The smile curve and value distribution</a></li>
-  <li><a href="#sec-monter-ch18si" id="toc-sec-monter-ch18si" class="nav-link" data-scroll-target="#sec-monter-ch18si"><span class="header-section-number">21.2</span> Moving up the curve: the practical strategies</a></li>
-  <li><a href="#sec-nearshoring-ch18si" id="toc-sec-nearshoring-ch18si" class="nav-link" data-scroll-target="#sec-nearshoring-ch18si"><span class="header-section-number">21.3</span> The nearshoring dividend and its conditions</a></li>
-  <li><a href="#sec-numerique-ch18si" id="toc-sec-numerique-ch18si" class="nav-link" data-scroll-target="#sec-numerique-ch18si"><span class="header-section-number">21.4</span> The digital economy insertion</a></li>
+  <li><a href="#sec-sourire-ch18si" id="toc-sec-sourire-ch18si" class="nav-link" data-scroll-target="#sec-sourire-ch18si">The smile curve and value distribution</a></li>
+  <li><a href="#sec-monter-ch18si" id="toc-sec-monter-ch18si" class="nav-link" data-scroll-target="#sec-monter-ch18si">Moving up the curve: the practical strategies</a></li>
+  <li><a href="#sec-nearshoring-ch18si" id="toc-sec-nearshoring-ch18si" class="nav-link" data-scroll-target="#sec-nearshoring-ch18si">The nearshoring dividend and its conditions</a></li>
+  <li><a href="#sec-numerique-ch18si" id="toc-sec-numerique-ch18si" class="nav-link" data-scroll-target="#sec-numerique-ch18si">The digital economy insertion</a></li>
   </ul></li>
-  <li><a href="#sec-avantage-ch18si" id="toc-sec-avantage-ch18si" class="nav-link" data-scroll-target="#sec-avantage-ch18si"><span class="header-section-number">22</span> Part II — Constructing Comparative Advantage: The Strategic Logic</a>
+  <li><a href="#sec-avantage-ch18si" id="toc-sec-avantage-ch18si" class="nav-link" data-scroll-target="#sec-avantage-ch18si">Part II — Constructing Comparative Advantage: The Strategic Logic</a>
   <ul class="collapse">
-  <li><a href="#sec-statique-ch18si" id="toc-sec-statique-ch18si" class="nav-link" data-scroll-target="#sec-statique-ch18si"><span class="header-section-number">22.1</span> Static versus dynamic comparative advantage</a></li>
-  <li><a href="#sec-quatre-piliers-ch18si" id="toc-sec-quatre-piliers-ch18si" class="nav-link" data-scroll-target="#sec-quatre-piliers-ch18si"><span class="header-section-number">22.2</span> The four strategic pillars</a></li>
-  <li><a href="#sec-strategiereelle-ch18si" id="toc-sec-strategiereelle-ch18si" class="nav-link" data-scroll-target="#sec-strategiereelle-ch18si"><span class="header-section-number">22.3</span> What makes a strategy different from a wish list</a></li>
-  <li><a href="#sec-ide-ch18si" id="toc-sec-ide-ch18si" class="nav-link" data-scroll-target="#sec-ide-ch18si"><span class="header-section-number">22.4</span> The governance of FDI: from attraction to anchoring</a></li>
+  <li><a href="#sec-statique-ch18si" id="toc-sec-statique-ch18si" class="nav-link" data-scroll-target="#sec-statique-ch18si">Static versus dynamic comparative advantage</a></li>
+  <li><a href="#sec-quatre-piliers-ch18si" id="toc-sec-quatre-piliers-ch18si" class="nav-link" data-scroll-target="#sec-quatre-piliers-ch18si">The four strategic pillars</a></li>
+  <li><a href="#sec-strategiereelle-ch18si" id="toc-sec-strategiereelle-ch18si" class="nav-link" data-scroll-target="#sec-strategiereelle-ch18si">What makes a strategy different from a wish list</a></li>
+  <li><a href="#sec-ide-ch18si" id="toc-sec-ide-ch18si" class="nav-link" data-scroll-target="#sec-ide-ch18si">The governance of FDI: from attraction to anchoring</a></li>
   </ul></li>
-  <li><a href="#sec-europe-ch18si" id="toc-sec-europe-ch18si" class="nav-link" data-scroll-target="#sec-europe-ch18si"><span class="header-section-number">23</span> Part III — The European Relationship: Deepening Without Subordinating</a>
+  <li><a href="#sec-europe-ch18si" id="toc-sec-europe-ch18si" class="nav-link" data-scroll-target="#sec-europe-ch18si">Part III — The European Relationship: Deepening Without Subordinating</a>
   <ul class="collapse">
-  <li><a href="#sec-bilan-ue-ch18si" id="toc-sec-bilan-ue-ch18si" class="nav-link" data-scroll-target="#sec-bilan-ue-ch18si"><span class="header-section-number">23.1</span> The balance sheet of the EU association</a></li>
-  <li><a href="#sec-origine-ch18si" id="toc-sec-origine-ch18si" class="nav-link" data-scroll-target="#sec-origine-ch18si"><span class="header-section-number">23.2</span> Rules of origin as industrial policy instrument</a></li>
+  <li><a href="#sec-bilan-ue-ch18si" id="toc-sec-bilan-ue-ch18si" class="nav-link" data-scroll-target="#sec-bilan-ue-ch18si">The balance sheet of the EU association</a></li>
+  <li><a href="#sec-origine-ch18si" id="toc-sec-origine-ch18si" class="nav-link" data-scroll-target="#sec-origine-ch18si">Rules of origin as industrial policy instrument</a></li>
   </ul></li>
-  <li><a href="#sec-afrique-ch18si" id="toc-sec-afrique-ch18si" class="nav-link" data-scroll-target="#sec-afrique-ch18si"><span class="header-section-number">24</span> Part IV — Africa: From Commercial Presence to Developmental Hub</a>
+  <li><a href="#sec-afrique-ch18si" id="toc-sec-afrique-ch18si" class="nav-link" data-scroll-target="#sec-afrique-ch18si">Part IV — Africa: From Commercial Presence to Developmental Hub</a>
   <ul class="collapse">
-  <li><a href="#sec-afcfta-ch18si" id="toc-sec-afcfta-ch18si" class="nav-link" data-scroll-target="#sec-afcfta-ch18si"><span class="header-section-number">24.1</span> The AfCFTA opportunity: what it requires to be real</a></li>
-  <li><a href="#sec-partenariat-ch18si" id="toc-sec-partenariat-ch18si" class="nav-link" data-scroll-target="#sec-partenariat-ch18si"><span class="header-section-number">24.2</span> Partnership versus extraction: the governance test</a></li>
+  <li><a href="#sec-afcfta-ch18si" id="toc-sec-afcfta-ch18si" class="nav-link" data-scroll-target="#sec-afcfta-ch18si">The AfCFTA opportunity: what it requires to be real</a></li>
+  <li><a href="#sec-partenariat-ch18si" id="toc-sec-partenariat-ch18si" class="nav-link" data-scroll-target="#sec-partenariat-ch18si">Partnership versus extraction: the governance test</a></li>
   </ul></li>
-  <li><a href="#sec-vert-ch18si" id="toc-sec-vert-ch18si" class="nav-link" data-scroll-target="#sec-vert-ch18si"><span class="header-section-number">25</span> Part V — The Green Frontier: Energy Transition as Strategic Reorientation</a>
+  <li><a href="#sec-vert-ch18si" id="toc-sec-vert-ch18si" class="nav-link" data-scroll-target="#sec-vert-ch18si">Part V — The Green Frontier: Energy Transition as Strategic Reorientation</a>
   <ul class="collapse">
-  <li><a href="#sec-geometrie-ch18si" id="toc-sec-geometrie-ch18si" class="nav-link" data-scroll-target="#sec-geometrie-ch18si"><span class="header-section-number">25.1</span> Morocco’s renewable geometry</a></li>
-  <li><a href="#sec-h2-ch18si" id="toc-sec-h2-ch18si" class="nav-link" data-scroll-target="#sec-h2-ch18si"><span class="header-section-number">25.2</span> Green hydrogen: the platform opportunity</a></li>
-  <li><a href="#sec-batteries-ch18si" id="toc-sec-batteries-ch18si" class="nav-link" data-scroll-target="#sec-batteries-ch18si"><span class="header-section-number">25.3</span> Battery materials: the phosphate-energy convergence</a></li>
-  <li><a href="#sec-financement-ch18si" id="toc-sec-financement-ch18si" class="nav-link" data-scroll-target="#sec-financement-ch18si"><span class="header-section-number">25.4</span> The financing of transformation: closing the investment gap</a></li>
+  <li><a href="#sec-geometrie-ch18si" id="toc-sec-geometrie-ch18si" class="nav-link" data-scroll-target="#sec-geometrie-ch18si">Morocco’s renewable geometry</a></li>
+  <li><a href="#sec-h2-ch18si" id="toc-sec-h2-ch18si" class="nav-link" data-scroll-target="#sec-h2-ch18si">Green hydrogen: the platform opportunity</a></li>
+  <li><a href="#sec-batteries-ch18si" id="toc-sec-batteries-ch18si" class="nav-link" data-scroll-target="#sec-batteries-ch18si">Battery materials: the phosphate-energy convergence</a></li>
+  <li><a href="#sec-financement-ch18si" id="toc-sec-financement-ch18si" class="nav-link" data-scroll-target="#sec-financement-ch18si">The financing of transformation: closing the investment gap</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch18si" id="toc-sec-concl-ch18si" class="nav-link" data-scroll-target="#sec-concl-ch18si"><span class="header-section-number">26</span> Conclusion: The Strategic Sovereignty of a Middle Power</a></li>
-  <li><a href="#sec-biblio-ch18si" id="toc-sec-biblio-ch18si" class="nav-link" data-scroll-target="#sec-biblio-ch18si"><span class="header-section-number">27</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch18si" id="toc-sec-concl-ch18si" class="nav-link" data-scroll-target="#sec-concl-ch18si">Conclusion: The Strategic Sovereignty of a Middle Power</a></li>
+  <li><a href="#sec-biblio-ch18si" id="toc-sec-biblio-ch18si" class="nav-link" data-scroll-target="#sec-biblio-ch18si">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch15-inequality-distribution.html">Part IV — International Economics and the Long Run</a></li><li class="breadcrumb-item"><a href="./ch18-strategies-integration.html"><span class="chapter-number">20</span>&nbsp; <span class="chapter-title">Chapter 18 — Strategies for World Integration: Morocco’s Choices</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -391,10 +559,10 @@ The guiding thread of this chapter
 <p>The chapter advances in five movements. First, the GVC architecture and Morocco’s current position within it. Second, the construction of comparative advantage through industrial policy. Third, the European relationship: how to deepen without subordinating. Fourth, the African strategy: from commercial presence to developmental partnership. Fifth, the new frontier: green hydrogen, battery materials, and the energy transition as Morocco’s strategic reorientation opportunity.</p>
 <hr>
 </section>
-<section id="sec-smile-ch18si" class="level1" data-number="21">
-<h1 data-number="21"><span class="header-section-number">21</span> Part I — Morocco in Global Value Chains: The Smile Curve Analysis</h1>
-<section id="sec-sourire-ch18si" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="sec-sourire-ch18si"><span class="header-section-number">21.1</span> The smile curve and value distribution</h2>
+<section id="sec-smile-ch18si" class="level1">
+<h1>Part I — Morocco in Global Value Chains: The Smile Curve Analysis</h1>
+<section id="sec-sourire-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-sourire-ch18si">The smile curve and value distribution</h2>
 <p>Acer founder Stan Shih introduced the “smile curve” concept in the 1990s to describe the distribution of value added across the stages of production in electronics value chains. The curve smiles upward at both ends and dips in the middle: the design and R&amp;D stages at the upstream end and the brand, marketing, and after-sales stages at the downstream end capture high value added. The manufacturing and assembly stages in the middle capture low value added, despite often involving complex logistics and large workforces.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -412,113 +580,113 @@ The car that leaves Tanger and where its value was created
 <p>The smile curve framework has become more pronounced over the past two decades as global production has fragmented and trade in tasks has replaced trade in goods. Manufacturing assembly, once considered the core industrial activity, has become progressively commoditised and footloose: assembly facilities relocate to wherever labour and logistics costs are minimised. The activities that resist commoditisation and retain high value are precisely those that require concentrated, non-replicable capabilities: design competence, algorithmic systems integration, brand trust, specialised material science.</p>
 <p>For Morocco’s GVC participation, the smile curve diagnosis is precise. In automotive, Morocco assembles at the trough: capturing wages, logistics management, and basic component manufacturing, while design, electronics integration, and brand management remain with European manufacturers and system integrators. In aerospace, Morocco machines components and assembles substructures at the trough, while aerodynamic design, certification authority, and system architecture remain with Airbus, Boeing, and Safran. In phosphates, Morocco has moved up the left side of the smile by processing rock into fertilisers, but has not yet moved to the right side (brand, market relationships, end-user agronomic advice).</p>
 </section>
-<section id="sec-monter-ch18si" class="level2" data-number="21.2">
-<h2 data-number="21.2" class="anchored" data-anchor-id="sec-monter-ch18si"><span class="header-section-number">21.2</span> Moving up the curve: the practical strategies</h2>
+<section id="sec-monter-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-monter-ch18si">Moving up the curve: the practical strategies</h2>
 <p>Three strategic pathways allow a country to move from the assembly trough toward the high-value ends of the smile curve.</p>
 <p><strong>Design capability development</strong> requires investing in the engineering talent and institutional infrastructure that allows Moroccan engineers to conceive, not just implement. For automotive, this means UM6P-industry co-development programmes where Moroccan engineers work alongside Renault and Stellantis design teams on components, not as service providers but as co-designers who learn and retain the intellectual property of the contribution. For aerospace, it means building local certification engineering capability, the capacity to demonstrate to EASA and FAA that a Moroccan-designed component meets airworthiness requirements. For phosphates, it means investing in soil science and crop nutrition science that allows OCP to sell tailored agronomic solutions, not commodity fertilisers.</p>
 <p><strong>System integration capability</strong> requires moving from executing a sub-system specification to designing the interface between sub-systems, the moment when a supplier becomes a systems engineer. In automotive terms: from manufacturing a seat assembly to designing the seating module that integrates structural, comfort, electrical, and safety functions. This requires both technical capability (mechatronics, embedded software) and relational capability (managing long-term co-development partnerships with lead customers).</p>
 <p><strong>Brand and market ownership</strong> requires the most difficult capability transition: building direct relationships with end users that create preferences for Moroccan-origin products independent of the multinational brand. OCP’s fertiliser brand in Africa, Attijariwafa Bank’s cross-border brand, and Royal Air Maroc’s network position are Morocco’s clearest examples. Each represents a relationship with end customers that does not depend on a European lead firm’s validation, a form of comparative advantage that compounds over time rather than remaining susceptible to relocation.</p>
 </section>
-<section id="sec-nearshoring-ch18si" class="level2" data-number="21.3">
-<h2 data-number="21.3" class="anchored" data-anchor-id="sec-nearshoring-ch18si"><span class="header-section-number">21.3</span> The nearshoring dividend and its conditions</h2>
+<section id="sec-nearshoring-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-nearshoring-ch18si">The nearshoring dividend and its conditions</h2>
 <p>Post-COVID supply chain reorganisation has created what analysts call the nearshoring dividend: the premium that European manufacturers pay for production proximity as they reduce their dependence on single-source, long-distance supply chains that proved fragile during pandemic disruptions. Morocco is among the principal geographic beneficiaries of this reorganisation, alongside Poland, Romania, Czechia, Tunisia, and Turkey.</p>
 <p>The nearshoring advantage is multi-dimensional. <strong>Speed to market</strong>: for fashion textiles, automotive spare parts, and fast-moving consumer goods, Morocco’s 14-hour shipping time to European ports versus 30 days from Vietnam provides a genuine competitive advantage for short-cycle, demand-responsive production. <strong>Intellectual property protection</strong>: European manufacturers are more confident placing product designs and process specifications in Morocco under the EU Association Agreement’s regulatory framework than in some Asian locations where IP enforcement is weaker. <strong>Carbon footprint</strong>: as European supply chain decarbonation requirements intensify, proximity reduces embedded transport emissions, a qualitative competitive advantage that Morocco’s renewable energy transition will reinforce.</p>
 <p>But the nearshoring dividend requires active capture. It does not automatically redirect investment that would otherwise go to Poland or Romania. Three conditions determine whether Morocco captures a larger nearshoring share in the coming decade. <strong>Certification and quality ecosystems</strong>: European manufacturers will not nearshore to locations where supplier quality certification (IATF, EN9100, ISO 22000) is unavailable or unreliable. Morocco’s sector-specific training infrastructure (IFMIA, IMA) and quality certification support must expand to cover the full range of sectors where nearshoring potential exists. <strong>Logistics fluency</strong>: just-in-time delivery to European clients requires not only port infrastructure but customs clearance speed, bonded warehouse networks, and cold chain integrity that Morocco is building but has not fully achieved. <strong>Language and cultural compatibility</strong>: Morocco’s French-Spanish-Arabic language profile, combined with a workforce with genuine secondary and technical education, provides a communication advantage over many competing nearshoring locations that serves both the manufacturing and the business services dimensions of European nearshoring.</p>
 </section>
-<section id="sec-numerique-ch18si" class="level2" data-number="21.4">
-<h2 data-number="21.4" class="anchored" data-anchor-id="sec-numerique-ch18si"><span class="header-section-number">21.4</span> The digital economy insertion</h2>
+<section id="sec-numerique-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-numerique-ch18si">The digital economy insertion</h2>
 <p>Morocco’s offshore IT and business process outsourcing (BPO) sector, approximately 120,000 direct employees in 2023, concentrated in Casablanca Nearshore, Rabat Technopolis, and Marrakech, represents the most successful services-sector insertion into the global economy since automotive. The sector’s competitive profile: French-language capability for French-speaking European markets, growing Arabic-language capability for Gulf and North African markets, competitive labour costs relative to French internal alternatives, and improving technical skills in software development, data analytics, and cloud infrastructure.</p>
 <p>The strategic challenge for digital services is the same as for industrial production: moving from the assembly trough of the smile curve (executing defined tasks in defined formats) toward the higher-value ends (designing solutions, managing client relationships, building proprietary technology). The call centre that executes a French insurer’s customer service script is at the trough; the software engineering team that co-develops a financial technology product with a European fintech is closer to the high-value end. Morocco’s digital strategy requires deliberately building the capability infrastructure (engineering education, incubation ecosystems, intellectual property protection) that enables the transition from execution to conception.</p>
 <p>UM6P’s engineering programmes, ENSIAS, École Polytechnique de Laâyoune, and the dozens of private higher education institutions growing in the digital skills space are the supply side of this transition. The demand side, European and Gulf firms willing to place genuine engineering work, not just execution tasks, in Morocco, requires both the supply of talent and the contractual infrastructure (IP protection, data security certification, regulatory compliance) that makes complex service offshoring viable. Casablanca Finance City’s role in providing this regulatory credibility for financial services can be replicated in digital services through appropriate certification and regulatory framework development.</p>
 <hr>
 </section>
 </section>
-<section id="sec-avantage-ch18si" class="level1" data-number="22">
-<h1 data-number="22"><span class="header-section-number">22</span> Part II — Constructing Comparative Advantage: The Strategic Logic</h1>
-<section id="sec-statique-ch18si" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="sec-statique-ch18si"><span class="header-section-number">22.1</span> Static versus dynamic comparative advantage</h2>
+<section id="sec-avantage-ch18si" class="level1">
+<h1>Part II — Constructing Comparative Advantage: The Strategic Logic</h1>
+<section id="sec-statique-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-statique-ch18si">Static versus dynamic comparative advantage</h2>
 <p>The central distinction in development strategy is between <strong>static comparative advantage</strong> (what you are currently most efficient at, relative to other activities, given existing capabilities) and <strong>dynamic comparative advantage</strong> (what you will be most efficient at in ten to twenty years, given investment in capabilities today).</p>
 <p>Morocco’s static comparative advantage in 2024: phosphate rock processing, assembly manufacturing (automotive, aerospace, textiles), proximity services to European clients (BPO, nearshore IT), and agricultural exports (tomatoes, citrus, olives). These are real advantages that generate real export revenues. Morocco should exploit them. But exploiting static comparative advantage while neglecting dynamic capability-building is the prescription for permanent periphery: becoming ever more efficient at activities whose value the smile curve places at the trough.</p>
 <p>The East Asian developmental states understood this distinction operationally. Korea in 1965 had static comparative advantage in simple textiles and cheap labour. It chose to invest in steel and shipbuilding, where it had no comparative advantage at all, deliberately sacrificing short-run efficiency for long-run capability building. Within fifteen years, Korean steel and shipbuilding were globally competitive. Within thirty years, Korean electronics and semiconductors were the world frontier. The comparative advantage had been constructed, not found.</p>
 <p>Morocco cannot replicate the Korean trajectory in detail, different historical moment, different institutional context, different international rules. But the strategic logic is transferable: identify activities where dynamic comparative advantage can be built given current capabilities and the product space adjacencies, invest in the capabilities they require, and accept the learning costs of the transition period.</p>
 </section>
-<section id="sec-quatre-piliers-ch18si" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="sec-quatre-piliers-ch18si"><span class="header-section-number">22.2</span> The four strategic pillars</h2>
+<section id="sec-quatre-piliers-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-quatre-piliers-ch18si">The four strategic pillars</h2>
 <p>Morocco’s distinctive strategic assets, what it has that few others can replicate, define the four pillars around which dynamic comparative advantage construction makes most sense.</p>
 <p><strong>Pillar 1, Renewable energy endowment</strong>: exceptional solar irradiation (among the world’s highest in the southern regions), consistent Atlantic winds, and proximity to European energy demand create an energy production comparative advantage that is geographically permanent and becoming economically decisive as decarbonation progresses. This is not merely a power generation opportunity; it is the foundation for energy-intensive chemical industries (green ammonia, green hydrogen, battery cathode materials) that Morocco can produce at costs competitive with any location in the accessible-to-Europe world.</p>
 <p><strong>Pillar 2, Phosphate chemistry platform</strong>: the world’s largest phosphate reserves, combined with existing industrial chemistry capability at OCP’s Jorf Lasfar and Safi complexes, create a platform for diversification toward battery materials (lithium iron phosphate chemistry requires phosphoric acid as a key input), specialty agrochemicals, and food security-adjacent industrial chemistry. The phosphate platform is not simply a resource, it is an industrial chemistry base from which adjacent products can be developed.</p>
 <p><strong>Pillar 3, European proximity and regulatory alignment</strong>: geographic adjacency to the world’s most demanding regulatory and quality environment has generated capabilities in Moroccan industry that constitute a non-trivial asset: IATF 16949 automotive quality systems, AS9100 aerospace certification, EU phytosanitary compliance in agriculture. These certifications represent accumulated institutional knowledge that competing low-cost locations are often years away from replicating. Proximity creates a just-in-time advantage in addition to the quality advantages.</p>
 <p><strong>Pillar 4, African platform position</strong>: Morocco’s connectivity to sub-Saharan Africa, through Tanger Med’s container volumes, Royal Air Maroc’s network, the banking presence, and the OCP fertiliser strategy, creates a hub position that no other country combines with similar European integration. This double insertion is Morocco’s most distinctive geopolitical asset: the ability to be the commercial and logistical bridge between Europe and Africa.</p>
 </section>
-<section id="sec-strategiereelle-ch18si" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="sec-strategiereelle-ch18si"><span class="header-section-number">22.3</span> What makes a strategy different from a wish list</h2>
+<section id="sec-strategiereelle-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-strategiereelle-ch18si">What makes a strategy different from a wish list</h2>
 <p>A genuine strategic orientation differs from a wish list in three ways: it makes <strong>explicit trade-offs</strong> (choosing to do X means not doing Y with the same resources), it specifies <strong>implementation mechanisms</strong> (not just what but who does what, under which conditionality, evaluated by which metrics), and it has <strong>temporal coherence</strong> (the sequence of investments builds capability cumulatively rather than investing simultaneously in unrelated directions).</p>
 <p>Morocco’s successive industrial strategies, Plan Émergence, PNEI, PAI, have been stronger on ambition than on mechanism, stronger on target-setting than on conditionality, and stronger on sectoral identification than on sequencing logic. The contribution of the analytical framework developed across this book, and particularly the four-condition framework, the product space, and the HRV growth diagnostics, is to provide the missing operational specificity: which coordination failures are being addressed, which institutional capabilities are being built, which performance milestones trigger continuation versus exit, and which adjacency steps build on each other.</p>
 </section>
-<section id="sec-ide-ch18si" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="sec-ide-ch18si"><span class="header-section-number">22.4</span> The governance of FDI: from attraction to anchoring</h2>
+<section id="sec-ide-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ide-ch18si">The governance of FDI: from attraction to anchoring</h2>
 <p>Morocco’s FDI governance has been primarily an attraction exercise: reducing administrative barriers, offering fiscal incentives, providing infrastructure, and marketing the country to potential investors. The transition from attraction to anchoring, ensuring that FDI generates durable productive capabilities rather than footloose assembly operations, requires a governance architecture that Morocco has not yet fully built.</p>
 <p>The anchoring instruments are known. <strong>Local content requirements with graduated escalation</strong>: OEM investors committed to specific local content milestones (verified annually by independent auditors) have incentive to develop their local supply base rather than relying indefinitely on imports. The annual escalation creates continuous upgrading pressure. <strong>Technology co-development obligations</strong>: the most sophisticated version of anchoring requires lead firms to place genuine engineering work with Moroccan design teams, not merely manufacturing sub-contracts. This requires Moroccan engineering capacity (the supply side) and investment agreement provisions that reward knowledge transfer (the demand side). <strong>Profit reinvestment incentives</strong>: Morocco’s current fiscal framework treats all OCP, Renault, and Safran profits equivalently for taxation, whether reinvested locally or repatriated. A two-tier system, lower effective tax rates on profits reinvested in Morocco’s productive capacity than on repatriated dividends, would create a financial incentive for local reinvestment that currently operates only through general tax provisions.</p>
 <p>The political economy challenge: lead firms that have accepted current incentive packages without performance conditions will resist retroactive conditionality. The governance architecture for anchoring must therefore be built primarily through new agreements (applying conditions to new investments and new incentive packages) while finding ways to encourage voluntary deepening by existing investors through positive rather than punitive instruments. OCP’s supply chain development programmes, working with local chemical suppliers to progressively substitute imports, and Renault’s supplier development academies are models of what voluntary anchoring can achieve when the lead firm’s own interests in local supply quality align with the policy objective.</p>
 <hr>
 </section>
 </section>
-<section id="sec-europe-ch18si" class="level1" data-number="23">
-<h1 data-number="23"><span class="header-section-number">23</span> Part III — The European Relationship: Deepening Without Subordinating</h1>
-<section id="sec-bilan-ue-ch18si" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="sec-bilan-ue-ch18si"><span class="header-section-number">23.1</span> The balance sheet of the EU association</h2>
+<section id="sec-europe-ch18si" class="level1">
+<h1>Part III — The European Relationship: Deepening Without Subordinating</h1>
+<section id="sec-bilan-ue-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bilan-ue-ch18si">The balance sheet of the EU association</h2>
 <p>Morocco’s Association Agreement with the EU (2000) and the aspiration toward a Deep and Comprehensive Free Trade Area (ALECA) represent the most consequential commercial policy framework in Morocco’s recent history. The honest balance sheet requires acknowledging both what the relationship has delivered and what it has cost.</p>
 <p><strong>What it has delivered</strong>: preferential access to the world’s most demanding market has driven the automotive and aerospace clusters beyond what domestic market demand could have generated; EU quality and regulatory standards have forced genuine quality upgrading in food exports, textiles, and industrial products; the regulatory alignment required by association has improved governance in several domains, including competition law, financial market regulation, and food safety; and the credibility signal of EU association has reduced the risk premium that investors and creditors apply to Morocco relative to comparable economies.</p>
 <p><strong>What it has cost</strong>: sectors unprotected by transition periods, segments of domestic food processing, textile manufacturing, experienced competitive shocks without adequate adjustment support. The asymmetry in agricultural market access (Morocco faces seasonal quotas and phytosanitary barriers on its most competitive exports) while accepting industrial goods liberalisation reflects the negotiating power differential of a large bloc facing a medium-income country. The investment protection provisions create potential constraints on future industrial policy instruments.</p>
 <p><strong>The ALECA strategic calculus</strong>: extending liberalisation to services, public procurement, and intellectual property would deepen regulatory alignment and potentially open large service export markets. But it would also discipline industrial policy instruments, public procurement preferences, some forms of state aid, intellectual property flexibilities, that Morocco currently uses or could use for development objectives. The Rodrik trilemma applies directly: deep integration gains market access while constraining policy sovereignty. Morocco’s negotiating objective should be asymmetric commitments that discipline regulatory quality (which improves Moroccan governance) without foreclosing the industrial policy space that Morocco needs for productive transformation.</p>
 </section>
-<section id="sec-origine-ch18si" class="level2" data-number="23.2">
-<h2 data-number="23.2" class="anchored" data-anchor-id="sec-origine-ch18si"><span class="header-section-number">23.2</span> Rules of origin as industrial policy instrument</h2>
+<section id="sec-origine-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-origine-ch18si">Rules of origin as industrial policy instrument</h2>
 <p>One of the least-discussed but most consequential dimensions of Morocco’s EU trade relationship is the <strong>rules of origin</strong> in preferential trade agreements. Rules of origin determine what share of a product must be produced domestically or regionally to qualify for preferential tariff treatment. They are simultaneously a technical trade instrument and a de facto industrial policy tool.</p>
 <p>For Morocco’s automotive sector, the EU Association Agreement’s rules of origin require a minimum regional value content for vehicles to qualify as “Moroccan” for tariff purposes. The transition to electric vehicles is tightening these rules: the EU is progressively requiring higher local content in battery and electronic systems. This tightening creates a powerful incentive for Morocco to develop local battery and electronics manufacturing, not to comply with a regulatory requirement for its own sake, but because the market access premium on being genuinely origin-compliant is substantial.</p>
 <p>Morocco can use rules of origin negotiations strategically: pushing for rules that reward and incentivise the productive deepening investments that the industrial policy agenda requires, rather than rules that would certify superficial assembly as origin-compliant. Rules of origin are one of the few trade policy instruments that WTO disciplines leave relatively unconstrained, making them a significant space for industrial policy ambition within the EU association framework.</p>
 <hr>
 </section>
 </section>
-<section id="sec-afrique-ch18si" class="level1" data-number="24">
-<h1 data-number="24"><span class="header-section-number">24</span> Part IV — Africa: From Commercial Presence to Developmental Hub</h1>
-<section id="sec-afcfta-ch18si" class="level2" data-number="24.1">
-<h2 data-number="24.1" class="anchored" data-anchor-id="sec-afcfta-ch18si"><span class="header-section-number">24.1</span> The AfCFTA opportunity: what it requires to be real</h2>
+<section id="sec-afrique-ch18si" class="level1">
+<h1>Part IV — Africa: From Commercial Presence to Developmental Hub</h1>
+<section id="sec-afcfta-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-afcfta-ch18si">The AfCFTA opportunity: what it requires to be real</h2>
 <p>The African Continental Free Trade Area creates, in legal architecture, the world’s largest preferential trade area. Its economic impact will be determined by implementation, infrastructure, and whether production follows trade rules in creating actual cross-border value chains rather than simply rerouting existing trade flows to capture tariff preferences.</p>
 <p>For Morocco, the AfCFTA represents the most significant new market opportunity of the coming decade, but capturing it requires complementary investments that preferential tariff rates alone cannot provide. <strong>Payment infrastructure</strong>: the cost and difficulty of paying and collecting across African borders remains a binding constraint. The Pan-African Payment and Settlement System (PAPSS) is a partial response; deepening it and ensuring Morocco’s banking system is fully integrated is a priority. <strong>Logistics infrastructure</strong>: despite Tanger Med’s global rank, the cost of sending a container from Casablanca to Lagos or Nairobi via sea exceeds the cost of the same container to northern Europe, a geographic reality that trans-Saharan connectivity investment partially addresses. <strong>Regulatory harmonisation</strong>: rules of origin within AfCFTA are still being negotiated; Morocco has a direct interest in rules that reward value addition within the continent and that are simple enough for SMEs to use.</p>
 <p>Morocco’s competitive advantages in the AfCFTA context are specific and defensible: processed fertilisers with African-tailored formulations (OCP’s strategy), banking and insurance services with deep African market knowledge (Attijariwafa Bank, Saham), construction and infrastructure services (BMCE, Moroccan construction firms), agri-food processing (adapting products for African taste profiles), and pharmaceutical manufacturing (generic medicines with import substitution potential in large African markets).</p>
 </section>
-<section id="sec-partenariat-ch18si" class="level2" data-number="24.2">
-<h2 data-number="24.2" class="anchored" data-anchor-id="sec-partenariat-ch18si"><span class="header-section-number">24.2</span> Partnership versus extraction: the governance test</h2>
+<section id="sec-partenariat-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-partenariat-ch18si">Partnership versus extraction: the governance test</h2>
 <p>The distinction between productive partnership and commercial extraction in Morocco’s African engagement is not merely ethical, it is strategic. An engagement that builds genuine productive capabilities in partner countries generates the sustainable relationships that anchor Morocco’s hub position over decades. An engagement that is primarily extractive or that primarily benefits Moroccan firms at the expense of local development generates the political backlash that has affected other extraterritorial commercial actors in Africa, from Chinese infrastructure contractors to French agri-business firms.</p>
 <p>The governance test for Morocco’s African engagement is concrete: Do Moroccan banks in West Africa primarily mobilise local savings for local productive investment, or do they primarily serve as conduits for Moroccan-origin commercial credit? Does OCP’s African fertiliser strategy primarily sell commodity fertilisers or primarily build local agronomic capability that deepens the relationship? Do Moroccan construction firms primarily employ local labour, local materials, and local subcontractors, or do they primarily replicate the Chinese infrastructure model of imported labour and materials?</p>
 <p>Hirschman’s distinction between the teaching sector and the enclave applies at the level of cross-border economic relationships: a Moroccan banking presence in Côte d’Ivoire that primarily finances Moroccan export sales is an enclave; one that mobilises Ivorian savings, trains Ivorian bankers, and finances Ivorian SME investment is a teaching relationship. Morocco’s long-run African hub ambition is only achievable through the latter model.</p>
 <hr>
 </section>
 </section>
-<section id="sec-vert-ch18si" class="level1" data-number="25">
-<h1 data-number="25"><span class="header-section-number">25</span> Part V — The Green Frontier: Energy Transition as Strategic Reorientation</h1>
-<section id="sec-geometrie-ch18si" class="level2" data-number="25.1">
-<h2 data-number="25.1" class="anchored" data-anchor-id="sec-geometrie-ch18si"><span class="header-section-number">25.1</span> Morocco’s renewable geometry</h2>
+<section id="sec-vert-ch18si" class="level1">
+<h1>Part V — The Green Frontier: Energy Transition as Strategic Reorientation</h1>
+<section id="sec-geometrie-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-geometrie-ch18si">Morocco’s renewable geometry</h2>
 <p>Morocco’s potential competitive advantage in green energy production rests on a convergence of three geographic and resource factors that few other countries combine.</p>
 <p><strong>Solar irradiation</strong>: Morocco’s southern regions and Saharan zones receive among the world’s highest direct normal irradiance (DNI) levels, comparable to the best Atacama Desert sites in Chile. The Noor Ouarzazate complex demonstrated that concentrated solar power at scale is commercially viable in Morocco; the cost trajectory for photovoltaic systems has made even larger-scale solar development economically compelling.</p>
 <p><strong>Wind resources</strong>: Morocco’s Atlantic coast has consistent, strong winds that complement solar generation (wind tends to be stronger at times when solar production is lower, creating a natural baseload complementarity). The Tarfaya wind farm and the subsequent Aftissat developments demonstrated world-class capacity factors.</p>
 <p><strong>Proximity to demand</strong>: Morocco is 14 kilometres from Spain at the Strait of Gibraltar and approximately 2,000 kilometres from Germany, dramatically closer to European energy demand than most other premium renewable resource sites (Australian solar, Kazakhstani wind, Gulf solar). This proximity matters for two reasons: electrical interconnection is technically feasible at Morocco-Europe distances (high-voltage direct current subsea cables), and ammonia or hydrogen pipeline infrastructure is economically viable in ways that would not be true for Australia-to-Europe hydrogen export.</p>
 </section>
-<section id="sec-h2-ch18si" class="level2" data-number="25.2">
-<h2 data-number="25.2" class="anchored" data-anchor-id="sec-h2-ch18si"><span class="header-section-number">25.2</span> Green hydrogen: the platform opportunity</h2>
+<section id="sec-h2-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-h2-ch18si">Green hydrogen: the platform opportunity</h2>
 <p>Green hydrogen, produced by electrolyzing water using renewable electricity, is simultaneously Morocco’s most significant new industrial development opportunity and its most complex strategic challenge. The opportunity: Morocco can produce green hydrogen at costs that will be competitive with any accessible-to-Europe production location as electrolyser costs continue falling along their documented learning curve trajectory (from approximately $1,000/kW in 2015 toward $200/kW by 2030 on current projections).</p>
 <p>The strategic challenge: the green hydrogen industry does not yet exist at commercial scale anywhere. Morocco would be entering as a pioneer in a market where the technology is rapidly evolving, the demand signals are political as much as commercial (European REPowerEU commitments), and the infrastructure (pipelines, port terminals, shipping) requires multi-billion-dollar investments with fifteen-year construction horizons. The risk is not that green hydrogen will fail commercially, the fundamental economics are sound, but that Morocco may make the infrastructure investments on a timeline that does not match market development, or on terms that give lead firms access to the resource without adequate value capture for Morocco.</p>
 <p>The industrial policy design for green hydrogen must therefore address simultaneously: the electrolyser cost reduction trajectory and how Morocco participates in it (domestic manufacturing ambition versus import-and-operate); the infrastructure ownership structure (public versus private versus hybrid, and which infrastructure elements Morocco must own to retain rent capture); the linkage between green hydrogen production and downstream industries (green ammonia for OCP’s fertiliser decarbonation, battery cathode materials processing) that anchor the value chain domestically; and the regulatory framework that makes long-term off-take agreements credible enough to attract private financing.</p>
 </section>
-<section id="sec-batteries-ch18si" class="level2" data-number="25.3">
-<h2 data-number="25.3" class="anchored" data-anchor-id="sec-batteries-ch18si"><span class="header-section-number">25.3</span> Battery materials: the phosphate-energy convergence</h2>
+<section id="sec-batteries-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-batteries-ch18si">Battery materials: the phosphate-energy convergence</h2>
 <p>The convergence between Morocco’s phosphate endowment and the electric vehicle battery supply chain creates what may be the single most consequential strategic opportunity of the next decade. Lithium iron phosphate (LFP) chemistry, used in approximately 40% of global EV battery production in 2023 and growing, uses phosphoric acid as its primary cathode material precursor. Morocco’s phosphate reserves combined with OCP’s existing phosphoric acid production infrastructure create a structural entry point into the battery materials supply chain.</p>
 <p>The value chain from phosphate rock to LFP battery cell has multiple stages: mining, phosphoric acid production (OCP already does this at massive scale), purification to battery-grade standards (new capability investment needed), iron phosphate precursor synthesis (new chemistry investment), LFP cathode active material production, and battery cell manufacturing. Each stage adds value and requires progressively more specialised capability.</p>
 <p>Morocco’s realistic near-term ambition: supplying battery-grade phosphoric acid and LFP precursor materials to battery manufacturers in Europe and potentially North Africa. This requires new investment in purification and synthesis chemistry, investments that UM6P’s materials science and chemistry departments are already researching. The longer-term ambition: battery cell manufacturing in Morocco, supplying the European EV industry with cells produced from Moroccan renewable energy and Moroccan phosphate chemistry, closing a circle that would place Morocco at the intersection of two of the 21st century’s defining industrial transitions.</p>
 </section>
-<section id="sec-financement-ch18si" class="level2" data-number="25.4">
-<h2 data-number="25.4" class="anchored" data-anchor-id="sec-financement-ch18si"><span class="header-section-number">25.4</span> The financing of transformation: closing the investment gap</h2>
+<section id="sec-financement-ch18si" class="level2">
+<h2 class="anchored" data-anchor-id="sec-financement-ch18si">The financing of transformation: closing the investment gap</h2>
 <p>Morocco’s productive transformation requires investment at a scale and over a time horizon that neither private markets nor the current public budget can individually finance. Three financing gaps require specific institutional responses that complement the industrial policy architecture.</p>
 <p><strong>Long-horizon industrial investment</strong> in EV components, battery materials, green hydrogen infrastructure, and aerospace capability requires patient capital with maturities of ten to twenty years. Morocco’s banking system, despite its relative development, is structurally oriented toward shorter-horizon commercial and real estate lending. The Fonds Mohammed VI pour l’Investissement, with its mandate to co-invest in transformative projects, is the institutional response, but its capitalisation and governance must be calibrated to the scale of the challenge. A 10 billion dirham fund can anchor a handful of transformative investments; fully capitalising the productive transformation that Morocco needs requires fund capitalisation an order of magnitude larger, matched by international co-financing from the EIB, AfDB, IsDB, and bilateral development finance institutions.</p>
 <p><strong>SME supplier development</strong> in automotive, aerospace, and agri-food requires a dedicated instrument that closes the gap between the quality standards required by international lead firms and what locally owned Moroccan SMEs currently provide. Tamwilcom’s guarantee instruments are the right design but insufficient in scale and insufficiently oriented toward technology upgrading milestones. A sectoral supplier development fund, co-financed by the state and by the anchor firms that would benefit from local sourcing deepening, would align incentives with industrial policy objectives.</p>
@@ -527,8 +695,8 @@ The car that leaves Tanger and where its value was created
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch18si" class="level1" data-number="26">
-<h1 data-number="26"><span class="header-section-number">26</span> Conclusion: The Strategic Sovereignty of a Middle Power</h1>
+<section id="sec-concl-ch18si" class="level1">
+<h1>Conclusion: The Strategic Sovereignty of a Middle Power</h1>
 <p>Three propositions summarise this book’s culminating strategic argument.</p>
 <p><strong>Morocco’s integration into the world economy is the condition, not the opposite, of its development.</strong> Autarky is not available as a development strategy at Morocco’s level of economic complexity and openness. But the terms of integration, which activities Morocco anchors domestically, which capabilities it builds, which partnerships it accepts or declines, are strategic choices that determine whether integration serves Morocco’s development or merely serves others’ production strategies.</p>
 <p><strong>The four pillars of renewable energy, phosphate chemistry, European proximity, and African hub position are not isolated advantages, they are a convergent platform.</strong> Green hydrogen requires renewable energy and proximity to European demand. Battery materials require phosphate chemistry and advanced materials science. African hub position requires logistics infrastructure (Tanger Med) and financial services (Attijariwafa Bank) that already exist. A strategic orientation that invests in the intersections between these pillars, green ammonia from renewable energy through OCP’s chemistry infrastructure, battery materials from phosphate using renewable energy, logistics services connecting European nearshoring to African markets, is more powerful than investing in each pillar separately.</p>
@@ -556,8 +724,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch18si" class="level1 appendix" data-number="27">
-<h1 class="appendix" data-number="27"><span class="header-section-number">27</span> Further Reading</h1>
+<section id="sec-biblio-ch18si" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Rodrik, D. (2011). <em>The Globalization Paradox</em>. Norton.</strong> The trilemma and the strategic case for national policy space.</p>
 <p><strong>Gereffi, G. and Humphrey, J. and Sturgeon, T. (2005). “The Governance of Global Value Chains.” <em>Review of International Political Economy</em>.</strong> The framework for understanding power in GVCs.</p>
 <p><strong>IRENA (2022). <em>Green Hydrogen: A Guide to Policy Making</em>.</strong> The global benchmark for green hydrogen industrial policy design.</p>
@@ -569,8 +737,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -989,13 +1216,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1004,5 +1231,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

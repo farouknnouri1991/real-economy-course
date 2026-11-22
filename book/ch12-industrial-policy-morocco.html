@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch12-industrial-policy-morocco.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,8 +78,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,6 +265,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -297,57 +464,58 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-carte-ch12" id="toc-sec-carte-ch12" class="nav-link active" data-scroll-target="#sec-carte-ch12">The Map</a></li>
-  <li><a href="#sec-histoire-ch12" id="toc-sec-histoire-ch12" class="nav-link" data-scroll-target="#sec-histoire-ch12"><span class="header-section-number">15</span> Part I — The Long History: Everyone Uses Industrial Policy</a>
+  <li><a href="#sec-histoire-ch12" id="toc-sec-histoire-ch12" class="nav-link" data-scroll-target="#sec-histoire-ch12">Part I — The Long History: Everyone Uses Industrial Policy</a>
   <ul class="collapse">
-  <li><a href="#sec-histoire-longue-ch12" id="toc-sec-histoire-longue-ch12" class="nav-link" data-scroll-target="#sec-histoire-longue-ch12"><span class="header-section-number">15.1</span> From Colbert to Hamilton: the historical record</a></li>
-  <li><a href="#sec-new-ip-ch12" id="toc-sec-new-ip-ch12" class="nav-link" data-scroll-target="#sec-new-ip-ch12"><span class="header-section-number">15.2</span> The new industrial policy: sélective, conditional, evaluated</a></li>
+  <li><a href="#sec-histoire-longue-ch12" id="toc-sec-histoire-longue-ch12" class="nav-link" data-scroll-target="#sec-histoire-longue-ch12">From Colbert to Hamilton: the historical record</a></li>
+  <li><a href="#sec-new-ip-ch12" id="toc-sec-new-ip-ch12" class="nav-link" data-scroll-target="#sec-new-ip-ch12">The new industrial policy: sélective, conditional, evaluated</a></li>
   </ul></li>
-  <li><a href="#sec-trois-actes-ch12" id="toc-sec-trois-actes-ch12" class="nav-link" data-scroll-target="#sec-trois-actes-ch12"><span class="header-section-number">16</span> Part II — Morocco’s Three Industrial Acts</a>
+  <li><a href="#sec-trois-actes-ch12" id="toc-sec-trois-actes-ch12" class="nav-link" data-scroll-target="#sec-trois-actes-ch12">Part II — Morocco’s Three Industrial Acts</a>
   <ul class="collapse">
-  <li><a href="#sec-acte1-ch12" id="toc-sec-acte1-ch12" class="nav-link" data-scroll-target="#sec-acte1-ch12"><span class="header-section-number">16.1</span> Act I (1956-1978): developmental ambition and its abandonment</a></li>
-  <li><a href="#sec-acte2-ch12" id="toc-sec-acte2-ch12" class="nav-link" data-scroll-target="#sec-acte2-ch12"><span class="header-section-number">16.2</span> Act II (1983-2005): horizontal liberalism and the dissolution of selectivity</a></li>
-  <li><a href="#sec-acte3-ch12" id="toc-sec-acte3-ch12" class="nav-link" data-scroll-target="#sec-acte3-ch12"><span class="header-section-number">16.3</span> Act III (2005-today): the apparent return of selectivity</a></li>
+  <li><a href="#sec-acte1-ch12" id="toc-sec-acte1-ch12" class="nav-link" data-scroll-target="#sec-acte1-ch12">Act I (1956-1978): developmental ambition and its abandonment</a></li>
+  <li><a href="#sec-acte2-ch12" id="toc-sec-acte2-ch12" class="nav-link" data-scroll-target="#sec-acte2-ch12">Act II (1983-2005): horizontal liberalism and the dissolution of selectivity</a></li>
+  <li><a href="#sec-acte3-ch12" id="toc-sec-acte3-ch12" class="nav-link" data-scroll-target="#sec-acte3-ch12">Act III (2005-today): the apparent return of selectivity</a></li>
   </ul></li>
-  <li><a href="#sec-paradoxe-ch12" id="toc-sec-paradoxe-ch12" class="nav-link" data-scroll-target="#sec-paradoxe-ch12"><span class="header-section-number">17</span> Part III — The Assembly Paradox and the FDI Governance Problem</a>
+  <li><a href="#sec-paradoxe-ch12" id="toc-sec-paradoxe-ch12" class="nav-link" data-scroll-target="#sec-paradoxe-ch12">Part III — The Assembly Paradox and the FDI Governance Problem</a>
   <ul class="collapse">
-  <li><a href="#sec-ikea-ch12" id="toc-sec-ikea-ch12" class="nav-link" data-scroll-target="#sec-ikea-ch12"><span class="header-section-number">17.1</span> Assembling without learning: the IKEA metaphor</a></li>
-  <li><a href="#sec-contenu-local-ch12" id="toc-sec-contenu-local-ch12" class="nav-link" data-scroll-target="#sec-contenu-local-ch12"><span class="header-section-number">17.2</span> The local content problem: from 45% to 65%</a></li>
-  <li><a href="#sec-ide-ch12" id="toc-sec-ide-ch12" class="nav-link" data-scroll-target="#sec-ide-ch12"><span class="header-section-number">17.3</span> FDI: accelerator or substitute?</a></li>
-  <li><a href="#sec-financement-ch12" id="toc-sec-financement-ch12" class="nav-link" data-scroll-target="#sec-financement-ch12"><span class="header-section-number">17.4</span> Financing industrial upgrading: beyond FDI</a></li>
+  <li><a href="#sec-ikea-ch12" id="toc-sec-ikea-ch12" class="nav-link" data-scroll-target="#sec-ikea-ch12">Assembling without learning: the IKEA metaphor</a></li>
+  <li><a href="#sec-contenu-local-ch12" id="toc-sec-contenu-local-ch12" class="nav-link" data-scroll-target="#sec-contenu-local-ch12">The local content problem: from 45% to 65%</a></li>
+  <li><a href="#sec-ide-ch12" id="toc-sec-ide-ch12" class="nav-link" data-scroll-target="#sec-ide-ch12">FDI: accelerator or substitute?</a></li>
+  <li><a href="#sec-financement-ch12" id="toc-sec-financement-ch12" class="nav-link" data-scroll-target="#sec-financement-ch12">Financing industrial upgrading: beyond FDI</a></li>
   </ul></li>
-  <li><a href="#sec-quatre-conditions-maroc-ch12" id="toc-sec-quatre-conditions-maroc-ch12" class="nav-link" data-scroll-target="#sec-quatre-conditions-maroc-ch12"><span class="header-section-number">18</span> Part IV — The Four Conditions Applied to Morocco</a>
+  <li><a href="#sec-quatre-conditions-maroc-ch12" id="toc-sec-quatre-conditions-maroc-ch12" class="nav-link" data-scroll-target="#sec-quatre-conditions-maroc-ch12">Part IV — The Four Conditions Applied to Morocco</a>
   <ul class="collapse">
-  <li><a href="#sec-cond1-ch12" id="toc-sec-cond1-ch12" class="nav-link" data-scroll-target="#sec-cond1-ch12"><span class="header-section-number">18.1</span> Condition 1: Real coordination failures — substantially satisfied</a></li>
-  <li><a href="#sec-cond2-ch12" id="toc-sec-cond2-ch12" class="nav-link" data-scroll-target="#sec-cond2-ch12"><span class="header-section-number">18.2</span> Condition 2: Institutional capacity — partial and uneven</a></li>
-  <li><a href="#sec-cond3-ch12" id="toc-sec-cond3-ch12" class="nav-link" data-scroll-target="#sec-cond3-ch12"><span class="header-section-number">18.3</span> Condition 3: Conditional reciprocity — structurally absent</a></li>
-  <li><a href="#sec-cond4-ch12" id="toc-sec-cond4-ch12" class="nav-link" data-scroll-target="#sec-cond4-ch12"><span class="header-section-number">18.4</span> Condition 4: Credible exit — never operationalised</a></li>
+  <li><a href="#sec-cond1-ch12" id="toc-sec-cond1-ch12" class="nav-link" data-scroll-target="#sec-cond1-ch12">Condition 1: Real coordination failures — substantially satisfied</a></li>
+  <li><a href="#sec-cond2-ch12" id="toc-sec-cond2-ch12" class="nav-link" data-scroll-target="#sec-cond2-ch12">Condition 2: Institutional capacity — partial and uneven</a></li>
+  <li><a href="#sec-cond3-ch12" id="toc-sec-cond3-ch12" class="nav-link" data-scroll-target="#sec-cond3-ch12">Condition 3: Conditional reciprocity — structurally absent</a></li>
+  <li><a href="#sec-cond4-ch12" id="toc-sec-cond4-ch12" class="nav-link" data-scroll-target="#sec-cond4-ch12">Condition 4: Credible exit — never operationalised</a></li>
   </ul></li>
-  <li><a href="#sec-comparaisons-ch12" id="toc-sec-comparaisons-ch12" class="nav-link" data-scroll-target="#sec-comparaisons-ch12"><span class="header-section-number">19</span> Part V — Comparative Cases: What Morocco Can Learn</a>
+  <li><a href="#sec-comparaisons-ch12" id="toc-sec-comparaisons-ch12" class="nav-link" data-scroll-target="#sec-comparaisons-ch12">Part V — Comparative Cases: What Morocco Can Learn</a>
   <ul class="collapse">
-  <li><a href="#sec-coree-ch12" id="toc-sec-coree-ch12" class="nav-link" data-scroll-target="#sec-coree-ch12"><span class="header-section-number">19.1</span> Korea 1960-1990: what the archetype actually did</a></li>
-  <li><a href="#sec-chine-ch12" id="toc-sec-chine-ch12" class="nav-link" data-scroll-target="#sec-chine-ch12"><span class="header-section-number">19.2</span> China: scale, speed, and the non-replicable parts</a></li>
-  <li><a href="#sec-aeronautique-ch12" id="toc-sec-aeronautique-ch12" class="nav-link" data-scroll-target="#sec-aeronautique-ch12"><span class="header-section-number">19.3</span> Morocco’s aerospace cluster: capability without ownership</a></li>
-  <li><a href="#sec-singapour-ch12" id="toc-sec-singapour-ch12" class="nav-link" data-scroll-target="#sec-singapour-ch12"><span class="header-section-number">19.4</span> Singapore’s EDB: the midwife designed right</a></li>
+  <li><a href="#sec-coree-ch12" id="toc-sec-coree-ch12" class="nav-link" data-scroll-target="#sec-coree-ch12">Korea 1960-1990: what the archetype actually did</a></li>
+  <li><a href="#sec-chine-ch12" id="toc-sec-chine-ch12" class="nav-link" data-scroll-target="#sec-chine-ch12">China: scale, speed, and the non-replicable parts</a></li>
+  <li><a href="#sec-aeronautique-ch12" id="toc-sec-aeronautique-ch12" class="nav-link" data-scroll-target="#sec-aeronautique-ch12">Morocco’s aerospace cluster: capability without ownership</a></li>
+  <li><a href="#sec-singapour-ch12" id="toc-sec-singapour-ch12" class="nav-link" data-scroll-target="#sec-singapour-ch12">Singapore’s EDB: the midwife designed right</a></li>
   </ul></li>
-  <li><a href="#sec-nmd-ch12" id="toc-sec-nmd-ch12" class="nav-link" data-scroll-target="#sec-nmd-ch12"><span class="header-section-number">20</span> Part VI — The New Development Model: Official Diagnosis and Its Gaps</a>
+  <li><a href="#sec-nmd-ch12" id="toc-sec-nmd-ch12" class="nav-link" data-scroll-target="#sec-nmd-ch12">Part VI — The New Development Model: Official Diagnosis and Its Gaps</a>
   <ul class="collapse">
-  <li><a href="#sec-nmd-right-ch12" id="toc-sec-nmd-right-ch12" class="nav-link" data-scroll-target="#sec-nmd-right-ch12"><span class="header-section-number">20.1</span> What the NMD gets right</a></li>
-  <li><a href="#sec-economie-politique-ch12" id="toc-sec-economie-politique-ch12" class="nav-link" data-scroll-target="#sec-economie-politique-ch12"><span class="header-section-number">20.2</span> The political economy of industrial stagnation</a></li>
-  <li><a href="#sec-bilans-ch12" id="toc-sec-bilans-ch12" class="nav-link" data-scroll-target="#sec-bilans-ch12"><span class="header-section-number">20.3</span> The sectoral strategies: honest assessment</a></li>
+  <li><a href="#sec-nmd-right-ch12" id="toc-sec-nmd-right-ch12" class="nav-link" data-scroll-target="#sec-nmd-right-ch12">What the NMD gets right</a></li>
+  <li><a href="#sec-economie-politique-ch12" id="toc-sec-economie-politique-ch12" class="nav-link" data-scroll-target="#sec-economie-politique-ch12">The political economy of industrial stagnation</a></li>
+  <li><a href="#sec-bilans-ch12" id="toc-sec-bilans-ch12" class="nav-link" data-scroll-target="#sec-bilans-ch12">The sectoral strategies: honest assessment</a></li>
   </ul></li>
-  <li><a href="#sec-fenetres-ch12" id="toc-sec-fenetres-ch12" class="nav-link" data-scroll-target="#sec-fenetres-ch12"><span class="header-section-number">21</span> Part VII — The Windows Still Open</a>
+  <li><a href="#sec-fenetres-ch12" id="toc-sec-fenetres-ch12" class="nav-link" data-scroll-target="#sec-fenetres-ch12">Part VII — The Windows Still Open</a>
   <ul class="collapse">
-  <li><a href="#sec-ve-ch12" id="toc-sec-ve-ch12" class="nav-link" data-scroll-target="#sec-ve-ch12"><span class="header-section-number">21.1</span> The electric vehicle transition: risk and opportunity</a></li>
-  <li><a href="#sec-h2-ch12" id="toc-sec-h2-ch12" class="nav-link" data-scroll-target="#sec-h2-ch12"><span class="header-section-number">21.2</span> Green hydrogen: the long-horizon bet</a></li>
-  <li><a href="#sec-nearshoring-ch12" id="toc-sec-nearshoring-ch12" class="nav-link" data-scroll-target="#sec-nearshoring-ch12"><span class="header-section-number">21.3</span> Nearshoring: the proximity dividend post-COVID</a></li>
+  <li><a href="#sec-ve-ch12" id="toc-sec-ve-ch12" class="nav-link" data-scroll-target="#sec-ve-ch12">The electric vehicle transition: risk and opportunity</a></li>
+  <li><a href="#sec-h2-ch12" id="toc-sec-h2-ch12" class="nav-link" data-scroll-target="#sec-h2-ch12">Green hydrogen: the long-horizon bet</a></li>
+  <li><a href="#sec-nearshoring-ch12" id="toc-sec-nearshoring-ch12" class="nav-link" data-scroll-target="#sec-nearshoring-ch12">Nearshoring: the proximity dividend post-COVID</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch12" id="toc-sec-concl-ch12" class="nav-link" data-scroll-target="#sec-concl-ch12"><span class="header-section-number">22</span> Conclusion: The Political Economy of Industrial Transformation</a></li>
-  <li><a href="#sec-biblio-ch12" id="toc-sec-biblio-ch12" class="nav-link" data-scroll-target="#sec-biblio-ch12"><span class="header-section-number">23</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch12" id="toc-sec-concl-ch12" class="nav-link" data-scroll-target="#sec-concl-ch12">Conclusion: The Political Economy of Industrial Transformation</a></li>
+  <li><a href="#sec-biblio-ch12" id="toc-sec-biblio-ch12" class="nav-link" data-scroll-target="#sec-biblio-ch12">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch10-growth-development.html">Part III — Development, Transformation, and Industrial Strategy</a></li><li class="breadcrumb-item"><a href="./ch12-industrial-policy-morocco.html"><span class="chapter-number">14</span>&nbsp; <span class="chapter-title">Chapter 12 — Industrial Policy: The Moroccan Experiment</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -404,18 +572,18 @@ The guiding thread of this chapter
 <p>The chapter advances in seven movements. First, the long history of industrial policy, from Colbert and Hamilton to the developmental state, establishing that today’s free-trade advocates are yesterday’s protectionists. Second, Morocco’s three-act industrial history: the developmental ambition (1956-1978), the structural adjustment dismantling (1978-2005), and the selective resurgence (2005-today); third, the assembly paradox and the FDI governance problem. Fourth, the four conditions applied diagnostically to Morocco’s current trajectory. Fifth, comparative cases: China’s upgrading model and Singapore’s EDB as the midwife par excellence. Sixth, the New Development Model as official diagnosis, its convergences and tensions with the analytical framework. Seventh, the open windows: the electric vehicle transition, nearshoring, and green hydrogen.</p>
 <hr>
 </section>
-<section id="sec-histoire-ch12" class="level1" data-number="15">
-<h1 data-number="15"><span class="header-section-number">15</span> Part I — The Long History: Everyone Uses Industrial Policy</h1>
-<section id="sec-histoire-longue-ch12" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="sec-histoire-longue-ch12"><span class="header-section-number">15.1</span> From Colbert to Hamilton: the historical record</h2>
+<section id="sec-histoire-ch12" class="level1">
+<h1>Part I — The Long History: Everyone Uses Industrial Policy</h1>
+<section id="sec-histoire-longue-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-histoire-longue-ch12">From Colbert to Hamilton: the historical record</h2>
 <p>Industrial policy is often presented as a heterodox or developing-country deviation from the free-trade norm. The historical record inverts this narrative entirely.</p>
 <p><strong>Jean-Baptiste Colbert</strong> (1619-1683), Louis XIV’s finance minister, implemented the most systematic state-directed industrialisation Europe had seen: creating royal manufactures (Gobelins tapestries, Saint-Gobain glass), suppressing competing imports, recruiting skilled artisans from abroad, and building the French textile, metalworking, and luxury goods industries through sustained public patronage and protection. Colbertism was not a deviation from proper economic policy: it <em>was</em> French economic policy for two centuries.</p>
 <p><strong>Alexander Hamilton’s</strong> <em>Report on Manufactures</em> (1791) articulated the infant industry argument before List formalised it: the United States needed to protect its nascent industries against established British manufacturers until those industries developed sufficient scale, learning, and technology to compete on equal terms. Hamilton’s argument was implemented through tariff policy that made the United States the most protectionist large economy in the world throughout the 19th century, while simultaneously becoming the most rapidly industrialising economy.</p>
 <p><strong>Friedrich List</strong> (<em>The National System of Political Economy</em>, 1841) provided the theoretical foundation that Hamilton had only sketched: national productive powers (the accumulation of productive skills, institutional capabilities, and industrial knowledge) are more valuable in the long run than the static efficiency gains from free trade according to comparative advantage. A country that specialises in agriculture because it currently has comparative advantage in agriculture is not maximising its long-run wealth; it is locking in a structure that prevents it from developing the dynamic capabilities that generate future wealth. List’s metaphor of kicking away the ladder describes precisely what developed countries have done in promoting free trade once they no longer needed protection.</p>
 <p>Britain protected its textile industry for centuries before achieving comparative advantage in it. The United States had average tariff rates of 40-50% in the 1870s. Germany used systematic state-industry coordination under Bismarck. Japan’s Meiji industrialisation was state-directed from the start. South Korea, Taiwan, and Singapore all used protection, directed credit, export targets, technology transfer requirements, and public enterprises extensively. The historical record is not ambiguous: <strong>what works in development is not what rich countries preach but what they practised.</strong></p>
 </section>
-<section id="sec-new-ip-ch12" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="sec-new-ip-ch12"><span class="header-section-number">15.2</span> The new industrial policy: sélective, conditional, evaluated</h2>
+<section id="sec-new-ip-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-new-ip-ch12">The new industrial policy: sélective, conditional, evaluated</h2>
 <p>The post-Washington Consensus synthesis that has emerged from academic and policy work since the 2000s articulates a new industrial policy doctrine that distinguishes itself clearly from the import-substitution industrialisation of the 1950s-1970s and the structural adjustment liberalisation of the 1980s-1990s.</p>
 <p><strong>Selectivity based on identified market failures.</strong> Support only what will not happen without public action because a specific externality, learning spillovers, coordination failure, information asymmetry, prevents private markets from generating it. Do not “pick winners”: create conditions for winners to emerge and reveal themselves.</p>
 <p><strong>Systematic conditionality.</strong> Every support instrument is matched with measurable performance targets and genuine withdrawal clauses. Reciprocity is not cosmetic: it is the condition that prevents industrial policy from becoming rent distribution.</p>
@@ -425,10 +593,10 @@ The guiding thread of this chapter
 <hr>
 </section>
 </section>
-<section id="sec-trois-actes-ch12" class="level1" data-number="16">
-<h1 data-number="16"><span class="header-section-number">16</span> Part II — Morocco’s Three Industrial Acts</h1>
-<section id="sec-acte1-ch12" class="level2" data-number="16.1">
-<h2 data-number="16.1" class="anchored" data-anchor-id="sec-acte1-ch12"><span class="header-section-number">16.1</span> Act I (1956-1978): developmental ambition and its abandonment</h2>
+<section id="sec-trois-actes-ch12" class="level1">
+<h1>Part II — Morocco’s Three Industrial Acts</h1>
+<section id="sec-acte1-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-acte1-ch12">Act I (1956-1978): developmental ambition and its abandonment</h2>
 <p>At independence, Morocco’s productive structure reflected its colonial function: an enclave of modern commercial agriculture and phosphate extraction serving French interests, surrounded by subsistence agriculture and artisanal production for the domestic market. The developmental aspiration that animated the first post-independence decade sought to rupture this structure.</p>
 <p>The creation of the Bureau d’Études et de Participation Industrielle (BEPI) in 1957 and the Banque Nationale pour le Développement Économique (BNDE) in 1959 expressed institutional awareness that a predominantly agricultural and commercial bourgeoisie would not spontaneously generate industrial investment at the required scale. Partnerships with foreign capital aimed to accelerate technological absorption. The ambition: build a nucleus of heavy industries (steel, chemicals, energy, cement) capable of inducing the rest of the economy through Hirschman linkages.</p>
 <p>This period coincides with Morocco’s most rapid structural dynamism: expanding manufacturing sector, declining agricultural employment share, emergence of initial productive capabilities in import-substituting industries. It also generated the structural tensions that would later constrain it: a narrow domestic market that limited economies of scale, high fixed costs for capital-intensive industries, and growing external debt to finance heavy investments.</p>
@@ -448,15 +616,15 @@ The structural adjustment trauma and its cognitive legacy
 </div>
 </div>
 </section>
-<section id="sec-acte2-ch12" class="level2" data-number="16.2">
-<h2 data-number="16.2" class="anchored" data-anchor-id="sec-acte2-ch12"><span class="header-section-number">16.2</span> Act II (1983-2005): horizontal liberalism and the dissolution of selectivity</h2>
+<section id="sec-acte2-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-acte2-ch12">Act II (1983-2005): horizontal liberalism and the dissolution of selectivity</h2>
 <p>The 1995 Investment Charter abandoned all sectoral discrimination, grouping all sectors without privileging industry, enshrining the extinction of industrial selectivity. The enterprise upgrade programmes launched in the late 1990s adopted the same horizontal logic: supporting competitiveness of existing firms facing trade opening, without privileging sectors or encouraging new productive capacities.</p>
 <p>This period is that of the free trade agreements, with the European Union (Association Agreement, 1996), the United States (FTA, 2004), Turkey, and the Arab world, that consolidated the liberal trajectory and reduced the room for selective trade policy. The codes d’investissement that Morocco adopted in succession (1958, 1961, 1973, 1983, then the 1995 Charter) trace a clear trajectory: in forty years, the Moroccan state progressively dissolved its capacity to orient industrial capital accumulation toward specific sectors and learning processes.</p>
 <p>The Investment Charter of 1995 deserves careful reading as an institutional document. It established a uniform incentive regime across all sectors, eliminating the previous differentiation between manufacturing investment (which received specific industrial promotion measures) and commercial, real estate, and service investment. In theory, this was optimal neutral policy: let market signals determine which activities are most profitable and let the fiscal system not distort those signals. In practice, it meant that industrial investment (which requires longer horizons, larger scale, more coordination, and more initial uncertainty than commercial activity) lost the specific institutional support that its distinctive risk-return profile requires.</p>
 <p>The paradox of this period: the horizontal liberalism of the Investment Charter primarily benefited social housing construction, a sector with weak learning externalities and limited backward linkages toward sophisticated manufacturing. The fiscal incentives designed to be neutral among sectors were, in practice, most easily captured by activities with fast cash returns and existing capital bases, real estate development and commercial services, rather than by manufacturing with longer investment horizons and higher capability requirements.</p>
 </section>
-<section id="sec-acte3-ch12" class="level2" data-number="16.3">
-<h2 data-number="16.3" class="anchored" data-anchor-id="sec-acte3-ch12"><span class="header-section-number">16.3</span> Act III (2005-today): the apparent return of selectivity</h2>
+<section id="sec-acte3-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-acte3-ch12">Act III (2005-today): the apparent return of selectivity</h2>
 <p>From the mid-2000s, sectoral strategies reappear: Plan Émergence (2005), Pacte National pour l’Emergence Industrielle (PNEI, 2009), Plan d’Accélération Industrielle (PAI, 2014-2020), specialised strategies for automotive, aerospace, offshoring, and agri-food. Industrial zones are created (Tanger Automotive City, Atlantic Free Zone Kénitra), sectoral agencies established, quantified objectives announced.</p>
 <p>This apparent selectivity masks a structural continuity: the instruments target certain sectors without being genuinely selective in the deep sense, they do not orient local investment toward those sectors, do not build national technological capabilities systematically, and do not impose obligations of productive learning on beneficiaries. They reduce to fiscal incentives and infrastructure: no structured local content requirements, no technology transfer obligations, no graduated performance conditionality.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -478,10 +646,10 @@ The argan cooperative: when collective action changes the power balance
 <hr>
 </section>
 </section>
-<section id="sec-paradoxe-ch12" class="level1" data-number="17">
-<h1 data-number="17"><span class="header-section-number">17</span> Part III — The Assembly Paradox and the FDI Governance Problem</h1>
-<section id="sec-ikea-ch12" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="sec-ikea-ch12"><span class="header-section-number">17.1</span> Assembling without learning: the IKEA metaphor</h2>
+<section id="sec-paradoxe-ch12" class="level1">
+<h1>Part III — The Assembly Paradox and the FDI Governance Problem</h1>
+<section id="sec-ikea-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ikea-ch12">Assembling without learning: the IKEA metaphor</h2>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -498,15 +666,15 @@ Assembling IKEA furniture versus designing it
 <p>This assembly paradox is not merely metaphorical. It has a structural measurement: the <strong>local content rate</strong>, the share of a sector’s production cost sourced from domestic suppliers. Morocco’s automotive sector has a local content rate of approximately 45-50% overall, but this figure disguises enormous heterogeneity. The high local content is concentrated in relatively simple components, wiring harnesses, seats, basic stamped metal parts, where local suppliers are competitive. In higher-value components, electronics modules, transmission systems, battery management systems, local sourcing is minimal, and these are precisely the components whose share of vehicle value is growing fastest as vehicles become increasingly electronic.</p>
 <p>The trajectory of local content over time matters more than its level at any moment. Morocco’s trajectory, while positive, is slower than Korea’s equivalent phase in the 1970s-1980s or China’s in the 2000s. The acceleration requires a Husbandman-state actively identifying the capability gaps between what international clients need and what local suppliers currently provide, and co-investing in closing those gaps, through shared testing facilities, metrology centres, quality management training, and supplier development programmes with measurable milestones.</p>
 </section>
-<section id="sec-contenu-local-ch12" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="sec-contenu-local-ch12"><span class="header-section-number">17.2</span> The local content problem: from 45% to 65%</h2>
+<section id="sec-contenu-local-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-contenu-local-ch12">The local content problem: from 45% to 65%</h2>
 <p>Morocco’s automotive sector has achieved a local content rate of approximately 45-50% of production cost, a real accomplishment relative to the 15-20% typical of early export processing zones, but substantially below the 65-80% rates that comparable mature clusters in Central Europe and East Asia have achieved. Closing this gap is the central operational challenge of Morocco’s automotive industrial policy for the 2020s.</p>
 <p>The gap is concentrated in specific component families. <strong>Simple, labour-intensive components</strong>, wiring harnesses (câblages), basic seat assemblies, simple metal stampings, are overwhelmingly sourced locally. <strong>Medium-complexity components</strong>, plastic injection mouldings, glass, aluminium castings, non-electronic mechanical parts, are partially sourced locally but with significant import dependence on raw material inputs. <strong>High-complexity components</strong>, electronic control modules, transmission systems, advanced driver assistance systems (ADAS) sensors and processors, battery management systems, are almost entirely imported, from European and increasingly from Moroccan-installed subsidiaries of Asian and European tier-1 suppliers who import their own inputs.</p>
 <p>The strategic pathway from 45% to 65% local content requires a differentiated approach by component family. For simple labour-intensive components, the focus is supplier consolidation and quality system upgrading: the many small Moroccan wiring harness and seat suppliers need to achieve IATF 16949 certification, invest in quality management systems, and consolidate volumes to achieve the minimum efficient scale for just-in-time delivery. For medium-complexity components, the constraint is often raw material access: Moroccan plastics processors depend on imported resin pellets whose price is set globally; Moroccan aluminium casters import ingot. Building domestic raw material supply or securing long-term supply agreements is part of the competitiveness equation. For high-complexity electronic components, the constraint is capability: Morocco currently has insufficient graduate engineers in power electronics, software, and systems integration to support localisation of these components within the current decade. Targeted scholarship and exchange programmes with European engineering schools, combined with accelerated UM6P programme development, are necessary conditions.</p>
 <p>The <strong>conditionality mechanism</strong> for local content escalation requires design. A graduated requirement, increasing local content by 3-4 percentage points annually over five years, verified by independent auditing, with fiscal exemption rates linked to achievement, would create the continuous improvement incentive that the current unconditional incentive system lacks. Renault and Stellantis have demonstrated willingness to develop local suppliers when institutional support is present: what is needed is the formal contractual architecture linking that willingness to measurable milestones.</p>
 </section>
-<section id="sec-ide-ch12" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="sec-ide-ch12"><span class="header-section-number">17.3</span> FDI: accelerator or substitute?</h2>
+<section id="sec-ide-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ide-ch12">FDI: accelerator or substitute?</h2>
 <p>Foreign Direct Investment has played a central role in Morocco’s industrial trajectory. The Renault-Tanger (2012) and Stellantis-Kénitra (2019) investments established the automotive anchor around which the ecosystem has grown. The aerospace cluster around Casablanca-Nouaceur has attracted Safran, Boeing, Bombardier, and over a hundred tier-2 and tier-3 suppliers. These investments are real productive contributions that no domestic private initiative could have assembled at the required scale and within the available time horizon.</p>
 <p>But FDI is neither automatically transformative nor necessarily a permanent productive anchor. The critical governance question is whether FDI generates lasting productive capabilities in the host economy, or whether it operates as an enclave: exporting, employing, paying taxes, but leaving behind nothing that would sustain production if the investor left.</p>
 <p>The <strong>profit reinvestment rate</strong> provides one measure. Between 2010 and 2020, reinvestment of foreign enterprise profits in Morocco averaged <strong>10.6% of FDI inflows</strong>, against 28.3% for upper-middle-income countries and 33.3% for developing countries overall. This reveals that the profit-investment cycle is partially extracted from the national economy: multinationals repatriate earnings rather than reinvesting locally. The state builds the infrastructure that makes their operations possible; the returns flow back to headquarters.</p>
@@ -526,8 +694,8 @@ What Morocco’s investment codes have consistently avoided asking
 </div>
 <p>The conditions under which FDI generates genuine learning, rather than assembly enclave, have been extensively studied. Technology transfer occurs when the host economy has sufficient <strong>absorptive capacity</strong> (a body of local engineering talent capable of decoding and improving upon observed foreign technologies), when <strong>labour mobility</strong> within the host economy allows workers trained by foreign firms to carry knowledge into domestic enterprises, and when the <strong>governance framework</strong> requires progressively deepening local integration rather than permitting indefinite import-dependent assembly. All three conditions are partially present in Morocco and partially absent: building all three simultaneously is the operational challenge.</p>
 </section>
-<section id="sec-financement-ch12" class="level2" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="sec-financement-ch12"><span class="header-section-number">17.4</span> Financing industrial upgrading: beyond FDI</h2>
+<section id="sec-financement-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-financement-ch12">Financing industrial upgrading: beyond FDI</h2>
 <p>Morocco’s industrial deepening requires a financing architecture that goes beyond attracting foreign direct investment. Three financing gaps require specific institutional responses.</p>
 <p><strong>Long-horizon industrial investment</strong>, the multimillion-dirham commitment to build a component manufacturing facility or a quality testing laboratory, requires financing with maturities of 7-15 years at rates compatible with industrial returns. Morocco’s banking system, despite its relative development, is structurally oriented toward shorter-horizon commercial and real estate lending. The Caisse de Dépôt et de Gestion’s infrastructure financing role and Tamwilcom’s guarantee mechanisms are partial responses, but the gap between the financing available for industrial upgrading and what Korean or Taiwanese enterprises had access to through directed industrial finance in their catching-up phases remains large.</p>
 <p><strong>SME supplier development</strong> requires a dedicated instrument. Tier-2 and tier-3 Moroccan suppliers, the firms that would supply tier-1 suppliers who supply Renault and Stellantis, are typically undercapitalised for the investment required to meet IATF 16949 quality standards, install adequate testing equipment, and carry the working capital required for just-in-time delivery. A supplier development guarantee fund, co-financed by the state and by the anchor firms that would benefit from local sourcing, would align incentives and provide the risk-sharing that currently prevents the market from generating this investment spontaneously.</p>
@@ -536,30 +704,30 @@ What Morocco’s investment codes have consistently avoided asking
 <hr>
 </section>
 </section>
-<section id="sec-quatre-conditions-maroc-ch12" class="level1" data-number="18">
-<h1 data-number="18"><span class="header-section-number">18</span> Part IV — The Four Conditions Applied to Morocco</h1>
+<section id="sec-quatre-conditions-maroc-ch12" class="level1">
+<h1>Part IV — The Four Conditions Applied to Morocco</h1>
 <p>The four-condition framework from Chapter 9 (Nouri, forthcoming) provides the most operationally precise diagnosis of where Morocco’s industrial policy is effective and where it remains structurally incomplete.</p>
-<section id="sec-cond1-ch12" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="sec-cond1-ch12"><span class="header-section-number">18.1</span> Condition 1: Real coordination failures — substantially satisfied</h2>
+<section id="sec-cond1-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cond1-ch12">Condition 1: Real coordination failures — substantially satisfied</h2>
 <p>Morocco’s industrial zones address genuine coordination failures. The chicken-and-egg problem of supplier clusters, no assembler installs without suppliers; no suppliers invest without assemblers, is a textbook coordination failure that the Tanger Automotive City model addresses directly. By simultaneously providing infrastructure, training, fiscal incentives, and the anchor Renault installation, the state created the critical mass that private actors could not have assembled independently.</p>
 <p>The offshore services (BPO and ITO) sector similarly addresses information and coordination market failures: potential operators did not know whether Morocco could provide adequate talent and connectivity; European clients did not know whether Moroccan operators could meet quality standards; the early public co-investment in Casablanca Finance City, Technopolis, and the CFC telecommunications infrastructure created the credible signals that allowed the market to develop.</p>
 <p>The weakness at this level: not all instruments that bear the “industrial policy” label address real coordination failures. Some sectoral incentives benefit activities that would have developed without public support, generating windfall rents rather than additional investment. Without a rigorous methodology for identifying genuine coordination failures, the risk is that instruments justified analytically end up subsidising activities for which the market-failure justification is weak.</p>
 </section>
-<section id="sec-cond2-ch12" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="sec-cond2-ch12"><span class="header-section-number">18.2</span> Condition 2: Institutional capacity — partial and uneven</h2>
+<section id="sec-cond2-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cond2-ch12">Condition 2: Institutional capacity — partial and uneven</h2>
 <p>Morocco’s institutional capacity for industrial policy execution is real in some dimensions and structurally limited in others. Tanger Med’s success in building a world-class logistics and industrial infrastructure reflects genuine state capacity to deliver complex multistakeholder projects at international quality standards. The IFMIA’s ability to train automotive technicians to the specific requirements of Renault’s production system reflects capacity to build sector-specific human capital rapidly.</p>
 <p>But two structural gaps persist. First, <strong>coordination between ministries and agencies</strong> is fragile: industrial strategy involves simultaneously the Ministry of Industry, the Ministry of Finance (fiscal incentives), the Ministry of Education (training), the Ministry of Infrastructure (logistics), the AMDI (investment promotion), the CRI (regional investment), the OFPPT (vocational training), and OCP (supplier development). The absence of a permanent inter-ministerial coordination mechanism with genuine decision authority leads to strategic incoherence: each institution produces good policy within its mandate, but the cross-silo integration that a coherent industrial ecosystem requires is structurally underproduced.</p>
 <p>A concrete illustration: Morocco’s automotive cluster needs simultaneously better engineering graduates (Ministry of Education), upgraded supplier capability (Ministry of Industry and OFPPT), faster logistics (Ministry of Infrastructure), streamlined administrative procedures (AMDI and CRI), and competitive financing for local suppliers (Ministry of Finance and banking system). No single agency controls all these levers, and no systematic mechanism ensures their coordination toward a common upgrade objective. The cluster’s advancement speed is therefore determined by its slowest institutional complement rather than by the ambition of its fastest.</p>
 <p>Second, <strong>evaluation capacity</strong> is almost entirely absent. Morocco has not systematically assessed which components of its industrial programmes have generated genuine learning versus which have generated rent. The absence of programme-level impact analysis means that budget allocation between instruments cannot be evidence-based: decisions about whether to extend a fiscal exemption, expand a supplier development programme, or redirect funding from one sectoral strategy to another cannot draw on measured outcomes. Without this feedback loop, the adaptive adjustment that characterises effective industrial policy is structurally impossible. Building evaluation capacity in AMDI, the Ministry of Industry, and the sectoral technical centres is therefore not an administrative luxury: it is the precondition for intelligent industrial governance.</p>
 </section>
-<section id="sec-cond3-ch12" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="sec-cond3-ch12"><span class="header-section-number">18.3</span> Condition 3: Conditional reciprocity — structurally absent</h2>
+<section id="sec-cond3-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cond3-ch12">Condition 3: Conditional reciprocity — structurally absent</h2>
 <p>This is the most critical gap in Morocco’s industrial policy architecture. The East Asian developmental states that generated the fastest productive upgrading (Korea, Taiwan, Singapore) all shared a common feature: <strong>public support was systematically conditional on measurable performance</strong>. Samsung received directed credit and technology access in exchange for export performance benchmarks, capability development milestones, and increasing local value-added requirements. The state was not a passive incentive-distributor; it was an active performance monitor.</p>
 <p>Morocco’s investment codes and sectoral strategies have never operationalised this conditionality. Fiscal exemptions are granted based on investment commitment and employment creation, not on local content rates, technology upgrading trajectories, or capability development milestones. The five-year IS exemptions available in free zones do not vary with how deeply the enterprise integrates into the domestic economy. The absence of this conditionality mechanism is not a detail, it is the structural reason why Morocco can attract investment without deepening.</p>
 <p>The political economy of this absence is clear: firms that have received incentive packages resist performance conditionality that could expose their relative non-performance and trigger loss of privileges. The administrative capacity to enforce conditionality across hundreds of investment agreements is also genuinely demanding. But these obstacles are not insuperable, they are governance design challenges that successful industrial policy systems have resolved through transparent monitoring frameworks, sectoral dialogue platforms that create peer pressure among firms, and staged escalation of conditionality as the sectoral ecosystem matures.</p>
 </section>
-<section id="sec-cond4-ch12" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="sec-cond4-ch12"><span class="header-section-number">18.4</span> Condition 4: Credible exit — never operationalised</h2>
+<section id="sec-cond4-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-cond4-ch12">Condition 4: Credible exit — never operationalised</h2>
 <p>Morocco’s industrial instruments have no credible exit architecture. Fiscal exemptions available in zones have nominally limited durations, but the administrative trajectory has been extension after extension as firms and zones lobby for continuation. No Moroccan industrial programme has been publicly terminated for failure to produce the expected productive learning, the administrative and political costs of doing so have always exceeded the perceived costs of continuation.</p>
 <p>This creates the incentive pathology that Condition 4 is designed to prevent: knowing that support is effectively permanent, firms optimise their relationship with the support system rather than optimising their productive capabilities. An enterprise in a free zone that will receive fiscal exemption indefinitely has less incentive to develop the export market relationships and quality systems that would make it independently competitive than an enterprise knowing it must become independently competitive by year ten.</p>
 <p>Designing credible exit requires <strong>pre-commitment mechanisms</strong>: autonomous evaluation bodies whose assessments trigger automatic consequences, rather than recommendations that political actors can override. The mechanism design challenge is to make the exit trigger observable (based on publicly available performance metrics), automatic (not subject to discretionary override), and proportionate (graduated reduction rather than cliff-edge termination, which would create too large a political shock to be credible).</p>
@@ -568,8 +736,8 @@ What Morocco’s investment codes have consistently avoided asking
 <hr>
 </section>
 </section>
-<section id="sec-comparaisons-ch12" class="level1" data-number="19">
-<h1 data-number="19"><span class="header-section-number">19</span> Part V — Comparative Cases: What Morocco Can Learn</h1>
+<section id="sec-comparaisons-ch12" class="level1">
+<h1>Part V — Comparative Cases: What Morocco Can Learn</h1>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -584,8 +752,8 @@ OCP’s vertical integration: the model of Moroccan productive deepening
 <p>The logic is exactly Hirschman’s: OCP built backward linkages (purchasing engineering services, equipment, and chemicals progressively from Moroccan suppliers), forward linkages (financing African agri-distribution systems), and fiscal linkages (dividends and taxes that finance public investment). UM6P’s research on plant nutrition, soil science, and fertiliser efficiency is the learning externality that OCP’s campus investment generated, transforming a mining enterprise into an integrated agri-nutrition system. This is what productive deepening looks like when it is achieved. The automotive sector’s challenge is to replicate this logic at cluster scale rather than within a single enterprise.</p>
 </div>
 </div>
-<section id="sec-coree-ch12" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="sec-coree-ch12"><span class="header-section-number">19.1</span> Korea 1960-1990: what the archetype actually did</h2>
+<section id="sec-coree-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-coree-ch12">Korea 1960-1990: what the archetype actually did</h2>
 <p>The Korean developmental state, extensively documented by Amsden, Wade, and Evans, provides the most complete archetype of the conditional reciprocity model that Morocco needs to build. Its operating logic was not primarily ideological but transactional: public support in exchange for performance delivery.</p>
 <p>Korea’s instruments were varied and sophisticated. <strong>Directed credit at below-market rates</strong> from the state-controlled banking system financed chaebol expansion into targeted sectors, with export performance benchmarks attached. Samsung, Hyundai, and POSCO received preferential financing in exchange for specific export volume commitments and technology development targets verified by the Ministry of Trade and Industry. Firms meeting targets received continued support; firms missing targets lost it. The conditionality was enforced, not merely announced.</p>
 <p><strong>Domestic content requirements</strong> for industries receiving protection imposed escalating local sourcing obligations. An auto assembler protected from import competition was required to source progressively larger shares of its components from Korean suppliers, not as a permanent subsidy to inefficient suppliers but as a learning mandate forcing supply chain upgrading. Local content rates in Korean automotive manufacturing rose from below 40% in the late 1960s to above 80% by the mid-1980s, driven by this conditionality framework.</p>
@@ -593,24 +761,24 @@ OCP’s vertical integration: the model of Moroccan productive deepening
 <p>The Korean model’s most distinctive institutional feature was what Evans called <strong>embedded autonomy</strong>: the MTI officials who administered industrial policy were deeply embedded in Korean industrial sectors (they knew the firms, the technologies, the competitive dynamics) while simultaneously maintaining institutional authority to impose discipline. They were not captured by the industries they monitored, precisely because their career success was measured by industrial performance outcomes, not by the maintenance of client relationships.</p>
 <p>For Morocco, the specific Korean lesson is not replication: the instruments must be adapted to WTO commitments, EU agreement obligations, and Morocco’s institutional capacity. But the underlying logic is applicable. The PAI’s success with Renault and Stellantis proves that Morocco can attract major investors and create productive infrastructure. The missing element is exactly what Korea did systematically and Morocco has not: making that infrastructure investment conditional on deepening, not just on installing.</p>
 </section>
-<section id="sec-chine-ch12" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="sec-chine-ch12"><span class="header-section-number">19.2</span> China: scale, speed, and the non-replicable parts</h2>
+<section id="sec-chine-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-chine-ch12">China: scale, speed, and the non-replicable parts</h2>
 <p>China’s trajectory from low-cost assembly to global leadership in solar panels, electric vehicle batteries, and high-speed rail is the most cited success story of 21st-century industrial upgrading. Its relevance for Morocco is real but carefully conditional, some elements are genuinely applicable; others depend on conditions Morocco cannot replicate.</p>
 <p><strong>What applies to Morocco</strong>: the patient sequence of upgrading, entering segments with existing capability adjacency (automotive wiring, then components, then systems), accumulating learning at each stage before moving to the next, investing in the educational foundation that absorptive capacity requires, using state procurement to create domestic demand for infant industry products, and conditioning foreign investor access on technology transfer commitments.</p>
 <p>China’s <strong>SEZ model</strong>, special economic zones providing first-mover infrastructure and regulatory advantages to export-oriented industry, was adapted from Singapore’s and Taiwan’s earlier approaches, and Morocco’s PAI ecosystem model follows the same logic. The difference is in the density and speed of linkage development. China’s SEZs generated domestic supplier ecosystems within five to seven years; Morocco’s have taken longer because the domestic industrial base was thinner and the conditionality framework weaker.</p>
 <p><strong>What does not apply</strong>: China’s domestic market scale enabled a strategy that Morocco cannot replicate. Chinese firms could serve a billion-consumer domestic market while developing capabilities, using domestic demand as the training ground for export competitiveness. Morocco’s domestic market is approximately 7% of China’s at GDP equivalence, meaning that Morocco must develop export-competitive capabilities without the safety net of domestic market scale. This raises the risk profile of industrial investment significantly, because there is no fallback market if export market entry is slower than expected.</p>
 <p>China also violated multiple informal international trade norms during its industrial development, forced technology transfer, massive state subsidies, local content requirements that WTO rules nominally prohibit, which generated industrial success but also the trade conflict with the United States and Europe that now constrains market access. Morocco, deeply integrated with the EU through its Association Agreement and dependent on EU market access for its export strategy, does not have the same latitude for aggressive rule-bending. This constraint is real, but the response is not to abandon industrial policy; it is to design the instruments within available WTO and EU-agreement space. This space is larger than often assumed: R&amp;D subsidies, zone infrastructure, public procurement preferences, technology co-development partnerships, and training co-investments are all available instruments.</p>
 </section>
-<section id="sec-aeronautique-ch12" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="sec-aeronautique-ch12"><span class="header-section-number">19.3</span> Morocco’s aerospace cluster: capability without ownership</h2>
+<section id="sec-aeronautique-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-aeronautique-ch12">Morocco’s aerospace cluster: capability without ownership</h2>
 <p>Morocco’s aerospace cluster around Casablanca-Nouaceur represents a more technologically sophisticated industrial insertion than the automotive cluster and illustrates both the potential and the limits of the midwife-state model at a different level of the product space.</p>
 <p>The cluster has attracted Safran (aircraft engines and landing systems), Boeing (aircraft modifications and maintenance), Bombardier (aircraft interiors and structures), Spirit AeroSystems (fuselage components), and over 140 tier-2 and tier-3 suppliers. It has generated approximately 26,500 direct jobs in 2024, with average wages well above the Moroccan manufacturing mean, reflecting the genuine technical sophistication required. GIMAS (the Moroccan aerospace industry association) estimates total aerospace exports around 26.5 billion dirhams in 2024.</p>
 <p>The cluster’s technical profile is real: precision machining to aerospace tolerances, composite lay-up for structural components, complex cabling to AS9100 standards, and maintenance-repair-overhaul (MRO) operations. These are not low-skill assembly activities. The engineers and technicians who staff these operations possess genuine industrial capabilities that represent an accumulation of human capital that Morocco did not have fifteen years ago.</p>
 <p>The strategic challenge is ownership and conception. The vast majority of the cluster’s intellectual property, the design of aircraft components, the process engineering for manufacturing them, the certification that makes them acceptable to Boeing or Airbus, is held by the international firms, not by Moroccan enterprises or Moroccan engineers in their own name. A Moroccan machinist who can manufacture a turbine blade component to Safran specifications does not thereby acquire the capability to design that component or to sell it on the market independently. The cluster generates skilled employment and export revenue without yet generating Moroccan-owned technological assets.</p>
 <p>The pathway toward changing this requires a specific strategy for aerospace. University-level aerospace engineering education (currently limited in depth relative to the cluster’s technical level), dedicated materials and process research at the UM6P or a sectoral research centre, and co-development agreements with international partners that involve genuine knowledge transfer rather than only production subcontracting. The IMA (Institut des Métiers de l’Aéronautique) provides technician-level training; what is needed in addition is engineer-level design and systems integration capability that can gradually position Moroccan engineers as co-designers rather than subcontractors.</p>
 </section>
-<section id="sec-singapour-ch12" class="level2" data-number="19.4">
-<h2 data-number="19.4" class="anchored" data-anchor-id="sec-singapour-ch12"><span class="header-section-number">19.4</span> Singapore’s EDB: the midwife designed right</h2>
+<section id="sec-singapour-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-singapour-ch12">Singapore’s EDB: the midwife designed right</h2>
 <p>Singapore’s <strong>Economic Development Board</strong> is the most studied example of Evans’s Midwife state role operating at high institutional quality. Its core operating principles deserve detailed examination because they identify precisely what Morocco’s AMDI could become if institutional design were improved.</p>
 <p>The EDB did not create public electronics factories. It did not protect domestic manufacturers from foreign competition. Instead, it took on the coordination and signalling functions that market actors could not perform: negotiating with Texas Instruments, National Semiconductor, and Hewlett-Packard on the specific capability development requirements for Singapore operations; building dedicated technical training programmes in partnership with each incoming firm before the firm arrived; designing infrastructure (the Jurong Industrial Estate) specifically to the technical requirements of electronics assembly operations; and progressively raising the sophistication requirements for subsequent investment rounds, using early investors’ demonstrated capabilities as anchors to attract more complex activities.</p>
 <p>The key institutional feature: the EDB operated with <strong>embedded autonomy</strong> (Evans’s concept) in its purest form. Its staff were genuinely embedded in Singapore’s industrial sectors, they understood the specific technical constraints and market dynamics of each industry, while maintaining autonomous authority to set performance requirements and withdraw incentives from non-performers. Senior EDB officers were drawn from engineering and technology backgrounds, not from generalist civil service; they could evaluate investor promises against industry benchmarks. Their career success depended on sectoral upgrading outcomes, not on investment volume attracted.</p>
@@ -618,10 +786,10 @@ OCP’s vertical integration: the model of Moroccan productive deepening
 <hr>
 </section>
 </section>
-<section id="sec-nmd-ch12" class="level1" data-number="20">
-<h1 data-number="20"><span class="header-section-number">20</span> Part VI — The New Development Model: Official Diagnosis and Its Gaps</h1>
-<section id="sec-nmd-right-ch12" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="sec-nmd-right-ch12"><span class="header-section-number">20.1</span> What the NMD gets right</h2>
+<section id="sec-nmd-ch12" class="level1">
+<h1>Part VI — The New Development Model: Official Diagnosis and Its Gaps</h1>
+<section id="sec-nmd-right-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-nmd-right-ch12">What the NMD gets right</h2>
 <p>Morocco’s 2021 New Development Model (<em>Nouveau Modèle de Développement</em>, NMD), produced by the Special Commission on Development Model chaired by Chakib Benmoussa, represents the most comprehensive official diagnosis of Morocco’s development blockages ever produced. Its value is not merely as a policy document but as a signal that the highest levels of Moroccan governance have acknowledged the fundamental limitations of the preceding model.</p>
 <p>The NMD identifies accurately: insufficient inclusion (growth that has not reached a broad enough share of the population), undervalued human capital (education systems disconnected from productive needs), underperforming private sector (dominated by rentier rather than competitive dynamics), inefficient administration (fragmented, poorly evaluated, insufficiently capable), and persistent territorial inequality.</p>
 <p>The NMD’s six strategic levers, a new confidence pact, an effective state, a diversified productive economy, future competences, reinforced inclusion, and territorial cohesion, are analytically well-founded and correspond closely to what the four-condition framework would prescribe. Convergences with the analytical framework of this textbook are strong on institutional capacity, economic reasoning, and human capital development.</p>
@@ -641,8 +809,8 @@ The NMD’s operational gap
 </div>
 </div>
 </section>
-<section id="sec-economie-politique-ch12" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="sec-economie-politique-ch12"><span class="header-section-number">20.2</span> The political economy of industrial stagnation</h2>
+<section id="sec-economie-politique-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-economie-politique-ch12">The political economy of industrial stagnation</h2>
 <p>The four-condition framework describes the functional gaps in Morocco’s industrial policy. A complementary political economy analysis asks: <em>why</em> do these gaps persist? Understanding the political equilibrium that produces and reproduces them is essential for designing reforms that can actually be implemented rather than technically optimal policies that face insurmountable political resistance.</p>
 <p>The Moroccan political economy of industrial policy contains several distinct interest configurations that help explain the persistence of Conditions 3 and 4 failures.</p>
 <p><strong>Incumbent firm capture of incentive systems</strong>: firms that have received investment incentive packages have strong organisational incentives to resist performance conditionality and sunset clauses that could expose their relative non-performance. The larger and more politically connected the firm, the greater its ability to delay or dilute conditionality through lobbying, political relationships, and administrative discretion. This is not a Moroccan-specific phenomenon: it is the general capture dynamic that effective industrial policy governance must counteract through transparency, independent evaluation, and pre-commitment mechanisms.</p>
@@ -651,8 +819,8 @@ The NMD’s operational gap
 <p><strong>The PAS trauma’s institutional legacy</strong>: beyond the cognitive constraint described earlier, the structural adjustment programme left a specific institutional legacy: the destruction of the policy analysis and industrial monitoring capacity that had been building since independence. The BNDE carried institutional memory of sectoral financing: what worked, what did not, which firms were genuinely investible. Its privatisation in 1989 did not merely eliminate a lending institution; it eliminated an accumulation of analytical capability and sectoral knowledge that took decades to develop and has not been rebuilt. The gap between Morocco’s sectoral strategies and their implementation reflects, in part, the absence of an analytical bureaucracy capable of evaluating sectoral dynamics and designing performance benchmarks.</p>
 <p>Recognising these political economy mechanisms is not pessimism about change: it is realism about the political work that successful reform requires. Every successful developmental state overcame equivalent resistance, Korea’s chaebols resisted discipline; Singapore’s business community was skeptical of EDB conditionality; Taiwan’s incumbents resisted technology upgrading requirements. What made the difference was the combination of reform coalition strength (leaders with sufficient political capital to override resistance), institutional design that made backsliding costly (public performance disclosure, independent evaluation boards), and the credible threat of losing protection if performance was not delivered.</p>
 </section>
-<section id="sec-bilans-ch12" class="level2" data-number="20.3">
-<h2 data-number="20.3" class="anchored" data-anchor-id="sec-bilans-ch12"><span class="header-section-number">20.3</span> The sectoral strategies: honest assessment</h2>
+<section id="sec-bilans-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bilans-ch12">The sectoral strategies: honest assessment</h2>
 <p>Morocco’s major sectoral strategies since 2005 deserve an honest assessment against their stated objectives.</p>
 <p><strong>Plan Maroc Vert (2008-2020)</strong> met its quantitative agricultural objectives: agri-food export growth, irrigation development, small farmer aggregation. But it did not sufficiently resolve agricultural dualism: modern commercial farms progressed, while rainfed subsistence farmers remain exposed to climate variability. The Génération Green (2020-2030) attempts to correct this imbalance by targeting the agricultural middle class.</p>
 <p><strong>Plan Émergence and PAI (2005-2020)</strong> produced visible results in automotive, aerospace, and offshoring export volumes. But two structural limits persist: weak local content (value chains import most strategic inputs) and geographic concentration (modern activities remain concentrated on the Casablanca-Tanger axis, intensifying territorial inequalities).</p>
@@ -662,34 +830,34 @@ The NMD’s operational gap
 <hr>
 </section>
 </section>
-<section id="sec-fenetres-ch12" class="level1" data-number="21">
-<h1 data-number="21"><span class="header-section-number">21</span> Part VII — The Windows Still Open</h1>
-<section id="sec-ve-ch12" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="sec-ve-ch12"><span class="header-section-number">21.1</span> The electric vehicle transition: risk and opportunity</h2>
+<section id="sec-fenetres-ch12" class="level1">
+<h1>Part VII — The Windows Still Open</h1>
+<section id="sec-ve-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ve-ch12">The electric vehicle transition: risk and opportunity</h2>
 <p>The European Union’s decision to prohibit the sale of new internal combustion engine vehicles by 2035 poses an existential strategic question for Morocco’s automotive sector: if the cluster’s capabilities are concentrated in ICE components (wiring harnesses, exhaust systems, transmission parts, conventional stamped metal), what happens when the dominant technology platform shifts?</p>
 <p>The risk is real. Several major competence areas in Morocco’s current automotive cluster have limited transferability to EVs: engine components, exhaust after-treatment, fuel systems, conventional transmission. If the transition occurs without deliberate repositioning, Morocco could find itself with a cluster of specialised capabilities that the market no longer demands.</p>
 <p>The opportunity is equally real, and specific to Morocco’s resource endowment. Morocco possesses the world’s largest phosphate reserves, and phosphate is a primary input for lithium iron phosphate (LFP) battery cathode materials, one of the two dominant battery chemistries for EVs (alongside NMC). OCP is actively exploring battery materials positioning, and UM6P has established battery research capabilities. If Morocco successfully positions itself as a battery materials supplier, and ideally a battery cell manufacturer, for the European EV market, it transforms a geological endowment into a 21st-century industrial asset.</p>
 <p>The transition creates a sector-specific challenge for Morocco’s 45,000 workers currently employed in ICE-related manufacturing and their employers. A proactive transition strategy requires simultaneously mapping which existing competencies transfer to EV manufacturing (wiring harnesses almost entirely; precision assembly; metal stamping partially), which become obsolete (exhaust systems, fuel injection, conventional transmission), and which new competencies are required but not yet present (power electronics, battery cell manufacturing, software for EV control systems). This mapping is the prerequisite for designing the targeted retraining and capability investment that avoids stranded human capital.</p>
 <p>The product space adjacencies are defined: from automotive wiring, the natural move is toward embedded electronics, mechatronics, and battery management systems. From phosphate-based fertilisers, the natural move toward battery cathode materials requires significant new capability in chemical synthesis and materials science. From aerospace composites, adjacency exists toward lightweight EV structural components.</p>
 </section>
-<section id="sec-h2-ch12" class="level2" data-number="21.2">
-<h2 data-number="21.2" class="anchored" data-anchor-id="sec-h2-ch12"><span class="header-section-number">21.2</span> Green hydrogen: the long-horizon bet</h2>
+<section id="sec-h2-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-h2-ch12">Green hydrogen: the long-horizon bet</h2>
 <p>Morocco’s renewable energy endowment, exceptional solar irradiation across the south and Atlantic coast, strong and consistent Atlantic winds, creates a potential comparative advantage in <strong>green hydrogen</strong> production that did not exist a decade ago. Green hydrogen is produced by electrolyzing water using renewable electricity; Morocco’s projected renewable electricity costs by 2030 are among the lowest in the accessible-to-Europe geography.</p>
 <p>The EU’s REPowerEU initiative, seeking to replace Russian gas with renewable alternatives, has explicitly identified Morocco as a priority green hydrogen supply partner. The proposed Moroccan-European hydrogen pipeline (Medgaz corridor repurposing or new infrastructure) could, if built, transform Morocco from a chronic hydrocarbon importer to a green energy exporter, reversing one of the most structurally costly vulnerabilities in Morocco’s current account.</p>
 <p>This is a long-horizon investment: green hydrogen economics depend on electrolyser cost trajectories that are still declining rapidly (electrolyser costs have fallen from approximately $1,000/kW in 2015 to below $500/kW in 2023, with projections of $200/kW by 2030), on infrastructure investment that requires 10-15 year construction horizons, and on European policy frameworks that create stable demand signals. The EU’s REPowerEU hydrogen import targets (10 million tonnes annually by 2030) and MENA hydrogen strategies provide the demand signal framework; Morocco’s task is positioning its supply capabilities credibly within these frameworks before supply contracts are allocated elsewhere.</p>
 <p>The industrial policy logic for green hydrogen combines the Husbandman role (developing the domestic renewable energy equipment supply chain, potentially including electrolyser manufacturing and infrastructure engineering) with the Midwife role (creating the regulatory and infrastructure framework that makes private green hydrogen investment viable, including grid interconnection rules, hydrogen offtake contract frameworks, and port infrastructure for liquefied hydrogen export). The Moroccan state’s comparative advantage in the green hydrogen value chain is not the electrolyser (German and Chinese manufacturers dominate this) but the combination of land, solar and wind resources, and Atlantic port infrastructure that makes Morocco one of the lowest-cost green hydrogen production geographies in the accessible-to-Europe world.</p>
 <p>The strategic value of a successful positioning is transformative: Morocco achieving significant energy export status would change the current account dynamics that the Thirlwall constraint (Chapter 9) identifies as Morocco’s long-run growth ceiling. A country that currently imports 85% of its energy in hydrocarbons spending multiple billions of dollars of foreign exchange annually would, in an energy export scenario, generate a structural improvement in the current account that expands fiscal space, reduces external financing dependence, and creates the room for the industrial investment that self-sustaining development requires.</p>
 </section>
-<section id="sec-nearshoring-ch12" class="level2" data-number="21.3">
-<h2 data-number="21.3" class="anchored" data-anchor-id="sec-nearshoring-ch12"><span class="header-section-number">21.3</span> Nearshoring: the proximity dividend post-COVID</h2>
+<section id="sec-nearshoring-ch12" class="level2">
+<h2 class="anchored" data-anchor-id="sec-nearshoring-ch12">Nearshoring: the proximity dividend post-COVID</h2>
 <p>Post-COVID supply chain reconfiguration has created a genuine nearshoring opportunity that Chapter 6’s analysis described. For Morocco, the sectors where the proximity dividend applies most forcefully are those where European buyers need responsiveness, short-cycle fashion textiles, fresh produce, just-in-time automotive components, French-language business process services, and where Morocco’s 14-hour distance-to-market (versus 30 days from Asia) provides a structural advantage that is not merely cost-based.</p>
 <p>The condition for capturing this window is building capabilities that low-cost distance competitors cannot provide: design responsiveness for fashion; cold chain integrity and traceability for agri-food; engineering problem-solving for automotive; and language and cultural proximity for business services. Each of these requires investment in the capability dimension that cost competition alone does not.</p>
 <p>The window is not indefinitely open. As East Asian competitors invest in Morocco-equivalent nearshoring positioning (Turkish industrial zones, Egyptian special economic zones, Eastern European clusters), and as automation reduces the labour-content advantage that makes nearshoring less about cost than capability, Morocco must convert its current geographic advantage into durable capability advantage before the window narrows.</p>
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch12" class="level1" data-number="22">
-<h1 data-number="22"><span class="header-section-number">22</span> Conclusion: The Political Economy of Industrial Transformation</h1>
+<section id="sec-concl-ch12" class="level1">
+<h1>Conclusion: The Political Economy of Industrial Transformation</h1>
 <p>Three propositions emerge from this chapter’s analysis, each with direct implications for how Morocco’s industrial policy should be designed going forward.</p>
 <p><strong>Attraction without deepening is a strategy of permanent dependency.</strong> Morocco’s ability to attract world-class anchor firms, Renault, Stellantis, Safran, Boeing, Bombardier, is a genuine institutional achievement that reflects decades of accumulated infrastructure, regulatory improvement, and sectoral expertise. But attraction without systematic deepening, without Condition 3 and Condition 4, means that the infrastructure the state builds benefits primarily foreign value chains. Morocco captures employment and fiscal revenue while the firms capture the technological returns and repatriate the profits.</p>
 <p><strong>The NMD identifies the problem; the four conditions specify the solution.</strong> Morocco’s 2021 New Development Model is the most honest official diagnosis of development model limitations ever produced. Its gap is operational: it describes desired outcomes without specifying the governance mechanisms, conditionality architecture, evaluation systems, exit triggers, through which those outcomes become achievable. The four conditions are the operational translation of the NMD’s vision into an implementable governance framework.</p>
@@ -717,8 +885,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch12" class="level1 appendix" data-number="23">
-<h1 class="appendix" data-number="23"><span class="header-section-number">23</span> Further Reading</h1>
+<section id="sec-biblio-ch12" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Nouri, F. (à paraître). “Why Catch-Up Remains Rare.”</strong> The four-condition framework developed in this chapter. Direct source for the analytical framework applied to Morocco.</p>
 <p><strong>Amsden, A.H. (1989). <em>Asia’s Next Giant: South Korea and Late Industrialization</em>. Oxford University Press.</strong> The foundational analysis of the Korean developmental state and the reciprocal control mechanism. Essential for understanding what Morocco’s industrial policy is missing.</p>
 <p><strong>Wade, R. (1990). <em>Governing the Market: Economic Theory and the Role of Government in East Asian Industrialization</em>. Princeton University Press.</strong> The systematic comparison of East Asian developmental states. Shows what “governed markets” look like in practice.</p>
@@ -732,8 +900,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1152,13 +1379,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1167,5 +1394,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

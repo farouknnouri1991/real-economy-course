@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/preface.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,8 +78,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,6 +265,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -296,15 +463,16 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#the-intellectual-wager-simplicity-as-rigour" id="toc-the-intellectual-wager-simplicity-as-rigour" class="nav-link active" data-scroll-target="#the-intellectual-wager-simplicity-as-rigour"><span class="header-section-number">2.1</span> The Intellectual Wager: Simplicity as Rigour</a></li>
-  <li><a href="#why-morocco-and-why-it-matters-for-the-world" id="toc-why-morocco-and-why-it-matters-for-the-world" class="nav-link" data-scroll-target="#why-morocco-and-why-it-matters-for-the-world"><span class="header-section-number">2.2</span> Why Morocco, and Why It Matters for the World</a></li>
-  <li><a href="#how-to-read-this-book-four-lenses-one-economy" id="toc-how-to-read-this-book-four-lenses-one-economy" class="nav-link" data-scroll-target="#how-to-read-this-book-four-lenses-one-economy"><span class="header-section-number">2.3</span> How to Read This Book: Four Lenses, One Economy</a></li>
-  <li><a href="#a-note-on-the-heterodox-tradition" id="toc-a-note-on-the-heterodox-tradition" class="nav-link" data-scroll-target="#a-note-on-the-heterodox-tradition"><span class="header-section-number">2.4</span> A Note on the Heterodox Tradition</a></li>
+  <li><a href="#the-intellectual-wager-simplicity-as-rigour" id="toc-the-intellectual-wager-simplicity-as-rigour" class="nav-link active" data-scroll-target="#the-intellectual-wager-simplicity-as-rigour">The Intellectual Wager: Simplicity as Rigour</a></li>
+  <li><a href="#why-morocco-and-why-it-matters-for-the-world" id="toc-why-morocco-and-why-it-matters-for-the-world" class="nav-link" data-scroll-target="#why-morocco-and-why-it-matters-for-the-world">Why Morocco, and Why It Matters for the World</a></li>
+  <li><a href="#how-to-read-this-book-four-lenses-one-economy" id="toc-how-to-read-this-book-four-lenses-one-economy" class="nav-link" data-scroll-target="#how-to-read-this-book-four-lenses-one-economy">How to Read This Book: Four Lenses, One Economy</a></li>
+  <li><a href="#a-note-on-the-heterodox-tradition" id="toc-a-note-on-the-heterodox-tradition" class="nav-link" data-scroll-target="#a-note-on-the-heterodox-tradition">A Note on the Heterodox Tradition</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -329,35 +497,37 @@ ul.task-list li input[type="checkbox"] {
 <p>There is a persistent pedagogical paradox in the teaching of economics across the Global South, and Morocco is no exception. On one side, students encounter rigorous foreign textbooks, impeccably constructed and often intellectually formidable, written for American or European readers, with their institutions, their crises, their examples, their policy debates. On the other side, local materials are frequently fragmentary, incomplete, or so tightly tethered to a single lecture series that they cannot survive the classroom. Between the two sits a gap. This book is an attempt to close it.</p>
 <p>But the ambition here runs deeper than pedagogy. To understand economics from within one’s own reality is to understand it differently, and better. To discuss OCP and phosphate rents rather than a fictional firm. To analyse Bank Al-Maghrib rather than the Federal Reserve. To examine the Conseil de la Concurrence and the fuel distribution cartel rather than a generic abstraction. This is not parochialism. It is the condition under which concepts become real: anchored in memory, usable as analytical tools, capable of illuminating decisions that actually matter. A student who has understood why Morocco’s current account runs a structural deficit, why Bank Al-Maghrib raised rates in 2022 when inflation was largely imported, or what the OCP’s move from raw rock to processed fertiliser reveals about industrial upgrading, understands economics in a way that no amount of abstract theorising can replicate.</p>
 <p>This book rests on a deceptively simple conviction: economics does not appear difficult because it is complex. It appears difficult because it is badly told. Most of the fundamental mechanisms of economic life are accessible to any attentive reader. What makes them opaque is the accumulation of jargon deployed as a barrier rather than a tool, the absence of concrete examples, and above all the presentation of a single perspective as though it were established truth. The discipline has many schools of thought, and they disagree, not because some are right and others incompetent, but because they ask different questions, make different assumptions, and illuminate different dimensions of the same reality. Pretending otherwise is not rigour. It is a form of intellectual dishonesty that disserves students and citizens alike.</p>
-<section id="the-intellectual-wager-simplicity-as-rigour" class="level2" data-number="2.1">
-<h2 data-number="2.1" class="anchored" data-anchor-id="the-intellectual-wager-simplicity-as-rigour"><span class="header-section-number">2.1</span> The Intellectual Wager: Simplicity as Rigour</h2>
+<section id="the-intellectual-wager-simplicity-as-rigour" class="level2">
+<h2 class="anchored" data-anchor-id="the-intellectual-wager-simplicity-as-rigour">The Intellectual Wager: Simplicity as Rigour</h2>
 <p>The intellectual signature of this book is captured in a phrase that has guided its construction from the first page: <em>navigating the complexity of phenomena through the clarity of statement</em>. This is not a call for simplification. It is a call for precision. The most powerful ideas in economics: comparative advantage, effective demand, endogenous money, Minsky’s financial instability hypothesis, Hirschman’s linkage effects, the product space are not intrinsically difficult. They become difficult when presented in layers of formalism that obscure rather than reveal their logic, or when stripped of the institutional and historical context that makes them meaningful.</p>
 <p>The wager of this book is that it is possible to be simultaneously rigorous and accessible, to present mainstream models with full analytical honesty while also taking heterodox critiques seriously, to anchor every mechanism in institutional reality without losing analytical generality. Pierre-Noël Giraud has demonstrated this is possible: his way of exposing economic mechanisms in natural language, without sacrificing either rigour or accessibility, remains a model for what the teaching of economics can be. Joan Robinson identified the purpose decades ago: “The purpose of studying economics is to learn how not to be deceived by economists.” This book is built around that sentence.</p>
 <p>Clarity of statement does not mean avoiding hard ideas. It means doing what the best teachers do: starting from what the reader already knows, building upward carefully, naming assumptions when they are made, and acknowledging limits when they exist. Every chapter in this book begins with a concrete question or paradox rather than a formal definition. Every theoretical framework is introduced by explaining what problem it was designed to solve. Every model is accompanied by an honest account of what it illuminates and what it leaves in the dark.</p>
 </section>
-<section id="why-morocco-and-why-it-matters-for-the-world" class="level2" data-number="2.2">
-<h2 data-number="2.2" class="anchored" data-anchor-id="why-morocco-and-why-it-matters-for-the-world"><span class="header-section-number">2.2</span> Why Morocco, and Why It Matters for the World</h2>
+<section id="why-morocco-and-why-it-matters-for-the-world" class="level2">
+<h2 class="anchored" data-anchor-id="why-morocco-and-why-it-matters-for-the-world">Why Morocco, and Why It Matters for the World</h2>
 <p>Morocco is the empirical anchor of this book, but it is not merely an illustration. It is a laboratory. A middle-income country navigating the pressures of structural transformation, a phosphate superpower embedded in fragile global commodity chains, an economy simultaneously integrated into European value chains through Renault-Tanger and Safran, and dependent on rain-fed agriculture and remittances from its diaspora. A state that has pursued ambitious industrial strategies, including Plan Émergence, the automotive and aeronautics ecosystems, the MASEN renewable energy programme, while grappling with an informal economy that employs a third of its workforce and a structural unemployment rate among graduates that makes a mockery of standard human capital theory.</p>
 <p>None of this is exotic. The questions Morocco faces are the questions that define development economics: How does a country escape the middle-income trap? What industrial policies work, and under what institutional conditions? How do you manage a currency when you lack monetary sovereignty over the global reserve currency? What does financialisation mean when your stock exchange has fewer than eighty listed companies? How do you distribute the gains from trade when the sectors you export (phosphates, automobiles assembled from imported components) generate limited domestic value added?</p>
 <p>These are not Moroccan questions. They are the questions of the majority of the world’s economies. The difference is that this book does not treat them as exotic deviations from a universal norm. It treats them as the centre of analysis, and the American or European cases as instructive comparisons. The reader who finishes this book will understand the Moroccan economy with unusual depth. But they will also understand capitalism, with its circuits, crises, hierarchies, and instruments of power, more clearly than most textbooks allow, precisely because they will have studied it from a vantage point that exposes its structures rather than naturalising them.</p>
 </section>
-<section id="how-to-read-this-book-four-lenses-one-economy" class="level2" data-number="2.3">
-<h2 data-number="2.3" class="anchored" data-anchor-id="how-to-read-this-book-four-lenses-one-economy"><span class="header-section-number">2.3</span> How to Read This Book: Four Lenses, One Economy</h2>
+<section id="how-to-read-this-book-four-lenses-one-economy" class="level2">
+<h2 class="anchored" data-anchor-id="how-to-read-this-book-four-lenses-one-economy">How to Read This Book: Four Lenses, One Economy</h2>
 <p>Each chapter in this book deploys four lenses simultaneously, and the interplay between them is deliberate.</p>
 <p>The first is the <strong>mainstream analytical lens</strong>: the models and frameworks taught in leading universities worldwide. These are presented with rigour and without caricature. Supply and demand, comparative advantage, the Solow growth model, the CAPM, the IS-LM framework: they are in this book because they are analytically powerful tools, not because they are the final word. A student who cannot operate these models fluently is not equipped to participate in economic debates.</p>
 <p>The second is the <strong>heterodox lens</strong>: the tradition of economists who have systematically challenged mainstream assumptions without abandoning analytical rigour. Michał Kalecki on the political economy of full employment. Hyman Minsky on financial instability as an endogenous property of capitalism, not an external shock. Michel Aglietta on money as a social relation. David Graeber on debt as the original economic institution. Albert Hirschman on the strategic logic of productive linkages. Raúl Prebisch and the structuralist critique of comparative advantage. These perspectives are not presented as curiosities or as the exclusive province of left-wing economists. They are presented because they explain things the mainstream cannot, and because any honest account of economic reality requires them.</p>
 <p>The third is the <strong>institutional lens</strong>: the recognition that markets, firms, states, and financial systems are not abstract mechanisms but concrete institutions with histories, rules, power structures, and path dependencies. Bank Al-Maghrib is not “a central bank.” It is a specific institution with a particular mandate, a particular history since its founding in 1959, a particular relationship to the Treasury, and a particular set of choices it made during the inflationary episode of 2022-2023. OCP is not “a mining firm.” It is the world’s largest phosphate exporter, a quasi-sovereign enterprise whose strategic evolution from raw rock extraction to processed fertiliser production embodies the theory and practice of industrial upgrading. Understanding these institutions specifically is not a pedagogical ornament. It is the substance of economic analysis.</p>
 <p>The fourth is the <strong>Moroccan empirical lens</strong>, deployed not as a “case study” appended at the end of each chapter, but woven throughout the analytical fabric. The Moroccan data, the Moroccan institutional arrangements, the Moroccan policy debates are the primary empirical reference. The American, European, and East Asian cases are comparisons that illuminate, by contrast or similarity, what is specific and what is general about what happens in Morocco. This inversion of the conventional textbook hierarchy is intentional.</p>
 </section>
-<section id="a-note-on-the-heterodox-tradition" class="level2" data-number="2.4">
-<h2 data-number="2.4" class="anchored" data-anchor-id="a-note-on-the-heterodox-tradition"><span class="header-section-number">2.4</span> A Note on the Heterodox Tradition</h2>
+<section id="a-note-on-the-heterodox-tradition" class="level2">
+<h2 class="anchored" data-anchor-id="a-note-on-the-heterodox-tradition">A Note on the Heterodox Tradition</h2>
 <p>A word is needed on how this book handles the relationship between mainstream and heterodox economics, because the treatment is deliberate and deserves to be stated plainly.</p>
 <p>Neoclassical microeconomics, new Keynesian macroeconomics, endogenous growth theory, and the theory of incentives are presented with full analytical seriousness. These frameworks have earned their place in the discipline through decades of formalisation, empirical testing, and genuine predictive success in certain domains. A student who dismisses them because they rest on simplifying assumptions has not understood why simplifying assumptions are necessary for systematic analysis.</p>
 <p>But this book also insists, chapter by chapter, that the mainstream has systematic blind spots. It is poorly equipped to analyse power: who captures value in a supply chain, why wages do not fall to clear labour markets, how financial fragility builds up endogenously inside a capitalist economy operating normally. It tends to treat institutions as frictions rather than as the constitutive substance of economic life. It has historically struggled with the economics of structural transformation, treating development as a deviation from a universal equilibrium rather than as the primary analytical problem for most of the world’s population.</p>
 <p>The heterodox perspectives gathered in this book are not a single school with a unified doctrine. Kalecki and Graeber, Minsky and Prebisch, Aglietta and Hirschman differ enormously in their methods and their conclusions. What they share is a commitment to taking economic institutions seriously in their historical specificity, to analysing power and distribution as primary rather than residual phenomena, and to treating capitalism as a dynamic system with endogenous tendencies toward instability and inequality rather than a self-correcting equilibrium machine.</p>
 <p>The reader of this book will encounter both traditions in every chapter, held in productive tension. They will be asked to make up their own minds, equipped, it is hoped, with enough analytical apparatus to do so without being deceived by either side.</p>
 <p>This book is also a conviction about the mission of teaching. In contemporary universities, publication counts for more than pedagogy in the evaluation of academic careers. That logic is understandable but should not obscure the fact that forming minds capable of understanding and acting in the economic world is a mission at least as fundamental. These pages are offered in that spirit.</p>
-<p><em>Farouk Nouri</em> <em>Development Economist</em> <em>Martil, 2025</em></p>
+<p><em>Farouk Nouri</em></p>
+<p><em>Development Economist</em></p>
+<p><em>2026</em></p>
 <hr>
 <div class="callout callout-style-simple callout-important no-icon callout-titled">
 <div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="true" aria-label="Toggle callout">
@@ -383,8 +553,67 @@ The guiding thread of this book
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -803,13 +1032,13 @@ The guiding thread of this book
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -818,5 +1047,3 @@ The guiding thread of this book
 
 
 </body></html>
-
-

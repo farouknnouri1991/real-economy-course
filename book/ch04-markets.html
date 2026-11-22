@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch04-markets.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,54 +493,55 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch04" id="toc-sec-carte-ch04" class="nav-link active" data-scroll-target="#sec-carte-ch04">The Map</a></li>
-  <li><a href="#sec-gains-ch04" id="toc-sec-gains-ch04" class="nav-link" data-scroll-target="#sec-gains-ch04"><span class="header-section-number">7</span> Part I — Why Markets Exist: The Gains of Exchange</a>
+  <li><a href="#sec-gains-ch04" id="toc-sec-gains-ch04" class="nav-link" data-scroll-target="#sec-gains-ch04">Part I — Why Markets Exist: The Gains of Exchange</a>
   <ul class="collapse">
-  <li><a href="#sec-gain-pur-ch04" id="toc-sec-gain-pur-ch04" class="nav-link" data-scroll-target="#sec-gain-pur-ch04"><span class="header-section-number">7.1</span> The pure gain: two students, one cafeteria</a></li>
-  <li><a href="#sec-gains-dynamiques-ch04" id="toc-sec-gains-dynamiques-ch04" class="nav-link" data-scroll-target="#sec-gains-dynamiques-ch04"><span class="header-section-number">7.2</span> Dynamic gains: trade as a learning system</a></li>
-  <li><a href="#sec-pouvoir-negoce-ch04" id="toc-sec-pouvoir-negoce-ch04" class="nav-link" data-scroll-target="#sec-pouvoir-negoce-ch04"><span class="header-section-number">7.3</span> Negotiating power and the distribution of gains</a></li>
+  <li><a href="#sec-gain-pur-ch04" id="toc-sec-gain-pur-ch04" class="nav-link" data-scroll-target="#sec-gain-pur-ch04">The pure gain: two students, one cafeteria</a></li>
+  <li><a href="#sec-gains-dynamiques-ch04" id="toc-sec-gains-dynamiques-ch04" class="nav-link" data-scroll-target="#sec-gains-dynamiques-ch04">Dynamic gains: trade as a learning system</a></li>
+  <li><a href="#sec-pouvoir-negoce-ch04" id="toc-sec-pouvoir-negoce-ch04" class="nav-link" data-scroll-target="#sec-pouvoir-negoce-ch04">Negotiating power and the distribution of gains</a></li>
   </ul></li>
-  <li><a href="#sec-fondements-ch04" id="toc-sec-fondements-ch04" class="nav-link" data-scroll-target="#sec-fondements-ch04"><span class="header-section-number">8</span> Part II — How Markets Work: Supply, Demand, and the Welfare Theorems</a>
+  <li><a href="#sec-fondements-ch04" id="toc-sec-fondements-ch04" class="nav-link" data-scroll-target="#sec-fondements-ch04">Part II — How Markets Work: Supply, Demand, and the Welfare Theorems</a>
   <ul class="collapse">
-  <li><a href="#sec-equilibre-ch04" id="toc-sec-equilibre-ch04" class="nav-link" data-scroll-target="#sec-equilibre-ch04"><span class="header-section-number">8.1</span> Demand, supply, and equilibrium</a></li>
-  <li><a href="#sec-surplus-ch04" id="toc-sec-surplus-ch04" class="nav-link" data-scroll-target="#sec-surplus-ch04"><span class="header-section-number">8.2</span> Consumer and producer surplus</a></li>
-  <li><a href="#sec-bien-etre-ch04" id="toc-sec-bien-etre-ch04" class="nav-link" data-scroll-target="#sec-bien-etre-ch04"><span class="header-section-number">8.3</span> The two welfare theorems and their conditions</a></li>
+  <li><a href="#sec-equilibre-ch04" id="toc-sec-equilibre-ch04" class="nav-link" data-scroll-target="#sec-equilibre-ch04">Demand, supply, and equilibrium</a></li>
+  <li><a href="#sec-surplus-ch04" id="toc-sec-surplus-ch04" class="nav-link" data-scroll-target="#sec-surplus-ch04">Consumer and producer surplus</a></li>
+  <li><a href="#sec-bien-etre-ch04" id="toc-sec-bien-etre-ch04" class="nav-link" data-scroll-target="#sec-bien-etre-ch04">The two welfare theorems and their conditions</a></li>
   </ul></li>
-  <li><a href="#sec-kalecki-ch04" id="toc-sec-kalecki-ch04" class="nav-link" data-scroll-target="#sec-kalecki-ch04"><span class="header-section-number">9</span> Part III — The Kaleckian Correction: How Industrial Prices Are Actually Set</a>
+  <li><a href="#sec-kalecki-ch04" id="toc-sec-kalecki-ch04" class="nav-link" data-scroll-target="#sec-kalecki-ch04">Part III — The Kaleckian Correction: How Industrial Prices Are Actually Set</a>
   <ul class="collapse">
-  <li><a href="#sec-defaillances-ch04" id="toc-sec-defaillances-ch04" class="nav-link" data-scroll-target="#sec-defaillances-ch04"><span class="header-section-number">9.1</span> Market failures: four structural sources of inefficiency</a></li>
-  <li><a href="#sec-deux-regimes-ch04" id="toc-sec-deux-regimes-ch04" class="nav-link" data-scroll-target="#sec-deux-regimes-ch04"><span class="header-section-number">9.2</span> Two regimes</a></li>
-  <li><a href="#sec-markup-ch04" id="toc-sec-markup-ch04" class="nav-link" data-scroll-target="#sec-markup-ch04"><span class="header-section-number">9.3</span> The markup rule</a></li>
-  <li><a href="#sec-consequence-macro-ch04" id="toc-sec-consequence-macro-ch04" class="nav-link" data-scroll-target="#sec-consequence-macro-ch04"><span class="header-section-number">9.4</span> The macroeconomic consequence</a></li>
+  <li><a href="#sec-defaillances-ch04" id="toc-sec-defaillances-ch04" class="nav-link" data-scroll-target="#sec-defaillances-ch04">Market failures: four structural sources of inefficiency</a></li>
+  <li><a href="#sec-deux-regimes-ch04" id="toc-sec-deux-regimes-ch04" class="nav-link" data-scroll-target="#sec-deux-regimes-ch04">Two regimes</a></li>
+  <li><a href="#sec-markup-ch04" id="toc-sec-markup-ch04" class="nav-link" data-scroll-target="#sec-markup-ch04">The markup rule</a></li>
+  <li><a href="#sec-consequence-macro-ch04" id="toc-sec-consequence-macro-ch04" class="nav-link" data-scroll-target="#sec-consequence-macro-ch04">The macroeconomic consequence</a></li>
   </ul></li>
-  <li><a href="#sec-structures-ch04" id="toc-sec-structures-ch04" class="nav-link" data-scroll-target="#sec-structures-ch04"><span class="header-section-number">10</span> Part IV — Market Structures: A Geography of Power</a>
+  <li><a href="#sec-structures-ch04" id="toc-sec-structures-ch04" class="nav-link" data-scroll-target="#sec-structures-ch04">Part IV — Market Structures: A Geography of Power</a>
   <ul class="collapse">
-  <li><a href="#sec-spectre-ch04" id="toc-sec-spectre-ch04" class="nav-link" data-scroll-target="#sec-spectre-ch04"><span class="header-section-number">10.1</span> The spectrum from competition to monopoly</a></li>
-  <li><a href="#sec-monopole-ch04" id="toc-sec-monopole-ch04" class="nav-link" data-scroll-target="#sec-monopole-ch04"><span class="header-section-number">10.2</span> The monopoly: one master facing the market</a></li>
-  <li><a href="#sec-oligopole-ch04" id="toc-sec-oligopole-ch04" class="nav-link" data-scroll-target="#sec-oligopole-ch04"><span class="header-section-number">10.3</span> Oligopoly, strategic interdependence, and game theory</a></li>
-  <li><a href="#sec-barrieres-ch04" id="toc-sec-barrieres-ch04" class="nav-link" data-scroll-target="#sec-barrieres-ch04"><span class="header-section-number">10.4</span> Entry barriers: why concentration persists</a></li>
-  <li><a href="#sec-concurrence-monopolistique-ch04" id="toc-sec-concurrence-monopolistique-ch04" class="nav-link" data-scroll-target="#sec-concurrence-monopolistique-ch04"><span class="header-section-number">10.5</span> Monopolistic competition: many sellers, differentiated products</a></li>
+  <li><a href="#sec-spectre-ch04" id="toc-sec-spectre-ch04" class="nav-link" data-scroll-target="#sec-spectre-ch04">The spectrum from competition to monopoly</a></li>
+  <li><a href="#sec-monopole-ch04" id="toc-sec-monopole-ch04" class="nav-link" data-scroll-target="#sec-monopole-ch04">The monopoly: one master facing the market</a></li>
+  <li><a href="#sec-oligopole-ch04" id="toc-sec-oligopole-ch04" class="nav-link" data-scroll-target="#sec-oligopole-ch04">Oligopoly, strategic interdependence, and game theory</a></li>
+  <li><a href="#sec-barrieres-ch04" id="toc-sec-barrieres-ch04" class="nav-link" data-scroll-target="#sec-barrieres-ch04">Entry barriers: why concentration persists</a></li>
+  <li><a href="#sec-concurrence-monopolistique-ch04" id="toc-sec-concurrence-monopolistique-ch04" class="nav-link" data-scroll-target="#sec-concurrence-monopolistique-ch04">Monopolistic competition: many sellers, differentiated products</a></li>
   </ul></li>
-  <li><a href="#sec-numerique-ch04" id="toc-sec-numerique-ch04" class="nav-link" data-scroll-target="#sec-numerique-ch04"><span class="header-section-number">11</span> Part V — Digital Markets: Network Effects, Platforms, and Surveillance Capitalism</a>
+  <li><a href="#sec-numerique-ch04" id="toc-sec-numerique-ch04" class="nav-link" data-scroll-target="#sec-numerique-ch04">Part V — Digital Markets: Network Effects, Platforms, and Surveillance Capitalism</a>
   <ul class="collapse">
-  <li><a href="#sec-effets-reseau-ch04" id="toc-sec-effets-reseau-ch04" class="nav-link" data-scroll-target="#sec-effets-reseau-ch04"><span class="header-section-number">11.1</span> Network effects and winner-take-all dynamics</a></li>
-  <li><a href="#sec-marches-bifaces-ch04" id="toc-sec-marches-bifaces-ch04" class="nav-link" data-scroll-target="#sec-marches-bifaces-ch04"><span class="header-section-number">11.2</span> Two-sided platforms and the Tirole-Rochet framework</a></li>
-  <li><a href="#sec-maroc-numerique-ch04" id="toc-sec-maroc-numerique-ch04" class="nav-link" data-scroll-target="#sec-maroc-numerique-ch04"><span class="header-section-number">11.3</span> Morocco’s digital economy: platforms in a transitional context</a></li>
-  <li><a href="#sec-surveillance-ch04" id="toc-sec-surveillance-ch04" class="nav-link" data-scroll-target="#sec-surveillance-ch04"><span class="header-section-number">11.4</span> Surveillance capitalism and the data economy</a></li>
+  <li><a href="#sec-effets-reseau-ch04" id="toc-sec-effets-reseau-ch04" class="nav-link" data-scroll-target="#sec-effets-reseau-ch04">Network effects and winner-take-all dynamics</a></li>
+  <li><a href="#sec-marches-bifaces-ch04" id="toc-sec-marches-bifaces-ch04" class="nav-link" data-scroll-target="#sec-marches-bifaces-ch04">Two-sided platforms and the Tirole-Rochet framework</a></li>
+  <li><a href="#sec-maroc-numerique-ch04" id="toc-sec-maroc-numerique-ch04" class="nav-link" data-scroll-target="#sec-maroc-numerique-ch04">Morocco’s digital economy: platforms in a transitional context</a></li>
+  <li><a href="#sec-surveillance-ch04" id="toc-sec-surveillance-ch04" class="nav-link" data-scroll-target="#sec-surveillance-ch04">Surveillance capitalism and the data economy</a></li>
   </ul></li>
-  <li><a href="#sec-travail-ch04" id="toc-sec-travail-ch04" class="nav-link" data-scroll-target="#sec-travail-ch04"><span class="header-section-number">12</span> Part VI — The Labour Market: A Market of a Different Kind</a>
+  <li><a href="#sec-travail-ch04" id="toc-sec-travail-ch04" class="nav-link" data-scroll-target="#sec-travail-ch04">Part VI — The Labour Market: A Market of a Different Kind</a>
   <ul class="collapse">
-  <li><a href="#sec-rigidites-salariales-ch04" id="toc-sec-rigidites-salariales-ch04" class="nav-link" data-scroll-target="#sec-rigidites-salariales-ch04"><span class="header-section-number">12.1</span> Why wages do not easily fall</a></li>
-  <li><a href="#sec-monopsone-ch04" id="toc-sec-monopsone-ch04" class="nav-link" data-scroll-target="#sec-monopsone-ch04"><span class="header-section-number">12.2</span> Monopsony and employer power</a></li>
-  <li><a href="#sec-part-salaires-ch04" id="toc-sec-part-salaires-ch04" class="nav-link" data-scroll-target="#sec-part-salaires-ch04"><span class="header-section-number">12.3</span> The wage share and distribution: Kalecki applied to labour markets</a></li>
-  <li><a href="#sec-segmentation-ch04" id="toc-sec-segmentation-ch04" class="nav-link" data-scroll-target="#sec-segmentation-ch04"><span class="header-section-number">12.4</span> Labour market segmentation and the graduate unemployment paradox</a></li>
+  <li><a href="#sec-rigidites-salariales-ch04" id="toc-sec-rigidites-salariales-ch04" class="nav-link" data-scroll-target="#sec-rigidites-salariales-ch04">Why wages do not easily fall</a></li>
+  <li><a href="#sec-monopsone-ch04" id="toc-sec-monopsone-ch04" class="nav-link" data-scroll-target="#sec-monopsone-ch04">Monopsony and employer power</a></li>
+  <li><a href="#sec-part-salaires-ch04" id="toc-sec-part-salaires-ch04" class="nav-link" data-scroll-target="#sec-part-salaires-ch04">The wage share and distribution: Kalecki applied to labour markets</a></li>
+  <li><a href="#sec-segmentation-ch04" id="toc-sec-segmentation-ch04" class="nav-link" data-scroll-target="#sec-segmentation-ch04">Labour market segmentation and the graduate unemployment paradox</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch04" id="toc-sec-concl-ch04" class="nav-link" data-scroll-target="#sec-concl-ch04"><span class="header-section-number">13</span> Conclusion: Markets as Economic and Social Institutions</a></li>
-  <li><a href="#sec-biblio-ch04" id="toc-sec-biblio-ch04" class="nav-link" data-scroll-target="#sec-biblio-ch04"><span class="header-section-number">14</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch04" id="toc-sec-concl-ch04" class="nav-link" data-scroll-target="#sec-concl-ch04">Conclusion: Markets as Economic and Social Institutions</a></li>
+  <li><a href="#sec-biblio-ch04" id="toc-sec-biblio-ch04" class="nav-link" data-scroll-target="#sec-biblio-ch04">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch01-what-economics-is.html">Part I — The Microeconomic Foundation</a></li><li class="breadcrumb-item"><a href="./ch04-markets.html"><span class="chapter-number">6</span>&nbsp; <span class="chapter-title">Chapter 4 — Markets and Market Structures</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -429,11 +597,11 @@ The guiding thread of this chapter
 <p>The chapter advances in five movements. First, why markets exist: the gains of exchange, both static and dynamic. Second, how markets work: supply, demand, price, and the surplus they generate. Third, the Kaleckian correction to the standard price-formation story, which is the single most important heterodox contribution to microeconomics and the one most systematically omitted from introductory courses. Fourth, the spectrum of market structures, from monopoly through oligopoly and its strategic logic, with the Moroccan institutional texture throughout. Fifth, digital markets, where the logic of network effects and two-sided platforms creates a qualitatively new geography of power.</p>
 <hr>
 </section>
-<section id="sec-gains-ch04" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Part I — Why Markets Exist: The Gains of Exchange</h1>
+<section id="sec-gains-ch04" class="level1">
+<h1>Part I — Why Markets Exist: The Gains of Exchange</h1>
 <p>Exchange predates markets. Before prices, exchanges, or contracts existed, human beings bartered. Economics begins by understanding why this exchange is mutually beneficial, and under what conditions it may not be.</p>
-<section id="sec-gain-pur-ch04" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="sec-gain-pur-ch04"><span class="header-section-number">7.1</span> The pure gain: two students, one cafeteria</h2>
+<section id="sec-gain-pur-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-gain-pur-ch04">The pure gain: two students, one cafeteria</h2>
 <p>Consider a thought experiment. Two students in a university cafeteria: one has a tuna sandwich she dislikes, the other a bottle of water he does not need immediately. They trade. Neither has produced anything new. Yet both are better off than before. This is the <strong>pure gain from exchange</strong>: the fact that individuals assign different values to the same goods, and voluntary exchange permits a mutually advantageous reallocation.</p>
 <p>Economists formalise this through the Edgeworth box: a geometric device where two agents with different initial endowments and different preferences find mutually preferred allocations by exchanging. But Morocco’s <em>joutiya</em>, the informal second-hand market found in every Moroccan city, illustrates it just as well. A leather jacket forgotten in a Casablanca wardrobe finds a buyer in Fès who values it exactly for what it is. No fixed capital, no factory, no technology. Just the diversity of preferences and a place to meet.</p>
 <p>The gains from exchange arise from three distinct mechanisms. <strong>Preference differences</strong>: I like what you do not, and trade makes both of us better off. <strong>Endowment differences</strong>: I have what you lack, and specialisation creates joint gains. <strong>Comparative advantage differences</strong>: even if one party is more efficient at everything, specialisation according to relative cost advantage creates gains for both, the logic Ricardo identified in 1817 and that Chapter 14 develops fully in the context of international trade.</p>
@@ -451,15 +619,15 @@ The baker who wants shoes, and the invention of money
 </div>
 </div>
 </section>
-<section id="sec-gains-dynamiques-ch04" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="sec-gains-dynamiques-ch04"><span class="header-section-number">7.2</span> Dynamic gains: trade as a learning system</h2>
+<section id="sec-gains-dynamiques-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-gains-dynamiques-ch04">Dynamic gains: trade as a learning system</h2>
 <p>The static gains (reallocation, specialisation, comparative advantage) are only the visible part of the iceberg. Development economists have identified <em>dynamic</em> gains from trade that operate over the long run and are of an entirely different order.</p>
 <p>On the import side, the dynamic gains flow through four mechanisms: <em>competitive discipline</em> (import pressure eliminates the least productive firms and forces others to improve, as Pavcnik showed for India after its 2002 liberalisation); <em>technology diffusion</em> (imported machines from Germany or Japan embody knowledge that the importing country would not have developed alone); access to <em>higher-quality inputs</em> (suppliers in Morocco’s Tanger automotive ecosystem import precision parts that allow them to meet world-industry standards); and <em>benchmarking</em> (the food safety and traceability standards imposed by European markets on Moroccan agri-exporters have restructured entire value chains).</p>
 <p>On the export side, dynamic gains flow through <em>economies of scale</em> (a larger market makes R&amp;D and brand building profitable: Brazil’s Embraer could never have become a global aeronautics manufacturer on the Brazilian market alone); <em>learning by doing</em> (South Korean shipyards acquired their excellence by building for demanding foreign clients); and <em>value chain insertion</em> (Vietnamese textile factories supplying Zara gradually absorbed logistics, design, and quality control capabilities that the domestic market would never have required).</p>
 <p>Trade is therefore not merely an allocation mechanism. It is a learning system. The gains it generates depend on how firms and institutions use the exposure to upgrade. This distinction, between static gains that raise welfare in the short run and dynamic gains that transform productive capabilities over the long run, is the central analytical contribution of the structuralist tradition in development economics, explored further in Chapters 11 and 12.</p>
 </section>
-<section id="sec-pouvoir-negoce-ch04" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="sec-pouvoir-negoce-ch04"><span class="header-section-number">7.3</span> Negotiating power and the distribution of gains</h2>
+<section id="sec-pouvoir-negoce-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pouvoir-negoce-ch04">Negotiating power and the distribution of gains</h2>
 <p>One point that standard textbooks pass over too quickly: the price at which exchange occurs is not determined solely by supply and demand. It depends also on the <strong>balance of power</strong> between the parties.</p>
 <p>Consider a small farmer in the Souss region selling his tomatoes to a single collector. Technically, any price between the production cost (say, 1.50 dh/kg) and the wholesale market price (3 dh/kg) represents a mutually advantageous exchange. But who obtains 1.60 dh and who obtains 2.80 dh? The balance of power: the collector has other suppliers; the farmer has no other buyer. If the farmers organise into a cooperative, they regain negotiating capacity. The same reasoning applies.</p>
 <p>This is not a special case. It is the general rule. <strong>On any market, price reflects both the efficiency of allocation and the equilibrium of power.</strong> This is true between an artisan and a tourist in the lanes of the medina (where the pottery price is entirely negotiated), between a Moroccan ministry and a cloud software vendor (a bilateral monopoly with no public price), and between a supermarket and its agricultural suppliers (where large-scale retail often imposes its terms). The structure of the market, the number of actors, their relative size, their ability to exit, determines who captures the larger share of the gains from exchange.</p>
@@ -467,15 +635,15 @@ The baker who wants shoes, and the invention of money
 <hr>
 </section>
 </section>
-<section id="sec-fondements-ch04" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Part II — How Markets Work: Supply, Demand, and the Welfare Theorems</h1>
-<section id="sec-equilibre-ch04" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-equilibre-ch04"><span class="header-section-number">8.1</span> Demand, supply, and equilibrium</h2>
+<section id="sec-fondements-ch04" class="level1">
+<h1>Part II — How Markets Work: Supply, Demand, and the Welfare Theorems</h1>
+<section id="sec-equilibre-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-equilibre-ch04">Demand, supply, and equilibrium</h2>
 <p>The demand curve represents, for each price level, the quantity that consumers are willing to buy. Its downward slope rests on two complementary effects: the <em>substitution effect</em> (a more expensive good pushes consumers toward cheaper substitutes) and the <em>income effect</em> (a more expensive good reduces real purchasing power, reducing consumption of all goods). A single concept underlies both: <strong>diminishing marginal utility</strong>. The first unit of a good consumed in a day brings more satisfaction than the tenth. The consumer’s reservation price, the maximum she is willing to pay for one additional unit, decreases with quantity consumed. This is why the demand curve slopes down.</p>
 <p>The supply curve represents, for each price level, the quantity that firms are willing to produce. Its upward slope rests on rising marginal costs: as output expands, the additional cost of producing one more unit typically increases due to diminishing returns to variable factors. The firm supplies an additional unit only if the price covers the marginal cost of producing it, so higher quantities require higher prices. Market supply is the sum of individual firms’ supplies.</p>
 </section>
-<section id="sec-surplus-ch04" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-surplus-ch04"><span class="header-section-number">8.2</span> Consumer and producer surplus</h2>
+<section id="sec-surplus-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-surplus-ch04">Consumer and producer surplus</h2>
 <p>One of the most important and least intuitive ideas in microeconomics: <strong>the market creates value even when nothing new is produced</strong>, simply by enabling each party to buy or sell at a price different from their reservation value.</p>
 <p>The <strong>consumer surplus</strong> is the difference between what a consumer would have been willing to pay and what she actually pays. If you were prepared to pay 150 dirhams for a book and find it for 80, you pocket 70 dirhams of surplus requiring no additional production. The <strong>producer surplus</strong> is the difference between the price received and the marginal cost of each unit produced. Note the important distinction from profit: producer surplus is measured relative to marginal cost; profit is measured relative to total cost including fixed costs. A new Moroccan industrial firm still recovering its capital investment may generate positive producer surplus while reporting an accounting loss. The sum of the two surpluses is the <strong>total welfare</strong> created by the market in that period: maximising this total is what the welfare theorems demonstrate competitive equilibrium achieves.</p>
 <p><strong>Market equilibrium</strong> is the price at which quantity supplied equals quantity demanded, the price that “clears” the market, leaving neither unsatisfied demand nor unsold production. At this point, a remarkable property holds: the <strong>total surplus is maximised</strong>. No reallocation can improve one party’s situation without worsening another’s.</p>
@@ -494,8 +662,8 @@ The price of tomatoes after a night of frost
 </div>
 <p><strong>Elasticity</strong> measures the sensitivity of quantity demanded to price changes. The price elasticity of demand is the percentage change in quantity demanded per one percent change in price. When elasticity (in absolute value) exceeds 1, demand is <em>elastic</em>: quantity responds more than proportionally to price. When it is below 1, demand is <em>inelastic</em>: quantity is relatively insensitive. This distinction is not technical decoration. It shapes everything in policy. Taxes on inelastic goods, basic foodstuffs, essential medicines, fall heavily on consumers who cannot reduce their consumption. Taxes on elastic goods, luxury items, non-essential services, spread between producers and consumers, with a larger share borne by whoever faces stiffer competition. For Morocco, the 2022 inflation episode illustrated this dramatically: food prices surged, and households dependent on bread, cooking oil, and sugar, goods with very inelastic demand, bore a disproportionate real income loss.</p>
 </section>
-<section id="sec-bien-etre-ch04" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="sec-bien-etre-ch04"><span class="header-section-number">8.3</span> The two welfare theorems and their conditions</h2>
+<section id="sec-bien-etre-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bien-etre-ch04">The two welfare theorems and their conditions</h2>
 <p>The great intellectual achievement of 20th-century microeconomics was to give a rigorous demonstration of Adam Smith’s intuition. The invisible hand is not a vague metaphor: it is a precise theorem. Under certain conditions, the competitive equilibrium is <strong>Pareto optimal</strong>, no reallocation can make anyone better off without making someone else worse off.</p>
 <p>The competitive equilibrium simultaneously achieves two forms of efficiency. <strong>Productive efficiency</strong>: competition forces firms to produce at minimum cost; inefficient firms are eliminated. <strong>Allocative efficiency</strong>: the quantities produced correspond exactly to consumer preferences. The condition P = MC ensures that the marginal value consumers assign to the last unit produced equals the marginal cost of producing it. Neither too much nor too little is produced.</p>
 <p>This property is genuinely remarkable: a fully decentralised mechanism, with no central coordinator, no plan, no aggregated information, just millions of agents pursuing their private interest, delivers an optimal allocation. The mathematical formalisation of Smith’s invisible hand by Arrow and Debreu in 1954 is one of the monuments of economic theory.</p>
@@ -518,26 +686,26 @@ Market equilibrium is efficient. It is not equitable. These are different statem
 <hr>
 </section>
 </section>
-<section id="sec-kalecki-ch04" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Part III — The Kaleckian Correction: How Industrial Prices Are Actually Set</h1>
+<section id="sec-kalecki-ch04" class="level1">
+<h1>Part III — The Kaleckian Correction: How Industrial Prices Are Actually Set</h1>
 <p>The standard story just presented, price determined by the intersection of supply and demand, adjustment through market clearing, is the dominant representation in textbooks. It is useful. It is not universal. Prices do not form the same way in all sectors, and ignoring this leads to serious diagnostic errors in economic policy.</p>
 <p>Michał Kalecki, a Polish economist working in the 1930s-1960s, proposed a luminous distinction between two regimes of price formation according to the flexibility of supply.</p>
-<section id="sec-defaillances-ch04" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sec-defaillances-ch04"><span class="header-section-number">9.1</span> Market failures: four structural sources of inefficiency</h2>
+<section id="sec-defaillances-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-defaillances-ch04">Market failures: four structural sources of inefficiency</h2>
 <p>The welfare theorems show what markets can do under ideal conditions. Real markets fail along four systematic dimensions, each justifying a different form of institutional response.</p>
 <p><strong>Information asymmetries</strong> arise when one party knows more about the quality of a good than the other. George Akerlof’s 1970 “Market for Lemons” demonstrated that this can destroy entire markets: if buyers cannot distinguish good used cars from defective ones, they offer only an average price; sellers of good cars withdraw; average quality falls; prices fall; and the market may collapse entirely. The same mechanism operates in Morocco’s credit market for SMEs: banks cannot easily distinguish viable from risky projects among small enterprises without credit histories. The result is credit rationing, not from lack of liquidity but from information failure. The creation of Morocco’s credit bureau (CRC) and Tamwilcom’s guarantee mechanisms are institutional responses to this specific market failure.</p>
 <p><strong>Externalities</strong> occur when a decision imposes costs or confers benefits on third parties not involved in the transaction, without compensation. The intensive irrigation of Morocco’s Souss-Massa basin generates a negative externality on shared aquifers: each farmer pumps from a common water table without internalising the depletion cost imposed on neighbours and future generations. Conversely, Morocco’s agri-exporters who adopt drip irrigation and quality certification generate a positive externality on the entire sector’s reputation in European markets, benefiting competitors who bore none of the investment cost. These two externalities justify, respectively, water use regulation with pricing mechanisms and subsidisation of investment in quality infrastructure.</p>
 <p><strong>Public goods</strong> are non-rival (one person’s use does not diminish availability for others) and non-excludable (it is impossible to prevent anyone from benefiting). National defence, basic research, macroeconomic stability, and weather forecasting are examples. Because private firms cannot capture returns from non-excludable goods, they are systematically under-provided by markets. The state’s provision of these goods is not a correction of market failure but the fulfilment of a function the market structurally cannot perform.</p>
 <p><strong>Market power</strong>, the ability of one or a few actors to set prices above marginal cost, generates a deadweight loss: socially beneficial exchanges that would occur under competitive conditions do not take place. This is the subject of the market structure analysis that follows.</p>
 </section>
-<section id="sec-deux-regimes-ch04" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-deux-regimes-ch04"><span class="header-section-number">9.2</span> Two regimes</h2>
+<section id="sec-deux-regimes-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-deux-regimes-ch04">Two regimes</h2>
 <p>In <strong>flexible-supply markets</strong>, industry, manufactured goods, most services, firms have idle capacity and relatively stable (sometimes constant) marginal costs. They do not lower their prices in the face of falling demand. Instead, they reduce output, put workers on short-time schedules, and manage inventories. <strong>Prices are rigid; volumes fluctuate.</strong> If you ask a cement producer why she does not cut prices when orders fall, the answer is revealing: she would be interpreted as signalling weakness, triggering retaliatory price cuts from competitors, destroying the price structure, and ending up with lower revenue <em>and</em> lower margins. Better to reduce production and maintain the margin.</p>
 <p>In <strong>rigid-supply markets</strong>, agriculture, raw materials, non-storable goods, adjustment occurs through <em>price</em>. The quantity supplied is fixed in the short run (the harvest is what it is). When demand increases, price rises; when demand falls, price drops. <strong>Prices are volatile; quantities are stable.</strong></p>
 <p>This distinction is not academic. It is essential for interpreting the 2022 Moroccan inflation episode. The surge in food prices (over 11% according to the HCP) was a rigid-supply phenomenon: international grain and edible oil prices, driven by Russia’s invasion of Ukraine and post-COVID supply constraints, transmitted directly into consumer prices because domestic agricultural output could not quickly expand. The appropriate response, targeted subsidies on basic foods and emergency social transfers, was precisely calibrated to a supply-shock model, not a demand-pull model. Treating the two as equivalent would have produced the wrong diagnosis and the wrong policy.</p>
 </section>
-<section id="sec-markup-ch04" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="sec-markup-ch04"><span class="header-section-number">9.3</span> The markup rule</h2>
+<section id="sec-markup-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-markup-ch04">The markup rule</h2>
 <p>In industrial markets, Kalecki formalises a pricing rule that can be written simply:</p>
 <p><span class="math display">\[P = (1 + m) \cdot CUV\]</span></p>
 <p>where <span class="math inline">\(P\)</span> is the selling price, <span class="math inline">\(CUV\)</span> the unit variable cost (raw materials plus direct wages), and <span class="math inline">\(m\)</span> the <strong>markup rate</strong>, the margin applied by the enterprise.</p>
@@ -559,18 +727,18 @@ Markup pricing and the wage share in Morocco
 </div>
 </div>
 </section>
-<section id="sec-consequence-macro-ch04" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-consequence-macro-ch04"><span class="header-section-number">9.4</span> The macroeconomic consequence</h2>
+<section id="sec-consequence-macro-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-consequence-macro-ch04">The macroeconomic consequence</h2>
 <p>The post-Keynesian analysis extends Kalecki’s point to the business cycle with a conclusion that overturns a great deal of conventional wisdom. When an industrial firm faces a demand downturn, it does not generally cut prices. Cutting prices would be interpreted by competitors as a weakness signal, triggering destructive price wars. The firm prefers to reduce output and maintain margins. This is <strong>adjustment through quantities, not prices</strong>.</p>
 <p>The macroeconomic consequence is profound: industrial recessions do not resolve themselves through spontaneous price deflation but through declining employment and income, until demand recovers. This is why fiscal stimulus during recessions, the subject of Chapter 9, can increase output without immediately triggering inflation: in the face of idle industrial capacity, producers expand output at roughly constant prices rather than raising them. The Keynesian diagnosis of effective demand shortfalls, and the Kaleckian diagnosis of their distributional consequences, are two sides of the same analytical coin.</p>
 <hr>
 </section>
 </section>
-<section id="sec-structures-ch04" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Part IV — Market Structures: A Geography of Power</h1>
+<section id="sec-structures-ch04" class="level1">
+<h1>Part IV — Market Structures: A Geography of Power</h1>
 <p>The real economy is not a single market. It is a <strong>geography of market power</strong>: configurations that differ by the number of actors, their relative size, the nature of products, and especially the barriers that prevent or slow the entry of new competitors.</p>
-<section id="sec-spectre-ch04" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="sec-spectre-ch04"><span class="header-section-number">10.1</span> The spectrum from competition to monopoly</h2>
+<section id="sec-spectre-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-spectre-ch04">The spectrum from competition to monopoly</h2>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
@@ -639,8 +807,8 @@ The Tuesday souk and the only water supplier
 </tbody>
 </table>
 </section>
-<section id="sec-monopole-ch04" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="sec-monopole-ch04"><span class="header-section-number">10.2</span> The monopoly: one master facing the market</h2>
+<section id="sec-monopole-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-monopole-ch04">The monopoly: one master facing the market</h2>
 <p>The monopoly is the simplest market structure to analyse and the most socially costly. A single supplier faces captive demand. Because the monopolist faces the entire market demand, choosing output also determines price. To sell one additional unit, the monopolist must lower the price not only on that unit but on all units already sold. The <strong>marginal revenue is therefore less than price</strong>, and this asymmetry is the source of all the monopolist’s inefficiencies.</p>
 <p>The monopolist maximises profit by producing the quantity where marginal revenue equals marginal cost. The price is then read off the demand curve at that quantity, always above marginal cost, unlike the competitive firm where P = MC.</p>
 <p>With linear demand <span class="math inline">\(P(Q) = a - bQ\)</span> and constant marginal cost <span class="math inline">\(c\)</span>:</p>
@@ -649,8 +817,8 @@ The Tuesday souk and the only water supplier
 <p>The <strong>Lerner index</strong> <span class="math inline">\(L = (P - MC)/P\)</span> measures market power. In perfect competition, <span class="math inline">\(L = 0\)</span>. The deeper relation is <span class="math inline">\(L = 1/|\varepsilon_D|\)</span>: market power depends on the inelasticity of demand. Firms can maintain high markups only where clients cannot easily turn to substitutes. This is why patented medicines, drinking water, and energy are sectors with high potential market power, and why their regulation is a public interest, not merely a matter of economic efficiency.</p>
 <p>Not every monopoly is equally harmful. A monopoly born of genuine innovation earns a temporary rent that is the reward, and the incentive, for the innovation. The patent system is precisely a legally granted monopoly: temporary exclusivity as a prize for R&amp;D. A <strong>natural monopoly</strong> arises when fixed costs are so high and marginal costs so low that the cost structure favours a single actor, electricity transmission, railway infrastructure, water distribution. Duplicating these networks would be a colossal waste. ONEE (the national electricity and water utility) is a natural monopoly on the network. Its progressive block tariff, early kilowatt-hours cheaper, subsequent ones progressively more expensive, is a form of second-degree price discrimination that reconciles universal access with financial viability.</p>
 </section>
-<section id="sec-oligopole-ch04" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="sec-oligopole-ch04"><span class="header-section-number">10.3</span> Oligopoly, strategic interdependence, and game theory</h2>
+<section id="sec-oligopole-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-oligopole-ch04">Oligopoly, strategic interdependence, and game theory</h2>
 <p>An oligopoly is not simply a market with few firms. It is a situation of <strong>strategic interdependence</strong>: a firm’s pricing or output decision depends on what it anticipates rivals will do, and vice versa. This mutual anticipation is what makes oligopolistic analysis fundamentally different from monopoly analysis, and it is why economists developed game theory.</p>
 <p>Game theory was born formally in 1944 with von Neumann and Morgenstern’s <em>Theory of Games and Economic Behavior</em>, then given its central equilibrium concept by John Nash in 1950. A <strong>Nash equilibrium</strong> is a profile of strategies where no player has an incentive to deviate unilaterally, given the strategies of the others. It is not necessarily the collectively optimal outcome; it is the stable outcome where no one has regret about their choice in retrospect.</p>
 <p>The three canonical models of oligopoly each illuminate a different dimension.</p>
@@ -671,8 +839,8 @@ The prisoner’s dilemma in the Moroccan cement market
 </div>
 </div>
 </section>
-<section id="sec-barrieres-ch04" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="sec-barrieres-ch04"><span class="header-section-number">10.4</span> Entry barriers: why concentration persists</h2>
+<section id="sec-barrieres-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-barrieres-ch04">Entry barriers: why concentration persists</h2>
 <p>The central question is not the number of firms currently active but the barriers that prevent new entry. Without barriers, profits attract entrants, competition intensifies, and profits erode. With barriers, profits persist.</p>
 <p>Barriers arise from multiple sources. <strong>Structural economies of scale</strong> make large-scale production cheaper per unit: a cement kiln must operate at minimum efficient scale to be competitive, and that scale is large relative to regional demand. <strong>Network effects</strong> in digital markets make entry progressively harder as the incumbent accumulates users whose presence attracts more users. <strong>Switching costs</strong> lock in existing customers: a mobile operator whose subscribers have built up contact lists, payment histories, and loyalty points faces less competitive pressure than a market without these frictions. <strong>Sunk costs</strong>, investments in brand, technology, or regulatory approvals that cannot be recovered on exit, deter entry because they represent irrecoverable commitments. <strong>Regulatory barriers</strong> confer protected positions through licensing, concessions, and spectrum allocation; in Morocco, banking licences, telecom spectrum, and electricity production permits are examples.</p>
 <p>Incumbent firms also create barriers strategically. <strong>Predatory pricing</strong> involves accepting temporary losses to eliminate an existing competitor, then raising prices once the rival has exited, illegal in most jurisdictions but difficult to prove. <strong>Limit pricing</strong> involves maintaining prices sufficiently low to make entry unattractive, sacrificing short-run profits to protect market position. <strong>Strategic excess capacity</strong> is a commitment to respond aggressively to entry: a cement producer maintaining half a million tonnes of idle capacity signals credibly that it can flood the market if a new entrant appears, making the investment in entry unattractive before it is even made.</p>
@@ -690,8 +858,8 @@ Maroc Telecom: strategic pricing and brand moats
 </div>
 </div>
 </section>
-<section id="sec-concurrence-monopolistique-ch04" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="sec-concurrence-monopolistique-ch04"><span class="header-section-number">10.5</span> Monopolistic competition: many sellers, differentiated products</h2>
+<section id="sec-concurrence-monopolistique-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-concurrence-monopolistique-ch04">Monopolistic competition: many sellers, differentiated products</h2>
 <p>Between perfect competition and oligopoly sits a structure that describes much of retail trade, restaurants, hotels, personal services, and a large share of manufacturing: <strong>monopolistic competition</strong>. Many firms, differentiated products, and relatively free entry. Each firm faces a downward-sloping demand curve (its product is not a perfect substitute for rivals’) but cannot sustain positive profits over the long run because free entry erodes them.</p>
 <p>Joan Robinson’s <em>The Economics of Imperfect Competition</em> (1933) was the foundational analysis of this structure. Robinson showed that any market where firms face downward-sloping demand, that is, virtually all real markets, involves pricing above marginal cost, a departure from competitive efficiency. She went further: the degree of monopoly embedded in any market structure is directly reflected in the functional distribution of income. A higher markup means a higher profit share in value added and a lower wage share. Robinson’s analysis was, among other things, a theory of why capitalism tends to produce inequality, and why the structure of product markets is inseparable from the structure of income distribution.</p>
 <p>Robinson wrote in dialogue with Kalecki, and the two analyses are complementary: Kalecki provides the dynamic theory of price formation (the markup rule and its macroeconomic consequences), while Robinson provides the static welfare analysis (the departure from marginal cost and the distributional implications of that departure). Together, they make the case that the standard competitive model is not a description of typical market outcomes but of an extreme ideal that is rarely approached.</p>
@@ -699,11 +867,11 @@ Maroc Telecom: strategic pricing and brand moats
 <hr>
 </section>
 </section>
-<section id="sec-numerique-ch04" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Part V — Digital Markets: Network Effects, Platforms, and Surveillance Capitalism</h1>
+<section id="sec-numerique-ch04" class="level1">
+<h1>Part V — Digital Markets: Network Effects, Platforms, and Surveillance Capitalism</h1>
 <p>Digital markets are not simply markets with digital products. They are markets where the structural assumptions of the previous analysis, declining marginal costs, independent consumer preferences, price as the central coordination signal, are systematically violated. Understanding how requires a set of analytical concepts that did not exist in 1930.</p>
-<section id="sec-effets-reseau-ch04" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="sec-effets-reseau-ch04"><span class="header-section-number">11.1</span> Network effects and winner-take-all dynamics</h2>
+<section id="sec-effets-reseau-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-effets-reseau-ch04">Network effects and winner-take-all dynamics</h2>
 <p>An isolated telephone is useless. Two telephones enable a conversation. A million telephones create a social infrastructure. The value of the telephone does not come from its intrinsic characteristics: it comes from the number of people who possess one. This is the <strong>network effect</strong> in its purest form.</p>
 <p>Robert Metcalfe observed that the value of a communications network grows proportionally to the <em>square</em> of the number of its users. If a network has <span class="math inline">\(n\)</span> users, the number of possible connections is <span class="math inline">\(n(n-1)/2\)</span>, which grows like <span class="math inline">\(n^2\)</span>. The value grows quadratically while the cost of connecting an additional user is roughly constant. This gap between linear cost and quadratic value is the source of the <em>increasing returns to adoption</em> that characterise network markets.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -722,8 +890,8 @@ Why everyone stays on WhatsApp
 <p>Markets with strong network effects tend toward monopoly or tight oligopoly. A platform with more users offers more value; users migrate toward the larger platform; the larger platform attracts more users. This self-reinforcing positive feedback loop produces <strong>winner-take-all</strong> markets. WhatsApp, Google Search, LinkedIn, Amazon Marketplace: in each segment, one or two platforms dominate structurally. The <strong>tipping point</strong>, the critical user mass above which a platform’s growth becomes self-sustaining, explains why commercial wars between competing platforms are so violent in their initial phases: it is a race to cross the tipping point before rivals do, even at a sustained loss.</p>
 <p><strong>Switching costs</strong> lock users in once the platform is established. Leaving Facebook means losing one’s contacts. Leaving WhatsApp means persuading one’s entire social network to follow. Leaving the iPhone means reconfiguring applications, habits, and the iMessage ecosystem. These costs transform first-mover advantages into durable entry barriers.</p>
 </section>
-<section id="sec-marches-bifaces-ch04" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="sec-marches-bifaces-ch04"><span class="header-section-number">11.2</span> Two-sided platforms and the Tirole-Rochet framework</h2>
+<section id="sec-marches-bifaces-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-marches-bifaces-ch04">Two-sided platforms and the Tirole-Rochet framework</h2>
 <p>The digital economy’s most structurally distinctive institution is the <strong>two-sided platform</strong>: a firm that simultaneously serves two distinct groups of agents whose cross-externalities determine the optimal pricing structure.</p>
 <p>Jean Tirole (Nobel Prize 2014) and Jean-Charles Rochet formalised this theory in 2003. Their central contribution: on a two-sided market, the structure of prices between the two sides is determined not by relative costs but by relative elasticities and the intensity of cross-network effects. The rule is: subsidise the side that generates the most value for the other side; monetise the side that generates less value for the first.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -741,14 +909,14 @@ The nightclub and the two-sided platform logic
 </div>
 <p>This logic produces pricing structures that standard competition analysis cannot evaluate with the usual tools. The price of a product set at zero does not imply zero market power, it implies that the platform is monetising the other side of the market. The concentration of Google in search (over 90% of global searches) cannot be assessed merely by asking whether the price to users is above marginal cost, because the price to users is zero. Competition analysis on two-sided markets must account for the full pricing structure across both sides, the intensity of cross-network effects, and the barriers to multi-homing (the ability of users to use multiple platforms simultaneously).</p>
 </section>
-<section id="sec-maroc-numerique-ch04" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="sec-maroc-numerique-ch04"><span class="header-section-number">11.3</span> Morocco’s digital economy: platforms in a transitional context</h2>
+<section id="sec-maroc-numerique-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-maroc-numerique-ch04">Morocco’s digital economy: platforms in a transitional context</h2>
 <p>Morocco’s digital economy illustrates the dynamics of network effects and two-sided platforms in an economy where mobile penetration is high (over 50 million SIM cards for a population of 37 million), internet penetration still expanding (above 90% among youth), and fintech infrastructure being actively constructed.</p>
 <p>The most consequential platform battle is in <strong>mobile payments</strong>. CMI (Centre Monétique Interbancaire), M2T (Maroc Telecom’s mobile money service), and new digital banking entrants are each attempting to reach the critical user mass that would trigger self-sustaining network effects. The stakes are enormous: approximately 40% of the adult population remains unbanked, and informal cash transactions represent a massive share of daily commerce. The platform that successfully connects informal merchants and consumers through a simple payment system will acquire a structurally dominant position in Moroccan payments, with very high switching costs once routines are established.</p>
 <p>Jumia Morocco illustrates the difficulty of building a two-sided marketplace platform in an emerging economy. To attract buyers, it needs sellers and fast delivery. To attract sellers, it needs buyers. This chicken-and-egg problem requires heavy subsidisation of both sides during the growth phase (delivery subsidies for buyers, reduced commission rates for sellers), which generates sustained losses until critical mass is reached. Jumia’s profitability remained elusive because the subsidies needed to keep both sides engaged exceeded the value it could extract through commissions. This is the structural challenge of two-sided platform building in markets where trust in e-commerce is still being established and logistics infrastructure is relatively expensive.</p>
 </section>
-<section id="sec-surveillance-ch04" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="sec-surveillance-ch04"><span class="header-section-number">11.4</span> Surveillance capitalism and the data economy</h2>
+<section id="sec-surveillance-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-surveillance-ch04">Surveillance capitalism and the data economy</h2>
 <p>The dominant business model of the largest digital platforms rests not on selling products to users but on extracting behavioural data and selling predictive profiles to advertisers. Shoshana Zuboff calls this <strong>surveillance capitalism</strong>: what is being sold is not a product but the prediction and modification of human behaviour.</p>
 <p>Data have unusual economic properties that place them in a grey zone between public and private goods. They are <strong>non-rival</strong>: my use of a data set does not prevent your simultaneous use. They may be non-excludable in production (behavioural data is generated involuntarily by users) but are excludable in ownership, platforms claim proprietary rights over data generated on their infrastructure. These properties create a form of capital that compounds in value with scale in ways physical capital does not: a larger database generates more accurate predictions, which generate more advertising revenue, which fund better algorithms, which attract more users, which generate more data. The competitive advantage of data accumulation is self-reinforcing and cumulative.</p>
 <p>For competition analysis, this creates a fundamental problem: the standard test for market power asks whether a firm can profitably raise prices by 5-10%. When the price is zero, as with Google search or Facebook, this test is literally inapplicable. The relevant question is not whether the price exceeds marginal cost but whether users are paying a non-monetary price (their attention, their data, their behavioural modification) that constitutes an economic transfer whose value they neither observe nor negotiate. Shoshana Zuboff’s concept of <strong>surveillance capitalism</strong> captures this economy’s distinctive character: what is being sold is not a product, but the <em>prediction and modification of human behaviour</em>.</p>
@@ -769,18 +937,18 @@ Digital platform power in Morocco: a different vantage point
 <hr>
 </section>
 </section>
-<section id="sec-travail-ch04" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Part VI — The Labour Market: A Market of a Different Kind</h1>
+<section id="sec-travail-ch04" class="level1">
+<h1>Part VI — The Labour Market: A Market of a Different Kind</h1>
 <p>The labour market is not a market like the others. What is exchanged is not a commodity but a human capacity. The conditions of exchange determine not merely a price but the daily circumstances of millions of lives. This asymmetry between the product market analysis and the labour market analysis is not a footnote; it is one of the most consequential differences in applied economics.</p>
-<section id="sec-rigidites-salariales-ch04" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="sec-rigidites-salariales-ch04"><span class="header-section-number">12.1</span> Why wages do not easily fall</h2>
+<section id="sec-rigidites-salariales-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-rigidites-salariales-ch04">Why wages do not easily fall</h2>
 <p>The standard labour market model predicts that in the presence of excess supply (unemployment), wages will fall until equilibrium is restored. Empirically, this prediction is regularly contradicted: wages are <strong>rigid downward</strong>. Several mechanisms explain this.</p>
 <p><strong>Efficiency wages</strong>: Akerlof and Yellen showed that firms may rationally pay above the market-clearing wage to reduce turnover (costly to replace), improve productivity (better-paid workers engage more), and retain the best employees (who have more alternatives). If all firms reason this way, the equilibrium wage remains above the level that would clear the market, and unemployment persists at equilibrium.</p>
 <p><strong>Fairness norms</strong>: workers do not perceive their wage as a simple price. They perceive it as an evaluation of their contribution and their status. A wage cut, even slightly above the equilibrium level, is perceived as an injustice and generates reduced effort (work-to-rule, absenteeism, turnover). Firms anticipate this reaction and avoid nominal wage reductions even during low-demand periods, preferring layoffs.</p>
 <p><strong>Rotation costs</strong>: hiring (recruitment, training) and firing (severance, procedures) both have real costs. These costs encourage firms to stabilise their workforce rather than adjusting wages continuously to demand fluctuations.</p>
 </section>
-<section id="sec-monopsone-ch04" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="sec-monopsone-ch04"><span class="header-section-number">12.2</span> Monopsony and employer power</h2>
+<section id="sec-monopsone-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-monopsone-ch04">Monopsony and employer power</h2>
 <p>Standard theory assumes perfect competition on both sides of the labour market. On many local markets, this assumption is false: <strong>one or a few employers dominate</strong> the labour basin. This is <strong>monopsony</strong>, the buying-side counterpart of monopoly.</p>
 <p>In the presence of monopsony, the dominant employer can set wages below the competitive full-employment level, limiting hiring to push down the equilibrium wage. The consequence is sub-optimal employment <em>and</em> wages below marginal productivity. Card and Krueger’s seminal 1994 study showed empirically that minimum wage increases had not reduced employment in local markets dominated by powerful employers, precisely because the monopsonist was already paying below the competitive level, and the minimum wage was <em>correcting</em> the distortion rather than creating one.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -797,15 +965,15 @@ Mining basins and monopsony in Morocco
 </div>
 </div>
 </section>
-<section id="sec-part-salaires-ch04" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="sec-part-salaires-ch04"><span class="header-section-number">12.3</span> The wage share and distribution: Kalecki applied to labour markets</h2>
+<section id="sec-part-salaires-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-part-salaires-ch04">The wage share and distribution: Kalecki applied to labour markets</h2>
 <p>The Kaleckian markup framework, developed earlier for product markets, has a direct application to labour markets that completes the distributional analysis. If the price is set as P = (1+m) × CUV, and CUV includes direct wage costs, then the wage share in value added is:</p>
 <p><span class="math display">\[rac{W}{VA} = rac{1}{1+m}    imes rac{W}{CUV}\]</span></p>
 <p>A higher markup compresses the wage share, holding everything else constant. This means that product market concentration, through its effect on the markup, directly reduces the labour share of national income. This is not a marginal effect. The structural difference between Morocco’s wage share (around 35-40%) and that of comparable developing countries with less concentrated market structures is partly explained by exactly this mechanism.</p>
 <p>The macroeconomic consequence is important for understanding Morocco’s growth model. A compressed wage share means household consumption is structurally limited relative to what productivity would otherwise permit. This creates a structural tendency toward insufficient domestic demand that must be compensated by export growth, public investment, or external financing. Morocco’s persistent current account deficit, the economy consistently importing more than it exports, is partly the macroeconomic expression of an income distribution in which the wage share is too low to sustain domestic consumption adequate for productive capacity utilisation.</p>
 </section>
-<section id="sec-segmentation-ch04" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="sec-segmentation-ch04"><span class="header-section-number">12.4</span> Labour market segmentation and the graduate unemployment paradox</h2>
+<section id="sec-segmentation-ch04" class="level2">
+<h2 class="anchored" data-anchor-id="sec-segmentation-ch04">Labour market segmentation and the graduate unemployment paradox</h2>
 <p>The labour market is not a single market but a set of relatively sealed <strong>segments</strong>, separated by barriers to mobility. The dual labour market model (Doeringer and Piore, 1971) distinguishes a <strong>primary segment</strong>, formal, stable, well-remunerated employment with social protection (CNSS, AMO, paid leave), from a <strong>secondary segment</strong>, informal, precarious, poorly remunerated work without protection.</p>
 <p>Segmentation is stable because primary-segment firms maintain wages above market clearing (efficiency wages) and select candidates through costly signals (diplomas, prior experience in formal employment). Secondary-segment workers cannot simply apply to primary-segment employers without the required signals. The barriers are institutional as much as productive.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -824,8 +992,8 @@ Morocco’s graduate unemployment paradox
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch04" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Conclusion: Markets as Economic and Social Institutions</h1>
+<section id="sec-concl-ch04" class="level1">
+<h1>Conclusion: Markets as Economic and Social Institutions</h1>
 <p>This chapter has established the microeconomic foundations of the course. Four essential acquisitions.</p>
 <p><strong>Markets create value</strong> when they enable mutually beneficial exchanges: static gains from reallocation, dynamic gains from learning and capability-building. This is real, documentable, and constitutes the main economic justification for market economies.</p>
 <p><strong>Markets also fail</strong>, through externalities, public goods, information asymmetries, and market power. These failures are not accidents. They are structural properties of certain markets, and they define the legitimate perimeter of public intervention. Chapters 5 and 6 develop the institutional responses.</p>
@@ -855,8 +1023,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch04" class="level1 appendix" data-number="14">
-<h1 class="appendix" data-number="14"><span class="header-section-number">14</span> Further Reading</h1>
+<section id="sec-biblio-ch04" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Kalecki, M. (1943). “Political Aspects of Full Employment.” <em>Political Quarterly</em>.</strong> The most important short paper in political economy of the 20th century. Argues that capitalism systematically resists full employment because it undermines the disciplinary power of unemployment over labour.</p>
 <p><strong>Robinson, J. (1933). <em>The Economics of Imperfect Competition</em>. Macmillan.</strong> The foundational analysis of monopolistic competition and imperfect markets. Robinson demonstrated that most real markets involve P &gt; MC and traced the distributional consequences.</p>
 <p><strong>Card, D. and Krueger, A. (1994). “Minimum Wages and Employment.” <em>American Economic Review</em>.</strong> The empirical demonstration that minimum wage increases need not reduce employment, because monopsony is widespread in labour markets.</p>
@@ -869,8 +1037,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1289,13 +1516,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1304,5 +1531,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

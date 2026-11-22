@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch14-balance-of-payments.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,51 +493,52 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch14" id="toc-sec-carte-ch14" class="nav-link active" data-scroll-target="#sec-carte-ch14">The Map</a></li>
-  <li><a href="#sec-lecture-ch14" id="toc-sec-lecture-ch14" class="nav-link" data-scroll-target="#sec-lecture-ch14"><span class="header-section-number">17</span> Part I — Reading the Balance of Payments</a>
+  <li><a href="#sec-lecture-ch14" id="toc-sec-lecture-ch14" class="nav-link" data-scroll-target="#sec-lecture-ch14">Part I — Reading the Balance of Payments</a>
   <ul class="collapse">
-  <li><a href="#sec-architecture-ch14" id="toc-sec-architecture-ch14" class="nav-link" data-scroll-target="#sec-architecture-ch14"><span class="header-section-number">17.1</span> Architecture and accounting logic</a></li>
-  <li><a href="#sec-signes-ch14" id="toc-sec-signes-ch14" class="nav-link" data-scroll-target="#sec-signes-ch14"><span class="header-section-number">17.2</span> Sign conventions and what they reveal</a></li>
+  <li><a href="#sec-architecture-ch14" id="toc-sec-architecture-ch14" class="nav-link" data-scroll-target="#sec-architecture-ch14">Architecture and accounting logic</a></li>
+  <li><a href="#sec-signes-ch14" id="toc-sec-signes-ch14" class="nav-link" data-scroll-target="#sec-signes-ch14">Sign conventions and what they reveal</a></li>
   </ul></li>
-  <li><a href="#sec-change-ch14" id="toc-sec-change-ch14" class="nav-link" data-scroll-target="#sec-change-ch14"><span class="header-section-number">18</span> Part II — Exchange Rates, Depreciation, and the Marshall-Lerner Condition</a>
+  <li><a href="#sec-change-ch14" id="toc-sec-change-ch14" class="nav-link" data-scroll-target="#sec-change-ch14">Part II — Exchange Rates, Depreciation, and the Marshall-Lerner Condition</a>
   <ul class="collapse">
-  <li><a href="#sec-marshall-ch14" id="toc-sec-marshall-ch14" class="nav-link" data-scroll-target="#sec-marshall-ch14"><span class="header-section-number">18.1</span> How exchange rate changes affect the trade balance</a></li>
-  <li><a href="#sec-j-curve-ch14" id="toc-sec-j-curve-ch14" class="nav-link" data-scroll-target="#sec-j-curve-ch14"><span class="header-section-number">18.2</span> The J-curve effect</a></li>
-  <li><a href="#sec-mundell-ch14" id="toc-sec-mundell-ch14" class="nav-link" data-scroll-target="#sec-mundell-ch14"><span class="header-section-number">18.3</span> Mundell’s impossible trinity and Morocco’s navigation</a></li>
+  <li><a href="#sec-marshall-ch14" id="toc-sec-marshall-ch14" class="nav-link" data-scroll-target="#sec-marshall-ch14">How exchange rate changes affect the trade balance</a></li>
+  <li><a href="#sec-j-curve-ch14" id="toc-sec-j-curve-ch14" class="nav-link" data-scroll-target="#sec-j-curve-ch14">The J-curve effect</a></li>
+  <li><a href="#sec-mundell-ch14" id="toc-sec-mundell-ch14" class="nav-link" data-scroll-target="#sec-mundell-ch14">Mundell’s impossible trinity and Morocco’s navigation</a></li>
   </ul></li>
-  <li><a href="#sec-chiname-ch14" id="toc-sec-chiname-ch14" class="nav-link" data-scroll-target="#sec-chiname-ch14"><span class="header-section-number">19</span> Part III — Global Imbalances: The Chinamérica Anatomy</a>
+  <li><a href="#sec-chiname-ch14" id="toc-sec-chiname-ch14" class="nav-link" data-scroll-target="#sec-chiname-ch14">Part III — Global Imbalances: The Chinamérica Anatomy</a>
   <ul class="collapse">
-  <li><a href="#sec-interdependance-ch14" id="toc-sec-interdependance-ch14" class="nav-link" data-scroll-target="#sec-interdependance-ch14"><span class="header-section-number">19.1</span> The structural interdependence</a></li>
-  <li><a href="#sec-fin-ch14" id="toc-sec-fin-ch14" class="nav-link" data-scroll-target="#sec-fin-ch14"><span class="header-section-number">19.2</span> The end of Chimerica and its consequences</a></li>
+  <li><a href="#sec-interdependance-ch14" id="toc-sec-interdependance-ch14" class="nav-link" data-scroll-target="#sec-interdependance-ch14">The structural interdependence</a></li>
+  <li><a href="#sec-fin-ch14" id="toc-sec-fin-ch14" class="nav-link" data-scroll-target="#sec-fin-ch14">The end of Chimerica and its consequences</a></li>
   </ul></li>
-  <li><a href="#sec-smi-ch14" id="toc-sec-smi-ch14" class="nav-link" data-scroll-target="#sec-smi-ch14"><span class="header-section-number">20</span> Part IV — The Architecture of the International Monetary System</a>
+  <li><a href="#sec-smi-ch14" id="toc-sec-smi-ch14" class="nav-link" data-scroll-target="#sec-smi-ch14">Part IV — The Architecture of the International Monetary System</a>
   <ul class="collapse">
-  <li><a href="#sec-bretton-ch14" id="toc-sec-bretton-ch14" class="nav-link" data-scroll-target="#sec-bretton-ch14"><span class="header-section-number">20.1</span> Bretton Woods and the dollar standard</a></li>
-  <li><a href="#sec-triffin-ch14" id="toc-sec-triffin-ch14" class="nav-link" data-scroll-target="#sec-triffin-ch14"><span class="header-section-number">20.2</span> The Triffin dilemma</a></li>
-  <li><a href="#sec-privilege-ch14" id="toc-sec-privilege-ch14" class="nav-link" data-scroll-target="#sec-privilege-ch14"><span class="header-section-number">20.3</span> The “exorbitant privilege”</a></li>
-  <li><a href="#sec-peccatum-ch14" id="toc-sec-peccatum-ch14" class="nav-link" data-scroll-target="#sec-peccatum-ch14"><span class="header-section-number">20.4</span> The “original sin” and peripheral financing constraints</a></li>
+  <li><a href="#sec-bretton-ch14" id="toc-sec-bretton-ch14" class="nav-link" data-scroll-target="#sec-bretton-ch14">Bretton Woods and the dollar standard</a></li>
+  <li><a href="#sec-triffin-ch14" id="toc-sec-triffin-ch14" class="nav-link" data-scroll-target="#sec-triffin-ch14">The Triffin dilemma</a></li>
+  <li><a href="#sec-privilege-ch14" id="toc-sec-privilege-ch14" class="nav-link" data-scroll-target="#sec-privilege-ch14">The “exorbitant privilege”</a></li>
+  <li><a href="#sec-peccatum-ch14" id="toc-sec-peccatum-ch14" class="nav-link" data-scroll-target="#sec-peccatum-ch14">The “original sin” and peripheral financing constraints</a></li>
   </ul></li>
-  <li><a href="#sec-crise-ch14" id="toc-sec-crise-ch14" class="nav-link" data-scroll-target="#sec-crise-ch14"><span class="header-section-number">21</span> Part V — The Debt Crisis and Structural Adjustment</a>
+  <li><a href="#sec-crise-ch14" id="toc-sec-crise-ch14" class="nav-link" data-scroll-target="#sec-crise-ch14">Part V — The Debt Crisis and Structural Adjustment</a>
   <ul class="collapse">
-  <li><a href="#sec-volcker-ch14" id="toc-sec-volcker-ch14" class="nav-link" data-scroll-target="#sec-volcker-ch14"><span class="header-section-number">21.1</span> The Volcker shock and the periphery</a></li>
-  <li><a href="#sec-petrodollar-ch14" id="toc-sec-petrodollar-ch14" class="nav-link" data-scroll-target="#sec-petrodollar-ch14"><span class="header-section-number">21.2</span> Petrodollar recycling and the debt trap</a></li>
-  <li><a href="#sec-arrighi-ch14" id="toc-sec-arrighi-ch14" class="nav-link" data-scroll-target="#sec-arrighi-ch14"><span class="header-section-number">21.3</span> Arrighi and the long cycles of financial hegemony</a></li>
-  <li><a href="#sec-pas-ch14" id="toc-sec-pas-ch14" class="nav-link" data-scroll-target="#sec-pas-ch14"><span class="header-section-number">21.4</span> Structural adjustment: discipline or subjugation?</a></li>
+  <li><a href="#sec-volcker-ch14" id="toc-sec-volcker-ch14" class="nav-link" data-scroll-target="#sec-volcker-ch14">The Volcker shock and the periphery</a></li>
+  <li><a href="#sec-petrodollar-ch14" id="toc-sec-petrodollar-ch14" class="nav-link" data-scroll-target="#sec-petrodollar-ch14">Petrodollar recycling and the debt trap</a></li>
+  <li><a href="#sec-arrighi-ch14" id="toc-sec-arrighi-ch14" class="nav-link" data-scroll-target="#sec-arrighi-ch14">Arrighi and the long cycles of financial hegemony</a></li>
+  <li><a href="#sec-pas-ch14" id="toc-sec-pas-ch14" class="nav-link" data-scroll-target="#sec-pas-ch14">Structural adjustment: discipline or subjugation?</a></li>
   </ul></li>
-  <li><a href="#sec-maroc-ch14" id="toc-sec-maroc-ch14" class="nav-link" data-scroll-target="#sec-maroc-ch14"><span class="header-section-number">22</span> Part VI — Morocco’s External Position</a>
+  <li><a href="#sec-maroc-ch14" id="toc-sec-maroc-ch14" class="nav-link" data-scroll-target="#sec-maroc-ch14">Part VI — Morocco’s External Position</a>
   <ul class="collapse">
-  <li><a href="#sec-compte-courant-ch14" id="toc-sec-compte-courant-ch14" class="nav-link" data-scroll-target="#sec-compte-courant-ch14"><span class="header-section-number">22.1</span> The current account anatomy</a></li>
-  <li><a href="#sec-comparaison-ch14" id="toc-sec-comparaison-ch14" class="nav-link" data-scroll-target="#sec-comparaison-ch14"><span class="header-section-number">22.2</span> Morocco in comparative perspective</a></li>
-  <li><a href="#sec-thirlwall-ch14" id="toc-sec-thirlwall-ch14" class="nav-link" data-scroll-target="#sec-thirlwall-ch14"><span class="header-section-number">22.3</span> The Thirlwall constraint applied to Morocco</a></li>
-  <li><a href="#sec-reserves-ch14" id="toc-sec-reserves-ch14" class="nav-link" data-scroll-target="#sec-reserves-ch14"><span class="header-section-number">22.4</span> Reserves adequacy and crisis prevention</a></li>
-  <li><a href="#sec-priorites-ch14" id="toc-sec-priorites-ch14" class="nav-link" data-scroll-target="#sec-priorites-ch14"><span class="header-section-number">22.5</span> The strategic priorities for external rebalancing</a></li>
+  <li><a href="#sec-compte-courant-ch14" id="toc-sec-compte-courant-ch14" class="nav-link" data-scroll-target="#sec-compte-courant-ch14">The current account anatomy</a></li>
+  <li><a href="#sec-comparaison-ch14" id="toc-sec-comparaison-ch14" class="nav-link" data-scroll-target="#sec-comparaison-ch14">Morocco in comparative perspective</a></li>
+  <li><a href="#sec-thirlwall-ch14" id="toc-sec-thirlwall-ch14" class="nav-link" data-scroll-target="#sec-thirlwall-ch14">The Thirlwall constraint applied to Morocco</a></li>
+  <li><a href="#sec-reserves-ch14" id="toc-sec-reserves-ch14" class="nav-link" data-scroll-target="#sec-reserves-ch14">Reserves adequacy and crisis prevention</a></li>
+  <li><a href="#sec-priorites-ch14" id="toc-sec-priorites-ch14" class="nav-link" data-scroll-target="#sec-priorites-ch14">The strategic priorities for external rebalancing</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch14" id="toc-sec-concl-ch14" class="nav-link" data-scroll-target="#sec-concl-ch14"><span class="header-section-number">23</span> Conclusion: Sovereignty as External Constraint, and Its Margins</a></li>
-  <li><a href="#sec-biblio-ch14" id="toc-sec-biblio-ch14" class="nav-link" data-scroll-target="#sec-biblio-ch14"><span class="header-section-number">24</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch14" id="toc-sec-concl-ch14" class="nav-link" data-scroll-target="#sec-concl-ch14">Conclusion: Sovereignty as External Constraint, and Its Margins</a></li>
+  <li><a href="#sec-biblio-ch14" id="toc-sec-biblio-ch14" class="nav-link" data-scroll-target="#sec-biblio-ch14">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch10-growth-development.html">Part III — Development, Transformation, and Industrial Strategy</a></li><li class="breadcrumb-item"><a href="./ch14-balance-of-payments.html"><span class="chapter-number">16</span>&nbsp; <span class="chapter-title">Chapter 14 — The Balance of Payments and the International Monetary System</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -430,10 +598,10 @@ The guiding thread of this chapter
 <p>The chapter advances in six movements. First, the mechanics: how to read a balance of payments, what the accounting identity means, and what it conceals. Second, the exchange rate: how depreciation affects the trade balance, the Marshall-Lerner condition, and Morocco’s gradual exchange rate liberalisation. Third, global imbalances: the China-America interdependence and the recycling of surpluses that financed two decades of global growth. Fourth, the architecture of the international monetary system: from Bretton Woods to the dollar standard, the Triffin dilemma, and Keynes’s rejected alternative. Fifth, the debt crisis and structural adjustment: the Volcker shock, petrodollar recycling, and the political economy of IMF conditionality. Sixth, Morocco’s external position: the structure of the current account, the Thirlwall constraint, reserves adequacy, and the strategic priorities for reducing external vulnerability.</p>
 <hr>
 </section>
-<section id="sec-lecture-ch14" class="level1" data-number="17">
-<h1 data-number="17"><span class="header-section-number">17</span> Part I — Reading the Balance of Payments</h1>
-<section id="sec-architecture-ch14" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="sec-architecture-ch14"><span class="header-section-number">17.1</span> Architecture and accounting logic</h2>
+<section id="sec-lecture-ch14" class="level1">
+<h1>Part I — Reading the Balance of Payments</h1>
+<section id="sec-architecture-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-architecture-ch14">Architecture and accounting logic</h2>
 <p>The balance of payments records all economic and financial transactions between a country’s residents and the rest of the world during a given period. It has three principal components, each capturing a different dimension of external economic relations.</p>
 <p>The <strong>current account</strong> records real transactions: exports and imports of goods (the trade balance or balance commerciale); services (tourism received and spent abroad, transport, financial services, consulting); primary income (wages and dividends received from or paid to foreigners); and current transfers (most importantly, remittances from the Moroccan diaspora). The current account is the closest equivalent to a profit-and-loss statement for a national economy: it shows whether the country is earning more or less from the world than it is spending in it.</p>
 <p>The <strong>financial account</strong> records capital movements: foreign direct investment (received or outgoing), portfolio investments (foreign purchases of Moroccan stocks and bonds, or Moroccan purchases of foreign securities), loans and bank deposits, and other capital flows. If Morocco receives €2 billion of FDI from a European automotive manufacturer, this appears as a financial account inflow, a foreign entity is acquiring a Moroccan productive asset.</p>
@@ -455,8 +623,8 @@ The family keeping accounts with a son abroad
 </div>
 </div>
 </section>
-<section id="sec-signes-ch14" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="sec-signes-ch14"><span class="header-section-number">17.2</span> Sign conventions and what they reveal</h2>
+<section id="sec-signes-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-signes-ch14">Sign conventions and what they reveal</h2>
 <p>The sign conventions in a balance of payments are logical but initially counter-intuitive. The principle: any <strong>inflow of foreign exchange</strong> is positive; any <strong>outflow of foreign exchange</strong> is negative.</p>
 <p>Exports generate foreign exchange inflows: positive. Imports consume foreign exchange: negative. FDI received from abroad is a capital inflow: positive. A Moroccan firm investing abroad is a capital outflow: negative.</p>
 <p>The counter-intuitive case is reserves. When a central bank <strong>accumulates</strong> reserves, this appears as a <strong>negative</strong> entry, because accumulating reserves means buying foreign assets: the central bank is sending domestic currency outward (in effect) to acquire dollar or euro assets. When the central bank sells reserves to defend the currency, that is a <strong>positive</strong> entry, it is injecting foreign exchange into the market.</p>
@@ -465,18 +633,18 @@ The family keeping accounts with a son abroad
 <hr>
 </section>
 </section>
-<section id="sec-change-ch14" class="level1" data-number="18">
-<h1 data-number="18"><span class="header-section-number">18</span> Part II — Exchange Rates, Depreciation, and the Marshall-Lerner Condition</h1>
-<section id="sec-marshall-ch14" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="sec-marshall-ch14"><span class="header-section-number">18.1</span> How exchange rate changes affect the trade balance</h2>
+<section id="sec-change-ch14" class="level1">
+<h1>Part II — Exchange Rates, Depreciation, and the Marshall-Lerner Condition</h1>
+<section id="sec-marshall-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-marshall-ch14">How exchange rate changes affect the trade balance</h2>
 <p>When a currency depreciates, when it takes more of the domestic currency to buy one unit of foreign currency, exports become cheaper in foreign currency and imports become more expensive in domestic currency. The intuitive expectation: depreciation should improve the trade balance by boosting exports and reducing imports. But the reality is more complex.</p>
 <p>The <strong>Marshall-Lerner condition</strong> specifies when depreciation <em>actually</em> improves the current account. The condition requires that the sum of the absolute value of the price elasticity of exports and the price elasticity of imports exceeds one:</p>
 <p><span class="math display">\[|\varepsilon_X| + |\varepsilon_M| &gt; 1\]</span></p>
 <p>where <span class="math inline">\(\varepsilon_X\)</span> measures how much export volume changes for a given change in the export price (in foreign currency), and <span class="math inline">\(\varepsilon_M\)</span> measures how much import volume changes for a given change in the import price (in domestic currency).</p>
 <p>If Marshall-Lerner is satisfied, depreciation improves the trade balance in the long run, because export volumes rise enough (foreigners buy more of the now-cheaper exports) and import volumes fall enough (residents buy less of the now-more-expensive imports) to outweigh the initial deterioration in the value terms of trade.</p>
 </section>
-<section id="sec-j-curve-ch14" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="sec-j-curve-ch14"><span class="header-section-number">18.2</span> The J-curve effect</h2>
+<section id="sec-j-curve-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-j-curve-ch14">The J-curve effect</h2>
 <p>The complication is timing. In the short run, the Marshall-Lerner condition is typically <em>not</em> satisfied, because trade volumes are sticky. Existing contracts are fulfilled at old prices; buyers and sellers need time to adjust their sourcing decisions; firms need time to identify new export markets or find import substitutes. In the short run, depreciation <em>worsens</em> the trade balance:</p>
 <ul>
 <li>Import prices rise immediately (imports become more expensive in dirhams)</li>
@@ -487,8 +655,8 @@ The family keeping accounts with a son abroad
 <p>The net short-run effect is therefore a <em>deterioration</em> in the trade balance, followed by an <em>improvement</em> as volumes adjust. Graphically, this traces a J-shape: the balance first falls then rises. The <strong>J-curve effect</strong> explains why exchange rate depreciation is not an instant cure for trade deficits, and why the short-run response to depreciation can appear paradoxical.</p>
 <p>For Morocco’s exchange rate liberalisation trajectory: the IMF and World Bank analyses suggest that Morocco’s export and import elasticities are sufficient for the Marshall-Lerner condition to hold over a 12-18 month horizon. This is part of the economic case for the progressive exchange rate band widening from ±0.3% (pre-2018) through ±2.5% (2018), ±5% (2020), and toward greater flexibility. If Morocco’s exports have low price elasticity (because they compete primarily on quality, proximity, or unique resources like phosphates), a depreciation would generate less export volume response, reducing the benefit of exchange rate flexibility and reinforcing the case for capability-based rather than cost-based competitiveness strategy.</p>
 </section>
-<section id="sec-mundell-ch14" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="sec-mundell-ch14"><span class="header-section-number">18.3</span> Mundell’s impossible trinity and Morocco’s navigation</h2>
+<section id="sec-mundell-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mundell-ch14">Mundell’s impossible trinity and Morocco’s navigation</h2>
 <p>Robert Mundell’s impossible trinity is the most consequential result in international macroeconomics for developing country policy. A country cannot simultaneously:</p>
 <ol type="1">
 <li>Maintain a <strong>fixed exchange rate</strong></li>
@@ -514,16 +682,16 @@ The sovereignty cost of fixed exchange rate commitments
 <hr>
 </section>
 </section>
-<section id="sec-chiname-ch14" class="level1" data-number="19">
-<h1 data-number="19"><span class="header-section-number">19</span> Part III — Global Imbalances: The Chinamérica Anatomy</h1>
-<section id="sec-interdependance-ch14" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="sec-interdependance-ch14"><span class="header-section-number">19.1</span> The structural interdependence</h2>
+<section id="sec-chiname-ch14" class="level1">
+<h1>Part III — Global Imbalances: The Chinamérica Anatomy</h1>
+<section id="sec-interdependance-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-interdependance-ch14">The structural interdependence</h2>
 <p>For three decades from 1980 to 2010, the world economy was organised around a structural complementarity that Niall Ferguson and Moritz Schularick named <strong>“Chimerica”</strong>: the United States as the world’s great consumer-debtor, and China as the world’s great producer-creditor.</p>
 <p>The mechanism was elegant in its circularity. American consumers and firms imported massively from Chinese factories, paying in dollars. Chinese exporters received those dollars and ceded them to state institutions (People’s Bank of China, sovereign wealth funds) that recycled them by purchasing American Treasury bonds and financial assets. This recycling simultaneously achieved three goals: it kept the renminbi undervalued (constant dollar demand prevented yuan appreciation), stimulated Chinese exports (a weak yuan made Chinese goods cheap globally), and financed American deficits at low cost (Chinese Treasury demand kept US yields artificially low).</p>
 <p>But the Chinese strategy was not primarily about financial returns. The renminbi’s deliberate undervaluation attracted Western FDI seeking low production costs, but China was not a passive assembly platform. It imposed conditions: mandatory joint ventures, technology transfer requirements, localisation of production. Western capital was used as a technology transfer vehicle, accelerating national learning at a scale and speed no indigenous R&amp;D programme could have achieved alone. <strong>The financial return was deliberately sacrificed for the industrial return.</strong> In thirty years, China moved from assembling toys to designing electric vehicles, advanced semiconductors, and AI systems. The Chimerica was, from Beijing’s perspective, a rational accumulation strategy.</p>
 </section>
-<section id="sec-fin-ch14" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="sec-fin-ch14"><span class="header-section-number">19.2</span> The end of Chimerica and its consequences</h2>
+<section id="sec-fin-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fin-ch14">The end of Chimerica and its consequences</h2>
 <p>After 2010, the structural complementarity began unwinding. China’s technology catch-up was substantially achieved, making Western FDI less necessary. Beijing reoriented growth toward domestic consumption and began investing outward through the Belt and Road Initiative, becoming a creditor to Africa, Central Asia, and Latin America. Washington, recognising the strategic contradiction of financing a competitor’s technological ascent, responded with punitive tariffs (Trump) and explicit industrial policy (CHIPS Act, Inflation Reduction Act under Biden).</p>
 <p>For the rest of the world, and for Morocco specifically, this realignment creates both risk and opportunity. The risk: disruption of the stable global supply chain architecture that Chimerica had underwritten. The opportunity: the nearshoring that European and American manufacturers pursue as alternatives to Chinese production, the manufacturing relocation that a more fragmented global economy makes attractive, and the technology competition that generates multiple potential partners for capability transfer rather than a single US-led hierarchy.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -542,43 +710,43 @@ Why China bought American Treasuries rather than investing at home
 <hr>
 </section>
 </section>
-<section id="sec-smi-ch14" class="level1" data-number="20">
-<h1 data-number="20"><span class="header-section-number">20</span> Part IV — The Architecture of the International Monetary System</h1>
-<section id="sec-bretton-ch14" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="sec-bretton-ch14"><span class="header-section-number">20.1</span> Bretton Woods and the dollar standard</h2>
+<section id="sec-smi-ch14" class="level1">
+<h1>Part IV — The Architecture of the International Monetary System</h1>
+<section id="sec-bretton-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bretton-ch14">Bretton Woods and the dollar standard</h2>
 <p>The international monetary architecture in which Morocco operates was built in July 1944 at the Bretton Woods conference in New Hampshire. The forty-four allied nations negotiating a post-war monetary order made a choice that determined the structure of international finance for the next eighty years: the dollar would be the world’s reserve currency, convertible to gold at $35 per ounce, and all other currencies would maintain fixed parities against the dollar.</p>
 <p>The American negotiating team, led by Harry Dexter White, prevailed over the British team led by John Maynard Keynes. Keynes had proposed an entirely different architecture: a supranational currency called the <strong>bancor</strong>, managed by a new International Clearing Union. Under Keynes’s plan, trade surpluses would be penalised symmetrically with trade deficits: both surplus and deficit countries would face charges on their imbalances, creating mutual incentive for adjustment. The system would be symmetric; no national currency would play the reserve role.</p>
 <p>The American proposal, and the dollar’s reserve status, won because the US held the world’s largest gold reserves and the most productive economy at the moment of maximum negotiating leverage: a Europe in ruins, a devastated Asia, and an America that had financed the Allied victory and held the world’s productive and financial surplus.</p>
 <p>Keynes’s proposal had three distinctive features that made it superior in theory but politically unacceptable to the American delegation. First, the bancor would be issued by the International Clearing Union, not by any national authority, eliminating the “exorbitant privilege” that would otherwise accrue to the reserve currency issuer. Second, both surplus and deficit countries would face symmetric adjustment obligations, with charges accumulating on bancor balances above or below a norm: this would have obligated the United States (as a structural surplus country in 1944) to share the burden of global adjustment rather than exporting it entirely to deficit countries. Third, the system included capital controls as legitimate rather than aberrant: Keynes understood that free capital mobility was incompatible with the policy space needed for full employment economics.</p>
 <p>The American rejection of the bancor was not principally economic, White’s team acknowledged Keynes’s design was intellectually superior. It was geopolitical: the United States, for the first time in history the world’s dominant creditor and producer, had no interest in a symmetric system that would have required it to stimulate demand rather than simply recycling its surpluses through dollar lending at American-determined terms. But Keynes’s intellectual case was compelling: a system where one national currency is the world reserve medium is inherently asymmetric, because the issuing country, the United States, can run external deficits indefinitely (its “debt” is just reserve creation for others), while all other countries face genuine external financing constraints.</p>
 </section>
-<section id="sec-triffin-ch14" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="sec-triffin-ch14"><span class="header-section-number">20.2</span> The Triffin dilemma</h2>
+<section id="sec-triffin-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-triffin-ch14">The Triffin dilemma</h2>
 <p>Robert Triffin identified the structural contradiction at the heart of the dollar standard in his 1960 book <em>Gold and the Dollar Crisis</em>. The Triffin dilemma is this:</p>
 <p>For the world economy to grow, it needs a growing stock of international reserves, dollars, for trade settlement and safety buffers. The only way to supply these dollars is for the United States to run persistent balance of payments deficits: it must spend more abroad than it earns, creating dollar claims that the rest of the world holds as reserves.</p>
 <p>But if the United States runs persistent deficits, it accumulates debt, and eventually, the dollar’s gold convertibility becomes doubtful (if US liabilities to foreigners exceed US gold holdings). At that point, confidence in the dollar as a store of value collapses, triggering a run on US gold reserves.</p>
 <p>The dilemma is inescapable within the dollar standard: the system needs US deficits to supply reserve liquidity, but those deficits ultimately undermine the dollar’s credibility as a reserve asset.</p>
 <p>President Nixon’s decision on August 15, 1971 to unilaterally close the gold window, suspending dollar-gold convertibility, resolved the dilemma by abandoning the gold anchor. The dollar remained the world reserve currency not through an institutional backing but through network effects, market depth, and the absence of a credible alternative. Keynes’s proposed bancor was never implemented. Keynes’s predicted problem, the instability of a dollar standard without symmetric adjustment, has never been solved.</p>
 </section>
-<section id="sec-privilege-ch14" class="level2" data-number="20.3">
-<h2 data-number="20.3" class="anchored" data-anchor-id="sec-privilege-ch14"><span class="header-section-number">20.3</span> The “exorbitant privilege”</h2>
+<section id="sec-privilege-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-privilege-ch14">The “exorbitant privilege”</h2>
 <p>Valéry Giscard d’Estaing’s phrase, “l’exorbitant privilège”, names the structural advantage the United States derives from the dollar’s reserve status. This privilege has several dimensions.</p>
 <p><strong>Seigniorage</strong>: the United States earns a return from the rest of the world’s demand for dollar assets. When a Moroccan firm or Bank Al-Maghrib holds dollars in US Treasury bills, it is essentially lending to the US government at low interest, subsidising US government borrowing relative to what would prevail in a symmetric reserve system.</p>
 <p><strong>Deficit financing</strong>: the United States can run persistent current account deficits without facing the balance of payments crisis that would immediately constrain any other economy. As long as the world demands dollar assets, the US can issue them, its “debts are the reserves of others.” This is precisely the Triffin mechanism operationalised as a permanent structural advantage.</p>
 <p><strong>Sanctions power</strong>: denominating most international trade in dollars gives the United States control over the international payment system. Dollar-clearing banks must comply with US regulatory requirements; SWIFT, which routes most international bank-to-bank transfers, operates under American jurisdictional pressure. This has been weaponised in the Iran sanctions, the Russia SWIFT exclusion, and other instances where financial infrastructure has been converted into geopolitical leverage.</p>
 <p>The peripheral country’s position is the mirror image of this privilege. Morocco cannot run deficits financed by the rest of the world’s reserve demand. It must <em>earn</em> its foreign exchange through exports, remittances, and tourism. A depreciation of the dirham raises the domestic cost of its dollar- and euro-denominated debt. A sudden stop in external financing, capital outflows triggered by a US interest rate increase or a global risk-off episode, requires either depleting reserves or sharply contracting domestic demand.</p>
 </section>
-<section id="sec-peccatum-ch14" class="level2" data-number="20.4">
-<h2 data-number="20.4" class="anchored" data-anchor-id="sec-peccatum-ch14"><span class="header-section-number">20.4</span> The “original sin” and peripheral financing constraints</h2>
+<section id="sec-peccatum-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-peccatum-ch14">The “original sin” and peripheral financing constraints</h2>
 <p>Barry Eichengreen and Ricardo Hausmann identified a specific pathology that amplifies peripheral countries’ external vulnerability: the <strong>original sin</strong>, the structural incapacity of most developing country governments to borrow internationally in their own currency. Morocco’s external public debt is predominantly in euros and dollars. This creates a currency mismatch: revenues are in dirhams but obligations are in hard currency. If the dirham depreciates, the domestic currency value of the debt rises mechanically, potentially triggering debt sustainability crises even when the underlying fiscal position has not worsened.</p>
 <p>The original sin is not immutable. Countries accumulate the credibility to issue in local currency by demonstrating sustained macroeconomic discipline, deepening domestic bond markets, and attracting foreign investors into local-currency assets. Mexico, Brazil, and South Korea have partially escaped the original sin over the past two decades, they can now borrow partly in their own currency in international markets. Morocco’s development of a deep domestic Treasury bond market, and the progressive opening of this market to foreign investors, is the domestic financial development pathway toward reducing original sin exposure.</p>
 <hr>
 </section>
 </section>
-<section id="sec-crise-ch14" class="level1" data-number="21">
-<h1 data-number="21"><span class="header-section-number">21</span> Part V — The Debt Crisis and Structural Adjustment</h1>
-<section id="sec-volcker-ch14" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="sec-volcker-ch14"><span class="header-section-number">21.1</span> The Volcker shock and the periphery</h2>
+<section id="sec-crise-ch14" class="level1">
+<h1>Part V — The Debt Crisis and Structural Adjustment</h1>
+<section id="sec-volcker-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-volcker-ch14">The Volcker shock and the periphery</h2>
 <p>In October 1979, Paul Volcker, the newly appointed Federal Reserve chairman, made a decision whose consequences for the developing world rivalled any deliberate policy action. To break the US inflation that had been running at 10-14% since the mid-1970s, he implemented a monetary shock: the Fed funds rate rose from approximately 10% to above 20% within months.</p>
 <p>The consequences for developing country debtors were automatic and devastating. Most had borrowed in the 1970s at floating interest rates indexed to LIBOR, taking advantage of abundant recycled petrodollars (see below). When US rates spiked, the service on these floating-rate dollar loans rose in direct proportion. Simultaneously, the rising dollar (which appreciates when US rates rise, attracting global capital) meant that the local-currency burden of dollar-denominated debt rose for every country that had not dollarised. And capital that had flowed to emerging markets during the low-rate 1970s reversed direction, seeking the suddenly attractive US returns.</p>
 <p>Mexico was first, announcing in August 1982 that it could not service its debt. The declaration triggered a cascade: as each country defaulted, international banks (suddenly realising their developing-country exposure) closed credit lines to all remaining borrowers. The global credit contraction was self-fulfilling: even countries capable of servicing their debts could not roll over the short-term instruments they depended on, forcing default.</p>
@@ -597,21 +765,21 @@ The over-indebted family under the bank’s supervision
 </div>
 <p>The Volcker shock was not the consequence of American malice. It was the consequence of the structural asymmetry of the international monetary system: a unilateral monetary decision in Washington had systemic external effects that no policy coordination mechanism existed to manage. This asymmetry, American monetary policy as global economic weather, has recurred in every subsequent tightening cycle. The 1994 Mexican crisis. The 2013 “taper tantrum” when Ben Bernanke’s mere suggestion of reducing QE triggered capital flight from emerging markets. The 2022 Fed rate cycle that triggered crises in Turkey, Pakistan, and Sri Lanka. The pattern is structural, not coincidental.</p>
 </section>
-<section id="sec-petrodollar-ch14" class="level2" data-number="21.2">
-<h2 data-number="21.2" class="anchored" data-anchor-id="sec-petrodollar-ch14"><span class="header-section-number">21.2</span> Petrodollar recycling and the debt trap</h2>
+<section id="sec-petrodollar-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-petrodollar-ch14">Petrodollar recycling and the debt trap</h2>
 <p>Understanding why so many developing countries were so heavily dollar-indebted in the late 1970s requires the petrodollar circuit. The 1973 and 1979 OPEC price shocks transferred massive dollar income to oil-exporting countries. These petrodollars, oil revenues denominated and held in dollars, were deposited in large Western banks (principally American and British), creating a vast reservoir of dollar liquidity seeking yield.</p>
 <p>With limited domestic investment opportunities at home, these petrodollars were recycled by Western banks as loans to developing countries, initially at modest rates, justified by the development financing rationale. Countries borrowed to finance infrastructure, subsidies, and public investment, believing (and being told) that commodity price trends and global growth would generate the export revenues to service the debt.</p>
 <p>The trap closed when Volcker raised rates. The same petrodollar recycling circuit that had appeared virtuous, oil surpluses financing development, became catastrophic when the dollar interest rates to which those loans were indexed spiked. The loans that had been presented as development finance were revealed as a mechanism for transmitting American monetary risk to peripheral balance sheets.</p>
 </section>
-<section id="sec-arrighi-ch14" class="level2" data-number="21.3">
-<h2 data-number="21.3" class="anchored" data-anchor-id="sec-arrighi-ch14"><span class="header-section-number">21.3</span> Arrighi and the long cycles of financial hegemony</h2>
+<section id="sec-arrighi-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-arrighi-ch14">Arrighi and the long cycles of financial hegemony</h2>
 <p>Giovanni Arrighi’s <em>The Long Twentieth Century</em> (1994) places the dollar standard, the debt crisis, and structural adjustment within a framework of very long historical cycles that transforms the analysis from a policy debate into a theory of systemic reproduction.</p>
 <p>Arrighi’s fundamental observation: every major systemic cycle of capital accumulation follows a pattern. A period of material expansion (production-based growth, industrial dynamism, trade growth) is succeeded by a period of financial expansion (capital flowing out of trade into financial speculation, the productive hegemon becoming the world’s banker). This transition, what Arrighi calls the signal crisis of each cycle, signals that the leading power’s productive supremacy is eroding and that financial mechanisms are being used to extract value from the system rather than create it.</p>
 <p>The sequence from Genoese finance capital (15th-16th centuries) through Dutch mercantile capitalism (17th century) to British industrial capitalism (18th-19th centuries) to American financial capitalism (20th-21st centuries) traces each cycle. Each systemic leader has first been a producer, then a financier, then been succeeded by a new producer who eventually financialises in turn.</p>
 <p>The implications for Morocco and the Global South: the current US financial hegemony, characterised by the dollar reserve status, Treasury bond recycling, and disciplinary conditionality through the IMF and World Bank, is not a permanent institutional equilibrium but a phase in a long historical cycle. Its twilight, which observers since at least 2008 have debated, would open a period of systemic transition in which the rules of the international monetary game become contested rather than fixed. This transition creates genuine policy space for countries like Morocco to diversify their external anchors, the China Belt and Road, the Gulf sovereign wealth funds, the EU’s green transition financing, and potentially new multipolar reserve arrangements, rather than depending exclusively on the dollar-centred system that the post-Bretton Woods order constructed.</p>
 </section>
-<section id="sec-pas-ch14" class="level2" data-number="21.4">
-<h2 data-number="21.4" class="anchored" data-anchor-id="sec-pas-ch14"><span class="header-section-number">21.4</span> Structural adjustment: discipline or subjugation?</h2>
+<section id="sec-pas-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pas-ch14">Structural adjustment: discipline or subjugation?</h2>
 <p>The IMF and World Bank’s response to the debt crisis was the Structural Adjustment Programme, a standard package of conditions attached to emergency financing. The official rationale was macroeconomic: restore fiscal viability, reduce the current account deficit, enable debt service resumption. The unstated rationale, which became more visible over time, was ensuring that creditor banks were repaid before any other objective.</p>
 <p>SAPs followed a standard formula: budget deficit reduction (cutting social spending, public wages, and subsidies); currency devaluation (to stimulate exports and reduce imports); market liberalisation (deregulation, privatisations); and capital account opening (to attract foreign investment). These measures are internally coherent for restoring short-run macroeconomic balances. They also carry massive social costs, immediately visible, when the gains (improved export competitiveness, long-run fiscal health) materialise only over years.</p>
 <p>Morocco adopted a Structural Adjustment Programme in 1983. The timeline is documented: dirham devaluation, subsidy reductions on bread, sugar, cooking oil, and fuel, public investment compression, civil service hiring freezes, and preparation for privatisation. In January 1984, the subsidy reductions triggered riots in the northern cities, Nador, Tétouan, Al-Hoceima, Oujda, that left dozens dead. The “émeutes du pain” (bread riots) are the concrete human face of balance of payments adjustment: the costs are immediate and concentrated on the most vulnerable; the macroeconomic benefits are deferred and diffuse.</p>
@@ -632,18 +800,18 @@ Why the IMF has never imposed structural adjustment on the United States
 <hr>
 </section>
 </section>
-<section id="sec-maroc-ch14" class="level1" data-number="22">
-<h1 data-number="22"><span class="header-section-number">22</span> Part VI — Morocco’s External Position</h1>
-<section id="sec-compte-courant-ch14" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="sec-compte-courant-ch14"><span class="header-section-number">22.1</span> The current account anatomy</h2>
+<section id="sec-maroc-ch14" class="level1">
+<h1>Part VI — Morocco’s External Position</h1>
+<section id="sec-compte-courant-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-compte-courant-ch14">The current account anatomy</h2>
 <p>Morocco’s current account structure reveals a distinctive risk profile: persistent goods trade deficit offset by structurally important service and transfer inflows, with vulnerability concentrated in commodity price shocks and geopolitical disruptions to remittance flows.</p>
 <p><strong>Goods trade</strong> runs a chronic deficit: 2024 imports of approximately 761 billion MAD against exports of approximately 455 billion, yielding the 59.8% coverage rate. The deficit reflects three structural features: energy dependence (approximately 25-35% of imports are hydrocarbons, making the current account exquisitely sensitive to oil prices); capital equipment dependence (approximately 40% of imports are machinery and industrial inputs, partly productive investment, partly technological dependence); and food vulnerability (Morocco imports approximately 50% of its soft wheat needs, whose price was significantly disrupted by the Ukraine war).</p>
 <p><strong>Tourism receipts</strong> of approximately 120 billion MAD in normal years represent a major current account buffer, equivalent to approximately one-third of the goods trade deficit. But tourism is highly cyclical and vulnerable to security incidents, pandemic disruptions, and European consumer sentiment, as the 2020 COVID shock demonstrated when tourism income collapsed to near-zero.</p>
 <p><strong>MRE remittances</strong> of approximately 115 billion MAD in 2024 are Morocco’s most stable foreign exchange source, more stable than exports, more stable than FDI, and more stable than tourism. The Moroccan diaspora has demonstrated a remarkable counter-cyclical pattern: remittances <em>increased</em> during the 2020 crisis (solidarity motive) and remained robust through the 2022 commodity shock. This stability makes remittances Morocco’s most valuable external account buffer, but one that depends on the economic health and political commitment of a diaspora Morocco does not control.</p>
 <p><strong>FDI inflows</strong> (approximately 25-35 billion MAD annually in normal years) contribute to the financial account, partially offsetting the current account deficit without generating the external debt that bond issuance requires. The challenge: as Chapter 10 showed, FDI profit repatriation rates are high, meaning the financial account benefit of FDI is systematically reduced by dividend outflows in subsequent years.</p>
 </section>
-<section id="sec-comparaison-ch14" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="sec-comparaison-ch14"><span class="header-section-number">22.2</span> Morocco in comparative perspective</h2>
+<section id="sec-comparaison-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-comparaison-ch14">Morocco in comparative perspective</h2>
 <p>Situating Morocco’s external position relative to comparable economies reveals both its relative strengths and the structural constraints it shares with regional peers.</p>
 <table class="caption-top table">
 <colgroup>
@@ -704,8 +872,8 @@ Why the IMF has never imposed structural adjustment on the United States
 <p>Turkey’s experience offers a cautionary illustration of how quickly comfortable reserve positions can deteriorate: the 2018 and 2021 Turkish lira crises resulted from the combination of persistent current account deficits, high short-term external debt rollovers, and exchange rate management inconsistent with the Mundell triangle’s constraints. Turkey had adequate nominal reserves but massive net short-term dollar obligations, once confidence broke, a self-reinforcing devaluation-inflation-rate spike spiral developed that required years of painful adjustment to reverse.</p>
 <p>Morocco’s buffer advantage is not structural destiny: it reflects accumulated policy credibility and strategic choices (stable BAM governance, progressive exchange rate liberalisation, diversified financing sources) that require continued maintenance. The scenario that most threatens Morocco’s external stability is the one that combines an energy price spike, a European recession reducing remittances and tourism simultaneously, and a global capital outflow episode triggered by US monetary tightening.</p>
 </section>
-<section id="sec-thirlwall-ch14" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="sec-thirlwall-ch14"><span class="header-section-number">22.3</span> The Thirlwall constraint applied to Morocco</h2>
+<section id="sec-thirlwall-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-thirlwall-ch14">The Thirlwall constraint applied to Morocco</h2>
 <p>A.P. Thirlwall’s balance-of-payments-constrained growth model (1979) provides the analytical framework for identifying Morocco’s sustainable long-run growth rate given its external position.</p>
 <p><span class="math display">\[g^* = \frac{\varepsilon \cdot g_w}{\pi}\]</span></p>
 <p>With illustrative parameters for Morocco: export income elasticity <span class="math inline">\(\varepsilon \approx 1.2\)</span> (a 1% increase in world income increases Moroccan export volumes by approximately 1.2%), world growth <span class="math inline">\(g_w = 3\%\)</span>, and import income elasticity <span class="math inline">\(\pi \approx 1.8\)</span> (a 1% increase in Moroccan income increases import volumes by approximately 1.8%):</p>
@@ -713,14 +881,14 @@ Why the IMF has never imposed structural adjustment on the United States
 <p>This is Morocco’s balance-of-payments-constrained growth rate, the maximum sustainable growth without continuous current account deterioration. At Moroccan income levels and demographic structure, 2.0% growth is far below what is needed for meaningful convergence or job creation for the approximately 250,000 new labour market entrants each year.</p>
 <p>The arithmetic of escape from the Thirlwall constraint is clear: raise <span class="math inline">\(\varepsilon\)</span> (increase the income elasticity of exports by moving up the product space toward goods whose demand grows faster with world income) or reduce <span class="math inline">\(\pi\)</span> (decrease the import intensity of growth by building domestic supply chains in strategic input sectors). Both require exactly the structural transformation and industrial policy that Chapters 9 and 10 developed. The Thirlwall constraint is not an external macroeconomic abstraction, it is the growth theory consequence of Morocco’s productive structure, connecting Chapter 12’s balance of payments analytics directly to Chapters 9-10’s structural transformation analysis.</p>
 </section>
-<section id="sec-reserves-ch14" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="sec-reserves-ch14"><span class="header-section-number">22.4</span> Reserves adequacy and crisis prevention</h2>
+<section id="sec-reserves-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reserves-ch14">Reserves adequacy and crisis prevention</h2>
 <p>Morocco’s foreign exchange reserves of approximately 5.0-5.5 months of imports represent the primary buffer against external shocks. The “rule of thumb” threshold for adequate reserve coverage is typically 3 months of imports; Morocco’s position is therefore comfortable but not excessive.</p>
 <p>The 2020 COVID crisis tested this buffer: the simultaneous collapse of tourism, sharp decline of FDI, and trade disruption reduced net reserve coverage below 5 months temporarily, while the IMF’s Precautionary and Liquidity Line (reactivated at $3 billion) provided additional insurance. The recovery of tourism and the phosphate price surge in 2021-2022 restored and strengthened Morocco’s reserve position.</p>
 <p>Three shocks could convert manageable reserve drawdown into crisis: a sharp sustained decline in phosphate prices (reducing OCP export revenues and dividends); a sustained European recession reducing both remittances and tourism receipts simultaneously; or a global risk-off episode triggering capital flight from emerging markets (as the 2013 taper tantrum demonstrated is possible). The third scenario is the most structural concern because it operates through the Mundell triangle: if Morocco continues liberalising its capital account, it becomes progressively more exposed to the capital flow volatility that has repeatedly destabilised peripheral economies at moments of US monetary policy tightening.</p>
 </section>
-<section id="sec-priorites-ch14" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="sec-priorites-ch14"><span class="header-section-number">22.5</span> The strategic priorities for external rebalancing</h2>
+<section id="sec-priorites-ch14" class="level2">
+<h2 class="anchored" data-anchor-id="sec-priorites-ch14">The strategic priorities for external rebalancing</h2>
 <p>Three structural priorities follow from this analysis.</p>
 <p><strong>Increase the sophistication and income elasticity of exports.</strong> The Thirlwall arithmetic shows that Morocco’s sustainable growth rate depends directly on export income elasticity. Moving up the product space, from assembling vehicles to manufacturing complex EV components, from exporting raw phosphate to supplying battery cathode materials, from basic call centres to engineering services, is simultaneously a development strategy and a balance of payments strategy. Each move up the complexity ladder raises <span class="math inline">\(\varepsilon\)</span> and reduces the Thirlwall constraint on sustainable growth.</p>
 <p><strong>Reduce energy import dependence through the renewable energy programme.</strong> Energy imports represent approximately 25-35% of Morocco’s total import bill in most years. Each installed gigawatt of renewable capacity reduces energy imports by the equivalent of the hydrocarbon fuel it displaces. The MASEN renewable programme is therefore partly a current account programme, its economic rationale includes the balance of payments saving from reduced fuel imports, which the project-level financial analysis systematically fails to capture fully.</p>
@@ -728,8 +896,8 @@ Why the IMF has never imposed structural adjustment on the United States
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch14" class="level1" data-number="23">
-<h1 data-number="23"><span class="header-section-number">23</span> Conclusion: Sovereignty as External Constraint, and Its Margins</h1>
+<section id="sec-concl-ch14" class="level1">
+<h1>Conclusion: Sovereignty as External Constraint, and Its Margins</h1>
 <p>Three ideas should survive the closing of this chapter.</p>
 <p><strong>A current account deficit is a macroeconomic phenomenon, not a trade policy failure.</strong> It reflects the difference between national investment and national savings. Protectionist trade policies cannot fix this structural gap without addressing the underlying determinants: export competitiveness, savings rates, and fiscal discipline. What changes the current account sustainably is industrial upgrading, human capital investment, and public investment discipline, three projects that take a decade to produce visible effects.</p>
 <p><strong>The international monetary system is an asymmetric hierarchy, not a neutral mechanism.</strong> The Triffin dilemma was never resolved; it was converted into the “exorbitant privilege” for the United States and into permanent external constraint for everyone else. Keynes’s proposed bancor, a symmetric system where both surplus and deficit countries face adjustment pressure, remains the intellectually most coherent design for a fair international monetary order. It remains politically out of reach.</p>
@@ -759,8 +927,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch14" class="level1 appendix" data-number="24">
-<h1 class="appendix" data-number="24"><span class="header-section-number">24</span> Further Reading</h1>
+<section id="sec-biblio-ch14" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Triffin, R. (1960). <em>Gold and the Dollar Crisis</em>. Yale University Press.</strong> The original statement of the Triffin dilemma. Short, prophetic, and still the clearest account of the structural contradiction in the dollar standard.</p>
 <p><strong>Keynes, J.M. (1943). “Proposals for an International Clearing Union.”</strong> Keynes’s Bretton Woods proposal, the bancor and symmetric adjustment. Available from the UK National Archives and reproduced in <em>The Collected Writings of John Maynard Keynes</em>, Vol. XXV. The road not taken in 1944.</p>
 <p><strong>Eichengreen, B. (2011). <em>Exorbitant Privilege: The Rise and Fall of the Dollar</em>. Oxford University Press.</strong> The most accessible account of the dollar’s reserve status, its origins, its economics, and its potential futures.</p>
@@ -774,8 +942,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1194,13 +1421,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1209,5 +1436,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

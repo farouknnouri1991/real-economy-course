@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch09-unemployment-fiscal.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,47 +493,48 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch08" id="toc-sec-carte-ch08" class="nav-link active" data-scroll-target="#sec-carte-ch08">The Map</a></li>
-  <li><a href="#sec-fondements-ch08" id="toc-sec-fondements-ch08" class="nav-link" data-scroll-target="#sec-fondements-ch08"><span class="header-section-number">12</span> Part I — Unemployment and Aggregate Demand: Keynesian Foundations</a>
+  <li><a href="#sec-fondements-ch08" id="toc-sec-fondements-ch08" class="nav-link" data-scroll-target="#sec-fondements-ch08">Part I — Unemployment and Aggregate Demand: Keynesian Foundations</a>
   <ul class="collapse">
-  <li><a href="#sec-chomage-ch08" id="toc-sec-chomage-ch08" class="nav-link" data-scroll-target="#sec-chomage-ch08"><span class="header-section-number">12.1</span> What unemployment is — and what it hides</a></li>
-  <li><a href="#sec-keynes-ch08" id="toc-sec-keynes-ch08" class="nav-link" data-scroll-target="#sec-keynes-ch08"><span class="header-section-number">12.2</span> The Keynesian revolution: equilibrium below full employment</a></li>
-  <li><a href="#sec-demande-ch08" id="toc-sec-demande-ch08" class="nav-link" data-scroll-target="#sec-demande-ch08"><span class="header-section-number">12.3</span> Aggregate demand: the short-run motor of the economy</a></li>
-  <li><a href="#sec-multiplicateur-ch08" id="toc-sec-multiplicateur-ch08" class="nav-link" data-scroll-target="#sec-multiplicateur-ch08"><span class="header-section-number">12.4</span> The multiplier: amplification and its limits</a></li>
+  <li><a href="#sec-chomage-ch08" id="toc-sec-chomage-ch08" class="nav-link" data-scroll-target="#sec-chomage-ch08">What unemployment is — and what it hides</a></li>
+  <li><a href="#sec-keynes-ch08" id="toc-sec-keynes-ch08" class="nav-link" data-scroll-target="#sec-keynes-ch08">The Keynesian revolution: equilibrium below full employment</a></li>
+  <li><a href="#sec-demande-ch08" id="toc-sec-demande-ch08" class="nav-link" data-scroll-target="#sec-demande-ch08">Aggregate demand: the short-run motor of the economy</a></li>
+  <li><a href="#sec-multiplicateur-ch08" id="toc-sec-multiplicateur-ch08" class="nav-link" data-scroll-target="#sec-multiplicateur-ch08">The multiplier: amplification and its limits</a></li>
   </ul></li>
-  <li><a href="#sec-kalecki-ch08" id="toc-sec-kalecki-ch08" class="nav-link" data-scroll-target="#sec-kalecki-ch08"><span class="header-section-number">13</span> Part II — Kalecki’s Political Economy: Why Capitalism Resists Full Employment</a>
+  <li><a href="#sec-kalecki-ch08" id="toc-sec-kalecki-ch08" class="nav-link" data-scroll-target="#sec-kalecki-ch08">Part II — Kalecki’s Political Economy: Why Capitalism Resists Full Employment</a>
   <ul class="collapse">
-  <li><a href="#sec-kalecki-identite-ch08" id="toc-sec-kalecki-identite-ch08" class="nav-link" data-scroll-target="#sec-kalecki-identite-ch08"><span class="header-section-number">13.1</span> The identity: capitalists earn what they spend</a></li>
-  <li><a href="#sec-kalecki-modele-ch08" id="toc-sec-kalecki-modele-ch08" class="nav-link" data-scroll-target="#sec-kalecki-modele-ch08"><span class="header-section-number">13.2</span> Kalecki’s formal model: investment, profits, and the circuit</a></li>
-  <li><a href="#sec-kalecki-partage-ch08" id="toc-sec-kalecki-partage-ch08" class="nav-link" data-scroll-target="#sec-kalecki-partage-ch08"><span class="header-section-number">13.3</span> The markup, profits, and the wage share</a></li>
-  <li><a href="#sec-kalecki-politique-ch08" id="toc-sec-kalecki-politique-ch08" class="nav-link" data-scroll-target="#sec-kalecki-politique-ch08"><span class="header-section-number">13.4</span> The political obstacle to full employment</a></li>
+  <li><a href="#sec-kalecki-identite-ch08" id="toc-sec-kalecki-identite-ch08" class="nav-link" data-scroll-target="#sec-kalecki-identite-ch08">The identity: capitalists earn what they spend</a></li>
+  <li><a href="#sec-kalecki-modele-ch08" id="toc-sec-kalecki-modele-ch08" class="nav-link" data-scroll-target="#sec-kalecki-modele-ch08">Kalecki’s formal model: investment, profits, and the circuit</a></li>
+  <li><a href="#sec-kalecki-partage-ch08" id="toc-sec-kalecki-partage-ch08" class="nav-link" data-scroll-target="#sec-kalecki-partage-ch08">The markup, profits, and the wage share</a></li>
+  <li><a href="#sec-kalecki-politique-ch08" id="toc-sec-kalecki-politique-ch08" class="nav-link" data-scroll-target="#sec-kalecki-politique-ch08">The political obstacle to full employment</a></li>
   </ul></li>
-  <li><a href="#sec-modeles-ch08" id="toc-sec-modeles-ch08" class="nav-link" data-scroll-target="#sec-modeles-ch08"><span class="header-section-number">14</span> Part III — IS-LM and AS-AD: Policy Coordination in Practice</a>
+  <li><a href="#sec-modeles-ch08" id="toc-sec-modeles-ch08" class="nav-link" data-scroll-target="#sec-modeles-ch08">Part III — IS-LM and AS-AD: Policy Coordination in Practice</a>
   <ul class="collapse">
-  <li><a href="#sec-is-ch08" id="toc-sec-is-ch08" class="nav-link" data-scroll-target="#sec-is-ch08"><span class="header-section-number">14.1</span> The IS curve: goods market equilibrium</a></li>
-  <li><a href="#sec-investissement-ch08" id="toc-sec-investissement-ch08" class="nav-link" data-scroll-target="#sec-investissement-ch08"><span class="header-section-number">14.2</span> The investment function and animal spirits</a></li>
-  <li><a href="#sec-crowding-out-ch08" id="toc-sec-crowding-out-ch08" class="nav-link" data-scroll-target="#sec-crowding-out-ch08"><span class="header-section-number">14.3</span> Crowding out and the liquidity trap</a></li>
-  <li><a href="#sec-asad-ch08" id="toc-sec-asad-ch08" class="nav-link" data-scroll-target="#sec-asad-ch08"><span class="header-section-number">14.4</span> AS-AD: supply-side shocks and the Moroccan drought</a></li>
-  <li><a href="#sec-mundell-ch08" id="toc-sec-mundell-ch08" class="nav-link" data-scroll-target="#sec-mundell-ch08"><span class="header-section-number">14.5</span> Mundell-Fleming and the open economy constraint</a></li>
+  <li><a href="#sec-is-ch08" id="toc-sec-is-ch08" class="nav-link" data-scroll-target="#sec-is-ch08">The IS curve: goods market equilibrium</a></li>
+  <li><a href="#sec-investissement-ch08" id="toc-sec-investissement-ch08" class="nav-link" data-scroll-target="#sec-investissement-ch08">The investment function and animal spirits</a></li>
+  <li><a href="#sec-crowding-out-ch08" id="toc-sec-crowding-out-ch08" class="nav-link" data-scroll-target="#sec-crowding-out-ch08">Crowding out and the liquidity trap</a></li>
+  <li><a href="#sec-asad-ch08" id="toc-sec-asad-ch08" class="nav-link" data-scroll-target="#sec-asad-ch08">AS-AD: supply-side shocks and the Moroccan drought</a></li>
+  <li><a href="#sec-mundell-ch08" id="toc-sec-mundell-ch08" class="nav-link" data-scroll-target="#sec-mundell-ch08">Mundell-Fleming and the open economy constraint</a></li>
   </ul></li>
-  <li><a href="#sec-heterodoxes-ch08" id="toc-sec-heterodoxes-ch08" class="nav-link" data-scroll-target="#sec-heterodoxes-ch08"><span class="header-section-number">15</span> Part IV — Heterodox Corrections: MMT, Godley, and the South Global Critique</a>
+  <li><a href="#sec-heterodoxes-ch08" id="toc-sec-heterodoxes-ch08" class="nav-link" data-scroll-target="#sec-heterodoxes-ch08">Part IV — Heterodox Corrections: MMT, Godley, and the South Global Critique</a>
   <ul class="collapse">
-  <li><a href="#sec-histoire-ch08" id="toc-sec-histoire-ch08" class="nav-link" data-scroll-target="#sec-histoire-ch08"><span class="header-section-number">15.1</span> Historical cases: what fiscal history teaches</a></li>
-  <li><a href="#sec-dette-ch08" id="toc-sec-dette-ch08" class="nav-link" data-scroll-target="#sec-dette-ch08"><span class="header-section-number">15.2</span> Public debt dynamics: <span class="math inline">\(r\)</span> versus <span class="math inline">\(g\)</span></a></li>
-  <li><a href="#sec-fiscalite-maroc-ch08" id="toc-sec-fiscalite-maroc-ch08" class="nav-link" data-scroll-target="#sec-fiscalite-maroc-ch08"><span class="header-section-number">15.3</span> Morocco’s fiscal structure: the revenue constraint</a></li>
-  <li><a href="#sec-austerite-ch08" id="toc-sec-austerite-ch08" class="nav-link" data-scroll-target="#sec-austerite-ch08"><span class="header-section-number">15.4</span> The paradox of austerity</a></li>
-  <li><a href="#sec-mmt-ch08" id="toc-sec-mmt-ch08" class="nav-link" data-scroll-target="#sec-mmt-ch08"><span class="header-section-number">15.5</span> Modern Monetary Theory: the constraint is not the debt</a></li>
-  <li><a href="#sec-godley-ch08" id="toc-sec-godley-ch08" class="nav-link" data-scroll-target="#sec-godley-ch08"><span class="header-section-number">15.6</span> Godley’s sectoral balances: the arithmetic of fiscal space</a></li>
-  <li><a href="#sec-sudglobal-ch08" id="toc-sec-sudglobal-ch08" class="nav-link" data-scroll-target="#sec-sudglobal-ch08"><span class="header-section-number">15.7</span> The South Global critique: the external constraint</a></li>
-  <li><a href="#sec-crises-maroc-ch08" id="toc-sec-crises-maroc-ch08" class="nav-link" data-scroll-target="#sec-crises-maroc-ch08"><span class="header-section-number">15.8</span> Morocco’s three macroeconomic crises: institutional lessons</a></li>
+  <li><a href="#sec-histoire-ch08" id="toc-sec-histoire-ch08" class="nav-link" data-scroll-target="#sec-histoire-ch08">Historical cases: what fiscal history teaches</a></li>
+  <li><a href="#sec-dette-ch08" id="toc-sec-dette-ch08" class="nav-link" data-scroll-target="#sec-dette-ch08">Public debt dynamics: <span class="math inline">\(r\)</span> versus <span class="math inline">\(g\)</span></a></li>
+  <li><a href="#sec-fiscalite-maroc-ch08" id="toc-sec-fiscalite-maroc-ch08" class="nav-link" data-scroll-target="#sec-fiscalite-maroc-ch08">Morocco’s fiscal structure: the revenue constraint</a></li>
+  <li><a href="#sec-austerite-ch08" id="toc-sec-austerite-ch08" class="nav-link" data-scroll-target="#sec-austerite-ch08">The paradox of austerity</a></li>
+  <li><a href="#sec-mmt-ch08" id="toc-sec-mmt-ch08" class="nav-link" data-scroll-target="#sec-mmt-ch08">Modern Monetary Theory: the constraint is not the debt</a></li>
+  <li><a href="#sec-godley-ch08" id="toc-sec-godley-ch08" class="nav-link" data-scroll-target="#sec-godley-ch08">Godley’s sectoral balances: the arithmetic of fiscal space</a></li>
+  <li><a href="#sec-sudglobal-ch08" id="toc-sec-sudglobal-ch08" class="nav-link" data-scroll-target="#sec-sudglobal-ch08">The South Global critique: the external constraint</a></li>
+  <li><a href="#sec-crises-maroc-ch08" id="toc-sec-crises-maroc-ch08" class="nav-link" data-scroll-target="#sec-crises-maroc-ch08">Morocco’s three macroeconomic crises: institutional lessons</a></li>
   </ul></li>
-  <li><a href="#sec-stabilisateurs-ch08" id="toc-sec-stabilisateurs-ch08" class="nav-link" data-scroll-target="#sec-stabilisateurs-ch08"><span class="header-section-number">16</span> The Moroccan Fiscal Architecture: Automatic Stabilisers as a Strategic Investment</a></li>
-  <li><a href="#sec-concl-ch08" id="toc-sec-concl-ch08" class="nav-link" data-scroll-target="#sec-concl-ch08"><span class="header-section-number">17</span> Conclusion: Employment, Distribution, and the Political Economy of Macroeconomic Policy</a></li>
-  <li><a href="#sec-biblio-ch08" id="toc-sec-biblio-ch08" class="nav-link" data-scroll-target="#sec-biblio-ch08"><span class="header-section-number">18</span> Further Reading</a></li>
+  <li><a href="#sec-stabilisateurs-ch08" id="toc-sec-stabilisateurs-ch08" class="nav-link" data-scroll-target="#sec-stabilisateurs-ch08">The Moroccan Fiscal Architecture: Automatic Stabilisers as a Strategic Investment</a></li>
+  <li><a href="#sec-concl-ch08" id="toc-sec-concl-ch08" class="nav-link" data-scroll-target="#sec-concl-ch08">Conclusion: Employment, Distribution, and the Political Economy of Macroeconomic Policy</a></li>
+  <li><a href="#sec-biblio-ch08" id="toc-sec-biblio-ch08" class="nav-link" data-scroll-target="#sec-biblio-ch08">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch07-money-credit.html">Part II — Money, Finance, and Macroeconomic Stabilisation</a></li><li class="breadcrumb-item"><a href="./ch09-unemployment-fiscal.html"><span class="chapter-number">11</span>&nbsp; <span class="chapter-title">Chapter 9 — Unemployment, Fiscal Policy, and Macroeconomic Coordination</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -420,10 +588,10 @@ The guiding thread of this chapter
 <p>The chapter advances in four movements. First, the Keynesian foundations: the nature of unemployment, the anatomy of aggregate demand, the multiplier, and the paradox of thrift. Second, Kalecki’s political economy: a deeper diagnosis of why capitalism resists full employment and what this implies for income distribution. Third, the IS-LM and AS-AD models as tools for thinking about policy coordination, with Morocco’s COVID episode as the diagnostic case. Fourth, heterodox corrections to the standard framework: Modern Monetary Theory, Godley’s sectoral balances, and the South Global critique of fiscal policy applied to developing economies.</p>
 <hr>
 </section>
-<section id="sec-fondements-ch08" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Part I — Unemployment and Aggregate Demand: Keynesian Foundations</h1>
-<section id="sec-chomage-ch08" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="sec-chomage-ch08"><span class="header-section-number">12.1</span> What unemployment is — and what it hides</h2>
+<section id="sec-fondements-ch08" class="level1">
+<h1>Part I — Unemployment and Aggregate Demand: Keynesian Foundations</h1>
+<section id="sec-chomage-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-chomage-ch08">What unemployment is — and what it hides</h2>
 <p>Before analysing unemployment, one must know what is being measured. The ILO’s international definition is precise: unemployed is any working-age person without employment during the reference week, available to work, <em>and</em> who has actively sought work. Each criterion matters. Someone who has given up searching, judging the search futile, is no longer counted as unemployed: they join the “discouraged inactive,” a statistical shadow zone that can be massive in high-informality economies.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -455,15 +623,15 @@ Three forms of unemployment, three diagnoses
 </div>
 </div>
 </section>
-<section id="sec-keynes-ch08" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="sec-keynes-ch08"><span class="header-section-number">12.2</span> The Keynesian revolution: equilibrium below full employment</h2>
+<section id="sec-keynes-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-keynes-ch08">The Keynesian revolution: equilibrium below full employment</h2>
 <p>The standard pre-Keynesian view held that unemployment was temporary and self-correcting. If there are more workers seeking jobs than jobs available, wages will fall, making labour cheaper; firms will hire more at the lower wage; employment will return to its natural level. This view, elegant and internally consistent, failed spectacularly during the Great Depression of the 1930s, when unemployment reached 25% in the United States and remained elevated for a decade despite falling wages.</p>
 <p>Keynes’s revolutionary contribution in <em>The General Theory</em> (1936) was to show that an economy can reach a stable equilibrium <em>well below full employment</em>. This is not a market failure in the conventional sense (not a monopoly, an externality, or a public good problem). It is a <strong>macroeconomic coordination failure</strong>: a situation where individually rational decisions aggregate into a collectively irrational outcome.</p>
 <p>The paradox of thrift captures the mechanism most cleanly. If one household decides to save more in response to economic uncertainty, this is a prudent and rational decision. But if <em>all</em> households simultaneously decide to save more, collective consumption falls, firms sell less, reduce production, lay off workers, and national income falls. In the end, aggregate saving <em>decreases</em>, because households save a fraction of a lower income. The market equilibrium imposes the accounting identity <span class="math inline">\(S = I\)</span>, but potentially at a lower level of national income: a stable equilibrium with persistent involuntary unemployment, without any automatic mechanism of return to full employment.</p>
 <p>This is what economists call a <strong>compositional fallacy</strong>: what is true for an individual is false for the aggregate. The market’s celebrated ability to coordinate individual decisions breaks down at the macroeconomic level when all actors respond similarly to a common signal. The policy implication follows directly: if individual rationality can produce collective irrationality, there is a legitimate role for public action that coordinates what the market cannot.</p>
 </section>
-<section id="sec-demande-ch08" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="sec-demande-ch08"><span class="header-section-number">12.3</span> Aggregate demand: the short-run motor of the economy</h2>
+<section id="sec-demande-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-demande-ch08">Aggregate demand: the short-run motor of the economy</h2>
 <p>In the short run, Keynesian theory holds that output adjusts to demand rather than the reverse. Firms do not produce first and then seek customers; they anticipate demand and calibrate production accordingly. Supply is passive; demand is the motor.</p>
 <p>Aggregate demand in an open economy decomposes into four components:</p>
 <p><span class="math display">\[AD = C(Y - T) + I + G + (X - M)\]</span></p>
@@ -473,8 +641,8 @@ Three forms of unemployment, three diagnoses
 <p><strong>Net exports</strong> <span class="math inline">\(X - M\)</span> reflects the difference between what the economy exports and imports. For Morocco, whose structural trade deficit regularly exceeds 15% of GDP, this term is systematically negative and represents a permanent “leakage” of demand to the exterior, a major structural constraint on the effectiveness of any stimulus policy.</p>
 <p>The <strong>short-run equilibrium</strong> is the income level <span class="math inline">\(Y^*\)</span> at which aggregate demand exactly equals output: <span class="math inline">\(AD(Y^*) = Y^*\)</span>. This level <em>can be below full employment</em>. This is the Keynesian rupture: equilibrium is not necessarily optimum.</p>
 </section>
-<section id="sec-multiplicateur-ch08" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="sec-multiplicateur-ch08"><span class="header-section-number">12.4</span> The multiplier: amplification and its limits</h2>
+<section id="sec-multiplicateur-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-multiplicateur-ch08">The multiplier: amplification and its limits</h2>
 <p>Keynes’s most analytically fertile insight is that any initial demand injection generates a total effect larger than the initial shock. This is the <strong>Keynesian multiplier</strong>.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -500,19 +668,19 @@ The 1,000 dirhams that go three times around the neighbourhood
 <hr>
 </section>
 </section>
-<section id="sec-kalecki-ch08" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Part II — Kalecki’s Political Economy: Why Capitalism Resists Full Employment</h1>
+<section id="sec-kalecki-ch08" class="level1">
+<h1>Part II — Kalecki’s Political Economy: Why Capitalism Resists Full Employment</h1>
 <p>Keynes showed that full employment is achievable through demand management. Michal Kalecki, a Polish economist who arrived at very similar macroeconomic conclusions through a completely different theoretical route, posed the deeper question: why does capitalism resist full employment even when the tools to achieve it exist?</p>
-<section id="sec-kalecki-identite-ch08" class="level2" data-number="13.1">
-<h2 data-number="13.1" class="anchored" data-anchor-id="sec-kalecki-identite-ch08"><span class="header-section-number">13.1</span> The identity: capitalists earn what they spend</h2>
+<section id="sec-kalecki-identite-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kalecki-identite-ch08">The identity: capitalists earn what they spend</h2>
 <p>Kalecki’s starting point is an accounting identity. In an economy with two classes (capitalists and workers), if workers spend all their income (consume what they earn), aggregate capitalist profits are identically equal to capitalists’ own expenditures: their consumption plus investment.</p>
 <p><span class="math display">\[\Pi = C_K + I\]</span></p>
 <p>The intuition: think of Casablanca. A developer invests to build a residential complex. He orders cement, hires workers. The cement supplier reinvests. The engineer consumes at the souk. Where do the developer’s profits ultimately come from? Not from prior savings, not from market magic. They come from his own spending and that of other capitalists. This is Kalecki’s famous aphorism, carried in the post-Keynesian tradition: <em>“Workers spend what they earn; capitalists earn what they spend.”</em></p>
 <p>But this identity is still only a description. The decisive question is causality. The neoclassical reading: anticipated profits determine capitalists’ investment and consumption decisions, expected profitability is primary, spending follows. Kalecki inverts the causality: it is the <em>decisions to spend</em> that determine profits, not the reverse. As he formulated: <em>“Capitalists can decide to consume or invest, but they cannot decide to earn more.”</em></p>
 <p>This reversal is conceptually revolutionary. It implies that investment precedes income, not savings preceding investment as in the classical tradition. It gives a motor role to expenditure decisions, expectations, and credit. And it logically justifies active macroeconomic policies: if there are insufficient spending flows in the circuit, incomes stagnate, profits fall, and the economy sinks.</p>
 </section>
-<section id="sec-kalecki-modele-ch08" class="level2" data-number="13.2">
-<h2 data-number="13.2" class="anchored" data-anchor-id="sec-kalecki-modele-ch08"><span class="header-section-number">13.2</span> Kalecki’s formal model: investment, profits, and the circuit</h2>
+<section id="sec-kalecki-modele-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kalecki-modele-ch08">Kalecki’s formal model: investment, profits, and the circuit</h2>
 <p>Kalecki’s macroeconomic model formalises his accounting insight with full analytical rigour. In a closed economy with two classes, national income <span class="math inline">\(Y\)</span> decomposes into wages <span class="math inline">\(W\)</span> and profits <span class="math inline">\(\Pi\)</span>: <span class="math inline">\(Y = W + \Pi\)</span>. Workers, by assumption, spend all their income on consumption. Capitalists divide their income between consumption <span class="math inline">\(C_K\)</span> and investment <span class="math inline">\(I\)</span>, with a propensity to save <span class="math inline">\(lpha_K\)</span> from profits.</p>
 <p>The goods market equilibrium requires that output equals demand: <span class="math display">\[Y = C_W + C_K + I = W + lpha_K \cdot C_K + I\]</span></p>
 <p>Since <span class="math inline">\(W = C_W\)</span> (workers spend all wages) and substituting, one derives the fundamental Kaleckian result:</p>
@@ -522,8 +690,8 @@ The 1,000 dirhams that go three times around the neighbourhood
 <p>Public deficits <span class="math inline">\((G &gt; T)\)</span> increase profits. Trade surpluses increase profits. This is the macroeconomic arithmetic that explains why deflationary fiscal policies in a depressed economy are self-defeating: cutting government spending reduces profits, reduces investment incentives, reduces output, and reduces the tax base: exactly the austerity spiral.</p>
 <p>The investment function in Kalecki is <strong>not determined by interest rates</strong> in the standard IS-LM sense. It is determined by two factors: the current level of profits (which signals the profitability of existing capital and provides internal financing) and the rate of change of profits (which signals whether expansion is warranted). Crucially, investment <em>creates</em> its own profits through the multiplier process, but it does so with a lag, creating the business cycle: periods of high investment generate high profits which encourage further investment, until financial fragility or distribution conflicts (workers’ wage demands eroding profit margins) trigger a downturn.</p>
 </section>
-<section id="sec-kalecki-partage-ch08" class="level2" data-number="13.3">
-<h2 data-number="13.3" class="anchored" data-anchor-id="sec-kalecki-partage-ch08"><span class="header-section-number">13.3</span> The markup, profits, and the wage share</h2>
+<section id="sec-kalecki-partage-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kalecki-partage-ch08">The markup, profits, and the wage share</h2>
 <p>Kalecki’s analysis of price formation, from Chapter 4, links directly to the distribution of national income. In industrial markets, firms set price as a markup over unit variable costs:</p>
 <p><span class="math display">\[P = (1 + m) \cdot CUV\]</span></p>
 <p>The markup <span class="math inline">\(m\)</span> depends on the degree of monopoly, market concentration and the barriers that prevent competitive entry from eroding above-normal returns. The profit share in value added is:</p>
@@ -531,8 +699,8 @@ The 1,000 dirhams that go three times around the neighbourhood
 <p>The profit share rises with the markup. Greater market concentration raises the markup, raises the profit share, and compresses the wage share. <strong>Market structure is directly a mechanism of income distribution</strong>, a point the standard supply-and-demand framework cannot see, because it treats market power as a distortion rather than a structural feature of most real markets.</p>
 <p>This gives a second dimension to Kalecki’s analysis: not only do capitalists earn what they spend, but the <em>division</em> of national income between wages and profits reflects the balance of market power between firms and workers, and between large firms and small ones. Policies that increase market concentration do not just reduce allocative efficiency, they shift income from workers to capital owners.</p>
 </section>
-<section id="sec-kalecki-politique-ch08" class="level2" data-number="13.4">
-<h2 data-number="13.4" class="anchored" data-anchor-id="sec-kalecki-politique-ch08"><span class="header-section-number">13.4</span> The political obstacle to full employment</h2>
+<section id="sec-kalecki-politique-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kalecki-politique-ch08">The political obstacle to full employment</h2>
 <p>Kalecki’s most original and enduring contribution is his 1943 essay “Political Aspects of Full Employment”, a text that may be the single most important short paper in political economy of the 20th century. Its argument can be compressed into three propositions.</p>
 <p><strong>First</strong>: full employment is technically achievable through sustained government expenditure, as Keynes had shown. The technical knowledge existed in 1943. Nothing in economic mechanics prevented it.</p>
 <p><strong>Second</strong>: the business community would systematically oppose sustained full employment, not because they prefer recession, but because full employment would undermine the disciplinary mechanism that keeps labour costs under control. When unemployment is high, workers accept worse conditions, slower wages, and managerial authority because they fear replacement. When unemployment is near zero, workers gain bargaining power, wages rise, and the threat of dismissal loses its force. Industrial discipline loosens. Kalecki wrote: “the social position of the boss would be undermined, and the self-assurance and class-consciousness of the working class would grow.”</p>
@@ -553,24 +721,24 @@ Kalecki’s permanent relevance for Morocco
 <hr>
 </section>
 </section>
-<section id="sec-modeles-ch08" class="level1" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> Part III — IS-LM and AS-AD: Policy Coordination in Practice</h1>
-<section id="sec-is-ch08" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="sec-is-ch08"><span class="header-section-number">14.1</span> The IS curve: goods market equilibrium</h2>
+<section id="sec-modeles-ch08" class="level1">
+<h1>Part III — IS-LM and AS-AD: Policy Coordination in Practice</h1>
+<section id="sec-is-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-is-ch08">The IS curve: goods market equilibrium</h2>
 <p>The IS-LM model represents the short-run macroeconomic equilibrium as the intersection of two relationships.</p>
 <p>The <strong>IS curve</strong> (Investment-Savings) traces all combinations of output <span class="math inline">\(Y\)</span> and interest rate <span class="math inline">\(i\)</span> for which the goods market is in equilibrium, that is, where aggregate demand equals output. Its negative slope reflects the investment channel: a higher interest rate raises the cost of borrowing, reduces investment demand, reduces aggregate demand, and reduces equilibrium output. Fiscal policy shifts the IS curve: an increase in government expenditure <span class="math inline">\(G\)</span> raises aggregate demand at any given interest rate, shifting IS rightward (higher equilibrium output); a tax increase shifts IS leftward.</p>
 <p>The <strong>LM curve</strong> (Liquidity-Money) traces all combinations of <span class="math inline">\(Y\)</span> and <span class="math inline">\(i\)</span> for which the money market is in equilibrium, where money demand equals money supply. Its positive slope reflects the transactions demand for money: higher income increases the demand for money for transaction purposes, which at a given money supply requires a higher interest rate to restore equilibrium. Monetary policy shifts the LM curve: a decrease in the policy rate (an expansionary monetary policy) effectively shifts LM rightward.</p>
 <p>The macroeconomic equilibrium is the intersection of IS and LM, determining simultaneously the equilibrium level of output <span class="math inline">\(Y^*\)</span> and the equilibrium interest rate <span class="math inline">\(i^*\)</span>.</p>
 </section>
-<section id="sec-investissement-ch08" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="sec-investissement-ch08"><span class="header-section-number">14.2</span> The investment function and animal spirits</h2>
+<section id="sec-investissement-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-investissement-ch08">The investment function and animal spirits</h2>
 <p>The IS curve’s negative slope depends critically on the responsiveness of investment to the interest rate — one of the most empirically contested relationships in macroeconomics. In the standard formulation, investment demand is a decreasing function of the interest rate: <span class="math inline">\(I = I_0 - b \cdot i\)</span>, where <span class="math inline">\(b\)</span> captures the sensitivity of investment to borrowing costs and <span class="math inline">\(I_0\)</span> represents autonomous investment determined by profit expectations and technology.</p>
 <p>Keynes introduced the concept of <strong>animal spirits</strong> to describe the volatile, fundamentally non-rational element in investment decisions. Entrepreneurs making investment decisions under genuine uncertainty cannot calculate expected returns with the precision that classical theory assumed. They rely on conventions, on optimism or pessimism about the future, on their assessment of what others are doing. When animal spirits are buoyant, firms invest even if quantitative risk calculations would suggest caution. When they collapse, as in the immediate aftermath of a financial crisis, even historically low interest rates cannot induce investment, because the problem is not the cost of borrowing but the absence of any profitable project horizon worth borrowing for.</p>
 <p>For Morocco, this Keynesian insight has direct practical relevance. The private investment rate (gross fixed capital formation by the private sector as a share of GDP) has been structurally weak relative to comparable economies, hovering around 20-22% of GDP against 30-35% in the most dynamic Asian comparators. This is not primarily a credit cost problem, Moroccan lending rates, while higher than European levels, are not prohibitive by regional standards. It is partly an expectations problem: the expectation of future demand, of stable regulatory frameworks, of infrastructure complementing private investment, of educated workers being available. Public investment in transport, energy, human capital, and stable institutions raises private investment’s expected return, the <strong>complementarity effect</strong>, precisely through its effect on animal spirits.</p>
 <p>The policy implication is that fiscal policy acts on investment not only through the direct demand effect of public expenditure but through the indirect confidence effect: sustained, strategic public investment signals to private actors that the economic environment is stable and improving, shifting <span class="math inline">\(I_0\)</span> upward and rotating the IS curve rightward independently of any interest rate effect.</p>
 </section>
-<section id="sec-crowding-out-ch08" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="sec-crowding-out-ch08"><span class="header-section-number">14.3</span> Crowding out and the liquidity trap</h2>
+<section id="sec-crowding-out-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-crowding-out-ch08">Crowding out and the liquidity trap</h2>
 <p>IS-LM generates two important results that structure the debate between fiscal and monetary policy advocates.</p>
 <p><strong>Crowding out</strong>: if the government increases expenditure (shifting IS rightward), output rises but so does the equilibrium interest rate (moving up along the LM curve). The higher interest rate reduces private investment, “crowding out” private expenditure to partly offset the public stimulus. If LM is steep (inelastic money demand), crowding out is large; if LM is flat, crowding out is small. The practical implication: fiscal expansion is more effective when monetary policy accommodates it, that is, when BAM simultaneously expands liquidity to prevent interest rates from rising, keeping LM flat at the prevailing level.</p>
 <p><strong>The liquidity trap</strong>: if nominal interest rates are at or near zero, monetary policy loses traction. The LM curve becomes horizontal at the zero lower bound, the central bank can inject unlimited liquidity without reducing rates further, because agents absorb all injected money at the prevailing near-zero rate. In this configuration, only fiscal policy (shifting IS) can raise equilibrium output. The IS-LM model predicts maximum effectiveness for fiscal policy precisely when monetary policy is at its limit.</p>
@@ -588,34 +756,34 @@ BAM in partial liquidity trap, 2020-2021
 </div>
 </div>
 </section>
-<section id="sec-asad-ch08" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="sec-asad-ch08"><span class="header-section-number">14.4</span> AS-AD: supply-side shocks and the Moroccan drought</h2>
+<section id="sec-asad-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-asad-ch08">AS-AD: supply-side shocks and the Moroccan drought</h2>
 <p>IS-LM analyses demand. The AS-AD (Aggregate Supply-Aggregate Demand) model adds the supply dimension, allowing the analysis of shocks that simultaneously affect output and prices, the stagflationary supply shocks that IS-LM cannot handle.</p>
 <p><strong>Aggregate demand</strong> (AD) is downward-sloping in the output-price space: higher prices reduce the real value of money holdings (the real balance effect) and cause the central bank to tighten, both reducing spending. <strong>Aggregate supply</strong> (AS) slopes upward in the short run: higher prices induce firms to expand output, as margins improve for a given nominal wage.</p>
 <p>Three scenarios matter. A <strong>positive demand shock</strong> (fiscal stimulus, export surge) shifts AD rightward: output rises and prices rise. In the medium term, higher wages shift AS leftward, returning output toward potential at a higher price level. A <strong>negative supply shock</strong> (oil price surge, drought, war) shifts AS leftward: output falls <em>and</em> prices rise, stagflation. The policy dilemma is cruel: stimulating demand to fight the recession aggravates inflation; compressing inflation through monetary tightening deepens the recession. A <strong>positive supply shock</strong> (productivity gain, falling commodity costs) shifts AS rightward: output rises and prices fall, the ideal scenario of growth with disinflation.</p>
 <p>Morocco’s recurring drought constitutes precisely a <strong>negative supply shock</strong>, particularly severe in an economy where agriculture still represents 10-14% of GDP and employs over 30% of the active population. The 2022 crisis illustrated this sharply: the simultaneous surge in wheat prices (+50% post-Ukraine) and petroleum products (+40%) shifted AS leftward, producing textbook stagflation, growth slowing from 7.9% in 2021 to 1.1% in 2022 while inflation accelerated from below 2% to above 8%.</p>
 <p>The policy response illustrates the dilemma: BAM raised its policy rate from 1.5% to 3% (fighting inflation via LM), but this compressed domestic credit demand and slowed already fragile growth. The government maintained subsidies on butane gas and partially on food products via the Caisse de Compensation, partially absorbing the shock on vulnerable households at the cost of a temporary fiscal overrun. This case shows why supply shocks are the hardest to manage: there is no good short-run answer, only trade-offs between inflation and recession.</p>
 </section>
-<section id="sec-mundell-ch08" class="level2" data-number="14.5">
-<h2 data-number="14.5" class="anchored" data-anchor-id="sec-mundell-ch08"><span class="header-section-number">14.5</span> Mundell-Fleming and the open economy constraint</h2>
+<section id="sec-mundell-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mundell-ch08">Mundell-Fleming and the open economy constraint</h2>
 <p>The Mundell-Fleming model extends IS-LM to the open economy by adding a <strong>BP curve</strong> (balance of payments equilibrium) representing combinations of output and interest rate for which the current account and capital account balance. The model generates fundamental results according to the exchange rate regime.</p>
 <p>Under <strong>fixed exchange rates</strong> (Morocco’s semi-fixed dirham peg): fiscal policy is relatively effective. A fiscal expansion raises output without triggering a destabilising appreciation. Monetary policy is constrained by the obligation to defend parity, BAM cannot lower rates below the level consistent with the exchange rate anchor without losing reserves. Under <strong>flexible exchange rates</strong>: monetary policy is highly effective (a monetary expansion depreciates the currency, stimulates exports and growth). Fiscal policy is less effective, the interest rate rise it induces attracts capital inflows, appreciates the currency, and reduces competitiveness, partly offsetting the demand stimulus.</p>
 <p>For Morocco, which has progressively widened the dirham fluctuation band from ±0.3% to ±5% since 2018, this transition toward greater flexibility implies more active monetary management and careful coordination between BAM, the Ministry of Finance, and the Office des Changes. The implication for fiscal policy: under Morocco’s current semi-fixed regime, fiscal expansion is the more reliable macroeconomic lever, which reinforces the importance of careful fiscal strategy.</p>
 <hr>
 </section>
 </section>
-<section id="sec-heterodoxes-ch08" class="level1" data-number="15">
-<h1 data-number="15"><span class="header-section-number">15</span> Part IV — Heterodox Corrections: MMT, Godley, and the South Global Critique</h1>
-<section id="sec-histoire-ch08" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="sec-histoire-ch08"><span class="header-section-number">15.1</span> Historical cases: what fiscal history teaches</h2>
+<section id="sec-heterodoxes-ch08" class="level1">
+<h1>Part IV — Heterodox Corrections: MMT, Godley, and the South Global Critique</h1>
+<section id="sec-histoire-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-histoire-ch08">Historical cases: what fiscal history teaches</h2>
 <p>The theory of the multiplier and fiscal policy is best evaluated through its historical record. Four episodes are particularly instructive.</p>
 <p><strong>The American New Deal (1933-1937)</strong>: Roosevelt’s New Deal combined large-scale public employment programmes (the Works Progress Administration employed 8.5 million workers at its peak), infrastructure investment (the Tennessee Valley Authority, rural electrification), and financial regulation (Glass-Steagall Act separating commercial and investment banking, creation of the FDIC deposit guarantee). GDP grew at 9-10% annually from 1934 to 1937. In 1937, Roosevelt cut spending under political pressure to balance the budget. The result: a sharp recession in 1937-1938 that economists have called the “recession within the Depression.” The lesson: premature fiscal consolidation, driven by political orthodoxy rather than economic conditions, can abort a recovery precisely when confidence is not yet self-sustaining.</p>
 <p><strong>Japan’s lost decade (1990s)</strong>: Japan’s asset bubble collapsed in 1990-1991 after a decade of rapid credit expansion and land price inflation. The government’s response was a series of fiscal stimulus packages between 1992 and 2001, totalling over 100 trillion yen. Yet growth remained anaemic throughout the decade. The apparent failure of fiscal stimulus in Japan is often cited as evidence that fiscal policy cannot work, a reading that misses the critical institutional context. Japanese banks, with balance sheets destroyed by collapsed asset values, were not lending; monetary transmission was broken. Fiscal stimulus was fighting a massive private sector deleveraging, businesses and households simultaneously reducing debt, that absorbed the public sector’s stimulus without generating recovery. The sectoral balances analysis explains exactly this: when the private sector is intensively saving (deleveraging), the public sector must run offsetting deficits. The Japanese lesson is not that fiscal policy failed; it is that fiscal policy without concurrent banking system repair and balance sheet restructuring cannot restore private investment demand.</p>
 <p><strong>European austerity (2010-2013)</strong>: As documented by Blanchard and Leigh (2013), eurozone fiscal consolidation during 2010-2013 operated with fiscal multipliers well above 1.0, the opposite of what pre-austerity IMF forecasts assumed. Every euro of spending cuts contracted the economy by more than a euro, worsening the debt-to-GDP ratio even as it reduced the absolute deficit. The austerity paradox operated in textbook form. Greece lost 25% of GDP. Unemployment in Spain and Portugal exceeded 25%. The mechanism was precisely the Keynes-Kalecki prediction: insufficient aggregate demand, no automatic self-correcting mechanism, and procyclical fiscal tightening amplifying the downswing.</p>
 <p><strong>Morocco’s COVID response (2020)</strong>: Morocco’s Special COVID Fund mobilised approximately 33 billion MAD (3.3% of GDP), the fiscal deficit widened from approximately -3.6% to -7.6% of GDP, and the policy rate fell to 1.5%. The recession reached -6.3% of GDP in 2020, severe but substantially smaller than it would have been without intervention. The 2021 recovery of +7.9% confirmed that the productive fabric had been preserved. The instruments were calibrated to the Moroccan multiplier reality: direct enterprise support (Damane Relance, Damane Oxygène) to prevent bankruptcies and maintain future supply capacity; household transfers through the RAMED system; and monetary accommodation keeping banks well-supplied with liquidity. What the response could not fully achieve was coverage of the informal sector, over 50% of employment, whose workers lacked access to formal social protection mechanisms and received support only with delay through emergency RSU mechanisms.</p>
 </section>
-<section id="sec-dette-ch08" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="sec-dette-ch08"><span class="header-section-number">15.2</span> Public debt dynamics: <span class="math inline">\(r\)</span> versus <span class="math inline">\(g\)</span></h2>
+<section id="sec-dette-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-dette-ch08">Public debt dynamics: <span class="math inline">\(r\)</span> versus <span class="math inline">\(g\)</span></h2>
 <p>Before examining heterodox challenges, a fundamental reframing of how public debt is assessed. The prevailing political discourse treats public debt as unconditionally bad, a burden imposed on future generations, a sign of living beyond one’s means. The economic reality is more nuanced.</p>
 <p>The <strong>debt dynamics equation</strong> shows what actually matters:</p>
 <p><span class="math display">\[\frac{\Delta (D/Y)}{D/Y} \approx (r - g) \cdot \frac{D}{Y} + \text{primary deficit}\]</span></p>
@@ -623,30 +791,30 @@ BAM in partial liquidity trap, 2020-2021
 <p>Morocco’s public debt trajectory illustrates this. Between 2000-2010, debt stabilised around 45-50% of GDP through strong growth (5-6% annually) and moderate deficits. Between 2010-2022, it rose progressively toward 70-76% of GDP under successive shocks (2012: subsidy crisis; 2020: COVID; 2022: inflationary shock). Since 2023, gradual consolidation aims to return toward 65% at medium term.</p>
 <p>Two features of Morocco’s debt structure shape its risk profile. Approximately 70% is domestic (in dirhams), limiting exchange rate vulnerability. The approximately 30% external component (in euro and dollar) must be repaid in foreign currency, its dirham cost rises mechanically if the dirham depreciates, creating a fragility that large current account deficits can activate. The annual debt service currently represents approximately 25-26% of fiscal revenues: a quarter of every dirham collected by the state services debt obligations before financing public services.</p>
 </section>
-<section id="sec-fiscalite-maroc-ch08" class="level2" data-number="15.3">
-<h2 data-number="15.3" class="anchored" data-anchor-id="sec-fiscalite-maroc-ch08"><span class="header-section-number">15.3</span> Morocco’s fiscal structure: the revenue constraint</h2>
+<section id="sec-fiscalite-maroc-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fiscalite-maroc-ch08">Morocco’s fiscal structure: the revenue constraint</h2>
 <p>Any analysis of Morocco’s fiscal space must reckon with the structural features of its revenue system. Fiscal revenues represent approximately 22-25% of GDP, reasonable by emerging economy standards but concentrated in ways that create structural fragility.</p>
 <p>The <strong>Value Added Tax</strong> (TVA) is the largest single source of fiscal revenues, contributing approximately 30-35% of total tax receipts. Because TVA applies uniformly to consumption, it is regressive relative to income: lower-income households spend a higher share of their income on consumption and therefore pay a higher effective TVA rate as a fraction of income than wealthier households. This regressive element in Morocco’s revenue structure means that fiscal consolidation through TVA increases falls disproportionately on lower-income households, compounding the distributional problems of austerity.</p>
 <p><strong>Corporate tax</strong> is highly concentrated: a small number of large formal enterprises and financial institutions contribute the majority of corporate tax revenues. The broad mass of Moroccan enterprises, SMEs, informal operators, small traders, contributes relatively little to the direct tax base, either through formal informality (registered but under-reporting) or complete informality. This creates both a fiscal fragility (revenues concentrated in cyclically sensitive large firms) and a structural inequity: formal enterprises bear disproportionate tax obligations relative to informal competitors at the same income level.</p>
 <p><strong>Personal income tax</strong> operates on a narrow base: primarily formal sector employees whose wages are directly declared and withheld at source. Self-employed workers, informal business owners, and the large majority of agricultural income largely escape personal income taxation. The effective tax-to-GDP ratio on labour income in Morocco is therefore much lower than headline rates suggest, because the tax falls on a fraction of total labour income.</p>
 <p>This structure has a fundamental implication for fiscal space: expanding Morocco’s fiscal capacity for development investment requires broadening the tax base, integrating the informal economy progressively, taxing capital gains and inheritance more systematically, and extending property taxes, rather than simply raising rates on the existing narrow formal base. Tax reform is therefore both a fiscal capacity question and a distributional question: who pays determines both what can be funded and whether the fiscal system contributes to or compounds inequality.</p>
 </section>
-<section id="sec-austerite-ch08" class="level2" data-number="15.4">
-<h2 data-number="15.4" class="anchored" data-anchor-id="sec-austerite-ch08"><span class="header-section-number">15.4</span> The paradox of austerity</h2>
+<section id="sec-austerite-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-austerite-ch08">The paradox of austerity</h2>
 <p>The historical record of fiscal consolidation programmes is systematically misread in mainstream policy discourse. Blanchard and Leigh’s landmark 2013 IMF study demonstrated that fiscal multipliers in eurozone countries after 2010 were substantially above 1.0, meaning that every euro of spending cuts contracted the economy by more than a euro, worsening the recession rather than resolving it. Greece lost 25% of its GDP. Portugal, Spain, and Ireland experienced deep recessions with unemployment rates exceeding 20%.</p>
 <p>The <strong>spiral logic</strong> is straightforward once one takes multipliers seriously. An economic shock reduces tax revenues and automatically increases social spending. The deficit widens and debt rises. Creditors or international institutions impose austerity: spending cuts, tax increases, reduced transfers. These measures, by reducing public demand, deepen the recession. Household and firm incomes fall, consumption and investment contract, fiscal revenues fall further, and debt continues rising <em>despite</em> the adjustment effort. This is the austerity paradox: measures designed to stabilise debt can be self-defeating by destroying the growth that alone makes debt sustainable.</p>
 <p>Morocco experienced a moderate version of this dynamic during 2013-2016, when reducing the fiscal deficit from 7.3% of GDP in 2012 to below 4% by 2016 was accompanied by a growth slowdown and retreat in public investment, without significantly reversing the debt trajectory. The lesson: fiscal adjustments are necessary when well-calibrated, gradual, and accompanied by structural reform of expenditure composition rather than simple cuts, and when their timing is not procyclical.</p>
 </section>
-<section id="sec-mmt-ch08" class="level2" data-number="15.5">
-<h2 data-number="15.5" class="anchored" data-anchor-id="sec-mmt-ch08"><span class="header-section-number">15.5</span> Modern Monetary Theory: the constraint is not the debt</h2>
+<section id="sec-mmt-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mmt-ch08">Modern Monetary Theory: the constraint is not the debt</h2>
 <p>Modern Monetary Theory, developed in the United States from the 1990s-2000s by Warren Mosler, L. Randall Wray, and Stephanie Kelton, starts from a simple observation about contemporary monetary systems: a state that issues its own currency can technically never “run out of money” in its own denomination. It creates money by spending and destroys it by taxing. The logical sequence is not “the state collects taxes, then spends” but the reverse: “the state spends by creating money, and taxes serve to regulate the quantity of money in circulation and give it value.”</p>
 <p>This framing inverts the priorities of fiscal debate. The real constraint is not debt or deficit, but <strong>inflation</strong>: as long as the economy has underutilised real resources (unemployed workers, idle factories, available productive capacity), the state can spend more without triggering inflation. It is only when resources are fully mobilised that additional spending becomes inflationary.</p>
 <p>The MMT’s signature policy proposal is the <strong>job guarantee</strong>: the state offers employment at the minimum wage to anyone willing to work. This programme becomes a powerful automatic stabiliser, expanding when unemployment rises, contracting when private employment recovers, without requiring discretionary political decisions. It replaces unemployment as the instrument of inflation regulation (which central banks achieve by slowing the economy to reduce labour demand) with a public employment buffer whose size varies with the cycle.</p>
 <p><strong>MMT’s application to Morocco is limited by structural constraints</strong> that its proponents, calibrated for reserve-currency-issuing developed economies, underweigh. A significant share of Morocco’s public debt is denominated in foreign currency: creating dirhams does not service these obligations. Imported inflation, driven by dependence on energy and food imports priced in dollars, is a real risk that domestic money creation cannot address. Rating agencies and institutional lenders monitor fiscal credibility. These constraints are real.</p>
 <p>But MMT is not without Moroccan relevance. It challenges the taboo on deficits as an end in themselves, invites recasting the debate around available real resources rather than accounting balances, and reminds that the objective of economic policy should be full employment, not market satisfaction. The question “can we afford to spend?” is in many contexts badly posed: the relevant question is “what real resources do we have available, and what institutional framework would allow us to mobilise them?”</p>
 </section>
-<section id="sec-godley-ch08" class="level2" data-number="15.6">
-<h2 data-number="15.6" class="anchored" data-anchor-id="sec-godley-ch08"><span class="header-section-number">15.6</span> Godley’s sectoral balances: the arithmetic of fiscal space</h2>
+<section id="sec-godley-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-godley-ch08">Godley’s sectoral balances: the arithmetic of fiscal space</h2>
 <p>Wynne Godley’s sectoral balances approach provides the most rigorous analytical tool for evaluating whether a fiscal position is sustainable, and whether “fiscal consolidation” makes arithmetic sense.</p>
 <p>The starting point is an accounting identity true by construction:</p>
 <p><span class="math display">\[\underbrace{(S - I)}_{\text{private sector}} + \underbrace{(T - G)}_{\text{public sector}} + \underbrace{(M - X)}_{\text{external sector}} = 0\]</span></p>
@@ -671,31 +839,31 @@ Godley’s identity applied to Morocco, 2023
 </div>
 <p>This Godley framework is what correctly predicted the eurozone crisis <em>before</em> it occurred. By 2007, Godley had shown that Germany’s persistent current account surpluses necessarily implied equivalent deficits in the south of the eurozone, and that these imbalances were unsustainable without a fiscal transfer mechanism. The crisis that erupted in 2010 was the arithmetic result he had identified three years earlier.</p>
 </section>
-<section id="sec-sudglobal-ch08" class="level2" data-number="15.7">
-<h2 data-number="15.7" class="anchored" data-anchor-id="sec-sudglobal-ch08"><span class="header-section-number">15.7</span> The South Global critique: the external constraint</h2>
+<section id="sec-sudglobal-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-sudglobal-ch08">The South Global critique: the external constraint</h2>
 <p>The South Global economists, Dani Rodrik, Jayati Ghosh, Ha-Joon Chang, and the structuralist Latin American tradition of Prebisch, Furtado, and their contemporary heirs, insist that the Keynesian standard framework was built for developed economies with sovereign currencies and low external dependence. For emerging and developing economies, the conditions are radically different.</p>
 <p><strong>External constraints</strong> manifest across several registers. A fiscal stimulus in a country with a structural trade deficit partly translates into import increases, multiplier leakage. This creates pressure on foreign exchange reserves and can trigger currency depreciation that raises the cost of foreign-currency-denominated debt: a vicious cycle. Rating agencies can downgrade the sovereign, increasing the risk premium and therefore financing costs, precisely when financing is most needed. This is what Guillermo Calvo called the <strong>sudden stop</strong>: an abrupt halt to capital inflows that forces a brutal adjustment of domestic demand. Countries with high external debt and weak currencies are structurally vulnerable to this form of crisis, which converts an ordinary recession into an external financing crisis.</p>
 <p>For Morocco, the external constraint is real but manageable: a current account deficit of 1-2.5% of GDP (significantly improved since 2022), foreign exchange reserves covering approximately 5-6 months of imports (comfortable but not inexhaustible), and approximately 25-30% of public debt in foreign currency. The strategic implication is that Morocco’s fiscal multiplier is structurally limited by import propensity, and that the most effective use of fiscal space is expenditure that directly builds domestic productive capacity, reduces import dependence, and expands the tax base.</p>
 <p>This leads to what Rodrik calls the strategic framing: the question for developing economies is not “can we afford to spend more?” but “<strong>how to spend in ways that expand domestic productive capacity</strong> and reduce the external dependence that limits precisely the fiscal room?” Industrial policy in the PAI sense, investment in domestic input supply chains, and integration policy that increases the domestic value content of exports are all ways of simultaneously expanding fiscal multipliers and reducing external constraints. This is a development strategy question as much as a macroeconomic stabilisation question.</p>
 <hr>
 </section>
-<section id="sec-crises-maroc-ch08" class="level2" data-number="15.8">
-<h2 data-number="15.8" class="anchored" data-anchor-id="sec-crises-maroc-ch08"><span class="header-section-number">15.8</span> Morocco’s three macroeconomic crises: institutional lessons</h2>
+<section id="sec-crises-maroc-ch08" class="level2">
+<h2 class="anchored" data-anchor-id="sec-crises-maroc-ch08">Morocco’s three macroeconomic crises: institutional lessons</h2>
 <p>Morocco’s post-independence macroeconomic history contains three episodes that illuminate fiscal and monetary policy effectiveness under Moroccan structural conditions, and that make the theoretical frameworks of this chapter concrete.</p>
 <p><strong>The 1983 structural adjustment crisis</strong>: following the collapse of phosphate prices and the global oil shock, Morocco entered the 1980s with an unsustainable external position. The IMF-designed structural adjustment programme imposed fiscal consolidation, subsidy elimination on food and fuel, public wage freezes, privatisation, and import liberalisation. The social consequences were immediate: the bread riots of January 1984 in Marrakech, Nador, Tétouan, and Al-Hoceima directly resulted from the removal of food subsidies. A decade of structural adjustment produced fiscal stabilisation and created the institutional conditions for a market economy. But it terminated the directed credit model that had supported early industrialisation, reduced public investment, and generated a decade of slow growth and stagnant private investment. The lesson from this episode: fiscal consolidation imposed in a context of external shock, without growth-supporting alternatives, shifts adjustment costs onto the most vulnerable, destroys productive capacity needed for long-run growth, and undermines the social contract that makes market economies politically sustainable.</p>
 <p><strong>The 2011-2012 twin shocks</strong>: the global commodity price surge of 2010-2011 and the domestic political pressures of the Arab Spring combined to create a severe fiscal challenge. Fuel and food subsidies expanded massively through the Caisse de Compensation to shield households from commodity prices, ballooning to nearly 6% of GDP. The fiscal deficit reached 7.3% of GDP in 2012. The subsequent consolidation replaced the universal subsidy system with targeted transfer programmes, progressively transitioning toward the RSU-based direct transfer model. This consolidation was better designed than the 1983 programme: more gradual, with social protection instruments that preserved vulnerable household purchasing power rather than cutting it. But the fiscal tightening coincided with weak growth in 2013-2016, again illustrating the procyclical risks of consolidation during demand shortfall.</p>
 <p><strong>The COVID-2022 compound shock</strong>: Morocco’s first genuinely counter-cyclical fiscal response, the Special COVID Fund operated as a discretionary stimulus during the shock, complemented by monetary accommodation. The key institutional lesson: response quality correlated with prior institutional infrastructure. Support was faster and more targeted where existing social protection infrastructure existed (formal sector workers with CNSS coverage, enterprises with banking relationships) and slower, more imprecise, and incomplete where it did not (informal workers, unregistered enterprises). Building the institutional mechanisms in advance is not merely good governance; it is the operational precondition for effective crisis response.</p>
 </section>
 </section>
-<section id="sec-stabilisateurs-ch08" class="level1" data-number="16">
-<h1 data-number="16"><span class="header-section-number">16</span> The Moroccan Fiscal Architecture: Automatic Stabilisers as a Strategic Investment</h1>
+<section id="sec-stabilisateurs-ch08" class="level1">
+<h1>The Moroccan Fiscal Architecture: Automatic Stabilisers as a Strategic Investment</h1>
 <p>Morocco’s structural macroeconomic vulnerability, high sensitivity to droughts, fluctuations in MRE remittances, and commodity price shocks, is amplified by the weakness of automatic stabilisers. Unemployment insurance covers less than 10% of active workers. In Europe, unemployment allowances can pay 60-70% of the previous salary for one to two years, a massive shock absorber that maintains a large fraction of household consumption even when employment collapses.</p>
 <p>Morocco’s social protection reform of 2021-2025 (generalisation of AMO health insurance, expansion of family allowances, construction of unemployment insurance) is therefore not only a social justice project. It is a <strong>macroeconomic investment</strong>. A simple calculation illustrates: if 500,000 additional workers lose their employment during a recession, and if unemployment insurance replaces 50% of average previous salary (approximately 2,500 MAD per month), the multiplier effect of this income maintenance would preserve approximately 3-4 billion dirhams of demand, automatically, without any ministerial signature, limiting the contraction of consumption precisely when its maintenance is most valuable.</p>
 <p>The Registre Social Unifié (RSU), the centralised household database designed to enable targeted cash transfers, provides the information infrastructure for a new generation of automatic stabilisers that can activate quickly in crises without the months of administrative delay that discretionary programmes typically require. Building these institutional mechanisms before the next crisis, not in response to it, is the macroeconomic case for Morocco’s ongoing social protection reform, quite apart from its social justice dimension.</p>
 <hr>
 </section>
-<section id="sec-concl-ch08" class="level1" data-number="17">
-<h1 data-number="17"><span class="header-section-number">17</span> Conclusion: Employment, Distribution, and the Political Economy of Macroeconomic Policy</h1>
+<section id="sec-concl-ch08" class="level1">
+<h1>Conclusion: Employment, Distribution, and the Political Economy of Macroeconomic Policy</h1>
 <p>This chapter has established six propositions that together constitute the political economy of macroeconomic stabilisation.</p>
 <p><strong>Markets do not automatically produce full employment.</strong> The paradox of thrift, the volatility of investment expectations, and the liquidity trap are structural features of capitalist dynamics that Keynes identified in 1936 and that Morocco’s employment statistics confirm empirically: 13.3% official unemployment, 36.7% youth unemployment, and a female participation rate below 20% cannot be attributed to market frictions alone. They reflect the Kaleckian reality that the labour market distributes bargaining power unequally, and that the private investment decisions that would create formal employment are structured by profit expectations that are themselves shaped by aggregate demand, which loops back to fiscal and monetary policy.</p>
 <p><strong>The multiplier is real but contextual.</strong> Morocco’s effective fiscal multiplier is 0.6 to 1.2, structurally smaller than textbook values because of import leakages in a highly open economy. The quality and targeting of expenditure matters as much as its volume. Fiscal policy that maximises domestic content, targets low-income households, and invests in sectors with strong domestic linkages achieves higher multipliers.</p>
@@ -727,8 +895,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch08" class="level1 appendix" data-number="18">
-<h1 class="appendix" data-number="18"><span class="header-section-number">18</span> Further Reading</h1>
+<section id="sec-biblio-ch08" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Keynes, J.M. (1936). <em>The General Theory of Employment, Interest and Money</em>. Macmillan.</strong> Chapters 1-3 and 8-10 on effective demand and the paradox of thrift. The intellectual foundation of this chapter.</p>
 <p><strong>Kalecki, M. (1943). “Political Aspects of Full Employment.” <em>Political Quarterly</em>.</strong> The most important short paper in political economy of the 20th century. Six pages that explain more about macroeconomics than most textbooks.</p>
 <p><strong>Kalecki, M. (1971). <em>Selected Essays on the Dynamics of the Capitalist Economy</em>. Cambridge University Press.</strong> The collected formalisation of Kalecki’s macroeconomic framework.</p>
@@ -742,8 +910,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1162,13 +1389,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1177,5 +1404,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

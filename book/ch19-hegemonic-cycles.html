@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch19-hegemonic-cycles.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,8 +78,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,6 +265,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -296,36 +463,37 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#sec-prologue-ch19hc" id="toc-sec-prologue-ch19hc" class="nav-link active" data-scroll-target="#sec-prologue-ch19hc"><span class="header-section-number">22</span> Prologue: The Question that Every Chapter Approached</a></li>
-  <li><a href="#sec-temps-ch19hc" id="toc-sec-temps-ch19hc" class="nav-link" data-scroll-target="#sec-temps-ch19hc"><span class="header-section-number">23</span> Part I — The Three Temporal Registers and Their Analytical Implications</a>
+  <li><a href="#sec-prologue-ch19hc" id="toc-sec-prologue-ch19hc" class="nav-link active" data-scroll-target="#sec-prologue-ch19hc">Prologue: The Question that Every Chapter Approached</a></li>
+  <li><a href="#sec-temps-ch19hc" id="toc-sec-temps-ch19hc" class="nav-link" data-scroll-target="#sec-temps-ch19hc">Part I — The Three Temporal Registers and Their Analytical Implications</a>
   <ul class="collapse">
-  <li><a href="#sec-braudel-ch19hc" id="toc-sec-braudel-ch19hc" class="nav-link" data-scroll-target="#sec-braudel-ch19hc"><span class="header-section-number">23.1</span> Why economists need Braudel</a></li>
+  <li><a href="#sec-braudel-ch19hc" id="toc-sec-braudel-ch19hc" class="nav-link" data-scroll-target="#sec-braudel-ch19hc">Why economists need Braudel</a></li>
   </ul></li>
-  <li><a href="#sec-arrighi-ch19hc" id="toc-sec-arrighi-ch19hc" class="nav-link" data-scroll-target="#sec-arrighi-ch19hc"><span class="header-section-number">24</span> Part II — Arrighi’s Cycles: Where the American Century Stands</a>
+  <li><a href="#sec-arrighi-ch19hc" id="toc-sec-arrighi-ch19hc" class="nav-link" data-scroll-target="#sec-arrighi-ch19hc">Part II — Arrighi’s Cycles: Where the American Century Stands</a>
   <ul class="collapse">
-  <li><a href="#sec-quatre-cycles-ch19hc" id="toc-sec-quatre-cycles-ch19hc" class="nav-link" data-scroll-target="#sec-quatre-cycles-ch19hc"><span class="header-section-number">24.1</span> The four cycles revisited</a></li>
-  <li><a href="#sec-crise-signal-ch19hc" id="toc-sec-crise-signal-ch19hc" class="nav-link" data-scroll-target="#sec-crise-signal-ch19hc"><span class="header-section-number">24.2</span> The signal crisis and its consequences</a></li>
-  <li><a href="#sec-transition-ch19hc" id="toc-sec-transition-ch19hc" class="nav-link" data-scroll-target="#sec-transition-ch19hc"><span class="header-section-number">24.3</span> The transition and its structural uncertainty</a></li>
-  <li><a href="#sec-trois-moments-ch19hc" id="toc-sec-trois-moments-ch19hc" class="nav-link" data-scroll-target="#sec-trois-moments-ch19hc"><span class="header-section-number">24.4</span> Morocco in the hegemonic cycles: three moments of integration</a></li>
+  <li><a href="#sec-quatre-cycles-ch19hc" id="toc-sec-quatre-cycles-ch19hc" class="nav-link" data-scroll-target="#sec-quatre-cycles-ch19hc">The four cycles revisited</a></li>
+  <li><a href="#sec-crise-signal-ch19hc" id="toc-sec-crise-signal-ch19hc" class="nav-link" data-scroll-target="#sec-crise-signal-ch19hc">The signal crisis and its consequences</a></li>
+  <li><a href="#sec-transition-ch19hc" id="toc-sec-transition-ch19hc" class="nav-link" data-scroll-target="#sec-transition-ch19hc">The transition and its structural uncertainty</a></li>
+  <li><a href="#sec-trois-moments-ch19hc" id="toc-sec-trois-moments-ch19hc" class="nav-link" data-scroll-target="#sec-trois-moments-ch19hc">Morocco in the hegemonic cycles: three moments of integration</a></li>
   </ul></li>
-  <li><a href="#sec-polanyi-ch19hc" id="toc-sec-polanyi-ch19hc" class="nav-link" data-scroll-target="#sec-polanyi-ch19hc"><span class="header-section-number">25</span> Part III — Polanyi’s Double Movement and the Social Contract</a>
+  <li><a href="#sec-polanyi-ch19hc" id="toc-sec-polanyi-ch19hc" class="nav-link" data-scroll-target="#sec-polanyi-ch19hc">Part III — Polanyi’s Double Movement and the Social Contract</a>
   <ul class="collapse">
-  <li><a href="#sec-desencastrement-ch19hc" id="toc-sec-desencastrement-ch19hc" class="nav-link" data-scroll-target="#sec-desencastrement-ch19hc"><span class="header-section-number">25.1</span> The disembedding and re-embedding of the market</a></li>
-  <li><a href="#sec-tension-ch19hc" id="toc-sec-tension-ch19hc" class="nav-link" data-scroll-target="#sec-tension-ch19hc"><span class="header-section-number">25.2</span> The structural tension at the heart of development</a></li>
-  <li><a href="#sec-scenarios-ch19hc" id="toc-sec-scenarios-ch19hc" class="nav-link" data-scroll-target="#sec-scenarios-ch19hc"><span class="header-section-number">25.3</span> The transition scenarios and Morocco’s strategic choice space</a></li>
+  <li><a href="#sec-desencastrement-ch19hc" id="toc-sec-desencastrement-ch19hc" class="nav-link" data-scroll-target="#sec-desencastrement-ch19hc">The disembedding and re-embedding of the market</a></li>
+  <li><a href="#sec-tension-ch19hc" id="toc-sec-tension-ch19hc" class="nav-link" data-scroll-target="#sec-tension-ch19hc">The structural tension at the heart of development</a></li>
+  <li><a href="#sec-scenarios-ch19hc" id="toc-sec-scenarios-ch19hc" class="nav-link" data-scroll-target="#sec-scenarios-ch19hc">The transition scenarios and Morocco’s strategic choice space</a></li>
   </ul></li>
-  <li><a href="#sec-siecle-ch19hc" id="toc-sec-siecle-ch19hc" class="nav-link" data-scroll-target="#sec-siecle-ch19hc"><span class="header-section-number">26</span> Part IV — Morocco’s Long Century</a>
+  <li><a href="#sec-siecle-ch19hc" id="toc-sec-siecle-ch19hc" class="nav-link" data-scroll-target="#sec-siecle-ch19hc">Part IV — Morocco’s Long Century</a>
   <ul class="collapse">
-  <li><a href="#sec-trois-moments-ch19hc" id="toc-sec-trois-moments-ch19hc" class="nav-link" data-scroll-target="#sec-trois-moments-ch19hc"><span class="header-section-number">26.1</span> Three historical moments of integration</a></li>
-  <li><a href="#sec-siecle-maroc-ch19hc" id="toc-sec-siecle-maroc-ch19hc" class="nav-link" data-scroll-target="#sec-siecle-maroc-ch19hc"><span class="header-section-number">26.2</span> What the Moroccan century requires</a></li>
+  <li><a href="#sec-trois-moments-historiques-ch19hc" id="toc-sec-trois-moments-historiques-ch19hc" class="nav-link" data-scroll-target="#sec-trois-moments-historiques-ch19hc">Three historical moments of integration</a></li>
+  <li><a href="#sec-siecle-maroc-ch19hc" id="toc-sec-siecle-maroc-ch19hc" class="nav-link" data-scroll-target="#sec-siecle-maroc-ch19hc">What the Moroccan century requires</a></li>
   </ul></li>
-  <li><a href="#sec-epilogue-ch19hc" id="toc-sec-epilogue-ch19hc" class="nav-link" data-scroll-target="#sec-epilogue-ch19hc"><span class="header-section-number">27</span> Epilogue: The Signature</a></li>
-  <li><a href="#sec-refs-ch19hc" id="toc-sec-refs-ch19hc" class="nav-link" data-scroll-target="#sec-refs-ch19hc"><span class="header-section-number">28</span> References for Further Exploration</a></li>
+  <li><a href="#sec-epilogue-ch19hc" id="toc-sec-epilogue-ch19hc" class="nav-link" data-scroll-target="#sec-epilogue-ch19hc">Epilogue: The Signature</a></li>
+  <li><a href="#sec-refs-ch19hc" id="toc-sec-refs-ch19hc" class="nav-link" data-scroll-target="#sec-refs-ch19hc">References for Further Exploration</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch15-inequality-distribution.html">Part IV — International Economics and the Long Run</a></li><li class="breadcrumb-item"><a href="./ch19-hegemonic-cycles.html"><span class="chapter-number">21</span>&nbsp; <span class="chapter-title">Chapter 19 — Hegemonic Cycles and the Long Run: A Concluding Essay</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -372,16 +540,16 @@ The purpose of this concluding chapter
 </div>
 </div>
 <hr>
-<section id="sec-prologue-ch19hc" class="level1" data-number="22">
-<h1 data-number="22"><span class="header-section-number">22</span> Prologue: The Question that Every Chapter Approached</h1>
+<section id="sec-prologue-ch19hc" class="level1">
+<h1>Prologue: The Question that Every Chapter Approached</h1>
 <p>Throughout this book, a question has been circling just beneath the surface of every chapter’s technical analysis. In Chapter 3, when we asked why some firms grow while others stagnate, the deeper question was about the institutional conditions under which productive investment becomes rational. In Chapter 8, when we traced the anatomy of financial crises from Minsky’s endogenous instability to Fisher’s debt deflation spiral, the deeper question was about the relationship between financial accumulation and productive investment, and why capitalism repeatedly substitutes the former for the latter. In Chapter 10, when we diagnosed Morocco’s assembly paradox, the deeper question was about who captures value from industrial activity and why the distribution persistently favours those with technological leverage over those with labour and natural resources. In Chapter 12, when we traced the asymmetry between the dollar’s “exorbitant privilege” and Morocco’s “original sin” of foreign-currency debt, the deeper question was about the political architecture of the international monetary system and whose interests it serves.</p>
 <p>That recurring deeper question is the subject of this chapter. It asks: what structural forces, operating at timescales longer than any policy cycle, determine the constraints within which Morocco’s economic choices are made? And what does a long-run reading of those forces suggest about the possibilities available to Morocco in the coming decades?</p>
 <hr>
 </section>
-<section id="sec-temps-ch19hc" class="level1" data-number="23">
-<h1 data-number="23"><span class="header-section-number">23</span> Part I — The Three Temporal Registers and Their Analytical Implications</h1>
-<section id="sec-braudel-ch19hc" class="level2" data-number="23.1">
-<h2 data-number="23.1" class="anchored" data-anchor-id="sec-braudel-ch19hc"><span class="header-section-number">23.1</span> Why economists need Braudel</h2>
+<section id="sec-temps-ch19hc" class="level1">
+<h1>Part I — The Three Temporal Registers and Their Analytical Implications</h1>
+<section id="sec-braudel-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-braudel-ch19hc">Why economists need Braudel</h2>
 <p>Economic analysis, as practised in the mainstream tradition, operates primarily in the short run. Quarterly GDP figures, monthly inflation readings, annual budget balances: the temporal horizon of most policy analysis is one to five years. This is rational given the incentive structures facing economists and policymakers, elections happen every four years, bond markets react to next quarter’s current account, but it systematically misses the structural forces that operate on longer timescales and that ultimately determine whether short-run policies achieve their objectives.</p>
 <p>Fernand Braudel’s contribution to economic thinking was methodological: he insisted that historical reality operates simultaneously at three temporal registers that require different analytical instruments and reveal different truths.</p>
 <p>The <strong>longue durée</strong> (centuries-long duration) is the domain of geographic and structural constraints that change so slowly they appear almost fixed within a human lifetime. Morocco’s Atlantic and Mediterranean geography, its position at the intersection of European, African, and Arab-Islamic civilisational zones, its control of the Gibraltar approach, its exceptional solar and wind resources, is a longue durée reality. No policy created it; no single policy can eliminate it. It is the geological and climatic foundation on which Morocco’s economic possibilities are built. A development strategy that ignores the longue durée may be technically coherent while being fundamentally misconceived: investing in activities that fight the structural geography rather than leveraging it.</p>
@@ -391,30 +559,30 @@ The purpose of this concluding chapter
 <hr>
 </section>
 </section>
-<section id="sec-arrighi-ch19hc" class="level1" data-number="24">
-<h1 data-number="24"><span class="header-section-number">24</span> Part II — Arrighi’s Cycles: Where the American Century Stands</h1>
-<section id="sec-quatre-cycles-ch19hc" class="level2" data-number="24.1">
-<h2 data-number="24.1" class="anchored" data-anchor-id="sec-quatre-cycles-ch19hc"><span class="header-section-number">24.1</span> The four cycles revisited</h2>
+<section id="sec-arrighi-ch19hc" class="level1">
+<h1>Part II — Arrighi’s Cycles: Where the American Century Stands</h1>
+<section id="sec-quatre-cycles-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-quatre-cycles-ch19hc">The four cycles revisited</h2>
 <p>Giovanni Arrighi’s <em>The Long Twentieth Century</em> (1994) proposed that the history of capitalism can be read as a succession of systemic cycles of accumulation, each centred on a state-capital alliance that organises world commerce and finance during its ascendancy phase before entering its financial expansion phase and eventually yielding to a new challenger.</p>
 <p>The Genoese cycle (15th-16th centuries) demonstrated that financial capitalism, the ability to control capital flows without territorial dominance, can generate disproportionate returns for those who hold the nodes through which capital must pass. The Genoese bankers financed Spanish and Portuguese empires without governing territories of their own, capturing a rent on the capital circuits of the Iberian world-economy. Their lesson: the most powerful position in a capitalist system is not ownership of production but control of the financial infrastructure through which production is financed.</p>
 <p>The Dutch cycle (17th century) added institutional innovation to financial sophistication: the VOC, the Amsterdam Bourse, the Bank of Amsterdam, the Treaty of Westphalia. The Dutch invented the organisational forms, joint-stock companies, secondary markets, stable reserve currency, that all subsequent cycles would use. Their characteristic contribution was the institutionalisation of capitalism: creating the legal and financial architecture that makes capital accumulation scalable and transferable across time and space.</p>
 <p>The British cycle (18th-19th centuries) added industrial production and free trade ideology to the financial and institutional innovations of predecessors. Britain’s productive supremacy in textiles, steel, and engineering provided the material foundation for its financial dominance (the gold-backed pound sterling as world reserve currency) and its ideological dominance (free trade as the universal prescription, implemented after Britain’s industrial supremacy was secure enough to benefit from open markets).</p>
 <p>The American cycle (20th-21st centuries) added mass production, multilateral institution-building, and the dollar standard. The American cycle’s material expansion phase (1945-1970) was the most productive in capitalist history: reconstruction of Europe and Japan created new markets; Fordist mass production generated the wages that sustained mass consumption; the Bretton Woods system provided monetary stability; and the United Nations framework provided political legitimacy. The American cycle’s financial expansion phase (1970s onward) has progressively substituted financial engineering for productive investment, dollar printing for value creation, and regulatory arbitrage for genuine innovation.</p>
 </section>
-<section id="sec-crise-signal-ch19hc" class="level2" data-number="24.2">
-<h2 data-number="24.2" class="anchored" data-anchor-id="sec-crise-signal-ch19hc"><span class="header-section-number">24.2</span> The signal crisis and its consequences</h2>
+<section id="sec-crise-signal-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-crise-signal-ch19hc">The signal crisis and its consequences</h2>
 <p>Arrighi dates the signal crisis of the American cycle to 1971: Nixon’s closure of the gold window, which acknowledged that the United States could not maintain its Bretton Woods commitments without constraining the domestic monetary expansion that its political economy required. The subsequent fifty years have been the financial expansion phase of the American cycle: maintaining dollar dominance through financial mechanisms, Treasury bond recycling, dollar weaponisation, financial market innovation, rather than through productive supremacy.</p>
 <p>The paradox of this phase: American financial dominance has been strengthened, not weakened, by the end of dollar-gold convertibility. Because no alternative exists as a store of value and medium of exchange for international trade, the world has continued accumulating dollar assets even as their gold backing disappeared and as the United States ran persistent current account deficits that would require balance-of-payments adjustment in any other economy. The “exorbitant privilege” analysed in Chapter 12 is the institutional expression of Arrighi’s M’-phase logic: the hegemon extracts systemic rents through its control of the monetary circuit rather than through the productivity of its production.</p>
 <p>The terminal crisis of the American cycle is unfolding at irregular pace. 2008 was a signal of terminal crisis dynamics: the leading financial complex itself generated the global crisis, inverting the hegemon’s traditional role as systemic stabiliser. The 2016-2020 American withdrawal from multilateralism, rejecting the rules-based international order that the United States had constructed, is further evidence of a hegemon less willing to provide the public goods that its hegemony required. The China-United States technology conflict is the most direct expression of the hegemonic transition: a rising challenger whose productive and technological capacities now rival the incumbent in semiconductors, AI, electric vehicles, and renewable energy is meeting an incumbent that uses regulatory, financial, and military instruments to defend its position.</p>
 </section>
-<section id="sec-transition-ch19hc" class="level2" data-number="24.3">
-<h2 data-number="24.3" class="anchored" data-anchor-id="sec-transition-ch19hc"><span class="header-section-number">24.3</span> The transition and its structural uncertainty</h2>
+<section id="sec-transition-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-transition-ch19hc">The transition and its structural uncertainty</h2>
 <p>Every Arrighian hegemonic transition has involved a period of systemic chaos, Braudel’s term for the interregnum between the decline of one hegemonic order and the consolidation of the next. The period from the signal crisis to the terminal crisis can span decades, during which old institutions lose legitimacy without being replaced, geopolitical competition intensifies, and the rules of the international economic game become contested rather than settled.</p>
 <p>Morocco has lived through one hegemonic transition already: the shift from British to American hegemony, through which the Protectorate was eventually ended as American post-war anti-colonialism replaced British imperial legitimacy. The current transition, from American unipolarity toward multipolarity, creates a different but analogous opportunity structure for a middle power positioned at the intersection of multiple great power spheres of influence.</p>
 <p>The specific opportunity of systemic transitions for middle powers: during stable hegemonic periods, the rules are fixed and smaller actors adapt to them. During transitions, rules are contested, new institutions are being built, and actors with genuine assets and credible governance can negotiate terms of engagement rather than simply accepting dictation. Morocco’s ability to engage simultaneously with European, Chinese, Gulf, and African partners, without full alignment with any, positions it to extract value from the transition’s multi-directional character that would not be available in a stable hegemonic environment.</p>
 </section>
-<section id="sec-trois-moments-ch19hc" class="level2" data-number="24.4">
-<h2 data-number="24.4" class="anchored" data-anchor-id="sec-trois-moments-ch19hc"><span class="header-section-number">24.4</span> Morocco in the hegemonic cycles: three moments of integration</h2>
+<section id="sec-trois-moments-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-trois-moments-ch19hc">Morocco in the hegemonic cycles: three moments of integration</h2>
 <p>Morocco’s integration into the capitalist world-economy has occurred through three structurally distinct moments, each conditioned by the phase of the hegemonic cycle in which it occurred and each leaving structural residues that shape the possibilities available today.</p>
 <p><strong>The first moment</strong> (1830-1912) coincided with the late phase of the British cycle, its financialisation period. European commercial capital, seeking new accumulation frontiers as European domestic markets saturated, extended credit, extracted tariff concessions through unequal treaties, and established commercial networks across the Mediterranean periphery. Morocco’s fiscal dependence on European loans (particularly the 1904 loans that directly preceded the Protectorate) illustrates the structural dynamic: debt creates the leverage that converts economic presence into political control. The Treaty of Fez was not primarily a military conquest, it was the culmination of a fiscal dependency mechanism that the British cycle’s financial expansion phase constructed across its periphery.</p>
 <p><strong>The second moment</strong> (1912-1956) coincided with the American cycle’s ascent and the British cycle’s terminal crisis. The Protectorate restructured Morocco’s productive geography to serve French metropolitan accumulation: phosphate extraction, commercial agriculture on the Atlantic plains, minimal industrial development. The <em>Maroc utile</em> distinction was not a geographic discovery but a political allocation of infrastructure that concentrated accumulation potential in the Atlantic corridor and simultaneously converted interior Morocco into a labour reservoir. This spatial economy was rational from the perspective of French metropolitan capital in the American cycle’s material expansion phase, which was rebuilding Europe’s industrial capacity and needed raw materials and labour.</p>
@@ -424,23 +592,23 @@ The purpose of this concluding chapter
 <hr>
 </section>
 </section>
-<section id="sec-polanyi-ch19hc" class="level1" data-number="25">
-<h1 data-number="25"><span class="header-section-number">25</span> Part III — Polanyi’s Double Movement and the Social Contract</h1>
-<section id="sec-desencastrement-ch19hc" class="level2" data-number="25.1">
-<h2 data-number="25.1" class="anchored" data-anchor-id="sec-desencastrement-ch19hc"><span class="header-section-number">25.1</span> The disembedding and re-embedding of the market</h2>
+<section id="sec-polanyi-ch19hc" class="level1">
+<h1>Part III — Polanyi’s Double Movement and the Social Contract</h1>
+<section id="sec-desencastrement-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-desencastrement-ch19hc">The disembedding and re-embedding of the market</h2>
 <p>Karl Polanyi’s <em>The Great Transformation</em> (1944) provided a reading of 19th-century capitalism that remains as analytically powerful as when written. Polanyi argued that the attempt to create a self-regulating market, a market for labour, land, and money governed entirely by price signals without social or institutional embedding, was a historical experiment that generated its own destruction. The social dislocations produced by the “disembedding” of economic activity from social and moral constraints provoked a counter-movement of social protection: labour legislation, social insurance, banking regulation, agricultural supports. The 20th century was the history of this double movement: the expansion of market mechanisms followed by social protection reactions.</p>
 <p>Polanyi’s framework illuminates the Washington Consensus and its aftermath with particular clarity. The structural adjustment programmes of the 1980s-1990s were a deliberate attempt to disembed markets from national social protections: reducing subsidies, privatising public enterprises, removing capital controls, liberalising labour markets. The social dislocations they produced, rising inequality, declining formal employment, withdrawal of public services, generated the backlash that Rodrik theorises as the political limits of hyperglobalisation.</p>
 <p>For Morocco, the Polanyi reading has a direct domestic application. The progressive dismantling of Morocco’s social compact, bread subsidies, price controls on basic necessities, public enterprise employment guarantees, under structural adjustment in the 1980s and its aftermath has produced a social disembedding whose full political consequences have not yet been absorbed. The 2011 reform pressures, the Hirak movements in peripheral regions, and the persistent political salience of social equity are expressions of the Polanyian counter-movement: society demanding re-embedding of economic activity in social and moral constraints.</p>
 <p>Morocco’s 2021-2025 social protection reform is the most significant attempt at re-embedding in the post-adjustment era: extending health insurance, building cash transfer infrastructure, moving from universal product subsidies toward targeted household transfers. If this re-embedding succeeds, if it creates a genuine social compact that distributes the gains from Morocco’s productive transformation more broadly, it will address the social contract deficit that the adjustment era created. If it fails, if the RSU targeting generates exclusions, if fiscal constraints limit its reach, if service quality fails to equalise, the Polanyian counter-movement will find other political expressions.</p>
 </section>
-<section id="sec-tension-ch19hc" class="level2" data-number="25.2">
-<h2 data-number="25.2" class="anchored" data-anchor-id="sec-tension-ch19hc"><span class="header-section-number">25.2</span> The structural tension at the heart of development</h2>
+<section id="sec-tension-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-tension-ch19hc">The structural tension at the heart of development</h2>
 <p>The Polanyi framework reveals a structural tension at the heart of Morocco’s development challenge that no policy can fully resolve: the productive transformation that development requires, structural adjustment of productive capabilities, reallocation of labour from low-productivity to high-productivity activities, integration into global value chains, generates social disruptions that destabilise the social compact that productive transformation requires.</p>
 <p>Workers displaced from declining sectors by trade and technological change need social protection and retraining that only a functioning state can provide, but the fiscal constraints that trade integration imposes limit the state’s capacity to provide them. Communities that lose economic anchors to deindustrialisation need coordinated public investment to rebuild their economic base, but the spatial concentration logic of market economies pulls investment toward already-prosperous centres. The intergenerational human capital investment that sustaining transformation requires produces returns only after a generation, but political economy operates on electoral cycles.</p>
 <p>These tensions cannot be dissolved; they must be managed. Managing them requires exactly the institutions this book has analysed: credible social protection that cushions transition costs, industrial policy that coordinates productive transformation without creating permanent rents, territorial policy that builds economic capability in lagging regions rather than only compensating their population for the cost of concentration, and a fiscal system that captures enough of the gains from growth to finance the public investments that growth requires.</p>
 </section>
-<section id="sec-scenarios-ch19hc" class="level2" data-number="25.3">
-<h2 data-number="25.3" class="anchored" data-anchor-id="sec-scenarios-ch19hc"><span class="header-section-number">25.3</span> The transition scenarios and Morocco’s strategic choice space</h2>
+<section id="sec-scenarios-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-scenarios-ch19hc">The transition scenarios and Morocco’s strategic choice space</h2>
 <p>Arrighi and Wallerstein agree that we inhabit a historical bifurcation: a moment when multiple trajectories of the world order are simultaneously possible and when the outcome depends on the balance of forces and the quality of collective organisation. For Morocco, the strategic question is not which great power to align with but how to position itself to capture value from the transition whatever trajectory it follows.</p>
 <p>Three scenarios frame the analytical range.</p>
 <p><strong>Scenario one: Chinese hegemonic cycle.</strong> China consolidates productive supremacy in advanced manufacturing (electric vehicles, semiconductors, renewable energy equipment, AI systems), the renminbi progressively internationalises, and the Belt and Road Initiative matures into a Chinese-centred institutional framework. For Morocco, this scenario implies: growing Chinese investment in strategic Moroccan assets (energy, ports, digital infrastructure); potential dependence on Chinese technology standards that could constrain relationships with European partners; and a broader space for South-South economic partnerships that Chinese hegemony would likely facilitate. The strategic risk: reproducing the structural dependency dynamic that characterised Morocco’s integration into the British and American cycles, but now centred on Beijing rather than London or Washington.</p>
@@ -450,18 +618,18 @@ The purpose of this concluding chapter
 <hr>
 </section>
 </section>
-<section id="sec-siecle-ch19hc" class="level1" data-number="26">
-<h1 data-number="26"><span class="header-section-number">26</span> Part IV — Morocco’s Long Century</h1>
-<section id="sec-trois-moments-ch19hc" class="level2" data-number="26.1">
-<h2 data-number="26.1" class="anchored" data-anchor-id="sec-trois-moments-ch19hc"><span class="header-section-number">26.1</span> Three historical moments of integration</h2>
+<section id="sec-siecle-ch19hc" class="level1">
+<h1>Part IV — Morocco’s Long Century</h1>
+<section id="sec-trois-moments-historiques-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-trois-moments-historiques-ch19hc">Three historical moments of integration</h2>
 <p>Morocco’s integration into the world capitalist economy has occurred in three distinct moments, each corresponding to a phase of the hegemonic cycle in which it occurred.</p>
 <p>The <strong>first moment</strong> (19th-century commercial penetration, 1830-1912) occurred during the late British cycle, as European commercial capital, principally French and British, extended its reach into Mediterranean peripheries through unequal treaties, debt leverage, and commercial presence. Morocco signed the Treaty of Fez in 1912 as a semi-peripheral country whose fiscal dependence on European creditors had progressively limited its sovereign economic policy. This is not primarily a story of external aggression, it is a story of the structural dynamics through which European capitalist expansion systematically converted independent trading polities into dependent zones of accumulation.</p>
 <p>The <strong>second moment</strong> (the Protectorate, 1912-1956) coincided with the late British cycle’s terminal crisis and the American cycle’s ascent. The colonial economy deliberately restructured Morocco’s productive geography (the <em>Maroc utile</em> distinction analysed in Chapter 17) and its commodity structure (phosphate extraction, commercial agriculture, minimal industrial development) to serve French metropolitan accumulation while providing the social stability on which colonial administration depended.</p>
 <p>The <strong>third moment</strong> (post-independence integration, 1956-present) occurred during the American cycle’s material expansion phase and then its financial expansion phase. Morocco’s structural adjustment programmes were imposed during the Volcker shock’s global balance-of-payments crisis, the moment when the American cycle’s financial expansion phase transferred its adjustment costs to peripheral debtors. Morocco’s subsequent insertion into European automotive and aerospace value chains occurred during the phase when European firms were reorganising their supply chains toward low-cost adjacent locations in response to Asian competitive pressure.</p>
 <p>Each integration moment has been shaped by the hegemonic cycle’s dynamics more than by Morocco’s autonomous strategic choices. But each has also left structural residues, capabilities, institutions, social formations, that have shaped the possibilities available in subsequent moments. The phosphate industry nationalised in 1975 is the accumulated legacy of colonial extraction reclaimed and transformed. The automotive cluster is the accumulated legacy of structural adjustment’s export orientation redirected toward higher-complexity activities. Each strategic choice builds on the inheritance of choices made by predecessors operating in different hegemonic contexts.</p>
 </section>
-<section id="sec-siecle-maroc-ch19hc" class="level2" data-number="26.2">
-<h2 data-number="26.2" class="anchored" data-anchor-id="sec-siecle-maroc-ch19hc"><span class="header-section-number">26.2</span> What the Moroccan century requires</h2>
+<section id="sec-siecle-maroc-ch19hc" class="level2">
+<h2 class="anchored" data-anchor-id="sec-siecle-maroc-ch19hc">What the Moroccan century requires</h2>
 <p>The analytical journey of this book converges on a set of structural requirements for Morocco’s long-run development that transcend the policy cycles of any single government or the strategic horizon of any single business plan.</p>
 <p><strong>Productive deepening as the condition for everything else.</strong> The book’s central analytical finding is that Morocco’s challenge is not primarily macroeconomic (inflation, fiscal balance, exchange rate) or sectoral (which industries to promote) but structural: the gap between the complexity of activities Morocco’s economy performs and the complexity of activities that would sustain Morocco’s development over the coming generation. Closing this gap requires a sustained industrial policy logic that is now well-understood analytically and has been demonstrated as feasible in Morocco’s automotive and aerospace experience. What it requires beyond the analytical is political: the coalition to implement performance conditionality against the resistance of beneficiaries of the status quo.</p>
 <p><strong>Social contract reconstruction as the condition for political sustainability.</strong> Morocco’s development model cannot sustain high growth rates without a more inclusive distribution of their gains. The NMD 2021 acknowledged this. The social protection reform operationalises it. But the reform’s ambition far exceeds its current fiscal capacity, and the political sustainability of the required tax reforms, broadening the base toward capital and informal income, requires a narrative of shared benefit that only visible redistribution can create. The Polanyian double movement will not wait indefinitely for the re-embedding to materialise.</p>
@@ -471,8 +639,8 @@ The purpose of this concluding chapter
 <hr>
 </section>
 </section>
-<section id="sec-epilogue-ch19hc" class="level1" data-number="27">
-<h1 data-number="27"><span class="header-section-number">27</span> Epilogue: The Signature</h1>
+<section id="sec-epilogue-ch19hc" class="level1">
+<h1>Epilogue: The Signature</h1>
 <p>This book opened with an ambition that deserves reiteration as a conclusion: <em>navigating the complexity of the phenomenon through the simplicity of the statement</em>.</p>
 <p>The complexity is genuine. Morocco’s economy operates simultaneously at the level of a small textile firm in Fès navigating credit constraints and supply chain disruption, at the level of OCP’s global fertiliser market positioning, at the level of BAM’s exchange rate liberalisation calibration, and at the level of the structural dynamics through which the Atlantic coast concentrates opportunity while the Rif and the Atlas watch their young people leave. These levels are analytically distinct, they require different tools, different data, different conceptual frameworks. But they are causally connected: the small firm’s credit constraint is partly a consequence of the banking system’s orientation toward large connected clients; OCP’s positioning is partly a consequence of the colonial infrastructure that concentrated phosphate development on the Atlantic coast; BAM’s liberalisation is partly constrained by the dollar system’s asymmetries; and the Rif’s outmigration is partly the accumulated result of seven decades of investment patterns that reproduced the Protectorate’s spatial economy.</p>
 <p>The simplicity is a methodological commitment, not a denial of complexity. It is the conviction that the most powerful analytical insights are those that reveal structural patterns with sufficient clarity that they can guide action, not by providing algorithms but by sharpening perception. When a student understands Myrdal’s backwash mechanism, they see differently the rural-urban migration statistics they read in HCP reports. When a policymaker understands Fisher’s debt deflation spiral, they respond differently to the first signs of asset price contraction. When a business strategist understands Hirschman’s inducement linkages, they design differently the supplier development programme their firm needs.</p>
@@ -502,8 +670,8 @@ The book’s permanent acquisitions
 </div>
 <hr>
 </section>
-<section id="sec-refs-ch19hc" class="level1 appendix" data-number="28">
-<h1 class="appendix" data-number="28"><span class="header-section-number">28</span> References for Further Exploration</h1>
+<section id="sec-refs-ch19hc" class="level1 appendix">
+<h1 class="appendix">References for Further Exploration</h1>
 <p><strong>Arrighi, G. (1994). <em>The Long Twentieth Century</em>. Verso.</strong> The intellectual core of this chapter.</p>
 <p><strong>Braudel, F. (1985). <em>The Dynamics of Capitalism</em>. Johns Hopkins University Press.</strong> The short accessible entry point to Braudel’s framework.</p>
 <p><strong>Polanyi, K. (1944). <em>The Great Transformation</em>. Beacon Press.</strong> On the double movement and the social limits of market disembedding.</p>
@@ -517,8 +685,67 @@ The book’s permanent acquisitions
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -937,13 +1164,13 @@ The book’s permanent acquisitions
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -952,5 +1179,3 @@ The book’s permanent acquisitions
 
 
 </body></html>
-
-

@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/glossary.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -38,10 +37,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -103,8 +106,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -129,6 +293,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -285,7 +452,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -324,17 +491,18 @@ window.Quarto = {
     <h2 id="toc-title">Table of contents</h2>
    
   <ul>
-  <li><a href="#i-microeconomic-foundations" id="toc-i-microeconomic-foundations" class="nav-link active" data-scroll-target="#i-microeconomic-foundations"><span class="header-section-number">22.1</span> I — Microeconomic Foundations</a></li>
-  <li><a href="#ii-the-firm-and-markets" id="toc-ii-the-firm-and-markets" class="nav-link" data-scroll-target="#ii-the-firm-and-markets"><span class="header-section-number">22.2</span> II — The Firm and Markets</a></li>
-  <li><a href="#iii-money-finance-and-macroeconomics" id="toc-iii-money-finance-and-macroeconomics" class="nav-link" data-scroll-target="#iii-money-finance-and-macroeconomics"><span class="header-section-number">22.3</span> III — Money, Finance, and Macroeconomics</a></li>
-  <li><a href="#iv-international-economics-and-development" id="toc-iv-international-economics-and-development" class="nav-link" data-scroll-target="#iv-international-economics-and-development"><span class="header-section-number">22.4</span> IV — International Economics and Development</a></li>
-  <li><a href="#v-development-and-structural-transformation" id="toc-v-development-and-structural-transformation" class="nav-link" data-scroll-target="#v-development-and-structural-transformation"><span class="header-section-number">22.5</span> V — Development and Structural Transformation</a></li>
-  <li><a href="#vi-the-long-run-and-political-economy" id="toc-vi-the-long-run-and-political-economy" class="nav-link" data-scroll-target="#vi-the-long-run-and-political-economy"><span class="header-section-number">22.6</span> VI — The Long Run and Political Economy</a></li>
+  <li><a href="#i-microeconomic-foundations" id="toc-i-microeconomic-foundations" class="nav-link active" data-scroll-target="#i-microeconomic-foundations">I — Microeconomic Foundations</a></li>
+  <li><a href="#ii-the-firm-and-markets" id="toc-ii-the-firm-and-markets" class="nav-link" data-scroll-target="#ii-the-firm-and-markets">II — The Firm and Markets</a></li>
+  <li><a href="#iii-money-finance-and-macroeconomics" id="toc-iii-money-finance-and-macroeconomics" class="nav-link" data-scroll-target="#iii-money-finance-and-macroeconomics">III — Money, Finance, and Macroeconomics</a></li>
+  <li><a href="#iv-international-economics-and-development" id="toc-iv-international-economics-and-development" class="nav-link" data-scroll-target="#iv-international-economics-and-development">IV — International Economics and Development</a></li>
+  <li><a href="#v-development-and-structural-transformation" id="toc-v-development-and-structural-transformation" class="nav-link" data-scroll-target="#v-development-and-structural-transformation">V — Development and Structural Transformation</a></li>
+  <li><a href="#vi-the-long-run-and-political-economy" id="toc-vi-the-long-run-and-political-economy" class="nav-link" data-scroll-target="#vi-the-long-run-and-political-economy">VI — The Long Run and Political Economy</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
@@ -362,8 +530,8 @@ window.Quarto = {
 <p>This glossary collects the analytical vocabulary built across the book’s nineteen chapters. Each entry states the concept, gives its precise economic meaning, and notes where in the book it is developed in depth. Entries that have particular Moroccan relevance include an empirical reference.</p>
 <p>The organisation follows the book’s intellectual architecture: microeconomic foundations first, then the macroeconomy, then international economics and political economy, then the long run. Alphabetical ordering within each section.</p>
 <hr>
-<section id="i-microeconomic-foundations" class="level2" data-number="22.1">
-<h2 data-number="22.1" class="anchored" data-anchor-id="i-microeconomic-foundations"><span class="header-section-number">22.1</span> I — Microeconomic Foundations</h2>
+<section id="i-microeconomic-foundations" class="level2">
+<h2 class="anchored" data-anchor-id="i-microeconomic-foundations">I — Microeconomic Foundations</h2>
 <p><strong>Adverse selection</strong>: the pre-contractual market failure arising when one party has information the other lacks, causing the market to attract disproportionately the unfavourable types. The classic case is Akerlof’s used car market (lemons problem): sellers know quality, buyers do not, so only low-quality goods trade. In credit markets: banks unable to distinguish creditworthy from uncreditworthy borrowers raise interest rates, which drives out the creditworthy (who have better outside options) and attracts the uncreditworthy. → Ch7</p>
 <p><strong>Bid rent</strong>: the maximum rent an economic activity is willing to pay at each location from the city centre, reflecting the productivity premium of proximity to the market minus transport costs. At each point in space, the highest-bid-rent activity wins. Generates von Thünen’s concentric ring structure. → Ch17</p>
 <p><strong>Coase theorem</strong>: Ronald Coase’s result that when property rights are clearly assigned and transaction costs are zero, parties will bargain their way to an efficient allocation regardless of who holds the initial right. Its practical importance is the contrapositive: where externalities are not resolved, it is because transaction costs prevent the bargain, not because people are irrational. Motivates institutional design to reduce transaction costs. → Ch5</p>
@@ -379,8 +547,8 @@ window.Quarto = {
 <p><strong>Transaction cost</strong>: the cost of executing an economic exchange beyond the direct production cost, search and information costs, negotiation and contracting costs, enforcement and monitoring costs. Coase showed that firm boundaries are determined by comparing the transaction costs of market exchange versus internal organisation. Williamson extended this to the theory of the firm and contracts. → Ch3</p>
 <hr>
 </section>
-<section id="ii-the-firm-and-markets" class="level2" data-number="22.2">
-<h2 data-number="22.2" class="anchored" data-anchor-id="ii-the-firm-and-markets"><span class="header-section-number">22.2</span> II — The Firm and Markets</h2>
+<section id="ii-the-firm-and-markets" class="level2">
+<h2 class="anchored" data-anchor-id="ii-the-firm-and-markets">II — The Firm and Markets</h2>
 <p><strong>Creative destruction</strong>: Joseph Schumpeter’s concept of the process through which capitalist innovation continuously destroys existing economic structures (firms, industries, skills, institutions) while creating new ones. The locomotive that eliminates the stagecoach; the internet that eliminates the travel agency; AI that threatens the entry-level analyst. The aggregate welfare result is positive (productivity rises) but the distribution of costs and gains is unequal and the transition costs are real. → Ch3</p>
 <p><strong>Degree of monopoly (Kalecki)</strong>: Michał Kalecki’s concept of the markup that firms can sustain above variable costs, determined by market structure and the elasticity of demand. Price equals <span class="math inline">\((1+m) \times CUV\)</span> where <span class="math inline">\(m\)</span> is the degree of monopoly. More concentrated industries have higher degrees of monopoly, higher markups, and therefore lower wage shares in value added. The functional distribution of income is an aggregate consequence of the distribution of market power. → Ch4</p>
 <p><strong>Dominant strategy</strong>: in game theory, a strategy that is optimal for a player regardless of what the opponent plays. The prisoner’s dilemma is defined by the property that “defect” is a dominant strategy for both players even though mutual cooperation would make both better off. Dominant strategy equilibria are more robust predictions than Nash equilibria requiring more coordination assumptions. → Ch4</p>
@@ -391,8 +559,8 @@ window.Quarto = {
 <p><strong>Vertical integration</strong>: the extension of a firm’s activities upstream (toward inputs) or downstream (toward customers). Motivated by: eliminating holdup risk on specific investments, appropriating rents from supplier or customer market power, securing access to inputs or distribution channels, and internalising transaction costs. Disadvantage: loss of specialisation benefits and high-powered market incentives. → Ch3</p>
 <hr>
 </section>
-<section id="iii-money-finance-and-macroeconomics" class="level2" data-number="22.3">
-<h2 data-number="22.3" class="anchored" data-anchor-id="iii-money-finance-and-macroeconomics"><span class="header-section-number">22.3</span> III — Money, Finance, and Macroeconomics</h2>
+<section id="iii-money-finance-and-macroeconomics" class="level2">
+<h2 class="anchored" data-anchor-id="iii-money-finance-and-macroeconomics">III — Money, Finance, and Macroeconomics</h2>
 <p><strong>Animal spirits</strong>: Keynes’s term for the autonomous fluctuations in investment driven by expectations about future profitability that are not fully grounded in calculable probabilities. Investment decisions are made under fundamental uncertainty, not just quantifiable risk, so they are inevitably influenced by the confidence and optimism of entrepreneurs that cannot be reduced to expected value calculations. → Ch7</p>
 <p><strong>CAPM (Capital Asset Pricing Model)</strong>: the model (Sharpe 1964) specifying that the expected return on any asset equals the risk-free rate plus a risk premium proportional to the asset’s beta, its covariance with the market portfolio divided by market variance: <span class="math inline">\(E(r_i) = r_f + \beta_i [E(r_m) - r_f]\)</span>. The foundational model for asset pricing and the cost of capital in corporate finance. Its limitations: betas estimated from historical data, correlations rise toward 1 in crises, and empirical anomalies (size effect, value premium) suggest other risk factors matter. → Ch8</p>
 <p><strong>Crowding out</strong>: the mechanism through which government borrowing raises interest rates (or competes for a fixed supply of loanable funds), reducing private investment. Complete crowding out (one dollar of government borrowing eliminates one dollar of private investment) is the extreme case; partial crowding out is more plausible; zero crowding out occurs at the zero lower bound. The degree of crowding out determines the fiscal multiplier. → Ch9</p>
@@ -407,8 +575,8 @@ window.Quarto = {
 <p><strong>Solow residual</strong>: the portion of output growth unexplained by measured factor input growth, often called “total factor productivity” growth or “the measure of our ignorance” (Abramovitz). Decomposing growth: <span class="math inline">\(\Delta Y/Y = \alpha \Delta K/K + (1-\alpha) \Delta L/L + A\)</span> where <span class="math inline">\(A\)</span> is the residual. In practice, it captures technological progress, organisational improvement, allocative efficiency gains, and all measurement errors. → Ch10</p>
 <hr>
 </section>
-<section id="iv-international-economics-and-development" class="level2" data-number="22.4">
-<h2 data-number="22.4" class="anchored" data-anchor-id="iv-international-economics-and-development"><span class="header-section-number">22.4</span> IV — International Economics and Development</h2>
+<section id="iv-international-economics-and-development" class="level2">
+<h2 class="anchored" data-anchor-id="iv-international-economics-and-development">IV — International Economics and Development</h2>
 <p><strong>AfCFTA (African Continental Free Trade Area)</strong>: the free trade agreement covering 55 African Union member states, operational since 2021. Creates in legal architecture the world’s largest preferential trade area by number of countries. Its economic impact depends on implementation, tariff reduction, rules of origin, customs simplification, and whether production investment follows to create intra-African value chains. Morocco is a member and has positioned itself as a logistics and financial hub for AfCFTA integration. → Ch11, Ch18</p>
 <p><strong>Bancor</strong>: Keynes’s proposed supranational currency for the post-WWII monetary system, to be issued by an International Clearing Union. The key features: both surplus and deficit countries would face charges on their imbalances, creating symmetric adjustment pressure; no national currency would hold reserve status; and the system would be genuinely multilateral rather than hegemonic. The American delegation (Harry Dexter White) rejected it at Bretton Woods. The bancor remains the intellectual benchmark for equitable international monetary reform. → Ch12</p>
 <p><strong>Balance of payments constraint (Thirlwall)</strong>: A.P. Thirlwall’s result that a country’s long-run sustainable growth rate is determined by the ratio of its export income elasticity to its import income elasticity, multiplied by world growth: <span class="math inline">\(g^* = (\varepsilon \cdot g_w) / \pi\)</span>. Countries with more income-elastic exports (sophisticated manufactured goods) have higher sustainable growth rates. Morocco’s estimated <span class="math inline">\(g^*\)</span> of approximately 2% requires industrial upgrading toward higher income-elasticity exports to be raised. → Ch12</p>
@@ -426,8 +594,8 @@ window.Quarto = {
 <p><strong>Triffin dilemma</strong>: Robert Triffin’s identification of the structural contradiction in the dollar reserve standard: the world needs growing dollar supplies for trade and reserves, which requires US current account deficits, which progressively undermines confidence in dollar-gold convertibility. Nixon’s 1971 gold window closure resolved the contradiction by abandoning the gold anchor, converting the dilemma into the “exorbitant privilege”: the US can run indefinite deficits because its debts are others’ reserves. → Ch12</p>
 <hr>
 </section>
-<section id="v-development-and-structural-transformation" class="level2" data-number="22.5">
-<h2 data-number="22.5" class="anchored" data-anchor-id="v-development-and-structural-transformation"><span class="header-section-number">22.5</span> V — Development and Structural Transformation</h2>
+<section id="v-development-and-structural-transformation" class="level2">
+<h2 class="anchored" data-anchor-id="v-development-and-structural-transformation">V — Development and Structural Transformation</h2>
 <p><strong>Backward and forward linkages (Hirschman)</strong>: a sector creates backward linkages when its demand pulls in suppliers of inputs (automotive creates wiring harnesses, stamped metal, paint demand); it creates forward linkages when its output serves as input to other industries (phosphoric acid creates fertiliser, specialty chemical, battery materials potential). Sectors with strong linkages induce complementary investment, Hirschman’s “multidimensional conspiracy in favour of development.” Sectors without linkages are enclaves. → Ch11</p>
 <p><strong>Cumulative causation (Myrdal)</strong>: the mechanism through which an initial regional advantage triggers a self-reinforcing spiral: more firms attract more workers (whose spending supports local services, whose taxes fund public services, which attracts more firms). Symmetric downward spiral for disadvantaged regions. Myrdal’s backwash effects (capital and talent drained to the prosperous region) typically dominate spread effects (demand and technology diffusing from centre to periphery) in poorly integrated economies. → Ch17</p>
 <p><strong>Embedded autonomy (Evans)</strong>: Peter Evans’s concept of the institutional condition that allows effective industrial policy: state agencies that are simultaneously embedded in industrial networks (understanding technical realities, firm constraints, market dynamics) and autonomous from capture by those networks (able to enforce performance conditions and withdraw support from non-performers). The developmental states that succeeded (Korea’s EPB, Singapore’s EDB, Taiwan’s CEPD) combined both dimensions. → Ch11</p>
@@ -439,8 +607,8 @@ window.Quarto = {
 <p><strong>Verdoorn’s Law</strong>: the empirical regularity (Verdoorn 1949, popularised by Kaldor) that manufacturing productivity growth is positively correlated with manufacturing output growth. The coefficient (Verdoorn coefficient) estimated at approximately 0.5: a 2% faster manufacturing output growth generates approximately 1% faster productivity growth. Reflects: scale economies, learning-by-doing, and the innovation pressure that competitive manufacturing creates. The mechanism through which industrial clusters become dynamically more productive over time. → Ch11, Ch17</p>
 <hr>
 </section>
-<section id="vi-the-long-run-and-political-economy" class="level2" data-number="22.6">
-<h2 data-number="22.6" class="anchored" data-anchor-id="vi-the-long-run-and-political-economy"><span class="header-section-number">22.6</span> VI — The Long Run and Political Economy</h2>
+<section id="vi-the-long-run-and-political-economy" class="level2">
+<h2 class="anchored" data-anchor-id="vi-the-long-run-and-political-economy">VI — The Long Run and Political Economy</h2>
 <p><strong>Accumulation by dispossession (Harvey)</strong>: David Harvey’s extension of Marx’s primitive accumulation concept to contemporary capitalism: the extraction of value not through the production process but through the privatisation of previously common goods, the monetisation of social relationships, and the use of financial crises to transfer assets from debtors to creditors at below-market prices. The structural adjustment programmes that transferred public enterprises to private capital at fire-sale prices, and the debt crisis dynamics that generated those programmes, are canonical examples. → Ch16</p>
 <p><strong>Arrighi’s systemic cycles</strong>: the succession of hegemonic centres in capitalist history (Genoese, Dutch, British, American), each following a material expansion (M-C phase: productive investment) then financial expansion (C-M’ phase: financial extraction) pattern. The signal crisis marks the end of productive supremacy; the terminal crisis marks the end of financial leverage. We are in the late financial expansion phase of the American cycle; China is in the material expansion phase of the potential next cycle. → Ch16, Ch19</p>
 <p><strong>Braudel’s three temporal registers</strong>: longue durée (geographic and structural constraints, centuries-long duration), conjoncture (economic cycles and institutional regimes, decade-to-generation duration), and événement (political events and economic shocks, months-to-years duration). Each register requires different analytical instruments; strategic economic analysis must address all three. → Ch16, Ch19</p>
@@ -455,8 +623,67 @@ window.Quarto = {
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -872,13 +1099,13 @@ window.Quarto = {
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -887,5 +1114,3 @@ window.Quarto = {
 
 
 </body></html>
-
-

@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch11-structural-transformation.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,49 +493,50 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch11st" id="toc-sec-carte-ch11st" class="nav-link active" data-scroll-target="#sec-carte-ch11st">The Map</a></li>
-  <li><a href="#sec-anatomie-ch11st" id="toc-sec-anatomie-ch11st" class="nav-link" data-scroll-target="#sec-anatomie-ch11st"><span class="header-section-number">14</span> Part I — The Anatomy of Structural Change</a>
+  <li><a href="#sec-anatomie-ch11st" id="toc-sec-anatomie-ch11st" class="nav-link" data-scroll-target="#sec-anatomie-ch11st">Part I — The Anatomy of Structural Change</a>
   <ul class="collapse">
-  <li><a href="#sec-mesurer-ch11st" id="toc-sec-mesurer-ch11st" class="nav-link" data-scroll-target="#sec-mesurer-ch11st"><span class="header-section-number">14.1</span> What structural change measures</a></li>
-  <li><a href="#sec-verdoorn-ch11st" id="toc-sec-verdoorn-ch11st" class="nav-link" data-scroll-target="#sec-verdoorn-ch11st"><span class="header-section-number">14.2</span> The Verdoorn mechanism in Morocco: where it operates and where it stalls</a></li>
-  <li><a href="#sec-desindu-ch11st" id="toc-sec-desindu-ch11st" class="nav-link" data-scroll-target="#sec-desindu-ch11st"><span class="header-section-number">14.3</span> The trap of negative reallocation: premature deindustrialisation</a></li>
-  <li><a href="#sec-kaldor-ch11st" id="toc-sec-kaldor-ch11st" class="nav-link" data-scroll-target="#sec-kaldor-ch11st"><span class="header-section-number">14.4</span> Why manufacturing remains central: Kaldor’s three laws</a></li>
+  <li><a href="#sec-mesurer-ch11st" id="toc-sec-mesurer-ch11st" class="nav-link" data-scroll-target="#sec-mesurer-ch11st">What structural change measures</a></li>
+  <li><a href="#sec-verdoorn-ch11st" id="toc-sec-verdoorn-ch11st" class="nav-link" data-scroll-target="#sec-verdoorn-ch11st">The Verdoorn mechanism in Morocco: where it operates and where it stalls</a></li>
+  <li><a href="#sec-desindu-ch11st" id="toc-sec-desindu-ch11st" class="nav-link" data-scroll-target="#sec-desindu-ch11st">The trap of negative reallocation: premature deindustrialisation</a></li>
+  <li><a href="#sec-kaldor-ch11st" id="toc-sec-kaldor-ch11st" class="nav-link" data-scroll-target="#sec-kaldor-ch11st">Why manufacturing remains central: Kaldor’s three laws</a></li>
   </ul></li>
-  <li><a href="#sec-product-space-ch11st" id="toc-sec-product-space-ch11st" class="nav-link" data-scroll-target="#sec-product-space-ch11st"><span class="header-section-number">15</span> Part II — The Product Space and Economic Complexity</a>
+  <li><a href="#sec-product-space-ch11st" id="toc-sec-product-space-ch11st" class="nav-link" data-scroll-target="#sec-product-space-ch11st">Part II — The Product Space and Economic Complexity</a>
   <ul class="collapse">
-  <li><a href="#sec-capabilities-ch11st" id="toc-sec-capabilities-ch11st" class="nav-link" data-scroll-target="#sec-capabilities-ch11st"><span class="header-section-number">15.1</span> Capabilities, not sectors, as the unit of analysis</a></li>
-  <li><a href="#sec-eci-ch11st" id="toc-sec-eci-ch11st" class="nav-link" data-scroll-target="#sec-eci-ch11st"><span class="header-section-number">15.2</span> The Economic Complexity Index and Morocco’s position</a></li>
+  <li><a href="#sec-capabilities-ch11st" id="toc-sec-capabilities-ch11st" class="nav-link" data-scroll-target="#sec-capabilities-ch11st">Capabilities, not sectors, as the unit of analysis</a></li>
+  <li><a href="#sec-eci-ch11st" id="toc-sec-eci-ch11st" class="nav-link" data-scroll-target="#sec-eci-ch11st">The Economic Complexity Index and Morocco’s position</a></li>
   </ul></li>
-  <li><a href="#sec-hirschman-ch11st" id="toc-sec-hirschman-ch11st" class="nav-link" data-scroll-target="#sec-hirschman-ch11st"><span class="header-section-number">16</span> Part III — Selecting Sectors: Hirschman’s Inducement Logic</a>
+  <li><a href="#sec-hirschman-ch11st" id="toc-sec-hirschman-ch11st" class="nav-link" data-scroll-target="#sec-hirschman-ch11st">Part III — Selecting Sectors: Hirschman’s Inducement Logic</a>
   <ul class="collapse">
-  <li><a href="#sec-liens-ch11st" id="toc-sec-liens-ch11st" class="nav-link" data-scroll-target="#sec-liens-ch11st"><span class="header-section-number">16.1</span> Backward and forward linkages</a></li>
-  <li><a href="#sec-vernon-ch11st" id="toc-sec-vernon-ch11st" class="nav-link" data-scroll-target="#sec-vernon-ch11st"><span class="header-section-number">16.2</span> The Vernon cycle: timing matters as much as sector</a></li>
-  <li><a href="#sec-grille-ch11st" id="toc-sec-grille-ch11st" class="nav-link" data-scroll-target="#sec-grille-ch11st"><span class="header-section-number">16.3</span> The seven-criterion diagnostic grid</a></li>
+  <li><a href="#sec-liens-ch11st" id="toc-sec-liens-ch11st" class="nav-link" data-scroll-target="#sec-liens-ch11st">Backward and forward linkages</a></li>
+  <li><a href="#sec-vernon-ch11st" id="toc-sec-vernon-ch11st" class="nav-link" data-scroll-target="#sec-vernon-ch11st">The Vernon cycle: timing matters as much as sector</a></li>
+  <li><a href="#sec-grille-ch11st" id="toc-sec-grille-ch11st" class="nav-link" data-scroll-target="#sec-grille-ch11st">The seven-criterion diagnostic grid</a></li>
   </ul></li>
-  <li><a href="#sec-politique-ch11st" id="toc-sec-politique-ch11st" class="nav-link" data-scroll-target="#sec-politique-ch11st"><span class="header-section-number">17</span> Part IV — Industrial Policy: Four Conditions and Four State Roles</a>
+  <li><a href="#sec-politique-ch11st" id="toc-sec-politique-ch11st" class="nav-link" data-scroll-target="#sec-politique-ch11st">Part IV — Industrial Policy: Four Conditions and Four State Roles</a>
   <ul class="collapse">
-  <li><a href="#sec-plans-ch11st" id="toc-sec-plans-ch11st" class="nav-link" data-scroll-target="#sec-plans-ch11st"><span class="header-section-number">17.1</span> Why industrial plans are not enough</a></li>
-  <li><a href="#sec-quatre-conditions-ch11st" id="toc-sec-quatre-conditions-ch11st" class="nav-link" data-scroll-target="#sec-quatre-conditions-ch11st"><span class="header-section-number">17.2</span> The four conditions</a></li>
-  <li><a href="#sec-evans-ch11st" id="toc-sec-evans-ch11st" class="nav-link" data-scroll-target="#sec-evans-ch11st"><span class="header-section-number">17.3</span> Evans’s four roles of the developmental state</a></li>
-  <li><a href="#sec-autonomie-ch11st" id="toc-sec-autonomie-ch11st" class="nav-link" data-scroll-target="#sec-autonomie-ch11st"><span class="header-section-number">17.4</span> Embedded autonomy: the institutional condition</a></li>
-  <li><a href="#sec-instruments-ch11st" id="toc-sec-instruments-ch11st" class="nav-link" data-scroll-target="#sec-instruments-ch11st"><span class="header-section-number">17.5</span> The instruments palette: from theory to practice</a></li>
-  <li><a href="#sec-reciprocite-ch11st" id="toc-sec-reciprocite-ch11st" class="nav-link" data-scroll-target="#sec-reciprocite-ch11st"><span class="header-section-number">17.6</span> Reciprocity, exit, and the political economy of discipline</a></li>
+  <li><a href="#sec-plans-ch11st" id="toc-sec-plans-ch11st" class="nav-link" data-scroll-target="#sec-plans-ch11st">Why industrial plans are not enough</a></li>
+  <li><a href="#sec-quatre-conditions-ch11st" id="toc-sec-quatre-conditions-ch11st" class="nav-link" data-scroll-target="#sec-quatre-conditions-ch11st">The four conditions</a></li>
+  <li><a href="#sec-evans-ch11st" id="toc-sec-evans-ch11st" class="nav-link" data-scroll-target="#sec-evans-ch11st">Evans’s four roles of the developmental state</a></li>
+  <li><a href="#sec-autonomie-ch11st" id="toc-sec-autonomie-ch11st" class="nav-link" data-scroll-target="#sec-autonomie-ch11st">Embedded autonomy: the institutional condition</a></li>
+  <li><a href="#sec-instruments-ch11st" id="toc-sec-instruments-ch11st" class="nav-link" data-scroll-target="#sec-instruments-ch11st">The instruments palette: from theory to practice</a></li>
+  <li><a href="#sec-reciprocite-ch11st" id="toc-sec-reciprocite-ch11st" class="nav-link" data-scroll-target="#sec-reciprocite-ch11st">Reciprocity, exit, and the political economy of discipline</a></li>
   </ul></li>
-  <li><a href="#sec-hrv-ch11st" id="toc-sec-hrv-ch11st" class="nav-link" data-scroll-target="#sec-hrv-ch11st"><span class="header-section-number">18</span> Part V — Growth Diagnostics: The HRV Decision Tree</a>
+  <li><a href="#sec-hrv-ch11st" id="toc-sec-hrv-ch11st" class="nav-link" data-scroll-target="#sec-hrv-ch11st">Part V — Growth Diagnostics: The HRV Decision Tree</a>
   <ul class="collapse">
-  <li><a href="#sec-methode-hrv-ch11st" id="toc-sec-methode-hrv-ch11st" class="nav-link" data-scroll-target="#sec-methode-hrv-ch11st"><span class="header-section-number">18.1</span> The method</a></li>
-  <li><a href="#sec-hrv-maroc-ch11st" id="toc-sec-hrv-maroc-ch11st" class="nav-link" data-scroll-target="#sec-hrv-maroc-ch11st"><span class="header-section-number">18.2</span> Applied to Morocco</a></li>
-  <li><a href="#sec-comparaisons-ch11st" id="toc-sec-comparaisons-ch11st" class="nav-link" data-scroll-target="#sec-comparaisons-ch11st"><span class="header-section-number">18.3</span> The comparative lessons: Korea, Singapore, Taiwan</a></li>
-  <li><a href="#sec-triangulation-ch11st" id="toc-sec-triangulation-ch11st" class="nav-link" data-scroll-target="#sec-triangulation-ch11st"><span class="header-section-number">18.4</span> Triangulating the diagnosis: a method for practitioners</a></li>
-  <li><a href="#sec-emploi-ch11st" id="toc-sec-emploi-ch11st" class="nav-link" data-scroll-target="#sec-emploi-ch11st"><span class="header-section-number">18.5</span> Morocco’s structural challenge: the employment arithmetic</a></li>
-  <li><a href="#sec-fenetre-ch11st" id="toc-sec-fenetre-ch11st" class="nav-link" data-scroll-target="#sec-fenetre-ch11st"><span class="header-section-number">18.6</span> Morocco’s window: what the framework implies</a></li>
+  <li><a href="#sec-methode-hrv-ch11st" id="toc-sec-methode-hrv-ch11st" class="nav-link" data-scroll-target="#sec-methode-hrv-ch11st">The method</a></li>
+  <li><a href="#sec-hrv-maroc-ch11st" id="toc-sec-hrv-maroc-ch11st" class="nav-link" data-scroll-target="#sec-hrv-maroc-ch11st">Applied to Morocco</a></li>
+  <li><a href="#sec-comparaisons-ch11st" id="toc-sec-comparaisons-ch11st" class="nav-link" data-scroll-target="#sec-comparaisons-ch11st">The comparative lessons: Korea, Singapore, Taiwan</a></li>
+  <li><a href="#sec-triangulation-ch11st" id="toc-sec-triangulation-ch11st" class="nav-link" data-scroll-target="#sec-triangulation-ch11st">Triangulating the diagnosis: a method for practitioners</a></li>
+  <li><a href="#sec-emploi-ch11st" id="toc-sec-emploi-ch11st" class="nav-link" data-scroll-target="#sec-emploi-ch11st">Morocco’s structural challenge: the employment arithmetic</a></li>
+  <li><a href="#sec-fenetre-ch11st" id="toc-sec-fenetre-ch11st" class="nav-link" data-scroll-target="#sec-fenetre-ch11st">Morocco’s window: what the framework implies</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch11st" id="toc-sec-concl-ch11st" class="nav-link" data-scroll-target="#sec-concl-ch11st"><span class="header-section-number">19</span> Conclusion: The Toolkit of Transformation</a></li>
-  <li><a href="#sec-biblio-ch11st" id="toc-sec-biblio-ch11st" class="nav-link" data-scroll-target="#sec-biblio-ch11st"><span class="header-section-number">20</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch11st" id="toc-sec-concl-ch11st" class="nav-link" data-scroll-target="#sec-concl-ch11st">Conclusion: The Toolkit of Transformation</a></li>
+  <li><a href="#sec-biblio-ch11st" id="toc-sec-biblio-ch11st" class="nav-link" data-scroll-target="#sec-biblio-ch11st">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch10-growth-development.html">Part III — Development, Transformation, and Industrial Strategy</a></li><li class="breadcrumb-item"><a href="./ch11-structural-transformation.html"><span class="chapter-number">13</span>&nbsp; <span class="chapter-title">Chapter 11 — Structural Transformation: Theory, Methods, and Industrial Policy</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -423,10 +591,10 @@ The guiding thread of this chapter
 <p>The chapter advances in five movements. First, the anatomy of structural change: what the shift-share decomposition measures and why premature deindustrialisation is a specific structural risk. Second, the product space and economic complexity: the geography of capabilities and Morocco’s position within it. Third, sectoral selection: Hirschman’s inducement logic and the seven-criterion diagnostic grid. Fourth, the four conditions of effective industrial policy and the state’s four roles. Fifth, growth diagnostics: the HRV decision tree applied to Morocco.</p>
 <hr>
 </section>
-<section id="sec-anatomie-ch11st" class="level1" data-number="14">
-<h1 data-number="14"><span class="header-section-number">14</span> Part I — The Anatomy of Structural Change</h1>
-<section id="sec-mesurer-ch11st" class="level2" data-number="14.1">
-<h2 data-number="14.1" class="anchored" data-anchor-id="sec-mesurer-ch11st"><span class="header-section-number">14.1</span> What structural change measures</h2>
+<section id="sec-anatomie-ch11st" class="level1">
+<h1>Part I — The Anatomy of Structural Change</h1>
+<section id="sec-mesurer-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mesurer-ch11st">What structural change measures</h2>
 <p>Economic development is not simply more GDP: it is the reallocation of resources from low-productivity to high-productivity activities. This distinction is foundational. An economy can grow by accumulating more capital and labour within its existing structure, extensive growth, or by moving workers to where they produce more value, and by learning to produce better things, structural transformation. The fastest-growing historical episodes combined both.</p>
 <p>If <span class="math inline">\(p_i\)</span> is labour productivity in sector <span class="math inline">\(i\)</span> and <span class="math inline">\(\theta_i\)</span> the share of employment, average economy-wide productivity is <span class="math inline">\(P = \sum_i \theta_i \cdot p_i\)</span>. Margaret McMillan and Dani Rodrik formalised the decomposition of productivity growth into two components:</p>
 <p><span class="math display">\[\Delta P = \underbrace{\sum_i \theta_i \, \Delta p_i}_{\text{within-sector gains}} + \underbrace{\sum_i \Delta\theta_i \,(p_i - P_0)}_{\text{between-sector reallocation}}\]</span></p>
@@ -446,15 +614,15 @@ The grandfather farmed, the father assembled, the son engineers
 </div>
 <p>This decomposition illuminates the two routes to development. The East Asian economies that caught up most rapidly, Korea in the 1970s-1990s, China in the 1990s-2010s, combined both routes: massive within-sector productivity improvement in manufacturing <em>and</em> the displacement of tens of millions of workers from agriculture to export-oriented industry. The between-sector reallocation term was as large as the within-sector term in driving their growth.</p>
 </section>
-<section id="sec-verdoorn-ch11st" class="level2" data-number="14.2">
-<h2 data-number="14.2" class="anchored" data-anchor-id="sec-verdoorn-ch11st"><span class="header-section-number">14.2</span> The Verdoorn mechanism in Morocco: where it operates and where it stalls</h2>
+<section id="sec-verdoorn-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-verdoorn-ch11st">The Verdoorn mechanism in Morocco: where it operates and where it stalls</h2>
 <p>Kaldor’s Verdoorn law predicts that faster manufacturing output growth generates faster manufacturing productivity growth through dynamic scale economies and learning-by-doing. This mechanism is empirically documented across the global manufacturing history: Korea’s automotive sector, China’s electronics complex, Taiwan’s semiconductor industry all exhibited Verdoorn dynamics, productivity improvements outpacing the workforce growth that would be needed if productivity were static.</p>
 <p>In Morocco, the Verdoorn mechanism operates visibly in the segments where manufacturing has genuinely scaled: wiring harness production, where Morocco now hosts some of the world’s most efficient large assembly facilities; aerospace precision machining, where IATF-certified Moroccan suppliers have achieved quality levels comparable to established European competitors; and phosphate processing chemistry, where OCP’s fertiliser complexes have generated learning that has progressively improved yield efficiency and product quality.</p>
 <p>Where the Verdoorn mechanism stalls is equally instructive: in sectors where scale has not been achieved because local market demand is insufficient to generate learning volumes, and in segments where assembly has not been accompanied by component manufacturing. An assembly operation that imports 80% of its components by value generates Verdoorn dynamics in the assembly process itself, logistics efficiency, quality control, but not in the component manufacturing that would generate the deeper technical learning. This is why measuring structural transformation at the level of sector employment shares rather than at the level of value-added composition understates the quality dimension of Morocco’s transformation challenge.</p>
 <p>The implication: Morocco’s industrial policy should prioritise sectors and subsectors where both the scale potential (domestic market plus export demand) and the component depth (proportion of value created domestically) are sufficient to generate genuine Verdoorn dynamics. Attracting another large assembly plant that imports most of its components may add to GDP and exports without adding to productive capabilities; facilitating the development of supplier firms with the technological depth to manufacture complex components adds to both.</p>
 </section>
-<section id="sec-desindu-ch11st" class="level2" data-number="14.3">
-<h2 data-number="14.3" class="anchored" data-anchor-id="sec-desindu-ch11st"><span class="header-section-number">14.3</span> The trap of negative reallocation: premature deindustrialisation</h2>
+<section id="sec-desindu-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-desindu-ch11st">The trap of negative reallocation: premature deindustrialisation</h2>
 <p>The between-sector term can be <strong>negative</strong>. If employment leaves agriculture to flow into low-productivity informal services (street kiosks, subsistence urban activity, informal guarding) rather than formal industry, the reallocation term drags down average productivity rather than raising it. McMillan and Rodrik document this pattern across much of Sub-Saharan Africa and Latin America since the 1990s: a “premature deindustrialisation” where the manufacturing employment share stagnates or falls before the country has reached the income level at which this transition occurred in historical cases.</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -471,8 +639,8 @@ Morocco’s structural warning signal
 </div>
 </div>
 </section>
-<section id="sec-kaldor-ch11st" class="level2" data-number="14.4">
-<h2 data-number="14.4" class="anchored" data-anchor-id="sec-kaldor-ch11st"><span class="header-section-number">14.4</span> Why manufacturing remains central: Kaldor’s three laws</h2>
+<section id="sec-kaldor-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-kaldor-ch11st">Why manufacturing remains central: Kaldor’s three laws</h2>
 <p>A natural objection arises: if sectoral productivity differences converge through mechanisation and digitisation, why emphasise manufacturing? Why not focus on services, which employ most workers in rich countries?</p>
 <p>Nicholas Kaldor’s three empirical regularities, formalised in the 1960s, provide the analytical foundation.</p>
 <p><strong>Kaldor’s First Law</strong>: the growth rate of GDP is positively correlated with the growth rate of manufacturing output. Manufacturing is the engine sector: its expansion generates broader economic dynamism that agriculture and informal services do not replicate at equivalent intensity.</p>
@@ -482,10 +650,10 @@ Morocco’s structural warning signal
 <hr>
 </section>
 </section>
-<section id="sec-product-space-ch11st" class="level1" data-number="15">
-<h1 data-number="15"><span class="header-section-number">15</span> Part II — The Product Space and Economic Complexity</h1>
-<section id="sec-capabilities-ch11st" class="level2" data-number="15.1">
-<h2 data-number="15.1" class="anchored" data-anchor-id="sec-capabilities-ch11st"><span class="header-section-number">15.1</span> Capabilities, not sectors, as the unit of analysis</h2>
+<section id="sec-product-space-ch11st" class="level1">
+<h1>Part II — The Product Space and Economic Complexity</h1>
+<section id="sec-capabilities-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-capabilities-ch11st">Capabilities, not sectors, as the unit of analysis</h2>
 <p>Ricardo Hausmann, César Hidalgo, and Bailey Klinger proposed a framework that shifts the unit of analysis from sectors to <strong>capabilities</strong>, the tacit knowledge, organisational routines, quality systems, supplier networks, institutions, and social capital that productive activities require. Two products are “close” in the product space if they mobilise similar capabilities; they are “distant” if they require radically different ones.</p>
 <p>The product space is the graphic representation of this network of proximities. Products are nodes; links represent the statistical probability that a country exporting one also exports the other. The analysis of these networks across all countries over decades established a major stylised fact: economies diversify by <strong>adjacency</strong>, developing products close to those already mastered before progressing toward more distant and sophisticated ones. Long jumps, entering sectors radically different from current capabilities, rarely succeed because they require capabilities the economy does not yet possess.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -503,8 +671,8 @@ Exporting sardines versus exporting aircraft wiring
 </div>
 <p>The centre of the network is dense: semiconductors, precision instruments, fine chemicals, machine tools, products requiring many shared capabilities and close to many other sophisticated products. The periphery is sparse: minimally processed agricultural goods, raw minerals, basic textiles, products requiring few capabilities and far from high-value segments. A country positioned at the periphery has few natural doors toward complex activities; a country near the centre can pivot easily toward new sophisticated segments.</p>
 </section>
-<section id="sec-eci-ch11st" class="level2" data-number="15.2">
-<h2 data-number="15.2" class="anchored" data-anchor-id="sec-eci-ch11st"><span class="header-section-number">15.2</span> The Economic Complexity Index and Morocco’s position</h2>
+<section id="sec-eci-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-eci-ch11st">The Economic Complexity Index and Morocco’s position</h2>
 <p>The <strong>Economic Complexity Index</strong> (ECI) measures the diversity and ubiquity of a country’s exports: in summary, the richness of its capability fabric. High-ECI countries (Japan, Germany, Switzerland, South Korea) export many products that few countries can produce. Low-ECI countries export few products produced by many other countries.</p>
 <p>Morocco displays a slightly positive and growing ECI since the 2010s, a sign of progressive complexity upgrading, but remains below the level expected for its income per capita. This complexity gap means that Morocco’s export basket is less diversified and sophisticated than its relative wealth would suggest. This gap is precisely the space that industrial policy must fill.</p>
 <p>In 1965, Morocco exported primarily raw phosphate and citrus: a firmly peripheral position with few links toward dense manufacturing segments. The emergence of automotive (wiring, then Renault-Tanger assembly and Stellantis-Kénitra) and aerospace (Safran, Boeing, Bombardier at Casablanca-Nouaceur) represents entry into medium-density segments. But Morocco remains at mid-space, with an export base still concentrated on phosphates and derivatives, automotive assembly, and minimally processed agri-food.</p>
@@ -513,10 +681,10 @@ Exporting sardines versus exporting aircraft wiring
 <hr>
 </section>
 </section>
-<section id="sec-hirschman-ch11st" class="level1" data-number="16">
-<h1 data-number="16"><span class="header-section-number">16</span> Part III — Selecting Sectors: Hirschman’s Inducement Logic</h1>
-<section id="sec-liens-ch11st" class="level2" data-number="16.1">
-<h2 data-number="16.1" class="anchored" data-anchor-id="sec-liens-ch11st"><span class="header-section-number">16.1</span> Backward and forward linkages</h2>
+<section id="sec-hirschman-ch11st" class="level1">
+<h1>Part III — Selecting Sectors: Hirschman’s Inducement Logic</h1>
+<section id="sec-liens-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-liens-ch11st">Backward and forward linkages</h2>
 <p>Albert Hirschman proposed in <em>The Strategy of Economic Development</em> (1958) an approach to evaluating sectors that cuts across simple profitability calculation. His question was not “how much does this sector earn?” but “what chains does it trigger?” A sector creates <strong>backward linkages</strong> when it generates demand for inputs, components, and technical services, pulling a galaxy of suppliers behind it. It creates <strong>forward linkages</strong> when its products serve as inputs to other industries. It generates <strong>learning effects</strong> when the routines it imposes, quality control, metrology, planning, maintenance, diffuse into other sectors.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -533,14 +701,14 @@ The factory that creates ten others
 </div>
 <p>When all these mechanisms co-activate and mutually reinforce, Hirschman speaks of a “multidimensional conspiracy in favour of development”: a bundle of effects that spill far beyond the direct value added of the sector. This is the logic of <em>inducement</em>, initial investment induces complementary investments, that distinguishes a “teaching sector” from an “enclave sector.” The difference is not a sectoral label but depends on context, timing, and governance. The same textile sector that was a learning laboratory in 18th-century England can be an export enclave at low wages in a country without machinery industry, without supplier networks, without design transfer.</p>
 </section>
-<section id="sec-vernon-ch11st" class="level2" data-number="16.2">
-<h2 data-number="16.2" class="anchored" data-anchor-id="sec-vernon-ch11st"><span class="header-section-number">16.2</span> The Vernon cycle: timing matters as much as sector</h2>
+<section id="sec-vernon-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-vernon-ch11st">The Vernon cycle: timing matters as much as sector</h2>
 <p>Raymond Vernon’s product cycle theory adds a temporal compass to Hirschman’s analysis. A product is born in knowledge-intensive economies: where proximity between R&amp;D, engineering, and pioneering users allows rapid iteration. As design stabilises and processes codify, production migrates toward lower-cost locations. Attempting to enter a production chain too late, when learning rents have already been captured by others, means inheriting a segment with eroded margins where differentiation turns on brand or system architecture that the late entrant does not possess.</p>
 <p>But entering too early, in a chain whose standards are not yet stabilised, exposes to prohibitive learning costs. The optimal <strong>technological window</strong> sits at the moment when the industry is growing, standards are beginning to stabilise, and space remains for entrants combining competitive costs with learning capacity.</p>
 <p>This is precisely the window Morocco seized for automotive in the 2000-2010 period: Renault was seeking sites for emerging market low-cost vehicles (Logan, Sandero); Tanger Med was under construction; the OFPPT could rapidly train assembly and wiring technicians. The convergence of these conditions created an opportunity that Moroccan industrial policy successfully mobilised. The same window is reopening partially today for electric vehicle components, the question is whether Morocco acts before it closes.</p>
 </section>
-<section id="sec-grille-ch11st" class="level2" data-number="16.3">
-<h2 data-number="16.3" class="anchored" data-anchor-id="sec-grille-ch11st"><span class="header-section-number">16.3</span> The seven-criterion diagnostic grid</h2>
+<section id="sec-grille-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-grille-ch11st">The seven-criterion diagnostic grid</h2>
 <p>How to move from Hirschman’s intuition to an operational prioritisation tool? Seven criteria allow systematic evaluation of sectors for industrial policy priority:</p>
 <p><strong>Criterion 1, Backward-forward linkages</strong>: how many input families can this sector potentially source locally? Can its industrial clients become sophisticated clients that pull up supplier quality? Measured by: local integration rate (% of production cost), number of locally certified suppliers, supply chain length (number of domestic subcontracting stages).</p>
 <p><strong>Criterion 2, Transferable learning</strong>: are the routines acquired in this sector (statistical process control, FMEA, lot traceability, preventive maintenance, ISO documentation management) reusable in other sectors? Can an engineer trained to automotive tolerance requirements carry that knowledge to medical devices or power electronics? Indicators: transversal certifications obtained (IATF, ISO 9001, HACCP, ISO 13485), observable intersectoral mobility of trained technicians.</p>
@@ -616,15 +784,15 @@ The seven criteria applied to Moroccan automotive
 <hr>
 </section>
 </section>
-<section id="sec-politique-ch11st" class="level1" data-number="17">
-<h1 data-number="17"><span class="header-section-number">17</span> Part IV — Industrial Policy: Four Conditions and Four State Roles</h1>
-<section id="sec-plans-ch11st" class="level2" data-number="17.1">
-<h2 data-number="17.1" class="anchored" data-anchor-id="sec-plans-ch11st"><span class="header-section-number">17.1</span> Why industrial plans are not enough</h2>
+<section id="sec-politique-ch11st" class="level1">
+<h1>Part IV — Industrial Policy: Four Conditions and Four State Roles</h1>
+<section id="sec-plans-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-plans-ch11st">Why industrial plans are not enough</h2>
 <p>Many governments possess industrial strategies, specialised agencies, economic zones, fiscal incentives, and sectoral diagnostics. The presence of these instruments does not guarantee productive transformation. What matters is how instruments articulate with a political direction, an economic logic, a discipline of beneficiaries, and an execution capacity. Understanding why so many industrial policies fail despite apparently well-designed instruments is the condition for building better ones.</p>
 <p>The four-condition framework (Nouri, forthcoming) identifies the necessary conditions that separate industrial policy generating learning from industrial policy generating rents.</p>
 </section>
-<section id="sec-quatre-conditions-ch11st" class="level2" data-number="17.2">
-<h2 data-number="17.2" class="anchored" data-anchor-id="sec-quatre-conditions-ch11st"><span class="header-section-number">17.2</span> The four conditions</h2>
+<section id="sec-quatre-conditions-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-quatre-conditions-ch11st">The four conditions</h2>
 <p><strong>Condition 1: Real coordination failure.</strong> The intervention must address a genuine market failure, typically a coordination problem (complementary investments that private markets cannot simultaneously provide), a learning externality (the pioneer bears the discovery cost while imitators free-ride), or a capital market failure (long-horizon industrial investment that private finance cannot accommodate). Industrial policy that does not address a real coordination failure is simply resource allocation by political preference, generating no productivity benefit and creating rents.</p>
 <p><strong>Condition 2: Institutional capacity.</strong> The state must have the administrative capability to select promising sectors, design appropriate instruments, monitor performance, and resist capture. This capacity is not generic; it is sector-specific. A state competent to regulate telecoms may not be competent to administer an automotive supplier development programme. Building institutional capacity is itself a development investment, and one chronically underfinanced in countries that most need it.</p>
 <p><strong>Condition 3: Conditional reciprocity.</strong> Support must be conditional on measurable performance, export growth, productivity improvement, technology upgrading, local content increase. Alice Amsden showed that this discipline was the differentiator between Korean and Brazilian industrial policy in the 1970s: both provided massive support to heavy industries; in Brazil, that support largely continued without real conditionality; in Korea, chaebols that did not meet export targets lost their advantages. Without conditionality, industrial policy becomes unconditional protection, creating incentives to lobby for continued support rather than improve performance.</p>
@@ -644,8 +812,8 @@ Why reciprocity is both essential and politically difficult
 </div>
 </div>
 </section>
-<section id="sec-evans-ch11st" class="level2" data-number="17.3">
-<h2 data-number="17.3" class="anchored" data-anchor-id="sec-evans-ch11st"><span class="header-section-number">17.3</span> Evans’s four roles of the developmental state</h2>
+<section id="sec-evans-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-evans-ch11st">Evans’s four roles of the developmental state</h2>
 <p>Peter Evans (<em>Embedded Autonomy</em>, 1995) demonstrated that the question “more or less state intervention?” entirely misses the point. What distinguishes industrial policy success from failure is not the quantity of intervention but its nature and appropriateness to the sectoral context. He identifies four distinct state roles, each corresponding to a specific type of market failure at a specific stage of industrial maturity.</p>
 <p><strong>The Custodian</strong> preserves market contestability: applying competition law, dismantling unjustified rents, guaranteeing incentive transparency. Without a functioning Custodian, rents proliferate, industrial protection becomes permanent, and zombie industries survive at the cost of dynamic innovators. But Evans identifies a symmetric danger: the heavy procedural Custodian, with permit systems, quotas, redundant certifications, consumes administrative capacity without proportional benefit. Morocco’s Conseil de la Concurrence exercises this role transversally but lacks adequate investigative resources.</p>
 <p><strong>The Producer</strong> creates productive capacity directly when private capital cannot or will not. The canonical example is POSCO in Korea: in the 1960s, private Korean capital was absent, multinationals refused to invest, yet cheap steel was the prerequisite for automobiles, shipbuilding, and appliances. POSCO did not just produce steel: it produced engineers, managers, qualified subcontractors, a dedicated university (POSTECH), and technology transfer partnerships. OCP’s trajectory, from raw phosphate extraction to integrated fertiliser production to African agri-nutrition strategy, illustrates how a public producer can evolve from extractive enclave toward systemic anchor, provided strategic vision and institutional autonomy allow the transformation.</p>
@@ -653,21 +821,21 @@ Why reciprocity is both essential and politically difficult
 <p><strong>The Husbandman</strong> assists once private actors have entered a sector, helping them upgrade, improve processes, certify products, access new markets, and finance R&amp;D. Morocco has Husbandman instruments: Maroc PME programmes, sectoral technical centres (automotive, aerospace, textile), CNRST research co-financing, OFPPT continuous training. But two structural limits persist: conditionality is insufficient (support often decoupled from measurable performance milestones), and evaluation is rare (few programmes undergo rigorous impact analysis to distinguish what works from what does not).</p>
 <p>Evans’s synthesis rule: states should not choose one role and apply it universally. They should adapt the role to the sectoral context and to their own administrative capabilities. The <strong>Midwife-to-Husbandman</strong> sequence is often dominant at Morocco’s stage: it requires fewer scarce resources than the Producer, is less exposed to capture risks than the heavy procedural Custodian, and creates self-reinforcing private dynamics. But when a critical upstream asset is absent (steel, utilities, applied research), the targeted Producer role remains justified, provided the exit trajectory is planned from the outset.</p>
 </section>
-<section id="sec-autonomie-ch11st" class="level2" data-number="17.4">
-<h2 data-number="17.4" class="anchored" data-anchor-id="sec-autonomie-ch11st"><span class="header-section-number">17.4</span> Embedded autonomy: the institutional condition</h2>
+<section id="sec-autonomie-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-autonomie-ch11st">Embedded autonomy: the institutional condition</h2>
 <p>Evans’s most original concept is <strong>embedded autonomy</strong>: an effective industrial state is simultaneously <em>embedded</em> in productive networks and <em>autonomous</em> from those networks. Embedded means that its officials understand industries from the inside, know the firms, understand technical constraints, speak the language of production. This proximity is indispensable for designing relevant policies and exercising calibrated performance judgements. Autonomous means that the same administration is not captive to the industries it accompanies: it can refuse unjustified rent extensions, withdraw support from firms that fail to deliver, and close inefficient programmes even when organised interest groups resist.</p>
 <p>This balance requires specific institutional design: merit-recruited bureaucracy, sufficient compensation to resist corruption, a service ethic protected from direct political interference. The East Asian developmental states that succeeded, Korea’s Economic Planning Board, Taiwan’s CEPD, Singapore’s EDB, maintained this balance through specific institutional arrangements. Morocco’s challenge is building the equivalent: not a copy of these institutions but an institutional design adapted to Morocco’s governance context that achieves the same combination of sectoral expertise and performance discipline.</p>
 </section>
-<section id="sec-instruments-ch11st" class="level2" data-number="17.5">
-<h2 data-number="17.5" class="anchored" data-anchor-id="sec-instruments-ch11st"><span class="header-section-number">17.5</span> The instruments palette: from theory to practice</h2>
+<section id="sec-instruments-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-instruments-ch11st">The instruments palette: from theory to practice</h2>
 <p>Industrial policy disposes of a broad palette of instruments. The most common error is not a lack of instruments but using them in the wrong order, without conditionality, or disconnected from a diagnosis of real failures. The guiding principle: <strong>problem → failure → role → instrument → governance → evaluation</strong>.</p>
 <p><strong>For the Midwife role</strong>: <em>Special Economic Zones</em> (SEZs and free zones) offer a derogatory regime (fiscal, customs, regulatory) to attract investments in sectors or activities the general regime does not make profitable. Their effectiveness depends critically on integration into the domestic economy: a SEZ without links to domestic suppliers becomes a low-learning-value export enclave. Tanger Free Zone and Atlantic Free Zone Kénitra have successfully attracted FDI but local integration beyond wiring has not yet been replicated in higher-value components. <em>Shared technology centres</em> allow the state to co-invest in R&amp;D, metrology, or prototyping equipment that individual SMEs cannot finance. <em>Catalytic public procurement</em>, the state acting as the first customer of a nascent technology, allows firms to reach critical scale and improve quality through repetition. Morocco’s potential to use renewable energy procurement, public transport, and infrastructure projects as demand anchors for nascent domestic suppliers is substantially underexploited.</p>
 <p><em>Self-discovery financing</em>, Rodrik’s term for funding the first export pilots or first prototypes in a new sector, addresses the market failure that the pioneer who demonstrates that Morocco can competitively produce a certain good generates spillovers to imitators who bear none of the discovery cost. Public financing of these demonstration investments resolves an externality that private capital will not address.</p>
 <p><strong>For the Husbandman role</strong>: <em>Productivity extension programmes</em> provide subsidised consultancy to diffuse lean manufacturing methods (5S, Kaizen, TPM, SPC), quality standards (ISO 9001, IATF), and process management practices to SMEs. Studies on similar programmes in Mexico (FUNDES) and Morocco (Maroc PME) show productivity gains of 15-30% over three years in accompanied enterprises, one of the best documented returns in industrial policy. <em>Conditional development credit</em>, below-market-rate loans or public guarantees with reduced collateral requirements, granted under performance conditions, is the most direct Husbandman instrument. Morocco’s TAMWILCOM plays this role for SMEs but remains insufficiently oriented toward technology upgrading targets. <em>Dual training and apprenticeship</em>, the IFMIA model for automotive and IMA for aerospace, is Morocco’s clearest Husbandman success: sector-specific human capital production at internationally recognised quality standards.</p>
 <p>The principle that unifies all instruments: <strong>evaluate, adapt, and exit</strong>. An effective Husbandman monitors outcomes (which firms improved? which did not?), adapts instruments based on evidence (redirect resources from non-performing to performing programmes), and withdraws support from programmes that do not produce measured learning. Morocco’s structural deficit is precisely here: programme evaluation is rare, comparative impact analysis is almost absent, and budget allocation between industrial policy instruments cannot be evidence-based because the evidence is not produced.</p>
 </section>
-<section id="sec-reciprocite-ch11st" class="level2" data-number="17.6">
-<h2 data-number="17.6" class="anchored" data-anchor-id="sec-reciprocite-ch11st"><span class="header-section-number">17.6</span> Reciprocity, exit, and the political economy of discipline</h2>
+<section id="sec-reciprocite-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-reciprocite-ch11st">Reciprocity, exit, and the political economy of discipline</h2>
 <p>The governance dimension of industrial policy is where its success or failure is ultimately decided. Three rules of governance are non-negotiable.</p>
 <p><strong>Reciprocity</strong> means: every public support, tariff protection, subsidy, preferential credit, free zone access, co-investment in a technology centre, must come with measurable performance commitments from the beneficiary. These commitments must be explicit (stated in public performance contracts), quantified (export volume reached, local content rate achieved, certifications obtained by date), and enforced (support is reduced or terminated if targets are missed). Amsden’s comparative analysis is direct: Korean chaebols received massive state support <em>and</em> faced real consequences for non-performance. Brazilian equivalents received massive support without real conditionality. The outcomes diverge precisely as the framework predicts.</p>
 <p><strong>Credible exit</strong> requires pre-commitment mechanisms: conditions defined from the outset under which support terminates, enforced by entities (independent evaluation bodies, public performance reports, statutory sunset clauses) that make political override costly. No Moroccan industrial programme has been publicly terminated for failure to produce expected learning, the political and administrative costs of doing so have always been judged too high. This is the structural reason why Morocco can attract investment without deepening: the feedback loop that would discipline performance does not operate.</p>
@@ -675,16 +843,16 @@ Why reciprocity is both essential and politically difficult
 <hr>
 </section>
 </section>
-<section id="sec-hrv-ch11st" class="level1" data-number="18">
-<h1 data-number="18"><span class="header-section-number">18</span> Part V — Growth Diagnostics: The HRV Decision Tree</h1>
-<section id="sec-methode-hrv-ch11st" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="sec-methode-hrv-ch11st"><span class="header-section-number">18.1</span> The method</h2>
+<section id="sec-hrv-ch11st" class="level1">
+<h1>Part V — Growth Diagnostics: The HRV Decision Tree</h1>
+<section id="sec-methode-hrv-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-methode-hrv-ch11st">The method</h2>
 <p>Ricardo Hausmann, Dani Rodrik, and Andrei Velasco (2005) proposed a method for identifying the <strong>binding constraint</strong> on private investment and growth in a specific country at a specific moment. Their insight: rather than applying a standard reform package, ask which specific constraint, if relaxed, would have the largest impact on the return to private investment.</p>
 <p>The method proceeds as a decision tree. Is private investment low because the return is low or because the cost of finance is high? If the cost of finance is high, is it because domestic savings are insufficient or because international finance is inaccessible? If returns are low, is it because of appropriability problems (firms cannot keep the returns they generate) or because of coordination failures (complementary inputs, infrastructure, skills, inputs, are absent)?</p>
 <p><strong>Price signals</strong> provide the first diagnostic layer. If borrowing rates are very high relative to comparators, financial constraint is likely. If returns to education are much lower than in comparators, the bottleneck is not human capital but productive demand for it. If firms use private generators extensively, infrastructure constraint is revealed by the private cost of circumventing it. <strong>Firm behaviour</strong> provides the second layer. If firms that access finance grow disproportionately faster, finance is likely binding. <strong>Growth responses</strong> to past reforms provide the third layer: if financial liberalisation reforms did not trigger investment surges, finance was not the binding constraint.</p>
 </section>
-<section id="sec-hrv-maroc-ch11st" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="sec-hrv-maroc-ch11st"><span class="header-section-number">18.2</span> Applied to Morocco</h2>
+<section id="sec-hrv-maroc-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-hrv-maroc-ch11st">Applied to Morocco</h2>
 <p>Applying the HRV framework to Morocco produces a differentiated diagnosis.</p>
 <p><strong>Is investment low because of high financing cost or low returns?</strong> Signal analysis: real borrowing rates in Morocco are not anomalously high by regional MENA standards. The financial reforms of the 1990s did not generate a manufacturing investment surge, suggesting financial cost is not the primary binding constraint. The constraint appears to be on the return side.</p>
 <p><strong>If returns are low, is it appropriability or coordination failures?</strong> Morocco’s macroeconomic stability, relatively secure property rights, and functioning commercial law make classic appropriability problems second-order concerns. Evidence points more strongly toward <strong>coordination failures</strong>: the complementary inputs that would make industrial investment productive, qualified technical workers for specific industrial processes, local supplier networks capable of meeting international quality standards, logistics infrastructure connecting industrial zones to input markets, are insufficiently developed relative to what would justify the level of private industrial investment Morocco needs.</p>
@@ -693,29 +861,29 @@ Why reciprocity is both essential and politically difficult
 <p>The HRV framework also generates a priority sequencing logic for reform. If the binding constraint is complementarity failures, the marginal return to generic business climate improvement is low while the return to targeted complementarity-building is high. This means investing in shared infrastructure for supplier quality upgrading (metrology centres, shared testing laboratories, certification co-financing) before investing in further fiscal incentives for new foreign investors. It means building technical curricula aligned with industrial process requirements before expanding university enrolment in fields without industrial labour demand. It means requiring local content milestones in existing FDI agreements before signing new agreements without such requirements.</p>
 <p>Applied consistently, HRV diagnostics transforms industrial policy from ambition-setting (publishing strategy documents with large targets) into iterative learning: diagnose, intervene, measure, update. This adaptive management style, characteristic of Singapore’s EDB and Finland’s TEKES, is the organisational complement to the analytical framework this chapter has developed. The diagnostic is not a one-off exercise but an ongoing process that sustains the embedded autonomy Evans identified as the institutional precondition for effective industrial policy.</p>
 </section>
-<section id="sec-comparaisons-ch11st" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="sec-comparaisons-ch11st"><span class="header-section-number">18.3</span> The comparative lessons: Korea, Singapore, Taiwan</h2>
+<section id="sec-comparaisons-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-comparaisons-ch11st">The comparative lessons: Korea, Singapore, Taiwan</h2>
 <p>Three comparative cases illuminate what Midwife and Husbandman industrial policy look like when all four conditions are met simultaneously.</p>
 <p><strong>Korea 1963-1990</strong> is the archetype of conditional reciprocity at scale. The Economic Planning Board allocated directed credit to chaebols, preferential bank financing at below-market rates, tied to export performance benchmarks verified annually. Samsung received electronics sector support in exchange for reaching specific export volume targets within defined timeframes. Hyundai’s Heavy Industries received shipbuilding support in exchange for vessel delivery schedules and quality standards. The Ministry of Trade and Industry published annual performance assessments, creating public accountability. Crucially, the discipline was real: chaebols that missed their targets lost preferential access in subsequent allocation rounds. This conditionality is what Korea’s industrial policy had that comparable programmes in Brazil, India, and much of sub-Saharan Africa lacked.</p>
 <p><strong>Singapore’s EDB 1961-2000</strong> is the archetype of the Midwife role at high institutional quality. Singapore did not create public electronics factories; it orchestrated the emergence of private industry by coordinating the complementary investments, infrastructure, training, regulatory frameworks, supply chains, that private investors needed before they could profitably enter. The EDB negotiated directly with Texas Instruments, Hewlett-Packard, and National Semiconductor on the specific capability development requirements for Singapore operations; built dedicated technical training programmes in partnership with each firm before arrival; designed infrastructure (Jurong Industrial Estate) to the technical specifications of electronics assembly; and progressively raised sophistication requirements for subsequent investment rounds. EDB officers were trained engineers who understood the technical realities of each industry, embedded autonomy in its operational form.</p>
 <p><strong>Taiwan’s dual-track model</strong> combined a large public enterprise sector (including TSMC’s precursor ITRI, which developed semiconductor technology and then spun it out to private firms) with a dense ecosystem of flexible SME manufacturers. Taiwan’s model is particularly instructive for Morocco because it shows that state-funded technology development does not have to remain in public hands permanently: the state can fund the risky early-stage capability development, then transfer it to private firms through licensing or spin-off, maintaining public discipline during the risky phase while harvesting private market efficiency in the scaling phase.</p>
 <p>For Morocco, the specific lesson from all three: the Midwife-to-Husbandman sequence can produce transformative results when backed by institutional design that creates genuine accountability for performance, not just announcements of targets but consequences for their achievement. The PAI’s automotive success proves Morocco can attract lead firms and build infrastructure. What it has not yet built is the performance accountability system that would turn attraction into deep learning.</p>
 </section>
-<section id="sec-triangulation-ch11st" class="level2" data-number="18.4">
-<h2 data-number="18.4" class="anchored" data-anchor-id="sec-triangulation-ch11st"><span class="header-section-number">18.4</span> Triangulating the diagnosis: a method for practitioners</h2>
+<section id="sec-triangulation-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-triangulation-ch11st">Triangulating the diagnosis: a method for practitioners</h2>
 <p>The growth diagnostics methodology is not a mechanical algorithm; it is a systematic Bayesian reasoning process. Price signals, firm behaviour, and reform responses each provide evidence that updates the probability of different constraint hypotheses. The analyst combines these signals to identify the constraint profile most consistent with the full set of observations.</p>
 <p>A practical triangulation combines three evidence types. <em>Quantitative data</em> provides the baseline: growth rates, export structure, interest rates, human capital indicators, current account balances. <em>Qualitative interviews</em> with entrepreneurs, bankers, public officials, and trainers reveal concrete bottlenecks that statistics do not capture. An entrepreneur who says she is not investing in new machinery because she cannot find qualified operators tells the analyst more about the human capital constraint than any regression coefficient. <em>Sectoral case studies</em> test whether aggregate-level hypotheses confirm in specific sectors: if automotive suppliers consistently report that their binding constraint is quality certification costs rather than financing costs, this conflicts with a financial constraint hypothesis and supports a capability hypothesis.</p>
 <p>The triangulation is a method, not a recipe. It requires analysts capable of integrating quantitative data and qualitative narratives without systematically privileging one over the other. This is precisely the competence that an economics education oriented toward pluralism, mainstream analytics combined with institutional empiricism, is designed to produce.</p>
 <p>For Morocco specifically: enterprise surveys in the automotive sector consistently identify the availability of qualified local second-tier suppliers as the most binding constraint on deeper local sourcing, not the regulatory environment (already competitive) nor financing costs (manageable). This is a textbook complementarity failure: lead firms want to source locally, local firms want to supply, but the knowledge and quality gap between international standards and current local capability prevents the market from clearing without institutional intervention. This diagnostic guides the intervention design: not generic business climate improvement or horizontal tax incentives, but specific supplier capability development programmes with measurable milestones and performance accountability.</p>
 </section>
-<section id="sec-emploi-ch11st" class="level2" data-number="18.5">
-<h2 data-number="18.5" class="anchored" data-anchor-id="sec-emploi-ch11st"><span class="header-section-number">18.5</span> Morocco’s structural challenge: the employment arithmetic</h2>
+<section id="sec-emploi-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-emploi-ch11st">Morocco’s structural challenge: the employment arithmetic</h2>
 <p>Morocco’s labour force grows by approximately 250,000-300,000 new entrants annually. Formal manufacturing currently absorbs a fraction of that cohort: the automotive and aerospace clusters together employ approximately 200,000 workers directly, growing at perhaps 15,000-20,000 per year. Tourism, modern services, and construction absorb more, but the informal sector and underemployment absorb the majority.</p>
 <p>The employment arithmetic is stark: to reduce graduate unemployment from its current 19%+ toward the 5-7% compatible with social stability and human capital utilisation, Morocco needs to create formal sector jobs at approximately twice the current rate for a sustained decade. This requires formal manufacturing employment to grow from its current 11-14% share of total employment toward the 18-22% that comparable economies achieved before ascending toward high-income status. The shift-share decomposition quantifies what this implies: the between-sector reallocation term must contribute strongly positive for a sustained period, which requires exactly the industrial policy enabling environment this chapter has described.</p>
 <p>The alternative trajectory, in which graduates accumulate in the queue for public sector employment, informal self-employment expands to absorb the excess, and the formal private sector grows only at its current pace, is not merely an economic failure. It is the social contract failure that the Nouveau Modèle de Développement diagnosed in 2021 and that Morocco’s political economy cannot indefinitely sustain.</p>
 </section>
-<section id="sec-fenetre-ch11st" class="level2" data-number="18.6">
-<h2 data-number="18.6" class="anchored" data-anchor-id="sec-fenetre-ch11st"><span class="header-section-number">18.6</span> Morocco’s window: what the framework implies</h2>
+<section id="sec-fenetre-ch11st" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fenetre-ch11st">Morocco’s window: what the framework implies</h2>
 <p>Applying this chapter’s full analytical toolkit to Morocco’s 2024 situation produces a structured strategic assessment.</p>
 <p>In product space terms, Morocco has moved from a peripheral position (raw phosphates, citrus, basic textiles) to a mid-space position (automotive assembly, aerospace subcontracting, processed fertilisers). The ECI trajectory is positive. But the distance between Morocco’s current product space position and the dense core of sophisticated manufacturing remains large. From current positions, credible adjacencies in EV components, specialty chemicals, and precision aerospace manufacturing represent the next logical steps, not leaps to semiconductors or advanced robotics.</p>
 <p>In structural transformation terms, the McMillan-Rodrik decomposition for Morocco shows that the between-sector reallocation component has been positive but insufficient: workers have moved from agriculture toward formal industry and modern services, but the pace of formal manufacturing job creation has not matched the scale of agricultural labour release. The informal sector has absorbed a significant share of the transfer, limiting the productivity gains that the Lewis mechanism would otherwise generate.</p>
@@ -724,8 +892,8 @@ Why reciprocity is both essential and politically difficult
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch11st" class="level1" data-number="19">
-<h1 data-number="19"><span class="header-section-number">19</span> Conclusion: The Toolkit of Transformation</h1>
+<section id="sec-concl-ch11st" class="level1">
+<h1>Conclusion: The Toolkit of Transformation</h1>
 <p>Three acquisitions from this chapter.</p>
 <p><strong>Structural change is measurable and diagnosable.</strong> The shift-share decomposition, the Economic Complexity Index, the product space, and HRV diagnostics transform a vague intuition (“we need to industrialise”) into a precise analytical approach: which sectors, why, with which binding constraints.</p>
 <p><strong>Industrial policy has identifiable success conditions.</strong> The four-condition framework separates learning-generating policies from rent-generating ones. These are not ideological conditions but institutional ones: the absence of a real coordination failure, adequate institutional capacity, conditional reciprocity, and credible exit all predictably convert good intentions into bad outcomes.</p>
@@ -753,8 +921,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch11st" class="level1 appendix" data-number="20">
-<h1 class="appendix" data-number="20"><span class="header-section-number">20</span> Further Reading</h1>
+<section id="sec-biblio-ch11st" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Hirschman, A.O. (1958). <em>The Strategy of Economic Development</em>. Yale University Press.</strong> The founding text on linkages and inducement mechanisms. The most operationally useful work in development economics.</p>
 <p><strong>Evans, P. (1995). <em>Embedded Autonomy: States and Industrial Transformation</em>. Princeton University Press.</strong> The four state roles and embedded autonomy. Essential for evaluating any industrial policy programme.</p>
 <p><strong>McMillan, M. and Rodrik, D. (2011). “Globalization, Structural Change, and Productivity Growth.” NBER Working Paper.</strong> The shift-share decomposition and the premature deindustrialisation evidence. The empirical reference.</p>
@@ -767,8 +935,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1187,13 +1414,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1202,5 +1429,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

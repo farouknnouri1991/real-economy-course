@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch15-inequality-distribution.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,43 +493,44 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch15iq" id="toc-sec-carte-ch15iq" class="nav-link active" data-scroll-target="#sec-carte-ch15iq">The Map</a></li>
-  <li><a href="#sec-mesurer-ch15iq" id="toc-sec-mesurer-ch15iq" class="nav-link" data-scroll-target="#sec-mesurer-ch15iq"><span class="header-section-number">18</span> Part I — Measuring Inequality: Tools, Indices, and their Limits</a>
+  <li><a href="#sec-mesurer-ch15iq" id="toc-sec-mesurer-ch15iq" class="nav-link" data-scroll-target="#sec-mesurer-ch15iq">Part I — Measuring Inequality: Tools, Indices, and their Limits</a>
   <ul class="collapse">
-  <li><a href="#sec-gini-ch15iq" id="toc-sec-gini-ch15iq" class="nav-link" data-scroll-target="#sec-gini-ch15iq"><span class="header-section-number">18.1</span> The Lorenz curve and the Gini coefficient</a></li>
-  <li><a href="#sec-beyond-gini-ch15iq" id="toc-sec-beyond-gini-ch15iq" class="nav-link" data-scroll-target="#sec-beyond-gini-ch15iq"><span class="header-section-number">18.2</span> Beyond Gini: the Palma ratio and wealth inequality</a></li>
-  <li><a href="#sec-territorial-ch15iq" id="toc-sec-territorial-ch15iq" class="nav-link" data-scroll-target="#sec-territorial-ch15iq"><span class="header-section-number">18.3</span> Territorial and non-monetary inequality</a></li>
+  <li><a href="#sec-gini-ch15iq" id="toc-sec-gini-ch15iq" class="nav-link" data-scroll-target="#sec-gini-ch15iq">The Lorenz curve and the Gini coefficient</a></li>
+  <li><a href="#sec-beyond-gini-ch15iq" id="toc-sec-beyond-gini-ch15iq" class="nav-link" data-scroll-target="#sec-beyond-gini-ch15iq">Beyond Gini: the Palma ratio and wealth inequality</a></li>
+  <li><a href="#sec-territorial-ch15iq" id="toc-sec-territorial-ch15iq" class="nav-link" data-scroll-target="#sec-territorial-ch15iq">Territorial and non-monetary inequality</a></li>
   </ul></li>
-  <li><a href="#sec-sources-ch15iq" id="toc-sec-sources-ch15iq" class="nav-link" data-scroll-target="#sec-sources-ch15iq"><span class="header-section-number">19</span> Part II — The Structural Sources of Moroccan Inequalities</a>
+  <li><a href="#sec-sources-ch15iq" id="toc-sec-sources-ch15iq" class="nav-link" data-scroll-target="#sec-sources-ch15iq">Part II — The Structural Sources of Moroccan Inequalities</a>
   <ul class="collapse">
-  <li><a href="#sec-piketty-ch15iq" id="toc-sec-piketty-ch15iq" class="nav-link" data-scroll-target="#sec-piketty-ch15iq"><span class="header-section-number">19.1</span> Piketty’s r &gt; g and the structural tendency toward wealth concentration</a></li>
-  <li><a href="#sec-heritage-ch15iq" id="toc-sec-heritage-ch15iq" class="nav-link" data-scroll-target="#sec-heritage-ch15iq"><span class="header-section-number">19.2</span> The colonial structural legacy</a></li>
-  <li><a href="#sec-rentes-ch15iq" id="toc-sec-rentes-ch15iq" class="nav-link" data-scroll-target="#sec-rentes-ch15iq"><span class="header-section-number">19.3</span> Market rents and the political economy of concentration</a></li>
-  <li><a href="#sec-segmentation-ch15iq" id="toc-sec-segmentation-ch15iq" class="nav-link" data-scroll-target="#sec-segmentation-ch15iq"><span class="header-section-number">19.4</span> Labour market segmentation and gender exclusion</a></li>
-  <li><a href="#sec-fonctionnelle-ch15iq" id="toc-sec-fonctionnelle-ch15iq" class="nav-link" data-scroll-target="#sec-fonctionnelle-ch15iq"><span class="header-section-number">19.5</span> The functional distribution: wages, profits, and rents</a></li>
-  <li><a href="#sec-international-ch15iq" id="toc-sec-international-ch15iq" class="nav-link" data-scroll-target="#sec-international-ch15iq"><span class="header-section-number">19.6</span> International comparisons and Morocco’s trajectory</a></li>
+  <li><a href="#sec-piketty-ch15iq" id="toc-sec-piketty-ch15iq" class="nav-link" data-scroll-target="#sec-piketty-ch15iq">Piketty’s r &gt; g and the structural tendency toward wealth concentration</a></li>
+  <li><a href="#sec-heritage-ch15iq" id="toc-sec-heritage-ch15iq" class="nav-link" data-scroll-target="#sec-heritage-ch15iq">The colonial structural legacy</a></li>
+  <li><a href="#sec-rentes-ch15iq" id="toc-sec-rentes-ch15iq" class="nav-link" data-scroll-target="#sec-rentes-ch15iq">Market rents and the political economy of concentration</a></li>
+  <li><a href="#sec-segmentation-ch15iq" id="toc-sec-segmentation-ch15iq" class="nav-link" data-scroll-target="#sec-segmentation-ch15iq">Labour market segmentation and gender exclusion</a></li>
+  <li><a href="#sec-fonctionnelle-ch15iq" id="toc-sec-fonctionnelle-ch15iq" class="nav-link" data-scroll-target="#sec-fonctionnelle-ch15iq">The functional distribution: wages, profits, and rents</a></li>
+  <li><a href="#sec-international-ch15iq" id="toc-sec-international-ch15iq" class="nav-link" data-scroll-target="#sec-international-ch15iq">International comparisons and Morocco’s trajectory</a></li>
   </ul></li>
-  <li><a href="#sec-redistrib-ch15iq" id="toc-sec-redistrib-ch15iq" class="nav-link" data-scroll-target="#sec-redistrib-ch15iq"><span class="header-section-number">20</span> Part III — Redistribution: Instruments, Limits, and the Pre-distribution Concept</a>
+  <li><a href="#sec-redistrib-ch15iq" id="toc-sec-redistrib-ch15iq" class="nav-link" data-scroll-target="#sec-redistrib-ch15iq">Part III — Redistribution: Instruments, Limits, and the Pre-distribution Concept</a>
   <ul class="collapse">
-  <li><a href="#sec-fiscal-ch15iq" id="toc-sec-fiscal-ch15iq" class="nav-link" data-scroll-target="#sec-fiscal-ch15iq"><span class="header-section-number">20.1</span> The Moroccan fiscal system: partial redistribution</a></li>
-  <li><a href="#sec-transferts-ch15iq" id="toc-sec-transferts-ch15iq" class="nav-link" data-scroll-target="#sec-transferts-ch15iq"><span class="header-section-number">20.2</span> Social transfers and the 2021-2025 social protection reform</a></li>
-  <li><a href="#sec-predistrib-ch15iq" id="toc-sec-predistrib-ch15iq" class="nav-link" data-scroll-target="#sec-predistrib-ch15iq"><span class="header-section-number">20.3</span> Pre-distribution: reforming the structures that generate inequality</a></li>
-  <li><a href="#sec-limites-ch15iq" id="toc-sec-limites-ch15iq" class="nav-link" data-scroll-target="#sec-limites-ch15iq"><span class="header-section-number">20.4</span> What redistribution cannot do alone</a></li>
-  <li><a href="#sec-bourdieu-ch15iq" id="toc-sec-bourdieu-ch15iq" class="nav-link" data-scroll-target="#sec-bourdieu-ch15iq"><span class="header-section-number">20.5</span> Bourdieu and non-economic capital: cultural and social reproduction</a></li>
-  <li><a href="#sec-intergenerationnel-ch15iq" id="toc-sec-intergenerationnel-ch15iq" class="nav-link" data-scroll-target="#sec-intergenerationnel-ch15iq"><span class="header-section-number">20.6</span> The intergenerational transmission of inequality</a></li>
-  <li><a href="#sec-fiscal-gap-ch15iq" id="toc-sec-fiscal-gap-ch15iq" class="nav-link" data-scroll-target="#sec-fiscal-gap-ch15iq"><span class="header-section-number">20.7</span> The fiscal gap: what Morocco’s redistribution does not yet do</a></li>
+  <li><a href="#sec-fiscal-ch15iq" id="toc-sec-fiscal-ch15iq" class="nav-link" data-scroll-target="#sec-fiscal-ch15iq">The Moroccan fiscal system: partial redistribution</a></li>
+  <li><a href="#sec-transferts-ch15iq" id="toc-sec-transferts-ch15iq" class="nav-link" data-scroll-target="#sec-transferts-ch15iq">Social transfers and the 2021-2025 social protection reform</a></li>
+  <li><a href="#sec-predistrib-ch15iq" id="toc-sec-predistrib-ch15iq" class="nav-link" data-scroll-target="#sec-predistrib-ch15iq">Pre-distribution: reforming the structures that generate inequality</a></li>
+  <li><a href="#sec-limites-ch15iq" id="toc-sec-limites-ch15iq" class="nav-link" data-scroll-target="#sec-limites-ch15iq">What redistribution cannot do alone</a></li>
+  <li><a href="#sec-bourdieu-ch15iq" id="toc-sec-bourdieu-ch15iq" class="nav-link" data-scroll-target="#sec-bourdieu-ch15iq">Bourdieu and non-economic capital: cultural and social reproduction</a></li>
+  <li><a href="#sec-intergenerationnel-ch15iq" id="toc-sec-intergenerationnel-ch15iq" class="nav-link" data-scroll-target="#sec-intergenerationnel-ch15iq">The intergenerational transmission of inequality</a></li>
+  <li><a href="#sec-fiscal-gap-ch15iq" id="toc-sec-fiscal-gap-ch15iq" class="nav-link" data-scroll-target="#sec-fiscal-gap-ch15iq">The fiscal gap: what Morocco’s redistribution does not yet do</a></li>
   </ul></li>
-  <li><a href="#sec-eco-pol-ch15iq" id="toc-sec-eco-pol-ch15iq" class="nav-link" data-scroll-target="#sec-eco-pol-ch15iq"><span class="header-section-number">21</span> Part IV — The Political Economy of Inequality</a>
+  <li><a href="#sec-eco-pol-ch15iq" id="toc-sec-eco-pol-ch15iq" class="nav-link" data-scroll-target="#sec-eco-pol-ch15iq">Part IV — The Political Economy of Inequality</a>
   <ul class="collapse">
-  <li><a href="#sec-macro-ineq-ch15iq" id="toc-sec-macro-ineq-ch15iq" class="nav-link" data-scroll-target="#sec-macro-ineq-ch15iq"><span class="header-section-number">21.1</span> Inequality and macroeconomic performance</a></li>
-  <li><a href="#sec-contrat-ch15iq" id="toc-sec-contrat-ch15iq" class="nav-link" data-scroll-target="#sec-contrat-ch15iq"><span class="header-section-number">21.2</span> Inequality, trust, and the social contract</a></li>
+  <li><a href="#sec-macro-ineq-ch15iq" id="toc-sec-macro-ineq-ch15iq" class="nav-link" data-scroll-target="#sec-macro-ineq-ch15iq">Inequality and macroeconomic performance</a></li>
+  <li><a href="#sec-contrat-ch15iq" id="toc-sec-contrat-ch15iq" class="nav-link" data-scroll-target="#sec-contrat-ch15iq">Inequality, trust, and the social contract</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch15iq" id="toc-sec-concl-ch15iq" class="nav-link" data-scroll-target="#sec-concl-ch15iq"><span class="header-section-number">22</span> Conclusion: Distribute to Grow</a></li>
-  <li><a href="#sec-biblio-ch15iq" id="toc-sec-biblio-ch15iq" class="nav-link" data-scroll-target="#sec-biblio-ch15iq"><span class="header-section-number">23</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch15iq" id="toc-sec-concl-ch15iq" class="nav-link" data-scroll-target="#sec-concl-ch15iq">Conclusion: Distribute to Grow</a></li>
+  <li><a href="#sec-biblio-ch15iq" id="toc-sec-biblio-ch15iq" class="nav-link" data-scroll-target="#sec-biblio-ch15iq">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch15-inequality-distribution.html">Part IV — International Economics and the Long Run</a></li><li class="breadcrumb-item"><a href="./ch15-inequality-distribution.html"><span class="chapter-number">17</span>&nbsp; <span class="chapter-title">Chapter 15 — Inequality, Distribution, and Redistribution</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -416,18 +584,18 @@ The guiding thread of this chapter
 <p>The chapter advances in four movements. First, the measurement toolkit: Lorenz curves, Gini coefficients, Palma ratios, and the critical distinctions between income, wealth, and opportunity inequality. Second, the structural sources of Moroccan inequalities: colonial legacy, market rents, labour market segmentation, and unequal access to capital. Third, redistribution instruments and their limits: fiscal systems, social transfers, public services, and the concept of pre-distribution. Fourth, the political economy of inequality: who benefits from existing structures and who has the resources to defend them.</p>
 <hr>
 </section>
-<section id="sec-mesurer-ch15iq" class="level1" data-number="18">
-<h1 data-number="18"><span class="header-section-number">18</span> Part I — Measuring Inequality: Tools, Indices, and their Limits</h1>
-<section id="sec-gini-ch15iq" class="level2" data-number="18.1">
-<h2 data-number="18.1" class="anchored" data-anchor-id="sec-gini-ch15iq"><span class="header-section-number">18.1</span> The Lorenz curve and the Gini coefficient</h2>
+<section id="sec-mesurer-ch15iq" class="level1">
+<h1>Part I — Measuring Inequality: Tools, Indices, and their Limits</h1>
+<section id="sec-gini-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-gini-ch15iq">The Lorenz curve and the Gini coefficient</h2>
 <p>The most widely used measure of income inequality is the <strong>Gini coefficient</strong>, derived from the Lorenz curve. The Lorenz curve plots the cumulative share of income against the cumulative share of the population, ranked from poorest to richest. Perfect equality, every person receiving an equal share, would produce a diagonal straight line. The Gini coefficient is defined as twice the area between this equality line and the actual Lorenz curve:</p>
 <p><span class="math display">\[G = 1 - 2\int_0^1 L(x)\,dx\]</span></p>
 <p>where <span class="math inline">\(L(x)\)</span> is the Lorenz curve. A Gini of 0 represents perfect equality; 1 represents maximum inequality (one person receives all income). In practice, Gini coefficients for income range from approximately 0.25 in the most equal advanced economies (Nordic countries) to above 0.60 in the most unequal developing economies (South Africa, Brazil).</p>
 <p>Morocco’s Gini coefficient for consumption expenditures (the most reliable available measure given data limitations) was approximately 0.39-0.40 according to HCP’s 2019 survey. This places Morocco in a middle position globally, more equal than Brazil (0.53) or South Africa (0.63), but considerably more unequal than France (0.29), Tunisia (0.33), or South Korea (0.31).</p>
 <p>The Gini coefficient has two well-known limitations that matter for policy design. First, it is most sensitive to changes in the middle of the distribution, making it relatively insensitive to extreme concentration at the top or extreme poverty at the bottom. Second, the same Gini can correspond to very different distributional shapes: a society where the rich are moderately richer than the middle and the middle is moderately richer than the poor can have the same Gini as one with extreme poverty and extreme wealth, provided the middle is distributed accordingly.</p>
 </section>
-<section id="sec-beyond-gini-ch15iq" class="level2" data-number="18.2">
-<h2 data-number="18.2" class="anchored" data-anchor-id="sec-beyond-gini-ch15iq"><span class="header-section-number">18.2</span> Beyond Gini: the Palma ratio and wealth inequality</h2>
+<section id="sec-beyond-gini-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-beyond-gini-ch15iq">Beyond Gini: the Palma ratio and wealth inequality</h2>
 <p>The <strong>Palma ratio</strong>, the ratio of the top 10%’s income share to the bottom 40%’s share, addresses one of the Gini’s limitations by focusing directly on the distributional extremes. Gabriel Palma observed that the middle 50% (deciles 5-9) tends to capture a relatively stable 50% of income across countries; most cross-country variation in inequality comes from the shares of the top 10% and the bottom 40%. Morocco’s Palma ratio is approximately 2.1 according to HCP estimates, meaning the richest 10% receive roughly twice as much income as the poorest 40% combined. For comparison: France is approximately 1.0, South Korea 1.2, Brazil 2.8.</p>
 <p>The <strong>Atkinson index</strong> incorporates an explicit normative parameter <span class="math inline">\(\varepsilon\)</span> measuring inequality aversion:</p>
 <p><span class="math display">\[A(\varepsilon) = 1 - \frac{1}{\mu}\left[\frac{1}{n}\sum_i y_i^{1-\varepsilon}\right]^{\frac{1}{1-\varepsilon}}\]</span></p>
@@ -447,30 +615,30 @@ The cruel paradox: being poor costs more
 </div>
 <p>A critical distinction that aggregate Gini figures typically obscure is the difference between <strong>income inequality</strong> and <strong>wealth inequality</strong>. Income flows, wages, profits, rents received each year, are unequally distributed. Wealth stocks, the accumulated assets (real estate, financial portfolios, business ownership) that generate those flows, are far more unequally distributed. Globally, the top 1% by wealth typically hold 30-40% of total wealth, while the top 1% by income holds 10-15% of total income. In Morocco, direct wealth distribution data are scarce, but proxies suggest extreme concentration: the top 5% of households hold the majority of real estate and financial assets, while the bottom 50% hold minimal real assets.</p>
 </section>
-<section id="sec-territorial-ch15iq" class="level2" data-number="18.3">
-<h2 data-number="18.3" class="anchored" data-anchor-id="sec-territorial-ch15iq"><span class="header-section-number">18.3</span> Territorial and non-monetary inequality</h2>
+<section id="sec-territorial-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-territorial-ch15iq">Territorial and non-monetary inequality</h2>
 <p>National Gini figures conceal profound territorial disparities. Rural-urban income gaps in Morocco remain substantial: the HCP estimates that urban households on average spend approximately 60% more than rural households, with the gap wider in consumption of services and processed goods. More important than average gaps are the extremes: the Atlantic coastal metropolitan corridor (Casablanca, Rabat, Tanger, Agadir) has human development indicators approaching those of advanced economies, while interior rural provinces and parts of the mountainous South display indicators comparable to Sub-Saharan Africa.</p>
 <p>Non-monetary inequalities often reflect and reinforce income inequalities. The <strong>education gap</strong>: dropout rates remain high in secondary school, particularly in rural areas. Private schools, representing 10-12% of primary and secondary enrolments but overrepresented in affluent urban families, produce significantly better examination results than public schools, transmitting educational advantage to the children of the already-advantaged. The <strong>health gap</strong>: infant mortality is approximately twice as high in rural as in urban areas; specialist care and reference hospitals are concentrated in major agglomerations. A patient with a cardiac condition in Midelt does not have the same access to care as one in Casablanca, even nominally covered by the same AMO system. The <strong>gender gap</strong>: female labour force participation at approximately 19-21% is among the lowest in the world at Morocco’s income level, reflecting simultaneously cultural barriers, insufficient childcare provision, and labour market discrimination that systematically undervalues women’s qualifications.</p>
 <hr>
 </section>
 </section>
-<section id="sec-sources-ch15iq" class="level1" data-number="19">
-<h1 data-number="19"><span class="header-section-number">19</span> Part II — The Structural Sources of Moroccan Inequalities</h1>
-<section id="sec-piketty-ch15iq" class="level2" data-number="19.1">
-<h2 data-number="19.1" class="anchored" data-anchor-id="sec-piketty-ch15iq"><span class="header-section-number">19.1</span> Piketty’s r &gt; g and the structural tendency toward wealth concentration</h2>
+<section id="sec-sources-ch15iq" class="level1">
+<h1>Part II — The Structural Sources of Moroccan Inequalities</h1>
+<section id="sec-piketty-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-piketty-ch15iq">Piketty’s r &gt; g and the structural tendency toward wealth concentration</h2>
 <p>Thomas Piketty’s <em>Capital in the Twenty-First Century</em> (2014) made a foundational analytical contribution: the long-run tendency of capitalism is toward wealth concentration, and this tendency is not self-correcting. His central result: when the rate of return on capital <span class="math inline">\(r\)</span> persistently exceeds the economy’s growth rate <span class="math inline">\(g\)</span>, the wealth-to-income ratio rises over time, concentrating wealth in the hands of those who already hold capital.</p>
 <p><span class="math display">\[\text{If } r &gt; g \text{ persistently} \Rightarrow \text{wealth share of capital owners rises over generations}\]</span></p>
 <p>The mechanism: capital owners receive returns that exceed what the economy produces for labour; they save and reinvest a fraction of those returns; their wealth grows faster than total income; their share of total wealth rises. This tendency toward concentration is reversed only by exceptional circumstances, wars that destroy accumulated wealth, economic crises that deflate asset values, or deliberate institutional intervention (progressive wealth taxation, inheritance taxes, redistributive social spending).</p>
 <p>For Morocco, the r &gt; g dynamic operates through several channels. Real estate has appreciated substantially faster than wages or GDP per capita over the past two decades, particularly in the major urban agglomerations. Those who held real estate wealth saw their relative position improve; those who did not, the majority of the population, particularly rural and informal workers, fell behind in relative terms even as their absolute consumption improved. The absence of meaningful wealth taxation (no general wealth tax, inheritance taxed at low rates, real estate capital gains substantially exempted for primary residences) means that this concentration is not corrected by the fiscal system.</p>
 </section>
-<section id="sec-heritage-ch15iq" class="level2" data-number="19.2">
-<h2 data-number="19.2" class="anchored" data-anchor-id="sec-heritage-ch15iq"><span class="header-section-number">19.2</span> The colonial structural legacy</h2>
+<section id="sec-heritage-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-heritage-ch15iq">The colonial structural legacy</h2>
 <p>Morocco’s current economic structure bears the mark of the colonial period (1912-1956). The French Protectorate deliberately developed a dual economy: a modern sector (irrigated commercial agriculture in the Gharb, industrial processing in the major cities, modern commerce) for European settlers and the export economy, and a traditional sector for the Moroccan population, integrated as a reservoir of cheap labour. This initial duality conditioned the distribution of productive assets at independence.</p>
 <p>Unlike South Korea and Taiwan, where radical land reforms in the 1950s redistributed land ownership and created a broad base of small property owners, generating the asset base for later industrialisation, Morocco conducted no significant redistributive land reform. European colonial landholdings were “Moroccanised” in 1973, but they primarily benefited families connected to state power. Smallholder farmers did not receive redistributive land allocations, reproducing land concentration under different owners.</p>
 <p>This structural starting condition creates persistent intergenerational inequality transmission: the children of disadvantaged rural areas in 1956 transmitted that disadvantage to their children, in a movement of intergenerational persistence that breaks only through massive targeted investment in human capital in lagging areas. The rural-urban divide in educational quality, health access, infrastructure, and economic opportunity is not a recent creation, it is the accumulated result of seventy years of investment patterns that initially reproduced colonial geographic concentration.</p>
 </section>
-<section id="sec-rentes-ch15iq" class="level2" data-number="19.3">
-<h2 data-number="19.3" class="anchored" data-anchor-id="sec-rentes-ch15iq"><span class="header-section-number">19.3</span> Market rents and the political economy of concentration</h2>
+<section id="sec-rentes-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-rentes-ch15iq">Market rents and the political economy of concentration</h2>
 <p>In economies where certain markets are weakly competitive and entry barriers are high, well-connected actors can capture <strong>rents</strong>, revenues above their marginal productivity through market position or access to public resources. Morocco’s rent-generating mechanisms are documented and operate through several channels.</p>
 <p><strong>Concentrated markets</strong>: in cement, food distribution, banking, and telecoms, oligopolistic market structures allow firms to set margins well above competitive levels. The Kaleckian markup relationship (<span class="math inline">\(P = (1+m) \times CUV\)</span>, where <span class="math inline">\(m\)</span> depends on the degree of monopoly) makes this explicit: concentrated markets generate higher markups, transferring income from consumers and downstream firms to the concentrated sector’s owners.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -490,19 +658,19 @@ The taxi owner sleeps while the driver works
 <p><strong>Capital-friendly taxation</strong>: the absence of a general wealth tax, low succession taxes for direct heirs (2.5%), substantial exemptions on real estate capital gains, and preferential dividend taxation rates all amplify wealth concentration by allowing capital to accumulate across generations without significant public redistribution.</p>
 <p>The analysis of Moroccan rent capitalism, documented by Mohamed Saadi’s comparative work, shows that political connection remains a significant determinant of business success in several sectors. This is not the full extractive-institution pathology of the worst cases; Morocco has competitive elections, a functioning judiciary, and broadly respected commercial law. But the distance from fully inclusive institutions is real and measurable in the gap between Morocco’s economic complexity and what its income level would predict.</p>
 </section>
-<section id="sec-segmentation-ch15iq" class="level2" data-number="19.4">
-<h2 data-number="19.4" class="anchored" data-anchor-id="sec-segmentation-ch15iq"><span class="header-section-number">19.4</span> Labour market segmentation and gender exclusion</h2>
+<section id="sec-segmentation-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-segmentation-ch15iq">Labour market segmentation and gender exclusion</h2>
 <p>The formal-informal segmentation of Morocco’s labour market directly generates income inequalities. Formal sector workers in large enterprises have wages above the SMIG floor, social insurance (CNSS), access to formal credit, and career progression prospects. Informal workers, representing approximately 40% of non-agricultural employment, receive lower wages with no social protection, no collective rights, and no formal employment history. The income gap between formal and equivalent-qualification informal workers is estimated at 40-60%.</p>
 <p>Segmentation is also gendered. Women are overrepresented in informal agricultural labour and domestic work: the two sectors with the weakest social protection. The female labour force participation rate of approximately 19-21% is structurally low, reflecting simultaneously cultural barriers, insufficient childcare infrastructure, transport and security constraints in rural areas, and labour market discrimination that systematically undervalues women’s qualifications equivalent to men’s. An economy that employs fewer than one in five women in the labour force operates substantially below its productive potential, and no monetary or fiscal stimulus can address this structural gap without complementary institutional and social investment.</p>
 </section>
-<section id="sec-fonctionnelle-ch15iq" class="level2" data-number="19.5">
-<h2 data-number="19.5" class="anchored" data-anchor-id="sec-fonctionnelle-ch15iq"><span class="header-section-number">19.5</span> The functional distribution: wages, profits, and rents</h2>
+<section id="sec-fonctionnelle-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fonctionnelle-ch15iq">The functional distribution: wages, profits, and rents</h2>
 <p>Beyond the personal distribution of income (how much each individual earns), the functional distribution, how national income is divided between wages, profits, and rents, structures the political economy of inequality. Kalecki’s markup pricing model, developed in Chapter 4, connects market structure directly to the wage share: <span class="math inline">\(P = (1+m)    imes CUV\)</span> implies that the profit share in value added equals <span class="math inline">\(m/(1+m)\)</span>, where <span class="math inline">\(m\)</span> is the markup determined by market concentration. More concentrated markets generate higher markups, compress the wage share, and transfer income from workers and consumers to capital owners.</p>
 <p>International comparisons reveal a significant pattern in Morocco’s functional distribution. The labour share of GDP in Morocco is estimated at approximately 35-40% of value added in the marketed sector, compared to 55-65% in OECD economies and 45-55% in comparable middle-income economies. This compressed wage share is simultaneously a reflection of Morocco’s labour market structure (high informality, weak collective bargaining, labour surplus in the Lewis sense) and a contributing cause of its domestic demand constraint: low wages limit domestic consumption, which limits the returns to domestic market-oriented investment, which perpetuates the low-wage equilibrium.</p>
 <p>The distributional implications of structural transformation reinforce this analysis. Moving workers from low-wage informal agriculture to higher-wage formal manufacturing raises the wage share, exactly the mechanism through which East Asian industrialisation reduced inequality in its later phases, after the initial Kuznets-curve rise. Morocco’s stagnant formal manufacturing employment share is therefore simultaneously a structural transformation failure, a growth constraint (Thirlwall’s law), and an inequality-perpetuation mechanism.</p>
 </section>
-<section id="sec-international-ch15iq" class="level2" data-number="19.6">
-<h2 data-number="19.6" class="anchored" data-anchor-id="sec-international-ch15iq"><span class="header-section-number">19.6</span> International comparisons and Morocco’s trajectory</h2>
+<section id="sec-international-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-international-ch15iq">International comparisons and Morocco’s trajectory</h2>
 <p>How does Morocco’s inequality profile compare to relevant reference points? Four comparisons illuminate different dimensions.</p>
 <p><strong>Tunisia</strong> (Gini ~0.33, Palma ~1.5) has somewhat lower measured inequality than Morocco despite similar income levels, reflecting Tunisia’s stronger formal labour market coverage, more developed social protection system, and less extreme territorial disparities. However, Tunisia’s inequality was a major driver of the 2011 revolution: the fact that aggregate Gini figures appeared moderate concealed extreme regional inequalities (coastal urbanised vs interior rural) and youth unemployment that the aggregate measures did not capture.</p>
 <p><strong>South Korea</strong> (Gini ~0.31, Palma ~1.2) shows the outcome of successful structural transformation combined with strong social protection: a country that industrialised rapidly, paid wages that rose with productivity, and built a comprehensive social insurance system now has one of the more equal income distributions among upper-middle-income economies. The Korean lesson for Morocco: inequality reduction is a product of structural transformation <em>accompanied by</em> labour market institutions, not a consequence of GDP growth alone.</p>
@@ -511,10 +679,10 @@ The taxi owner sleeps while the driver works
 <hr>
 </section>
 </section>
-<section id="sec-redistrib-ch15iq" class="level1" data-number="20">
-<h1 data-number="20"><span class="header-section-number">20</span> Part III — Redistribution: Instruments, Limits, and the Pre-distribution Concept</h1>
-<section id="sec-fiscal-ch15iq" class="level2" data-number="20.1">
-<h2 data-number="20.1" class="anchored" data-anchor-id="sec-fiscal-ch15iq"><span class="header-section-number">20.1</span> The Moroccan fiscal system: partial redistribution</h2>
+<section id="sec-redistrib-ch15iq" class="level1">
+<h1>Part III — Redistribution: Instruments, Limits, and the Pre-distribution Concept</h1>
+<section id="sec-fiscal-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fiscal-ch15iq">The Moroccan fiscal system: partial redistribution</h2>
 <p>Morocco’s tax structure rests primarily on three instruments: VAT (approximately 40% of fiscal revenues, standard rate 20%), Corporate Tax (progressive from 20% to 35% since 2023), and Personal Income Tax (marginal rates from 10% to 38%). Each has distributional properties that aggregate to a system of limited redistribution.</p>
 <p><strong>VAT is regressive</strong>: poor households spend a higher share of their income on consumption and therefore pay a higher effective VAT rate as a share of income than wealthy households. VAT exemptions on basic necessities (flour, sugar, essential medicines) partially attenuate this regressivity but do not eliminate it. A government that relies heavily on VAT for its revenues is structurally collecting proportionally more from the poor than from the rich.</p>
 <p><strong>Personal income tax is theoretically progressive but structurally narrow</strong>: its base is dominated by formal sector salaried workers subject to withholding at source. Informal revenues, agricultural incomes (exempted), and capital incomes (capital gains and dividends benefiting from reduced rates) largely escape IR. The effective tax-to-GDP ratio on labour income is far below headline rates because the tax falls on a fraction of total labour income.</p>
@@ -533,15 +701,15 @@ VAT hits Khadija harder than the developer
 </div>
 </div>
 </section>
-<section id="sec-transferts-ch15iq" class="level2" data-number="20.2">
-<h2 data-number="20.2" class="anchored" data-anchor-id="sec-transferts-ch15iq"><span class="header-section-number">20.2</span> Social transfers and the 2021-2025 social protection reform</h2>
+<section id="sec-transferts-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-transferts-ch15iq">Social transfers and the 2021-2025 social protection reform</h2>
 <p>Morocco’s social transfer landscape has been restructured through the 2021-2025 social protection reform, one of the most significant domestic policy changes of the decade. The reform’s ambitions are large: universalising health insurance (AMO) coverage to include informal workers and self-employed persons (previously excluded), expanding family allocations through the RSU, and building the infrastructure for eventual unemployment insurance.</p>
 <p>The <strong>Registre Social Unifié (RSU)</strong> is the administrative infrastructure on which the reform depends. It is a centralised database of household circumstances designed to target assistance to those who need it, replacing the previous approach of universal subsidies (which, through the Caisse de Compensation, disproportionately benefited wealthier households consuming more subsidised goods) with direct targeted transfers. The RSU’s conceptual elegance is real: targeted transfers are more efficient than universal price subsidies. Its implementation challenge is equally real: the administrative capacity to correctly identify vulnerable households, maintain data quality, prevent exclusion errors (eligible households incorrectly excluded) and inclusion errors (ineligible households incorrectly included) is substantial.</p>
 <p>The <strong>Tayssir</strong> programme, conditional cash transfers tied to school attendance in rural disadvantaged areas, has demonstrated documented positive effects: evaluations document a 30-40% reduction in school dropout rates in targeted zones. This is a rare example of a Moroccan redistributive policy that has been rigorously evaluated and shows clear impact.</p>
 <p>The <strong>expansion of AMO to all workers</strong> since 2022 represents a genuine inclusion gain: workers previously excluded from any health insurance now have formal coverage. But formal coverage and effective access are not identical: the quality of public health services varies enormously across the territory, and coverage does not translate into equal access to specialists, diagnostic equipment, or reference hospitals.</p>
 </section>
-<section id="sec-predistrib-ch15iq" class="level2" data-number="20.3">
-<h2 data-number="20.3" class="anchored" data-anchor-id="sec-predistrib-ch15iq"><span class="header-section-number">20.3</span> Pre-distribution: reforming the structures that generate inequality</h2>
+<section id="sec-predistrib-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-predistrib-ch15iq">Pre-distribution: reforming the structures that generate inequality</h2>
 <p>Anthony Atkinson’s concept of <strong>pre-distribution</strong> provides the most important analytical distinction for inequality policy: the difference between redistribution <em>ex post</em> (taxing the inequalities the market produces) and redistribution <em>ex ante</em> or pre-distributive (reforming the market structures that generate those inequalities). Pre-distribution attacks the generative mechanisms rather than their consequences.</p>
 <p>For Morocco, this distinction is operationally significant. Three pre-distributive policy domains have larger potential impact on inequality than equivalent spending on targeted social programmes:</p>
 <p><strong>Competition policy</strong>: dismantling the concentrated market structures in cement, distribution, banking, and telecoms that generate above-competitive profits transfers income from consumers and downstream firms to the concentrated sector’s owners. The Conseil de la Concurrence has the mandate; it needs the investigative resources and enforcement authority.</p>
@@ -549,27 +717,27 @@ VAT hits Khadija harder than the developer
 <p><strong>Transparent public procurement</strong>: reforming the awarding of public contracts to ensure competitive selection rather than connection-based allocation reduces the rents captured by politically connected firms and expands the productive base from which tax revenues can be collected.</p>
 <p>Each of these reforms creates losers who are well-organised to resist: the oligopolists who benefit from market concentration, the informal-sector employers who benefit from unprotected labour, the connected firms who benefit from preferential procurement. Understanding this political economy of redistribution, who benefits from existing structures, who has the resources to defend them, is indispensable for designing reform strategies that are technically sound <em>and</em> politically achievable.</p>
 </section>
-<section id="sec-limites-ch15iq" class="level2" data-number="20.4">
-<h2 data-number="20.4" class="anchored" data-anchor-id="sec-limites-ch15iq"><span class="header-section-number">20.4</span> What redistribution cannot do alone</h2>
+<section id="sec-limites-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-limites-ch15iq">What redistribution cannot do alone</h2>
 <p>Three dimensions of Morocco’s inequality are insufficiently addressed by redistribution instruments, even well-designed ones.</p>
 <p><strong>Wealth inequalities are not targeted</strong>: the fiscal system’s treatment of capital, low succession taxes, real estate capital gains exemptions, dividend rate reductions, systematically allows wealth to compound across generations. The result is that inheritance, not merit or effort, is increasingly the dominant determinant of economic position in the top quartile of the distribution. A meaningful reform of wealth taxation, bringing Morocco’s effective rates on capital toward the OECD average, would generate revenues for human capital investment while directly limiting intergenerational wealth transmission.</p>
 <p><strong>Service quality inequalities compound resource inequalities</strong>: the formal AMO coverage rate and school enrolment rate have both improved substantially. But a child in a well-equipped Casablanca private school and a child in an underfunded rural public school are not receiving the same education despite the same formal rights. Equalising service quality, through differentiated resource allocation that directs more resources to underperforming schools and health facilities, requires political will to override the interests of urban constituencies better positioned to defend existing distributions of public service quality.</p>
 <p><strong>The informal economy traps its participants</strong>: workers in the informal economy cannot build social insurance entitlements, cannot access formal credit, cannot demonstrate formal employment history for future formal employment. The informal sector is not a temporary staging ground before formal employment for most of its participants, it is a persistent trap that reduces lifetime earnings and intergenerationally transmits disadvantage. Formalisation incentives, reducing the costs of formal employment for small firms, simplifying social insurance registration, expanding labour inspectorate capacity, are the most direct tools available.</p>
 </section>
-<section id="sec-bourdieu-ch15iq" class="level2" data-number="20.5">
-<h2 data-number="20.5" class="anchored" data-anchor-id="sec-bourdieu-ch15iq"><span class="header-section-number">20.5</span> Bourdieu and non-economic capital: cultural and social reproduction</h2>
+<section id="sec-bourdieu-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bourdieu-ch15iq">Bourdieu and non-economic capital: cultural and social reproduction</h2>
 <p>Pierre Bourdieu’s sociological framework adds a dimension that purely economic measures of inequality systematically undercount: <strong>cultural capital</strong> (educational credentials, cultural knowledge, communicative competence) and <strong>social capital</strong> (networks of relationships that provide access to resources, opportunities, and influence).</p>
 <p>In Bourdieu’s framework, inequalities are reproduced not only through differential access to economic resources (wealth, income) but through differential access to cultural and social resources that convert into economic advantage. A child raised in a household with books, educated parents, and access to cultural institutions accumulates cultural capital that is not measured in household income surveys but translates into educational success, labour market advantage, and social network access. The educational system appears meritocratic, all children formally have access to public schools, while reproducing existing hierarchies because it rewards precisely the cultural capital that is differentially distributed by class origin.</p>
 <p>For Morocco, this analysis is directly relevant to the private-public education gap. The 10-12% of children enrolled in private primary and secondary schools are not merely receiving more resources, they are being socialised into the cultural capital (French language fluency, familiarity with academic conventions, networked relationships with other elite-track families) that provides competitive advantage in access to higher education, employment, and social networks. The formal equality of access to public education obscures the functional inequality of outcomes it produces.</p>
 </section>
-<section id="sec-intergenerationnel-ch15iq" class="level2" data-number="20.6">
-<h2 data-number="20.6" class="anchored" data-anchor-id="sec-intergenerationnel-ch15iq"><span class="header-section-number">20.6</span> The intergenerational transmission of inequality</h2>
+<section id="sec-intergenerationnel-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-intergenerationnel-ch15iq">The intergenerational transmission of inequality</h2>
 <p>Inequality persists across generations to a degree that challenges the liberal meritocratic narrative. The <strong>intergenerational income elasticity</strong>, the correlation between a parent’s income rank and a child’s adult income rank, is high in Morocco, suggesting low social mobility. Sons of professional fathers have systematically higher probabilities of professional employment than sons of agricultural workers, even after controlling for educational attainment.</p>
 <p>The mechanisms of intergenerational transmission are multiple and cumulative. <strong>Material transmission</strong>: wealthy families invest more in children’s education, provide better nutrition and health care, and live in better-resourced neighbourhoods. <strong>Cultural transmission</strong>: middle and upper-class families transmit academic cultural capital that enhances educational performance beyond material resources. <strong>Network transmission</strong>: professional networks are transmitted through family contacts, providing privileged access to internships, employment references, and business opportunities. <strong>Inheritance</strong>: wealth transfers at death directly reproduce asset inequalities across generations without any pretence of meritocracy.</p>
 <p>Morocco’s intergenerational mobility is lower than comparable economies with stronger social protection and public education systems, confirming the theoretical prediction that social protection investments and public service quality equalisation are the primary levers for intergenerational mobility, not growth alone.</p>
 </section>
-<section id="sec-fiscal-gap-ch15iq" class="level2" data-number="20.7">
-<h2 data-number="20.7" class="anchored" data-anchor-id="sec-fiscal-gap-ch15iq"><span class="header-section-number">20.7</span> The fiscal gap: what Morocco’s redistribution does not yet do</h2>
+<section id="sec-fiscal-gap-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-fiscal-gap-ch15iq">The fiscal gap: what Morocco’s redistribution does not yet do</h2>
 <p>The structural gap between Morocco’s redistribution capacity and what its level of inequality requires has three dimensions.</p>
 <p><strong>Revenue adequacy</strong>: Morocco’s tax-to-GDP ratio (approximately 22-25%) is below the 28-32% typical of comparable middle-income countries with adequate social protection systems. The financing of the 2021-2025 social protection reform requires either increasing revenues (the preferred path, through broadening the tax base to informal income and capital gains) or reallocating existing expenditures (reducing subsidies and inefficient expenditures). Both paths face political resistance from beneficiaries of the status quo.</p>
 <p><strong>Incidence analysis</strong>: a programme-by-programme incidence analysis of Morocco’s public expenditures would reveal which groups benefit most from government spending. International experience with such analyses consistently shows that wealthier groups capture disproportionate shares of education and health spending (because they have better access to higher-quality institutions), even when headline coverage rates appear universal. Morocco lacks this systematic programme incidence analysis, which means redistribution cannot be designed efficiently.</p>
@@ -578,29 +746,29 @@ VAT hits Khadija harder than the developer
 <hr>
 </section>
 </section>
-<section id="sec-eco-pol-ch15iq" class="level1" data-number="21">
-<h1 data-number="21"><span class="header-section-number">21</span> Part IV — The Political Economy of Inequality</h1>
+<section id="sec-eco-pol-ch15iq" class="level1">
+<h1>Part IV — The Political Economy of Inequality</h1>
 <p>Understanding why inequality persists despite broad public preference for greater equality requires analysing the political economy of redistribution: who benefits from existing structures, who has the organisational capacity to resist change, and what coalition conditions would allow reform.</p>
 <p>The beneficiaries of Morocco’s rent-generating structures, the oligopolists in concentrated markets, the holders of administrative licences, the connected firms in public procurement, are concentrated, organised, well-resourced, and directly aware of the stakes. The beneficiaries of redistribution, informal workers, rural households, women excluded from the formal labour market, are dispersed, not collectively organised, and often unaware of how specific policy choices affect them. This organisational asymmetry is the structural reason why redistribution tends to be incremental and subject to capture.</p>
 <p>Kalecki’s 1943 essay “Political Aspects of Full Employment” identified the parallel mechanism in labour markets: full employment is achievable but capitalists resist it because it erodes the disciplinary function of unemployment. The same logic applies to inequality: reducing rents through competition policy, formalising labour markets, and redistributing wealth through taxation are all technically achievable, but each creates organised resistance from those who currently capture the rents.</p>
 <p>Successful redistributive reform requires building the political coalition of losers and potential beneficiaries: the consumers who pay above-competitive prices in concentrated markets, the small enterprises that lose public contracts to connected competitors, the formal workers whose social insurance contributions cross-subsidise informal competitors. Making these distributed costs visible and attributing them to identifiable structural causes is the political economy prerequisite for building reform coalitions.</p>
-<section id="sec-macro-ineq-ch15iq" class="level2" data-number="21.1">
-<h2 data-number="21.1" class="anchored" data-anchor-id="sec-macro-ineq-ch15iq"><span class="header-section-number">21.1</span> Inequality and macroeconomic performance</h2>
+<section id="sec-macro-ineq-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-macro-ineq-ch15iq">Inequality and macroeconomic performance</h2>
 <p>The relationship between inequality and economic growth is not a purely distributional question, it has macroeconomic dimensions that connect this chapter to the preceding analysis of aggregate demand, structural transformation, and external constraints.</p>
 <p><strong>Inequality compresses domestic demand</strong>. A society where income is concentrated in a small wealthy group that saves a high proportion generates less domestic consumption demand per unit of GDP than one where income is distributed more broadly to households with higher marginal propensities to consume. This is the Kaleckian point: wage compression that raises the profit share may increase firms’ notional profits but reduces the domestic market for their output. For Morocco, where domestic demand is a binding constraint on non-export manufacturing investment, reducing inequality is also an expansion of the domestic market.</p>
 <p><strong>Inequality and political instability</strong>. The economic literature on inequality and growth increasingly finds that high inequality tends to reduce long-run growth rates, not primarily through macroeconomic mechanisms but through political ones: high inequality increases political instability risk, reduces policy continuity, and generates redistributive conflicts that consume resources and attention. Morocco’s 2011 political moment, in which economic discontent (unequal distribution of growth gains, youth unemployment, regional disparities) combined with political aspirations to generate significant reform pressure, illustrates this mechanism directly.</p>
 <p><strong>Inequality and the social contract</strong>. At its deepest level, the persistence of high inequality in the context of real economic growth represents a failure of the social contract: citizens who see growth occurring but do not share in its gains eventually withdraw consent from the institutional arrangements that sustain that growth. The NMD 2021’s most politically significant contribution was not its specific policy proposals but its institutional acknowledgment, at the highest level of Moroccan governance, that the existing model’s distributional outcomes were unsustainable.</p>
 </section>
-<section id="sec-contrat-ch15iq" class="level2" data-number="21.2">
-<h2 data-number="21.2" class="anchored" data-anchor-id="sec-contrat-ch15iq"><span class="header-section-number">21.2</span> Inequality, trust, and the social contract</h2>
+<section id="sec-contrat-ch15iq" class="level2">
+<h2 class="anchored" data-anchor-id="sec-contrat-ch15iq">Inequality, trust, and the social contract</h2>
 <p>The economic literature increasingly documents that high income and wealth inequality erodes social trust, the generalised belief that other citizens are honest and cooperative, in ways that impose real economic costs. Low-trust societies generate higher transaction costs (more legal enforcement, more security expenditure, more insurance), lower public goods provision (free-rider problems are more severe when trust is low), and weaker collective action for common interests including investment in shared infrastructure.</p>
 <p>Morocco’s Afrobarometer surveys document relatively high levels of distrust in institutions and between economic actors, particularly across class and regional lines. This institutional low-trust environment is simultaneously a consequence of inequality (economic stratification reduces the sense of shared fate) and a cause of under-provision of the public goods that would reduce inequality. Breaking this low-trust, low-public-goods, high-inequality equilibrium requires simultaneous progress on multiple dimensions: visible redistribution that signals the state is on the side of the disadvantaged, transparent governance that reduces the rent-extraction perception, and quality public services that demonstrate the value of collective provision.</p>
 <p>The social protection reform of 2021-2025 is the most important single initiative for addressing this low-trust equilibrium: if it succeeds in providing universal quality health coverage and family support that citizens experience as genuinely equal regardless of their economic position, it will have done more for social trust, and through trust, for economic performance, than any fiscal measure alone.</p>
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch15iq" class="level1" data-number="22">
-<h1 data-number="22"><span class="header-section-number">22</span> Conclusion: Distribute to Grow</h1>
+<section id="sec-concl-ch15iq" class="level1">
+<h1>Conclusion: Distribute to Grow</h1>
 <p>Morocco’s inequalities are not a fatality: they are the product of identifiable and partially correctable mechanisms. Market concentration generates rents that competition policy can reduce. Wealth inequalities are amplified by capital-friendly taxation that fiscal reform could correct. Educational and health access inequalities are the product of decades of underinvestment in disadvantaged areas that differentiated public resource allocation could partially reverse.</p>
 <p>The necessary structural reform combines several levers: more progressive wealth taxation, more active competition policy in concentrated markets, differentiated public investment favouring disadvantaged regions and groups, and construction of a social protection system that is universal in both coverage and quality. These levers are not contradictory with growth; they are its condition in an economy whose dynamic is constrained by the narrowness of domestic demand and the underutilisation of its human capital.</p>
 <p>The distributional question is ultimately a question about what kind of society Morocco chooses to be. An economy that generates 4-5% annual growth but concentrates the gains in a narrow segment while 40% of workers remain in informal precarity is not developing inclusively. The NMD 2021’s most important political contribution was making this explicit at the highest governance level: not that inequality exists, but that it is structurally reproduced and that its reproduction is a choice, not a fate. Reversing that choice requires not only technical reforms but the political coalition-building to implement them against the organised resistance of those who benefit from the status quo. Economics identifies the levers; political economy assesses which are available to pull.</p>
@@ -628,8 +796,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch15iq" class="level1 appendix" data-number="23">
-<h1 class="appendix" data-number="23"><span class="header-section-number">23</span> Further Reading</h1>
+<section id="sec-biblio-ch15iq" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Piketty, T. (2014). <em>Capital in the Twenty-First Century</em>. Harvard University Press.</strong> The foundational empirical and theoretical account of wealth concentration dynamics.</p>
 <p><strong>Atkinson, A.B. (2015). <em>Inequality: What Can Be Done?</em>. Harvard University Press.</strong> The most operationally specific agenda for reducing inequality. Atkinson’s pre-distribution concept developed in depth.</p>
 <p><strong>HCP. <em>Enquête nationale sur la consommation et les dépenses des ménages</em> (2019).</strong> The primary empirical source on Moroccan household inequality. Available at hcp.ma.</p>
@@ -641,8 +809,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1052,8 +1279,8 @@ What this chapter should leave with the reader
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="./ch16-intl-political-economy.html" class="pagination-link" aria-label="Chapter 16 — International Political Economy: Markets, States, and Power">
-        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="./ch16-intl-political-economy.html" class="pagination-link" aria-label="Chapter 16 — International Political Economy">
+        <span class="nav-page-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
@@ -1061,13 +1288,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1076,5 +1303,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

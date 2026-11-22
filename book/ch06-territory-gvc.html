@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch06-territory-gvc.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -75,8 +78,169 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -101,6 +265,9 @@ ul.task-list li input[type="checkbox"] {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -257,7 +424,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -297,44 +464,45 @@ ul.task-list li input[type="checkbox"] {
    
   <ul>
   <li><a href="#sec-carte-ch06" id="toc-sec-carte-ch06" class="nav-link active" data-scroll-target="#sec-carte-ch06">The Map</a></li>
-  <li><a href="#sec-agglomeration-ch06" id="toc-sec-agglomeration-ch06" class="nav-link" data-scroll-target="#sec-agglomeration-ch06"><span class="header-section-number">9</span> Part I — Why Activity Concentrates: From Marshall to Krugman and Myrdal</a>
+  <li><a href="#sec-agglomeration-ch06" id="toc-sec-agglomeration-ch06" class="nav-link" data-scroll-target="#sec-agglomeration-ch06">Part I — Why Activity Concentrates: From Marshall to Krugman and Myrdal</a>
   <ul class="collapse">
-  <li><a href="#sec-von-thunen-ch06" id="toc-sec-von-thunen-ch06" class="nav-link" data-scroll-target="#sec-von-thunen-ch06"><span class="header-section-number">9.1</span> The founding intuition: land rent and bid-rent curves</a></li>
-  <li><a href="#sec-marshall-ch06" id="toc-sec-marshall-ch06" class="nav-link" data-scroll-target="#sec-marshall-ch06"><span class="header-section-number">9.2</span> Marshall’s trinity: the three agglomeration forces</a></li>
-  <li><a href="#sec-dispersion-ch06" id="toc-sec-dispersion-ch06" class="nav-link" data-scroll-target="#sec-dispersion-ch06"><span class="header-section-number">9.3</span> Dispersion forces and the limits of concentration</a></li>
-  <li><a href="#sec-neg-ch06" id="toc-sec-neg-ch06" class="nav-link" data-scroll-target="#sec-neg-ch06"><span class="header-section-number">9.4</span> Krugman’s New Economic Geography: concentration from nothing</a></li>
-  <li><a href="#sec-myrdal-ch06" id="toc-sec-myrdal-ch06" class="nav-link" data-scroll-target="#sec-myrdal-ch06"><span class="header-section-number">9.5</span> Myrdal and cumulative causation: the heterodox correction</a></li>
+  <li><a href="#sec-von-thunen-ch06" id="toc-sec-von-thunen-ch06" class="nav-link" data-scroll-target="#sec-von-thunen-ch06">The founding intuition: land rent and bid-rent curves</a></li>
+  <li><a href="#sec-marshall-ch06" id="toc-sec-marshall-ch06" class="nav-link" data-scroll-target="#sec-marshall-ch06">Marshall’s trinity: the three agglomeration forces</a></li>
+  <li><a href="#sec-dispersion-ch06" id="toc-sec-dispersion-ch06" class="nav-link" data-scroll-target="#sec-dispersion-ch06">Dispersion forces and the limits of concentration</a></li>
+  <li><a href="#sec-neg-ch06" id="toc-sec-neg-ch06" class="nav-link" data-scroll-target="#sec-neg-ch06">Krugman’s New Economic Geography: concentration from nothing</a></li>
+  <li><a href="#sec-myrdal-ch06" id="toc-sec-myrdal-ch06" class="nav-link" data-scroll-target="#sec-myrdal-ch06">Myrdal and cumulative causation: the heterodox correction</a></li>
   </ul></li>
-  <li><a href="#sec-clusters-ch06" id="toc-sec-clusters-ch06" class="nav-link" data-scroll-target="#sec-clusters-ch06"><span class="header-section-number">10</span> Part II — Clusters and Industrial Districts: When Proximity Becomes System</a>
+  <li><a href="#sec-clusters-ch06" id="toc-sec-clusters-ch06" class="nav-link" data-scroll-target="#sec-clusters-ch06">Part II — Clusters and Industrial Districts: When Proximity Becomes System</a>
   <ul class="collapse">
-  <li><a href="#sec-district-ch06" id="toc-sec-district-ch06" class="nav-link" data-scroll-target="#sec-district-ch06"><span class="header-section-number">10.1</span> The industrial district: from Marshall to Becattini’s Third Italy</a></li>
-  <li><a href="#sec-tacit-ch06" id="toc-sec-tacit-ch06" class="nav-link" data-scroll-target="#sec-tacit-ch06"><span class="header-section-number">10.2</span> Tacit knowledge, absorptive capacity, and the limits of technology transfer</a></li>
-  <li><a href="#sec-nonaka-ch06" id="toc-sec-nonaka-ch06" class="nav-link" data-scroll-target="#sec-nonaka-ch06"><span class="header-section-number">10.3</span> The SECI spiral: how tacit knowledge becomes shared knowledge</a></li>
-  <li><a href="#sec-boschma-ch06" id="toc-sec-boschma-ch06" class="nav-link" data-scroll-target="#sec-boschma-ch06"><span class="header-section-number">10.4</span> Boschma’s five proximities: too close can be as bad as too far</a></li>
-  <li><a href="#sec-hirschman-ch06" id="toc-sec-hirschman-ch06" class="nav-link" data-scroll-target="#sec-hirschman-ch06"><span class="header-section-number">10.5</span> Perroux, Hirschman, and the test of linkages</a></li>
+  <li><a href="#sec-district-ch06" id="toc-sec-district-ch06" class="nav-link" data-scroll-target="#sec-district-ch06">The industrial district: from Marshall to Becattini’s Third Italy</a></li>
+  <li><a href="#sec-tacit-ch06" id="toc-sec-tacit-ch06" class="nav-link" data-scroll-target="#sec-tacit-ch06">Tacit knowledge, absorptive capacity, and the limits of technology transfer</a></li>
+  <li><a href="#sec-nonaka-ch06" id="toc-sec-nonaka-ch06" class="nav-link" data-scroll-target="#sec-nonaka-ch06">The SECI spiral: how tacit knowledge becomes shared knowledge</a></li>
+  <li><a href="#sec-boschma-ch06" id="toc-sec-boschma-ch06" class="nav-link" data-scroll-target="#sec-boschma-ch06">Boschma’s five proximities: too close can be as bad as too far</a></li>
+  <li><a href="#sec-hirschman-ch06" id="toc-sec-hirschman-ch06" class="nav-link" data-scroll-target="#sec-hirschman-ch06">Perroux, Hirschman, and the test of linkages</a></li>
   </ul></li>
-  <li><a href="#sec-gvc-ch06" id="toc-sec-gvc-ch06" class="nav-link" data-scroll-target="#sec-gvc-ch06"><span class="header-section-number">11</span> Part III — Global Value Chains: Who Governs, Who Captures</a>
+  <li><a href="#sec-gvc-ch06" id="toc-sec-gvc-ch06" class="nav-link" data-scroll-target="#sec-gvc-ch06">Part III — Global Value Chains: Who Governs, Who Captures</a>
   <ul class="collapse">
-  <li><a href="#sec-gereffi-ch06" id="toc-sec-gereffi-ch06" class="nav-link" data-scroll-target="#sec-gereffi-ch06"><span class="header-section-number">11.1</span> From national products to fragmented tasks</a></li>
-  <li><a href="#sec-smile-curve-ch06" id="toc-sec-smile-curve-ch06" class="nav-link" data-scroll-target="#sec-smile-curve-ch06"><span class="header-section-number">11.2</span> The smile curve and the paradox of impoverishing growth</a></li>
-  <li><a href="#sec-gouvernance-gvc-ch06" id="toc-sec-gouvernance-gvc-ch06" class="nav-link" data-scroll-target="#sec-gouvernance-gvc-ch06"><span class="header-section-number">11.3</span> Five governance structures and their upgrading implications</a></li>
-  <li><a href="#sec-strategic-coupling-ch06" id="toc-sec-strategic-coupling-ch06" class="nav-link" data-scroll-target="#sec-strategic-coupling-ch06"><span class="header-section-number">11.4</span> Coe, Yeung, and strategic coupling</a></li>
+  <li><a href="#sec-gereffi-ch06" id="toc-sec-gereffi-ch06" class="nav-link" data-scroll-target="#sec-gereffi-ch06">From national products to fragmented tasks</a></li>
+  <li><a href="#sec-smile-curve-ch06" id="toc-sec-smile-curve-ch06" class="nav-link" data-scroll-target="#sec-smile-curve-ch06">The smile curve and the paradox of impoverishing growth</a></li>
+  <li><a href="#sec-gouvernance-gvc-ch06" id="toc-sec-gouvernance-gvc-ch06" class="nav-link" data-scroll-target="#sec-gouvernance-gvc-ch06">Five governance structures and their upgrading implications</a></li>
+  <li><a href="#sec-strategic-coupling-ch06" id="toc-sec-strategic-coupling-ch06" class="nav-link" data-scroll-target="#sec-strategic-coupling-ch06">Coe, Yeung, and strategic coupling</a></li>
   </ul></li>
-  <li><a href="#sec-structuraliste-ch06" id="toc-sec-structuraliste-ch06" class="nav-link" data-scroll-target="#sec-structuraliste-ch06"><span class="header-section-number">12</span> Part IV — The Structuralist Critique: Periphery, Dependence, and the Question of Power</a>
+  <li><a href="#sec-structuraliste-ch06" id="toc-sec-structuraliste-ch06" class="nav-link" data-scroll-target="#sec-structuraliste-ch06">Part IV — The Structuralist Critique: Periphery, Dependence, and the Question of Power</a>
   <ul class="collapse">
-  <li><a href="#sec-prebisch-ch06" id="toc-sec-prebisch-ch06" class="nav-link" data-scroll-target="#sec-prebisch-ch06"><span class="header-section-number">12.1</span> Prebisch-Singer and the terms of trade</a></li>
-  <li><a href="#sec-maroc-gvc-ch06" id="toc-sec-maroc-gvc-ch06" class="nav-link" data-scroll-target="#sec-maroc-gvc-ch06"><span class="header-section-number">12.2</span> The smile of phosphate and the frown of textiles</a></li>
-  <li><a href="#sec-agro-ch06" id="toc-sec-agro-ch06" class="nav-link" data-scroll-target="#sec-agro-ch06"><span class="header-section-number">12.3</span> Agro-industry: the district that is also a chain</a></li>
-  <li><a href="#sec-politique-territoriale-ch06" id="toc-sec-politique-territoriale-ch06" class="nav-link" data-scroll-target="#sec-politique-territoriale-ch06"><span class="header-section-number">12.4</span> The territorial policy dilemma: efficiency versus equity</a></li>
-  <li><a href="#sec-nearshoring-ch06" id="toc-sec-nearshoring-ch06" class="nav-link" data-scroll-target="#sec-nearshoring-ch06"><span class="header-section-number">12.5</span> The nearshoring window and its conditions</a></li>
+  <li><a href="#sec-prebisch-ch06" id="toc-sec-prebisch-ch06" class="nav-link" data-scroll-target="#sec-prebisch-ch06">Prebisch-Singer and the terms of trade</a></li>
+  <li><a href="#sec-maroc-gvc-ch06" id="toc-sec-maroc-gvc-ch06" class="nav-link" data-scroll-target="#sec-maroc-gvc-ch06">The smile of phosphate and the frown of textiles</a></li>
+  <li><a href="#sec-agro-ch06" id="toc-sec-agro-ch06" class="nav-link" data-scroll-target="#sec-agro-ch06">Agro-industry: the district that is also a chain</a></li>
+  <li><a href="#sec-politique-territoriale-ch06" id="toc-sec-politique-territoriale-ch06" class="nav-link" data-scroll-target="#sec-politique-territoriale-ch06">The territorial policy dilemma: efficiency versus equity</a></li>
+  <li><a href="#sec-nearshoring-ch06" id="toc-sec-nearshoring-ch06" class="nav-link" data-scroll-target="#sec-nearshoring-ch06">The nearshoring window and its conditions</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch06" id="toc-sec-concl-ch06" class="nav-link" data-scroll-target="#sec-concl-ch06"><span class="header-section-number">13</span> Conclusion: The Micro That Makes the Macro</a></li>
-  <li><a href="#sec-biblio-ch06" id="toc-sec-biblio-ch06" class="nav-link" data-scroll-target="#sec-biblio-ch06"><span class="header-section-number">14</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch06" id="toc-sec-concl-ch06" class="nav-link" data-scroll-target="#sec-concl-ch06">Conclusion: The Micro That Makes the Macro</a></li>
+  <li><a href="#sec-biblio-ch06" id="toc-sec-biblio-ch06" class="nav-link" data-scroll-target="#sec-biblio-ch06">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch01-what-economics-is.html">Part I — The Microeconomic Foundation</a></li><li class="breadcrumb-item"><a href="./ch06-territory-gvc.html"><span class="chapter-number">8</span>&nbsp; <span class="chapter-title">Chapter 6 — Territory, Agglomeration, and Global Value Chains</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -391,17 +559,17 @@ The guiding thread of this chapter
 <p>This chapter addresses these questions in three ascending movements. First, the economics of why activity concentrates: agglomeration forces from Marshall through Krugman, and the heterodox counterpoint of Myrdal and Kaldor. Second, the meso-organisation of clusters and industrial districts: how firms organise collectively in a territory, and what separates genuine production systems from mere enclave assemblies. Third, the architecture of global value chains and Morocco’s position within them: the smile curve, governance structures, upgrading strategies, and the long shadow of the structuralist critique.</p>
 <hr>
 </section>
-<section id="sec-agglomeration-ch06" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Part I — Why Activity Concentrates: From Marshall to Krugman and Myrdal</h1>
-<section id="sec-von-thunen-ch06" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sec-von-thunen-ch06"><span class="header-section-number">9.1</span> The founding intuition: land rent and bid-rent curves</h2>
+<section id="sec-agglomeration-ch06" class="level1">
+<h1>Part I — Why Activity Concentrates: From Marshall to Krugman and Myrdal</h1>
+<section id="sec-von-thunen-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-von-thunen-ch06">The founding intuition: land rent and bid-rent curves</h2>
 <p>The first economist to take space seriously was a German landowner. In <em>The Isolated State</em> (1826), Johann Heinrich von Thünen imagined a single city in the centre of a uniform fertile plain with no rivers or roads, and asked how agricultural activities would distribute themselves around it. His answer founds all spatial economics.</p>
 <p>Each farmer arbitrates between the price obtained in the city and the cost of transporting production there. Heavy, perishable, or costly-to-move goods, fresh vegetables, dairy, must be produced close to the centre. Goods that tolerate a long journey, grain, timber, can be produced further out. The result is a set of concentric rings determined by a simple logic: <strong>bid rent</strong>, the maximum rent a farmer can offer for land at a given distance while still earning a normal profit. The bid-rent curve for market gardening falls steeply with distance (because transport costs per kilogram are high); the bid-rent curve for cereals falls more gently. At each point in space, the activity willing to pay the highest rent wins the land. Rings emerge from competition for soil, not from central planning.</p>
 <p>Von Thünen’s mechanism is the skeleton of all that follows: the value of a location depends on what it economises in transport and what markets it accesses. This logic, now expressed in terms of market potential and freight costs rather than horse-drawn carts, still determines the spatial distribution of Morocco’s agriculture (intensive export horticulture near Agadir, rainfed cereals in the interior plains) and the location premium for warehousing in Tanger-Med’s industrial zone relative to inland sites.</p>
 <p>The <strong>market potential</strong> concept, formalised by Chauncy Harris in 1954 and embedded in the gravity models of trade, extends this logic to industrial location. A location’s attractiveness depends on the sum of markets it can reach, weighted by their size and the inverse of their distance. Morocco’s most fundamental geographic asset is proximity to the European Union, the world’s largest single market for manufactured goods, at a distance that allows just-in-time automotive supply. This market potential advantage, not any domestic comparative cost advantage, is the primary explanation for why the Renault-Tanger and Stellantis-Kénitra investments materialised in Morocco rather than in cheaper labour markets further away. The distance premium is a gravity effect: proximity reduces transport costs, enables frequent shipments and lower inventory, and allows quality supervision by European engineers who can visit rather than video conference. Morocco’s industrial strategy has been, in essence, a strategy of monetising market potential: converting geographic proximity into logistical and contractual relationships that generate durable productive coupling.</p>
 </section>
-<section id="sec-marshall-ch06" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-marshall-ch06"><span class="header-section-number">9.2</span> Marshall’s trinity: the three agglomeration forces</h2>
+<section id="sec-marshall-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-marshall-ch06">Marshall’s trinity: the three agglomeration forces</h2>
 <p>Alfred Marshall, describing the industrial concentrations of 19th-century England, Sheffield cutlery, Lancashire textiles, identified three mechanisms that make firms productive by being near each other, mechanisms that Gilles Duranton and Diego Puga formalised a century later as <em>sharing, matching,</em> and <em>learning</em>.</p>
 <p><strong>Sharing</strong> is the first mechanism. A firm in an industrial district shares with its neighbours infrastructure, specialised services, and thick input markets that none of them could individually afford. A specialised machine tool maintenance firm can only survive if there are enough users nearby. A port terminal is viable only if traffic is dense enough. A specialised legal firm serving the automotive supply chain only justifies its existence in a region with a substantial automotive industry. All of these services are accessible to a firm in the cluster but inaccessible to an identical firm operating in isolation. The firm inside the cluster uses them; the firm outside the cluster must do without or travel for them at high cost.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -434,20 +602,20 @@ The chef who changes restaurant but not city
 </div>
 <p>These three mechanisms generate a quantifiable productivity premium. Econometric estimates consistently find that doubling employment density in a city raises productivity by 3–8%. This may seem modest in annual terms. Cumulated over decades, it accounts for a substantial share of the income gap between metropolis and interior. Casablanca’s productivity advantage over comparable-sized cities in Morocco’s interior is not entirely explainable by the quality of individual workers it attracts. A significant part is the agglomeration itself, the density of interaction, the thick markets, the knowledge spillovers that no amount of land and capital can replicate outside the cluster.</p>
 </section>
-<section id="sec-dispersion-ch06" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="sec-dispersion-ch06"><span class="header-section-number">9.3</span> Dispersion forces and the limits of concentration</h2>
+<section id="sec-dispersion-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-dispersion-ch06">Dispersion forces and the limits of concentration</h2>
 <p>Agglomeration is not unlimited. Against the centripetal forces pull centrifugal ones: land rent rises as the city grows, pricing out less productive activities and households; congestion mounts, traffic, network saturation, administrative bottlenecks; pollution and environmental degradation erode quality of life; and in semi-arid countries, pressure on scarce water resources ultimately constrains how large any concentration can grow sustainably.</p>
 <p>Casablanca illustrates the two faces of this medal. Its density generates the productivity premium that makes it Morocco’s economic capital. The same density generates land prices that have expelled lower-income households to a diffuse peri-urban ring of remote new towns (Tamesna, Tamansourt), long commute times that absorb several hours of every working day, water stress that will intensify as climate change reduces rainfall in the Atlantic coast watershed, and acute traffic congestion that already imposes measurable economic costs.</p>
 <p>The critical Moroccan specificity is water. The coastal urban conurbation from Kénitra to Casablanca concentrates millions of inhabitants and water-intensive industries on a strip where aquifer recharge is limited and increasingly unreliable under climate variability. Rather than self-correcting through market signals, as agglomeration theory would predict if land and water were properly priced, the concentration is maintained by massive hydraulic investment: inter-basin water transfers, desalination plants at Agadir and planned for Casablanca, groundwater extraction at rates that exceed recharge. The constraint does not disperse the activity; it displaces the problem from geography to public finance and ecological futures.</p>
 </section>
-<section id="sec-neg-ch06" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-neg-ch06"><span class="header-section-number">9.4</span> Krugman’s New Economic Geography: concentration from nothing</h2>
+<section id="sec-neg-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-neg-ch06">Krugman’s New Economic Geography: concentration from nothing</h2>
 <p>Why does Morocco’s economic activity concentrate in one part of the territory rather than another? Not primarily because of natural endowments, Casablanca has no coal, no exceptional port geography that Safi or Nador could not have provided, no mineral resource. It concentrated because of historical contingencies amplified by economic mechanisms that Paul Krugman formalised in the New Economic Geography.</p>
 <p>Krugman’s model (1991), developed with Masahisa Fujita and Anthony Venables, combines three ingredients: increasing returns at the firm level (firms are more efficient at larger scale), transport costs between regions, and the mobility of some factors (workers). From this combination, a centre-periphery structure emerges spontaneously, without any initial natural advantage being required. The circular causation is tight. Firms want to locate where the market is large, to save transport costs and exploit increasing returns. But the market is large where many workers and consumers are. Workers want to locate where many firms are, because they find employment, higher wages, and greater product variety there. The <strong>home market effect</strong>: a slightly larger region attracts more than proportionally the activities with increasing returns, because they can serve the large local market without transport cost while still exporting to smaller markets. The <strong>price index effect</strong>: more local producers mean lower consumer prices (less transport cost), which raises real wages in the region, attracting more workers. Once a small initial advantage tilts the balance toward a region, both effects self-reinforce and concentration accelerates.</p>
 <p>The model produces a counter-intuitive result about transport costs: the bell-shaped curve. When transport costs are very high, each region must produce locally what it consumes, activity is dispersed. When transport costs are very low, location becomes irrelevant, activity can again disperse. It is in the intermediate range, when transport is costly enough to make proximity to the large market valuable but cheap enough to allow export to smaller markets, that concentration is strongest. The policy implication is not obvious: improving infrastructure, highways, high-speed rail, does not automatically disperse activity toward inland regions. It may instead amplify the metropolis by opening regional markets to it. The <strong>tunnel effect</strong>, infrastructure that connects without irrigating, is a real risk in Morocco, where highway and TGV investments link Casablanca-Rabat to the national network without necessarily generating new productive activity in the interior rather than accelerating migration toward the coast.</p>
 </section>
-<section id="sec-myrdal-ch06" class="level2" data-number="9.5">
-<h2 data-number="9.5" class="anchored" data-anchor-id="sec-myrdal-ch06"><span class="header-section-number">9.5</span> Myrdal and cumulative causation: the heterodox correction</h2>
+<section id="sec-myrdal-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-myrdal-ch06">Myrdal and cumulative causation: the heterodox correction</h2>
 <p>The New Economic Geography describes a mechanism. It is largely silent about whether the outcome is desirable or correctable. The heterodox tradition, led by Gunnar Myrdal and Nicholas Kaldor, starts from the same empirical observation, concentration is cumulative, but draws darker normative and political conclusions.</p>
 <p>Myrdal’s <strong>circular cumulative causation</strong> (1957) describes a self-reinforcing dynamic of both success and failure. A region that attracts an enterprise attracts workers, whose spending supports commerce, whose taxes finance schools and roads, which attract new enterprises. Success begets success. Symmetrically, a region losing activities loses its youth, its shops close, its public services decline, which discourages further investment. Failure begets failure. Far from the neoclassical convergence, where poor regions should attract capital from rich ones because wages are lower, Myrdal sees self-sustaining divergence.</p>
 <p>Myrdal distinguishes <strong>backwash effects</strong>, the metropolis pulling capital, skills, and dynamism from the periphery, from <strong>spread effects</strong>, prosperity creating demand for peripheral products and diffusing technical progress outward. His crucial empirical claim: in poor, weakly integrated economies, backwash effects systematically dominate spread effects. The market, left to itself, worsens territorial inequality rather than correcting it.</p>
@@ -470,36 +638,36 @@ Morocco’s coastal macrocephaly is constructed, not natural
 <hr>
 </section>
 </section>
-<section id="sec-clusters-ch06" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Part II — Clusters and Industrial Districts: When Proximity Becomes System</h1>
-<section id="sec-district-ch06" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="sec-district-ch06"><span class="header-section-number">10.1</span> The industrial district: from Marshall to Becattini’s Third Italy</h2>
+<section id="sec-clusters-ch06" class="level1">
+<h1>Part II — Clusters and Industrial Districts: When Proximity Becomes System</h1>
+<section id="sec-district-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-district-ch06">The industrial district: from Marshall to Becattini’s Third Italy</h2>
 <p>Proximity is necessary for agglomeration economies to operate. It is not sufficient for them to produce genuine collective learning and innovation. What separates an industrial park where firms happen to be near each other from a true productive system is the subject of the cluster economics tradition.</p>
 <p>Giacomo Becattini’s rediscovery of the Marshallian industrial district in the late 1970s started from an empirical anomaly: while theory predicted the crushing of small enterprises by large integrated firms, entire regions of central and north-eastern Italy, the “Third Italy”, were thriving through networks of small firms. Prato in textiles, Sassuolo in ceramics, Carpi in knitwear: territories where hundreds of highly specialised firms formed together a productive machine of remarkable flexibility and quality, exporting to the world. Becattini understood that these districts were not reducible to simple geographic agglomeration. They were <strong>socio-territorial entities</strong> where a community of people, with shared values, norms of reciprocity, and familial transmission of skills, overlaid a population of enterprises linked by cooperation as much as competition. A workshop overwhelmed with orders subcontracts to its neighbour, knowing the favour will be returned. This combination of competitive rivalry and operational cooperation, <em>coopetition</em>, is the district’s strength. Coordination passes not through the hierarchy of a large firm but through a network of small units connected by markets and social conventions.</p>
 <p>Ann Markusen extended this typology to four ideal types. The <strong>Marshallian district</strong> is the original: small firms, local capital, dense input-output linkages, strong social embeddedness, as in the Third Italy. The <strong>hub-and-spoke district</strong> is organised around one or a few large anchor firms with local suppliers gravitating around them, the structure of many PAI ecosystems in Morocco. The <strong>satellite platform</strong> is a set of branch plants or subsidiaries of external firms with limited local linkages, assembled by public incentives but not generating local autonomous capability, the risk profile of much of Morocco’s export processing zones. The <strong>state-anchored district</strong> is built around a large public enterprise that organises local supply chains and secures the district against capital flight, the OCP complex in Khouribga-Jorf Lasfar is the clearest Moroccan example.</p>
 <p>Michael Porter’s <strong>cluster diamond</strong> adds a managerial and competitive intelligence dimension: competitive advantage in a cluster depends on the interaction of four forces, factor conditions (skilled labour, specialised infrastructure), demand conditions (local customers who are sophisticated and demanding), related and supporting industries (a density of suppliers and complementary activities), and firm strategy and rivalry (local competition that forces continuous improvement). Porter’s framework is more normative than Becattini’s, designed to guide investment rather than simply describe organic emergence, and has influenced explicitly the design of Morocco’s PAI ecosystems.</p>
 </section>
-<section id="sec-tacit-ch06" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="sec-tacit-ch06"><span class="header-section-number">10.2</span> Tacit knowledge, absorptive capacity, and the limits of technology transfer</h2>
+<section id="sec-tacit-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-tacit-ch06">Tacit knowledge, absorptive capacity, and the limits of technology transfer</h2>
 <p>Why does geographic proximity remain decisive for innovation in an age of instant global information flows? Meric Gertler’s answer is a distinction between two types of knowledge. <strong>Codified knowledge</strong>, what can be written in a manual, a patent, a technical specification, travels freely and at negligible cost. <strong>Tacit knowledge</strong>, the hands-on judgment, the intuitive diagnosis, the craft knowledge that resists verbalization, transfers only through shared practice, direct observation, and mentorship. It is precisely tacit knowledge that provides competitive advantage, because it is difficult to imitate and therefore to relocate. It remains attached to territory. This is why, despite the internet, innovation continues to concentrate in a handful of places. A production technique cannot be learned by video conference.</p>
 </section>
-<section id="sec-nonaka-ch06" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="sec-nonaka-ch06"><span class="header-section-number">10.3</span> The SECI spiral: how tacit knowledge becomes shared knowledge</h2>
+<section id="sec-nonaka-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-nonaka-ch06">The SECI spiral: how tacit knowledge becomes shared knowledge</h2>
 <p>Ikujiro Nonaka’s model of knowledge creation, developed in the 1990s, gives the most concrete account of how tacit knowledge circulates within a cluster and gradually becomes collective capability. Knowledge creation, he shows, proceeds through a spiral of four movements: socialisation, externalisation, combination, and internalisation (SECI).</p>
 <p><strong>Socialisation</strong> transmits tacit knowledge through tacit knowledge: the apprentice learns the master’s technique by watching and imitating, without a single word being written. This is the predominant mode in artisanal districts, in surgical teams, in machine tool workshops, and in Morocco’s aeronautics cluster at Nouaceur, where junior technicians shadow senior ones on composite lay-up procedures that no manual can fully specify. <strong>Externalisation</strong> converts tacit knowledge into explicit: the experienced engineer manages to describe in a procedure, a diagram, or a standard operating instruction something that was previously pure intuition. This conversion is the hardest step and produces the most value, because explicit knowledge can be stored, transmitted, and combined. <strong>Combination</strong> assembles existing explicit knowledge to produce new explicit knowledge: crossing datasets, integrating specifications, building on existing codified procedures. <strong>Internalisation</strong> reconverts explicit knowledge back into tacit: after enough practice, a written procedure becomes second nature, a new embodied competence, ready to restart the spiral.</p>
 <p>The cluster matters because <strong>socialisation and externalisation</strong>, the two moments where tacit knowledge is at stake, require physical proximity, direct observation, shared context, and trust. These conditions are produced by co-location, stable professional communities, worker mobility within the district, and the informal social relations that Marshall heard in the buzz of Sheffield and Becattini documented in Prato. A Moroccan industrial zone that installs firms in adjacent buildings but produces no worker mobility, no shared professional community, no informal knowledge exchange between firms, no <em>ba</em> in Nonaka’s term for the enabling space — will run the SECI spiral slowly or not at all. The distinction between a genuine district and an assembly enclave is precisely this: whether the spiral is turning.</p>
 <p>Michael Storper’s formulation captures what this implies at the territorial scale: <strong>untraded interdependencies</strong>, shared conventions, trust networks, informal circulation of persons and ideas, reputations, are the glue of an innovative territory. These are not market transactions. They are the invisible infrastructure that makes markets and formal contracts work at low cost. They are also the reason why a successful territorial system is so difficult to replicate elsewhere: building the walls is fast; creating the trust and tacit knowledge that inhabit them takes a generation.</p>
 </section>
-<section id="sec-boschma-ch06" class="level2" data-number="10.4">
-<h2 data-number="10.4" class="anchored" data-anchor-id="sec-boschma-ch06"><span class="header-section-number">10.4</span> Boschma’s five proximities: too close can be as bad as too far</h2>
+<section id="sec-boschma-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-boschma-ch06">Boschma’s five proximities: too close can be as bad as too far</h2>
 <p>Ron Boschma’s framework (2005) refines the analysis of proximity by identifying five distinct dimensions that facilitate learning, while warning that excess proximity in any dimension can be as damaging as its absence.</p>
 <p><strong>Geographic proximity</strong> is the most obvious: physical co-location reduces transport and communication costs and enables the face-to-face contact that tacit knowledge requires. But geographic proximity alone is not sufficient, and can be misleading: firms in the same industrial park may be geographically close while being cognitively or organisationally distant. <strong>Cognitive proximity</strong>, sharing a knowledge base, a technological paradigm, a professional vocabulary, is what allows partners to understand each other and recombine their knowledge productively. Too little cognitive proximity and communication produces noise; too much and the parties bring no new knowledge to each other. <strong>Organisational proximity</strong>, belonging to the same network, supply chain, or institutional relationship, creates stable channels for knowledge exchange. <strong>Social proximity</strong>, interpersonal trust built through repeated interaction and shared social context, reduces transaction costs and makes informal knowledge sharing safe. <strong>Institutional proximity</strong>, shared rules, norms, standards, and regulatory frameworks, reduces uncertainty and makes coordination predictable.</p>
 <p>The critical insight is the <strong>optimal proximity hypothesis</strong>: learning and innovation require neither too little nor too much proximity along any dimension. A cluster that achieves high geographic, cognitive, and social proximity but closes itself to external knowledge (the lock-in described by Grabher) stagnates in technological space precisely because it is too internally coherent. The Ruhr coal-steel complex failed to anticipate the collapse of its industries not from laziness but from a surfeit of internal coherence that made heterodox signals invisible. Morocco’s industrial ecosystems face the same risk: the PAI automotive cluster around Tanger is building geographic and organisational proximity rapidly, but cognitive proximity to the global automotive engineering frontier (the electric vehicle transition) requires deliberate pipeline investment through partnerships with European engineering schools, Moroccan university research programmes, and co-development agreements that bring frontier knowledge into the cluster rather than waiting for it to diffuse organically.</p>
 <p>The concept of <strong>absorptive capacity</strong> (Cohen and Levinthal, 1990) is crucial for developing economies. To assimilate technology from abroad, it is not enough to have access to it; one must already possess enough knowledge and competence to understand, adapt, and eventually improve upon it. Paradoxically, you need to already know a great deal to be able to learn more. A territory lacking absorptive capacity can host the most modern factories without learning anything from them, the technology remains a black box that is operated but not understood. A territory that has invested in education, applied research, and local engineering capability, by contrast, transforms the presence of foreign firms into genuine learning and eventually autonomous innovation. This is exactly what separates East Asian catching-up trajectories, where assembly served as a springboard to technological mastery, from blocked trajectories where assembly remained a dead end. Absorptive capacity is the missing link between attracting foreign investment and actually developing.</p>
 <p>Harald Bathelt and colleagues give this duality a memorable formulation: <strong>local buzz and global pipelines</strong>. An innovative territory combines the buzz of informal proximity-based exchanges with deliberately constructed channels to distant sources of knowledge. A cluster living only on its internal buzz eventually turns in circles; it needs pipelines to the global frontier to remain competitive. Clusters that are closed systems, high social density, low external connectivity, risk the <strong>lock-in</strong> that Gernot Grabher documented in the Ruhr’s coal-steel complex: a territory so well-adapted to a particular technological paradigm that it cannot absorb the signals heralding its obsolescence. The district’s strength becomes the source of its inability to transform.</p>
 </section>
-<section id="sec-hirschman-ch06" class="level2" data-number="10.5">
-<h2 data-number="10.5" class="anchored" data-anchor-id="sec-hirschman-ch06"><span class="header-section-number">10.5</span> Perroux, Hirschman, and the test of linkages</h2>
+<section id="sec-hirschman-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-hirschman-ch06">Perroux, Hirschman, and the test of linkages</h2>
 <p>The economic sociology of clusters reaches its most operational formulation in two political economy traditions that are essential for evaluating any development project.</p>
 <p>François Perroux’s growth poles theory (1955) identifies the <strong>propulsive firm</strong>, a dynamic, innovative, fast-growing activity of sufficient size, that exercises <strong>domination effects</strong> on surrounding industries, drawing them into its wake through purchases and sales. But Perroux issued a capital warning, validated by France’s own failed experiment with “métropoles d’équilibre” in the 1960s: a growth pole is primarily an abstraction of economic relationships, not necessarily a geographic concentration. Installing large factories in backward regions does not automatically trigger poles. Too often the factory came but the expected linkage effects did not follow, for lack of a local fabric capable of absorbing them. The implanted enterprise became an <strong>enclave</strong>: connected to the outside but disconnected from its immediate environment. This warning is directly relevant to evaluating Morocco’s large industrial projects.</p>
 <p>Albert Hirschman sharpens the criterion further in <em>The Strategy of Economic Development</em> (1958). An activity creates several types of linkages. <strong>Backward linkages</strong> stem from its purchases: an assembly plant creates demand for components, potentially generating local suppliers. <strong>Forward linkages</strong> stem from its production: a steel plant supplies input to a downstream transformation industry. <strong>Fiscal linkages</strong> generate tax revenues financing further public investment. <strong>Consumption linkages</strong> arise when distributed incomes create markets for consumer goods.</p>
@@ -523,16 +691,16 @@ Hirschman’s test for Morocco
 <hr>
 </section>
 </section>
-<section id="sec-gvc-ch06" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Part III — Global Value Chains: Who Governs, Who Captures</h1>
-<section id="sec-gereffi-ch06" class="level2" data-number="11.1">
-<h2 data-number="11.1" class="anchored" data-anchor-id="sec-gereffi-ch06"><span class="header-section-number">11.1</span> From national products to fragmented tasks</h2>
+<section id="sec-gvc-ch06" class="level1">
+<h1>Part III — Global Value Chains: Who Governs, Who Captures</h1>
+<section id="sec-gereffi-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-gereffi-ch06">From national products to fragmented tasks</h2>
 <p>For most of economic history, international trade was conceived as the exchange of finished goods between nations: Portugal sold wine, England sold cloth. This Ricardian framework assumed that each good was entirely produced in one country before being exchanged. This is no longer how the world economy works. A smartphone is designed in California, its components manufactured in South Korea, Japan, and Taiwan, assembled in China, and sold everywhere. It has no nationality; it is the product of a chain.</p>
 <p>Gary Gereffi’s concept of the <strong>global value chain</strong> (1994) provides the analytical vocabulary. His central question is not “what is produced where” but “who governs the chain.” A value chain is not an anonymous market where everyone trades freely. It is an organised structure, typically piloted by a dominant <strong>lead firm</strong> that sets the rules, standards, prices, and profit distribution across the chain. Gereffi distinguishes two broad governance archetypes: <strong>producer-driven chains</strong>, where large manufacturers in capital-intensive industries (automotive, aeronautics) structure the chain through their technological mastery and heavy investment; and <strong>buyer-driven chains</strong>, typical of clothing, toys, and agri-food, where large retailers and brand-holders without factories command, they design and sell but source from a worldwide network of subcontractors they place in competition.</p>
 <p>The distinction matters enormously for a developing-country supplier. In a producer-driven chain, technological capability determines position. In a buyer-driven chain, cost, flexibility, and compliance with the buyer’s specifications determine position, and the buyer, holding the brand and the customer relationship, can switch suppliers relatively easily.</p>
 </section>
-<section id="sec-smile-curve-ch06" class="level2" data-number="11.2">
-<h2 data-number="11.2" class="anchored" data-anchor-id="sec-smile-curve-ch06"><span class="header-section-number">11.2</span> The smile curve and the paradox of impoverishing growth</h2>
+<section id="sec-smile-curve-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-smile-curve-ch06">The smile curve and the paradox of impoverishing growth</h2>
 <p>The most powerful image in the economics of global value chains is the <strong>smile curve</strong>, attributed to Acer’s Stan Shih and formalised by Ram Mudambi. Plotting value added per stage along the production chain, the curve dips in the middle, assembly, and rises at both ends: R&amp;D, design, and intellectual property at the upstream extreme, and branding, distribution, marketing, and after-sales at the downstream extreme. The high-value stages are knowledge-intensive, IP-protected, and typically monopolised by firms in rich countries. Assembly is labour-intensive, technologically standardised, and contestable by any country offering lower costs.</p>
 <p>The paradox of <strong>immiserising growth</strong> follows directly. A country that successfully expands its assembly capacity, attracts more factories, hires more workers, exports more vehicles or garments, can simultaneously see its terms of trade worsen if increased competition from other low-cost assemblers drives down the price of the assembly service. Growth in volume does not guarantee growth in income if the value captured per unit falls. This is the trap Morocco must navigate in textiles and in the commodity segments of automotive assembly: growing activity does not automatically mean growing value capture.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -549,59 +717,59 @@ The Moroccan tomato and the European supermarket
 </div>
 </div>
 </section>
-<section id="sec-gouvernance-gvc-ch06" class="level2" data-number="11.3">
-<h2 data-number="11.3" class="anchored" data-anchor-id="sec-gouvernance-gvc-ch06"><span class="header-section-number">11.3</span> Five governance structures and their upgrading implications</h2>
+<section id="sec-gouvernance-gvc-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-gouvernance-gvc-ch06">Five governance structures and their upgrading implications</h2>
 <p>Gereffi, Humphrey, and Sturgeon (2005) refined the typology to five governance structures, ranging from <strong>market</strong> (standardised products, easy supplier switching, price-based competition) through <strong>modular</strong> (complex transactions governed by codified specifications that allow suppliers to manage their own activities), <strong>relational</strong> (complex interactions requiring mutual adaptation and trust), <strong>captive</strong> (small suppliers dependent on dominant buyers with limited capabilities) to <strong>hierarchy</strong> (full vertical integration by the lead firm). Position in this spectrum determines a supplier’s bargaining power, its exposure to switching, and its upgrading trajectory.</p>
 <p>Morocco’s automotive sector has evolved from captive toward relational and modular governance as local supplier capabilities have deepened. Tier-2 and tier-3 Moroccan firms that meet international quality standards (IATF 16949), that can manage their own production scheduling, and that have invested in engineering capability are treated as modular suppliers with meaningful autonomy. Firms that remain purely assembly subcontractors under tight supervision remain in captive governance, which means limited learning, limited bargaining power, and high switching risk.</p>
 <p><strong>Upgrading</strong> is the process of moving to more valuable activities within or across chains. It takes four forms: <strong>process upgrading</strong> (doing the same task more efficiently); <strong>product upgrading</strong> (shifting to higher-value products); <strong>functional upgrading</strong> (taking on higher-value functions, design, marketing, that were previously controlled upstream or downstream); and <strong>intersectoral upgrading</strong> (applying capabilities built in one chain to a new, higher-value chain). Morocco’s trajectory in phosphate, from raw rock to processed fertiliser to customised agri-nutrition to battery cathode materials, traces a near-textbook sequence of all four forms.</p>
 </section>
-<section id="sec-strategic-coupling-ch06" class="level2" data-number="11.4">
-<h2 data-number="11.4" class="anchored" data-anchor-id="sec-strategic-coupling-ch06"><span class="header-section-number">11.4</span> Coe, Yeung, and strategic coupling</h2>
+<section id="sec-strategic-coupling-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-strategic-coupling-ch06">Coe, Yeung, and strategic coupling</h2>
 <p>Neil Coe and Henry Yeung’s Global Production Networks framework adds a crucial relational dimension: a territory’s insertion in global chains is not an exogenous fact determined by comparative advantage. It is the outcome of a <strong>strategic coupling</strong> between a territory’s specific assets (skills, infrastructure, proximity, institutions) and the strategic needs of global lead firms at a particular moment. This coupling is constructed through deliberate policy, active promotion, and institutional complementarities, and it is reversible. A firm that coupled with Morocco because of proximity to Europe and low assembly costs may recouple with a different territory if Morocco’s cost advantage erodes or if automation reduces the importance of low-wage assembly.</p>
 <p><strong>Tanger-Med</strong> is the paradigmatic case of successful strategic coupling. Morocco transformed geographic proximity to the Strait of Gibraltar from a natural fact into a constructed competitive advantage through infrastructure investment of global standard, a free zone regime, trade agreement networks, and targeted FDI promotion. The port complex has made Morocco a node in Mediterranean logistics networks that generate transhipment revenues and anchorage for industrial zones. Its value is not the geography alone, it is the institutional and logistical capability built around the geography that makes it competitive.</p>
 <hr>
 </section>
 </section>
-<section id="sec-structuraliste-ch06" class="level1" data-number="12">
-<h1 data-number="12"><span class="header-section-number">12</span> Part IV — The Structuralist Critique: Periphery, Dependence, and the Question of Power</h1>
-<section id="sec-prebisch-ch06" class="level2" data-number="12.1">
-<h2 data-number="12.1" class="anchored" data-anchor-id="sec-prebisch-ch06"><span class="header-section-number">12.1</span> Prebisch-Singer and the terms of trade</h2>
+<section id="sec-structuraliste-ch06" class="level1">
+<h1>Part IV — The Structuralist Critique: Periphery, Dependence, and the Question of Power</h1>
+<section id="sec-prebisch-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-prebisch-ch06">Prebisch-Singer and the terms of trade</h2>
 <p>The analytical tools developed above describe mechanisms. They are largely silent about the political economy of who benefits. The structuralist tradition, rooted in Latin American development economics, provides the missing dimension.</p>
 <p>Raúl Prebisch and Hans Singer, independently, formulated in 1950 the thesis of the <strong>secular deterioration of the terms of trade</strong> for primary commodity exporters. The reasoning: demand for primary commodities grows less rapidly than income, while demand for manufactured goods accelerates (Engel’s Law applied to trade). Productivity gains in the industrial centre translate into higher wages and profits, because organised labour markets and concentrated market structures allow workers and firms to capture the gains, while in the periphery, productivity gains translate into lower prices, because competitive commodity markets and weak labour organisations prevent capture. Consequence: to buy the same machine, the periphery must sell progressively more sacks of coffee or tonnes of ore. Trade, far from equalising living standards as Ricardo promised, structurally transfers value from periphery to centre.</p>
 <p>The empirical record is mixed over different periods and products. But the core insight has proved durable: primary commodity specialisation exposes to terms-of-trade deterioration and ruinous price volatility, and the project of industrialisation as a path out is well-founded.</p>
 <p>Wallerstein’s <strong>world-system analysis</strong> adds the category that was missing: between the dominant centre and the dominated periphery sits the <strong>semi-periphery</strong>, countries combining both roles, exploited by the centre and exploiting more peripheral economies in turn, and capable (in periods of world-system recomposition) of moving upward toward the centre or downward toward deeper peripheralisation. The semi-periphery is the zone of mobility in the world system.</p>
 <p>Morocco is an almost ideal-typical semi-periphery. Too industrialised and too integrated in European production networks to be a pure primary commodity exporter. Not yet autonomous enough in technology, brand ownership, and financial control to belong to the centre. Fernando Henrique Cardoso’s <strong>associated dependent development</strong> names this third position precisely: genuine growth and industrialisation are possible within dependency, but they remain subordinated, their dynamics, technologies, and markets commanded partly from outside. Knowing Morocco is a semi-periphery is not pessimistic. It is analytically precise, and it identifies the degrees of freedom that exist.</p>
 </section>
-<section id="sec-maroc-gvc-ch06" class="level2" data-number="12.2">
-<h2 data-number="12.2" class="anchored" data-anchor-id="sec-maroc-gvc-ch06"><span class="header-section-number">12.2</span> The smile of phosphate and the frown of textiles</h2>
+<section id="sec-maroc-gvc-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-maroc-gvc-ch06">The smile of phosphate and the frown of textiles</h2>
 <p>Applied to Morocco’s current position, the full analytical framework generates a differentiated verdict, not a single judgment but a map of positions across sectors.</p>
 <p><strong>OCP and phosphate</strong> represent Morocco’s most successful value capture strategy, precisely because they rest on a non-relocatable natural endowment. Rather than exporting raw rock, the pure periphery option, OCP systematically moved up the chain: phosphoric acid, diammonium phosphate, customised NPK fertilisers for specific soil profiles, and now positioning for battery cathode materials as EV adoption accelerates. This is a multi-stage functional and intersectoral upgrading trajectory that contradicts the most rigid structuralist pessimism: a resource-based firm from the semi-periphery becoming a global market-power actor on its segment. The enabling condition was state-supported integration, not private market logic, that maintained the value within a national institution rather than licensing it to foreign processors.</p>
 <p><strong>The automotive sector</strong> sits in an intermediate and dynamic position. Morocco has successfully attracted both Renault-Tanger and Stellantis-Kénitra, become Africa’s leading vehicle exporter, and progressively increased the domestic integration rate. The trajectory moves from purely captive assembly (hub-and-spoke district in Markusen’s terms) toward increasing relational governance as Moroccan tier-2 and tier-3 suppliers develop. The electric vehicle transition is both the largest risk (the existing component competencies are internal combustion specific) and the largest potential opportunity (Morocco’s phosphate endowment positions it for battery supply chains if the technological and hydric challenges are resolved).</p>
 <p><strong>Aeronautics</strong> around Casablanca-Nouaceur is technologically sophisticated but strategically fragile. The dependent-development diagnosis applies most precisely here: real capability in precision machining, cabling, and composites; growing skills; but no conception, no intellectual property, no brand, and a very short list of global decision-makers whose sourcing choices determine the entire sector’s trajectory. Cardoso’s formulation, development real but commanded from outside, is exact.</p>
 </section>
-<section id="sec-agro-ch06" class="level2" data-number="12.3">
-<h2 data-number="12.3" class="anchored" data-anchor-id="sec-agro-ch06"><span class="header-section-number">12.3</span> Agro-industry: the district that is also a chain</h2>
+<section id="sec-agro-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-agro-ch06">Agro-industry: the district that is also a chain</h2>
 <p>Morocco’s agri-food export sector offers an instructive intermediate case that escapes easy classification. The Souss-Massa basin around Agadir, the Berkane citrus zone in the Oriental, the soft fruit districts of the Atlantic coast: these territories exhibit genuine Marshallian district characteristics. Hundreds of producers, conditioned by generations of specialised practice, share input markets (irrigation infrastructure, packaging suppliers, refrigerated transport networks), a thick regional labour market for agricultural and logistics workers, and tacit knowledge of crop cycles, pest management, and export timing that circulates through farmer associations, cooperatives, and the dense informal networks of producers who have grown up in the same valleys.</p>
 <p>But these districts are simultaneously inserted in <strong>buyer-driven global value chains</strong> piloted from Brussels, Paris, and London. The governance mechanism is not price: it is <strong>certification and standards</strong>. European retailers (Carrefour, Lidl, Intermarché) and their logistics intermediaries impose compliance with GlobalGAP (Good Agricultural Practices), BRCGS food safety standards, BIO certifications, and bespoke traceability systems that connect a tomato in a Rotterdam supermarket to a specific plot in Ait Melloul. This governance by norms is the dominant mechanism of value chain coordination in agri-food: the lead firm sets the rules; the supplier absorbs the compliance cost; the consumer pays the quality premium; and the lead firm captures the brand value and the customer relationship.</p>
 <p>The welfare implications are double-edged. Morocco’s agri-food producers have been genuinely upgraded by European standards: quality management systems, cold chain discipline, traceability infrastructure, and export logistics have transformed Moroccan horticulture in two decades. These are real process and product upgrades, visible in the ONSSA certification capacity and the logistics hubs that handle chilled exports through Tanger-Med. But functional upgrading, owning the brand, controlling distribution, managing the consumer relationship, remains minimal. And the standards regime creates a paradox: meeting European food safety requirements is expensive and technically demanding, which creates barriers that exclude smaller producers who lack the capital and technical capacity for compliance, concentrating export capacity in larger commercial farms while marginalising the smallholders that make up most of the basin’s social fabric. The Plan Maroc Vert and Génération Green strategies have sought to aggregate small producers through cooperatives and aggregator structures, with real but uneven results. The agro-industry case shows that governance by norms is not neutral: it upgrades those who can comply and excludes those who cannot, restructuring the district’s social geography even as it raises its aggregate technical level.</p>
 </section>
-<section id="sec-politique-territoriale-ch06" class="level2" data-number="12.4">
-<h2 data-number="12.4" class="anchored" data-anchor-id="sec-politique-territoriale-ch06"><span class="header-section-number">12.4</span> The territorial policy dilemma: efficiency versus equity</h2>
+<section id="sec-politique-territoriale-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-politique-territoriale-ch06">The territorial policy dilemma: efficiency versus equity</h2>
 <p>The analytical framework this chapter has built does not end in description. It generates a fundamental policy question that any government managing a polarised territory must face: if cumulative causation generates self-reinforcing spatial inequality, and if concentration is productive in aggregate terms, should public investment reinforce the metropolis or compensate the periphery?</p>
 <p>The efficiency argument for the metropolis is clear: agglomeration externalities make investment in dense areas more productive per dirham. A road that reduces congestion in Casablanca generates more economic activity than the same investment in a region with sparse productive activity. Education investment near a cluster of high-skill employers produces higher private and social returns than equivalent investment in a zone without a labour market thick enough to absorb graduates.</p>
 <p>The equity argument for the periphery is also clear, and it is reinforced by Rodríguez-Pose’s political economy dimension: territorial inequality that concentrates prosperity in the coastal corridor while the interior loses its youth, its public services, and its productive dynamism creates social resentment and political instability that eventually imposes costs on the entire national economy.</p>
 <p>Morocco’s Régionalisation Avancée (2015) represented a structural response to this dilemma: devolving economic governance capacity to the twelve regions, giving regional councils budget authority and economic planning mandates, and creating Regional Investment Centres (CRIs) as one-stop shops for investors in each region. The ambition was to create multiple centres of economic dynamism that could partially break the coastal monopoly on growth. The results have been uneven: regions with existing productive assets and strong regional elites (Souss-Massa, Tanger-Tétouan-Al Hoceima, Fès-Meknès) have used the framework actively; interior regions with weaker institutional endowments have struggled to translate formal devolution into genuine economic dynamism. The lesson from the agglomeration theory is sobering: devolution of formal authority does not automatically trigger the cumulative success spiral. What triggers it is a critical mass of productive activity generating the sharing, matching, and learning externalities that pull further investment. Reaching that critical mass in peripheral regions requires more than administrative decentralisation; it requires deliberate productive investment sufficient to cross the tipping point, sustained long enough that the cumulative mechanism engages.</p>
 </section>
-<section id="sec-nearshoring-ch06" class="level2" data-number="12.5">
-<h2 data-number="12.5" class="anchored" data-anchor-id="sec-nearshoring-ch06"><span class="header-section-number">12.5</span> The nearshoring window and its conditions</h2>
+<section id="sec-nearshoring-ch06" class="level2">
+<h2 class="anchored" data-anchor-id="sec-nearshoring-ch06">The nearshoring window and its conditions</h2>
 <p>A structural shift in global supply chain thinking after the COVID-19 disruptions of 2020-2021 has created a window of opportunity for Morocco that did not exist in the same form before. European manufacturers and retailers, having experienced catastrophic supply chain disruptions when Asian manufacturing halted, have developed a systematic preference for geographic diversification toward nearby suppliers. This <strong>nearshoring</strong> impulse is reinforced by three additional drivers: the EU’s Carbon Border Adjustment Mechanism, which will raise the cost of high-carbon production in distant locations relative to low-carbon production nearby; rising shipping costs and longer lead times that erode the price advantage of distant assembly; and growing consumer and regulatory demand for supply chain transparency and accountability that is more easily satisfied with suppliers at shorter distance.</p>
 <p>For Morocco, this window is real but conditional. The sectors that benefit are those where proximity provides genuine operational advantage: just-in-time automotive components, short-cycle fashion textiles, agri-food requiring fresh supply, and business process outsourcing in French and Arabic. For each of these, the window opens specifically if Morocco develops capabilities that generic low-cost assembly cannot provide: design capability, flexible production at small quantities, digital supply chain management, quality certification. Capturing the nearshoring window is therefore not a matter of cost competition but of capability positioning.</p>
 <p><strong>Textiles and garments</strong> face the clearest smile-curve trap. Inserted in buyer-driven chains where European retailers control the brand and the consumer relationship, Moroccan producers operate in the assembly trough. Nearshoring, the European demand for short-lead-time proximity suppliers after COVID supply chain disruptions, offers a genuine repositioning window: Moroccan suppliers who can deliver fast, small-series, higher-fashion-cycle orders capture value that Asian distance suppliers cannot provide. But capturing this window requires upgrading to design capability, brand, and direct retailer relationships, precisely the functional upgrading that moves producers out of the trough.</p>
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch06" class="level1" data-number="13">
-<h1 data-number="13"><span class="header-section-number">13</span> Conclusion: The Micro That Makes the Macro</h1>
+<section id="sec-concl-ch06" class="level1">
+<h1>Conclusion: The Micro That Makes the Macro</h1>
 <p>This chapter has built three nested arguments that together constitute the economics of where and how development happens.</p>
 <p>Territory is not a passive container. Agglomeration forces, sharing, matching, learning, make concentrated activity more productive than dispersed activity. This productivity premium justifies spatial concentration. But concentration also generates cumulative divergence, Myrdal’s backwash effects dominating spread effects, that the market left to itself will deepen rather than correct. Morocco’s coastal macrocephaly is not efficient geography; it is constructed inequality. Addressing it requires deliberate counter-force, not merely improving the general climate.</p>
 <p>Clusters are not parks. Co-location generates agglomeration economies. Genuine productive systems generate learning, tacit knowledge transmission, Hirschman linkages, and embeddedness that make them resilient when external shocks hit. The critical test is what survives if the lead firm leaves. Morocco’s PAI ecosystems range from genuinely systemic (OCP-Khouribga) to potentially systemic (automotive if local suppliers deepen) to currently enclave (much of offshoring and lower-tier textile assembly).</p>
@@ -630,8 +798,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch06" class="level1 appendix" data-number="14">
-<h1 class="appendix" data-number="14"><span class="header-section-number">14</span> Further Reading</h1>
+<section id="sec-biblio-ch06" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Marshall, A. (1890). <em>Principles of Economics</em>, Book IV.</strong> The foundational analysis of industrial districts and knowledge spillovers. Still readable and rich.</p>
 <p><strong>Krugman, P. (1991). <em>Geography and Trade</em>. MIT Press.</strong> The originating text of the New Economic Geography. Accessible and written with Krugman’s characteristic clarity.</p>
 <p><strong>Myrdal, G. (1957). <em>Economic Theory and Underdeveloped Regions</em>. Duckworth.</strong> The most important heterodox contribution to economic geography. The concept of circular cumulative causation provides the essential counterpoint to Krugman.</p>
@@ -646,8 +814,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1066,13 +1293,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1081,5 +1308,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-

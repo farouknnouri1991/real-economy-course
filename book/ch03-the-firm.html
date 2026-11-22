@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<link rel="canonical" href="https://realeconomy.farouknouri.com/book/ch03-the-firm.html">
 <meta name="generator" content="quarto-1.7.33">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
@@ -39,10 +38,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-bc185b5c5bdbcb35c2eb49d8a876ef70.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ea385d0e468b0dd5ea5bf0780b1290d9.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-8b8c3db345084ab9082ba34f62189e47.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-457a4114a83670b0e7c6dc74f07c1ca0.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -104,8 +107,169 @@ window.Quarto = {
 <link rel="stylesheet" href="custom.css">
 </head>
 
-<body class="nav-sidebar docked quarto-light">
-<a class="book-site-return" href="../index.html">Guide to the Real Economy · Home</a>
+<body class="nav-sidebar docked quarto-light"><script id="quarto-html-before-body" type="application/javascript">
+    const toggleBodyColorMode = (bsSheetEl) => {
+      const mode = bsSheetEl.getAttribute("data-mode");
+      const bodyEl = window.document.querySelector("body");
+      if (mode === "dark") {
+        bodyEl.classList.add("quarto-dark");
+        bodyEl.classList.remove("quarto-light");
+      } else {
+        bodyEl.classList.add("quarto-light");
+        bodyEl.classList.remove("quarto-dark");
+      }
+    }
+    const toggleBodyColorPrimary = () => {
+      const bsSheetEl = window.document.querySelector("link#quarto-bootstrap:not([rel=disabled-stylesheet])");
+      if (bsSheetEl) {
+        toggleBodyColorMode(bsSheetEl);
+      }
+    }
+    const setColorSchemeToggle = (alternate) => {
+      const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+      for (let i=0; i < toggles.length; i++) {
+        const toggle = toggles[i];
+        if (toggle) {
+          if (alternate) {
+            toggle.classList.add("alternate");
+          } else {
+            toggle.classList.remove("alternate");
+          }
+        }
+      }
+    };
+    const toggleColorMode = (alternate) => {
+      // Switch the stylesheets
+      const primaryStylesheets = window.document.querySelectorAll('link.quarto-color-scheme:not(.quarto-color-alternate)');
+      const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+      manageTransitions('#quarto-margin-sidebar .nav-link', false);
+      if (alternate) {
+        // note: dark is layered on light, we don't disable primary!
+        enableStylesheet(alternateStylesheets);
+        for (const sheetNode of alternateStylesheets) {
+          if (sheetNode.id === "quarto-bootstrap") {
+            toggleBodyColorMode(sheetNode);
+          }
+        }
+      } else {
+        disableStylesheet(alternateStylesheets);
+        enableStylesheet(primaryStylesheets)
+        toggleBodyColorPrimary();
+      }
+      manageTransitions('#quarto-margin-sidebar .nav-link', true);
+      // Switch the toggles
+      setColorSchemeToggle(alternate)
+      // Hack to workaround the fact that safari doesn't
+      // properly recolor the scrollbar when toggling (#1455)
+      if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+        manageTransitions("body", false);
+        window.scrollTo(0, 1);
+        setTimeout(() => {
+          window.scrollTo(0, 0);
+          manageTransitions("body", true);
+        }, 40);
+      }
+    }
+    const disableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        stylesheet.rel = 'disabled-stylesheet';
+      }
+    }
+    const enableStylesheet = (stylesheets) => {
+      for (let i=0; i < stylesheets.length; i++) {
+        const stylesheet = stylesheets[i];
+        if(stylesheet.rel !== 'stylesheet') { // for Chrome, which will still FOUC without this check
+          stylesheet.rel = 'stylesheet';
+        }
+      }
+    }
+    const manageTransitions = (selector, allowTransitions) => {
+      const els = window.document.querySelectorAll(selector);
+      for (let i=0; i < els.length; i++) {
+        const el = els[i];
+        if (allowTransitions) {
+          el.classList.remove('notransition');
+        } else {
+          el.classList.add('notransition');
+        }
+      }
+    }
+    const isFileUrl = () => {
+      return window.location.protocol === 'file:';
+    }
+    const hasAlternateSentinel = () => {
+      let styleSentinel = getColorSchemeSentinel();
+      if (styleSentinel !== null) {
+        return styleSentinel === "alternate";
+      } else {
+        return false;
+      }
+    }
+    const setStyleSentinel = (alternate) => {
+      const value = alternate ? "alternate" : "default";
+      if (!isFileUrl()) {
+        window.localStorage.setItem("quarto-color-scheme", value);
+      } else {
+        localAlternateSentinel = value;
+      }
+    }
+    const getColorSchemeSentinel = () => {
+      if (!isFileUrl()) {
+        const storageValue = window.localStorage.getItem("quarto-color-scheme");
+        return storageValue != null ? storageValue : localAlternateSentinel;
+      } else {
+        return localAlternateSentinel;
+      }
+    }
+    const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+      const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+      const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+      let newTheme = '';
+      if(authorPrefersDark) {
+        newTheme = isAlternate ? baseTheme : alternateTheme;
+      } else {
+        newTheme = isAlternate ? alternateTheme : baseTheme;
+      }
+      const changeGiscusTheme = () => {
+        // From: https://github.com/giscus/giscus/issues/336
+        const sendMessage = (message) => {
+          const iframe = document.querySelector('iframe.giscus-frame');
+          if (!iframe) return;
+          iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+        }
+        sendMessage({
+          setConfig: {
+            theme: newTheme
+          }
+        });
+      }
+      const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+      if (isGiscussLoaded) {
+        changeGiscusTheme();
+      }
+    };
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
+      document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+      document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
+    let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
+    // Dark / light mode switch
+    window.quartoToggleColorScheme = () => {
+      // Read the current dark / light value
+      let toAlternate = !hasAlternateSentinel();
+      toggleColorMode(toAlternate);
+      setStyleSentinel(toAlternate);
+      toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
+    };
+    // Switch to dark mode if need be
+    if (hasAlternateSentinel()) {
+      toggleColorMode(true);
+    } else {
+      toggleColorMode(false);
+    }
+  </script>
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -130,6 +294,9 @@ window.Quarto = {
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
       <a href="./">Guide to the Real Economy</a> 
+        <div class="sidebar-tools-main">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -286,7 +453,7 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./ch16-intl-political-economy.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy: Markets, States, and Power</span></span></a>
+ <span class="menu-text"><span class="chapter-number">18</span>&nbsp; <span class="chapter-title">Chapter 16 — International Political Economy</span></span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -326,46 +493,47 @@ window.Quarto = {
    
   <ul>
   <li><a href="#sec-carte-ch03" id="toc-sec-carte-ch03" class="nav-link active" data-scroll-target="#sec-carte-ch03">The Map</a></li>
-  <li><a href="#sec-existence-ch03" id="toc-sec-existence-ch03" class="nav-link" data-scroll-target="#sec-existence-ch03"><span class="header-section-number">6</span> Part I — Why Does the Firm Exist?</a>
+  <li><a href="#sec-existence-ch03" id="toc-sec-existence-ch03" class="nav-link" data-scroll-target="#sec-existence-ch03">Part I — Why Does the Firm Exist?</a>
   <ul class="collapse">
-  <li><a href="#sec-boite-noire-ch03" id="toc-sec-boite-noire-ch03" class="nav-link" data-scroll-target="#sec-boite-noire-ch03"><span class="header-section-number">6.1</span> The neoclassical black box and its limits</a></li>
-  <li><a href="#sec-coase-ch03" id="toc-sec-coase-ch03" class="nav-link" data-scroll-target="#sec-coase-ch03"><span class="header-section-number">6.2</span> Coase: the firm as a response to transaction costs</a></li>
-  <li><a href="#sec-williamson-ch03" id="toc-sec-williamson-ch03" class="nav-link" data-scroll-target="#sec-williamson-ch03"><span class="header-section-number">6.3</span> Williamson: asset specificity and the hold-up problem</a></li>
-  <li><a href="#sec-ghm-ch03" id="toc-sec-ghm-ch03" class="nav-link" data-scroll-target="#sec-ghm-ch03"><span class="header-section-number">6.4</span> Grossman, Hart, and Moore: incomplete contracts and residual rights</a></li>
-  <li><a href="#sec-schumpeter-mazzucato-ch03" id="toc-sec-schumpeter-mazzucato-ch03" class="nav-link" data-scroll-target="#sec-schumpeter-mazzucato-ch03"><span class="header-section-number">6.5</span> Schumpeter and Mazzucato: who really bears the risk?</a></li>
+  <li><a href="#sec-boite-noire-ch03" id="toc-sec-boite-noire-ch03" class="nav-link" data-scroll-target="#sec-boite-noire-ch03">The neoclassical black box and its limits</a></li>
+  <li><a href="#sec-coase-ch03" id="toc-sec-coase-ch03" class="nav-link" data-scroll-target="#sec-coase-ch03">Coase: the firm as a response to transaction costs</a></li>
+  <li><a href="#sec-williamson-ch03" id="toc-sec-williamson-ch03" class="nav-link" data-scroll-target="#sec-williamson-ch03">Williamson: asset specificity and the hold-up problem</a></li>
+  <li><a href="#sec-ghm-ch03" id="toc-sec-ghm-ch03" class="nav-link" data-scroll-target="#sec-ghm-ch03">Grossman, Hart, and Moore: incomplete contracts and residual rights</a></li>
+  <li><a href="#sec-schumpeter-mazzucato-ch03" id="toc-sec-schumpeter-mazzucato-ch03" class="nav-link" data-scroll-target="#sec-schumpeter-mazzucato-ch03">Schumpeter and Mazzucato: who really bears the risk?</a></li>
   </ul></li>
-  <li><a href="#sec-comptes-ch03" id="toc-sec-comptes-ch03" class="nav-link" data-scroll-target="#sec-comptes-ch03"><span class="header-section-number">7</span> Part II — The Firm from the Inside: Reading the Accounts</a>
+  <li><a href="#sec-comptes-ch03" id="toc-sec-comptes-ch03" class="nav-link" data-scroll-target="#sec-comptes-ch03">Part II — The Firm from the Inside: Reading the Accounts</a>
   <ul class="collapse">
-  <li><a href="#sec-valeur-ajoutee-ch03" id="toc-sec-valeur-ajoutee-ch03" class="nav-link" data-scroll-target="#sec-valeur-ajoutee-ch03"><span class="header-section-number">7.1</span> Value added and its distribution</a></li>
-  <li><a href="#sec-compte-resultats-ch03" id="toc-sec-compte-resultats-ch03" class="nav-link" data-scroll-target="#sec-compte-resultats-ch03"><span class="header-section-number">7.2</span> The income statement: from revenue to profit</a></li>
-  <li><a href="#sec-bilan-ch03" id="toc-sec-bilan-ch03" class="nav-link" data-scroll-target="#sec-bilan-ch03"><span class="header-section-number">7.3</span> The balance sheet and financial structure</a></li>
+  <li><a href="#sec-valeur-ajoutee-ch03" id="toc-sec-valeur-ajoutee-ch03" class="nav-link" data-scroll-target="#sec-valeur-ajoutee-ch03">Value added and its distribution</a></li>
+  <li><a href="#sec-compte-resultats-ch03" id="toc-sec-compte-resultats-ch03" class="nav-link" data-scroll-target="#sec-compte-resultats-ch03">The income statement: from revenue to profit</a></li>
+  <li><a href="#sec-bilan-ch03" id="toc-sec-bilan-ch03" class="nav-link" data-scroll-target="#sec-bilan-ch03">The balance sheet and financial structure</a></li>
   </ul></li>
-  <li><a href="#sec-gouvernance-ch03" id="toc-sec-gouvernance-ch03" class="nav-link" data-scroll-target="#sec-gouvernance-ch03"><span class="header-section-number">8</span> Part III — Governance, Contracts, and Power</a>
+  <li><a href="#sec-gouvernance-ch03" id="toc-sec-gouvernance-ch03" class="nav-link" data-scroll-target="#sec-gouvernance-ch03">Part III — Governance, Contracts, and Power</a>
   <ul class="collapse">
-  <li><a href="#sec-separation-ch03" id="toc-sec-separation-ch03" class="nav-link" data-scroll-target="#sec-separation-ch03"><span class="header-section-number">8.1</span> The separation of ownership and control</a></li>
-  <li><a href="#sec-mecanismes-gouvernance-ch03" id="toc-sec-mecanismes-gouvernance-ch03" class="nav-link" data-scroll-target="#sec-mecanismes-gouvernance-ch03"><span class="header-section-number">8.2</span> Governance mechanisms</a></li>
-  <li><a href="#sec-contrats-incomplets-ch03" id="toc-sec-contrats-incomplets-ch03" class="nav-link" data-scroll-target="#sec-contrats-incomplets-ch03"><span class="header-section-number">8.3</span> Incomplete contracts and labour</a></li>
+  <li><a href="#sec-separation-ch03" id="toc-sec-separation-ch03" class="nav-link" data-scroll-target="#sec-separation-ch03">The separation of ownership and control</a></li>
+  <li><a href="#sec-mecanismes-gouvernance-ch03" id="toc-sec-mecanismes-gouvernance-ch03" class="nav-link" data-scroll-target="#sec-mecanismes-gouvernance-ch03">Governance mechanisms</a></li>
+  <li><a href="#sec-contrats-incomplets-ch03" id="toc-sec-contrats-incomplets-ch03" class="nav-link" data-scroll-target="#sec-contrats-incomplets-ch03">Incomplete contracts and labour</a></li>
   </ul></li>
-  <li><a href="#sec-paradigmes-ch03" id="toc-sec-paradigmes-ch03" class="nav-link" data-scroll-target="#sec-paradigmes-ch03"><span class="header-section-number">9</span> Part IV — Alternative Paradigms: The Firm as Historical Institution</a>
+  <li><a href="#sec-paradigmes-ch03" id="toc-sec-paradigmes-ch03" class="nav-link" data-scroll-target="#sec-paradigmes-ch03">Part IV — Alternative Paradigms: The Firm as Historical Institution</a>
   <ul class="collapse">
-  <li><a href="#sec-technostructure-ch03" id="toc-sec-technostructure-ch03" class="nav-link" data-scroll-target="#sec-technostructure-ch03"><span class="header-section-number">9.1</span> The technostructure: Galbraith’s correction</a></li>
-  <li><a href="#sec-evolutionniste-ch03" id="toc-sec-evolutionniste-ch03" class="nav-link" data-scroll-target="#sec-evolutionniste-ch03"><span class="header-section-number">9.2</span> The evolutionary view: routines, path dependency, and the resource-based firm</a></li>
-  <li><a href="#sec-chandler-ch03" id="toc-sec-chandler-ch03" class="nav-link" data-scroll-target="#sec-chandler-ch03"><span class="header-section-number">9.3</span> Chandler and the visible hand</a></li>
-  <li><a href="#sec-isomorphisme-ch03" id="toc-sec-isomorphisme-ch03" class="nav-link" data-scroll-target="#sec-isomorphisme-ch03"><span class="header-section-number">9.4</span> Isomorphism: why firms resemble each other</a></li>
+  <li><a href="#sec-technostructure-ch03" id="toc-sec-technostructure-ch03" class="nav-link" data-scroll-target="#sec-technostructure-ch03">The technostructure: Galbraith’s correction</a></li>
+  <li><a href="#sec-evolutionniste-ch03" id="toc-sec-evolutionniste-ch03" class="nav-link" data-scroll-target="#sec-evolutionniste-ch03">The evolutionary view: routines, path dependency, and the resource-based firm</a></li>
+  <li><a href="#sec-chandler-ch03" id="toc-sec-chandler-ch03" class="nav-link" data-scroll-target="#sec-chandler-ch03">Chandler and the visible hand</a></li>
+  <li><a href="#sec-isomorphisme-ch03" id="toc-sec-isomorphisme-ch03" class="nav-link" data-scroll-target="#sec-isomorphisme-ch03">Isomorphism: why firms resemble each other</a></li>
   </ul></li>
-  <li><a href="#sec-firme-marocaine-ch03" id="toc-sec-firme-marocaine-ch03" class="nav-link" data-scroll-target="#sec-firme-marocaine-ch03"><span class="header-section-number">10</span> Part V — The Moroccan Firm: Structures, Dualities, and the Missing Middle</a>
+  <li><a href="#sec-firme-marocaine-ch03" id="toc-sec-firme-marocaine-ch03" class="nav-link" data-scroll-target="#sec-firme-marocaine-ch03">Part V — The Moroccan Firm: Structures, Dualities, and the Missing Middle</a>
   <ul class="collapse">
-  <li><a href="#sec-pyramides-ch03" id="toc-sec-pyramides-ch03" class="nav-link" data-scroll-target="#sec-pyramides-ch03"><span class="header-section-number">10.1</span> Pyramidal structures and the Al Mada model</a></li>
-  <li><a href="#sec-informel-ch03" id="toc-sec-informel-ch03" class="nav-link" data-scroll-target="#sec-informel-ch03"><span class="header-section-number">10.2</span> The informal sector and the formalisation dilemma</a></li>
-  <li><a href="#sec-missing-middle-ch03" id="toc-sec-missing-middle-ch03" class="nav-link" data-scroll-target="#sec-missing-middle-ch03"><span class="header-section-number">10.3</span> The missing middle</a></li>
+  <li><a href="#sec-pyramides-ch03" id="toc-sec-pyramides-ch03" class="nav-link" data-scroll-target="#sec-pyramides-ch03">Pyramidal structures and the Al Mada model</a></li>
+  <li><a href="#sec-informel-ch03" id="toc-sec-informel-ch03" class="nav-link" data-scroll-target="#sec-informel-ch03">The informal sector and the formalisation dilemma</a></li>
+  <li><a href="#sec-missing-middle-ch03" id="toc-sec-missing-middle-ch03" class="nav-link" data-scroll-target="#sec-missing-middle-ch03">The missing middle</a></li>
   </ul></li>
-  <li><a href="#sec-concl-ch03" id="toc-sec-concl-ch03" class="nav-link" data-scroll-target="#sec-concl-ch03"><span class="header-section-number">11</span> Conclusion: The Firm as Economic and Social Institution</a></li>
-  <li><a href="#sec-biblio-ch03" id="toc-sec-biblio-ch03" class="nav-link" data-scroll-target="#sec-biblio-ch03"><span class="header-section-number">12</span> Further Reading</a></li>
+  <li><a href="#sec-concl-ch03" id="toc-sec-concl-ch03" class="nav-link" data-scroll-target="#sec-concl-ch03">Conclusion: The Firm as Economic and Social Institution</a></li>
+  <li><a href="#sec-biblio-ch03" id="toc-sec-biblio-ch03" class="nav-link" data-scroll-target="#sec-biblio-ch03">Further Reading</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
+
 
 <header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./ch01-what-economics-is.html">Part I — The Microeconomic Foundation</a></li><li class="breadcrumb-item"><a href="./ch03-the-firm.html"><span class="chapter-number">5</span>&nbsp; <span class="chapter-title">Chapter 3 — The Firm: Nature, Governance, and Power</span></a></li></ol></nav>
 <div class="quarto-title">
@@ -417,8 +585,8 @@ The guiding thread of this chapter
 <p>The chapter moves from theoretical foundations to financial anatomy to governance and power, ending with the evolutionary and institutionalist traditions that offer the most productive framework for thinking about firms in a developing economy. The Moroccan texture runs throughout: OCP, Al Mada, family holding groups, the informal sector, the missing middle of medium-sized firms.</p>
 <hr>
 </section>
-<section id="sec-existence-ch03" class="level1" data-number="6">
-<h1 data-number="6"><span class="header-section-number">6</span> Part I — Why Does the Firm Exist?</h1>
+<section id="sec-existence-ch03" class="level1">
+<h1>Part I — Why Does the Firm Exist?</h1>
 <p>The question sounds naive. It is not. If markets coordinate exchanges efficiently through prices, why are millions of people employed in hierarchical organisations rather than contracting directly in markets? Why does an economy dominated by the logic of price coordination also contain islands of explicit command?</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -433,19 +601,19 @@ Why a restaurant does not buy each dish from a separate subcontractor
 <p>A restaurant owner could, in theory, produce nothing herself: order each starter from an independent cook, each dessert from another, negotiate each evening with a freelance waiter. Why does she not? Because negotiating, drafting, and monitoring a hundred small contracts every day would cost a fortune in time and disputes. It is simpler to hire a team under one roof, under one authority. This is Coase’s answer: the firm exists because organising internally sometimes costs less than buying across a market. The firm is an island of planning in an ocean of markets, emerging wherever the market is too expensive to use.</p>
 </div>
 </div>
-<section id="sec-boite-noire-ch03" class="level2" data-number="6.1">
-<h2 data-number="6.1" class="anchored" data-anchor-id="sec-boite-noire-ch03"><span class="header-section-number">6.1</span> The neoclassical black box and its limits</h2>
+<section id="sec-boite-noire-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-boite-noire-ch03">The neoclassical black box and its limits</h2>
 <p>Standard economic theory represents the firm by a production function: output <span class="math inline">\(q\)</span> depends on capital <span class="math inline">\(K\)</span> and labour <span class="math inline">\(L\)</span>, and the firm chooses factor quantities to minimise costs and then chooses output to maximise profit. In competitive markets, the firm takes price as given and produces until price equals marginal cost. This framework is analytically powerful and must be mastered before it is criticised. It generates clear predictions: a rise in the product price pushes the firm to produce more; a rise in the wage raises marginal cost and reduces output at a given price. The marginal logic is universal: invest until the marginal return on a project exceeds the marginal cost of capital; expand advertising until the marginal sale generated exceeds the campaign cost; internalise until the cost savings exceed the cost of internal organisation.</p>
 <p>But this framework does not answer the most elementary question: why a firm rather than a market? The neoclassical firm has no internal organisation, no hierarchy, no conflicts of interest, no incomplete contracts. Its costs are perfectly known, its information complete. Identifying these absences is not a counsel of despair: they are precisely what has motivated the richest theories of the real firm.</p>
 </section>
-<section id="sec-coase-ch03" class="level2" data-number="6.2">
-<h2 data-number="6.2" class="anchored" data-anchor-id="sec-coase-ch03"><span class="header-section-number">6.2</span> Coase: the firm as a response to transaction costs</h2>
+<section id="sec-coase-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-coase-ch03">Coase: the firm as a response to transaction costs</h2>
 <p>In 1937, Ronald Coase asked a question that had not been seriously posed before: if markets are efficient, why do firms exist? The context makes the question sharp. Classical theory, inherited from Smith and Ricardo, had a deeply optimistic view of markets as natural coordination mechanisms where prices emerge to balance supply and demand and allow everyone to pursue their individual interests. If the market is so effective at coordinating exchanges, why do enterprises, hierarchical organisations where relations are neither free nor spontaneous but based on employment contracts and authority, exist at all? Why not let every transaction occur directly across a market? Why not purchase each task from independent workers on digital platforms rather than hiring employees, bearing social charges, and managing hierarchical relationships?</p>
 <p>Coase’s answer: because market transactions have a cost. Searching for a supplier, negotiating a contract, verifying its execution, resorting to courts in the event of a dispute: all of this takes time and money. These <em>transaction costs</em> can exceed the costs of internal coordination within a firm.</p>
 <p>The firm is therefore an organisational response to market imperfection. Inside the firm, coordination no longer passes through prices: instructions are given. An employee does not need to renegotiate her contract every morning; she executes the instructions of her superior. This is simpler, faster, more predictable. What Coase calls transaction costs is simply the price of everything surrounding the exchange itself, distinct from the production itself: finding a partner, negotiating a price, drafting a contract, monitoring its execution, managing disputes. When this cost exceeds the cost of internal coordination, it is better to produce internally than to purchase externally.</p>
 </section>
-<section id="sec-williamson-ch03" class="level2" data-number="6.3">
-<h2 data-number="6.3" class="anchored" data-anchor-id="sec-williamson-ch03"><span class="header-section-number">6.3</span> Williamson: asset specificity and the hold-up problem</h2>
+<section id="sec-williamson-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-williamson-ch03">Williamson: asset specificity and the hold-up problem</h2>
 <p>Oliver Williamson deepened Coase by specifying <em>when</em> transaction costs are particularly high. He identified three factors that push toward internalisation.</p>
 <p><strong>Uncertainty</strong> makes contracts incomplete: the future cannot be fully specified. The more uncertain the environment, the more numerous the contractual gaps, and the more internal coordination is preferable.</p>
 <p><strong>Opportunism</strong> arises when interests diverge and partners can exploit the grey zones of a contract. A supplier who knows you have no quick alternative can deliver late, demand price renegotiation, or reduce quality in ways that are difficult to verify. This threat of opportunistic exploitation creates an incentive to internalise.</p>
@@ -464,13 +632,13 @@ OCP and vertical integration as a Williamson story
 </div>
 </div>
 </section>
-<section id="sec-ghm-ch03" class="level2" data-number="6.4">
-<h2 data-number="6.4" class="anchored" data-anchor-id="sec-ghm-ch03"><span class="header-section-number">6.4</span> Grossman, Hart, and Moore: incomplete contracts and residual rights</h2>
+<section id="sec-ghm-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-ghm-ch03">Grossman, Hart, and Moore: incomplete contracts and residual rights</h2>
 <p>The Grossman-Hart-Moore framework extends Williamson by asking not just whether to integrate but <em>who should own the assets</em> in a productive relationship. When contracts are necessarily incomplete, ownership of assets confers <em>residual control rights</em>: the power to decide what to do with the asset in situations not covered by the contract. Ownership is therefore a source of bargaining power in future negotiations. The party that owns the asset can threaten to exclude the other from its use, which shapes the distribution of the surplus.</p>
 <p>This framework produces a non-obvious result: integration is not always optimal. If both parties need to make relationship-specific investments, giving ownership to one party may reduce the other’s incentive to invest. The optimal allocation of ownership depends on which party’s investment is more critical to the total surplus. The theory thus provides a rigorous basis for thinking about the boundary of the firm: not as a matter of minimising costs, but as a matter of preserving incentives on both sides of a productive relationship. Applied to development policy, it implies that forcing integration or fragmentation without analysing the specific investment incentives at stake can reduce total value created. Consider a Moroccan phosphate processor deciding between contracting with an independent logistics firm versus building its own rail spur to the port. If the logistics firm must invest in wagons specifically designed for phosphate ore, it faces hold-up once those wagons are built. But if OCP owns all the logistics infrastructure, the independent operator loses incentive to invest in service quality. The optimal boundary depends on whose investment is more critical to total value — a question no generic policy answer can resolve without knowing the specific technological relationship.</p>
 </section>
-<section id="sec-schumpeter-mazzucato-ch03" class="level2" data-number="6.5">
-<h2 data-number="6.5" class="anchored" data-anchor-id="sec-schumpeter-mazzucato-ch03"><span class="header-section-number">6.5</span> Schumpeter and Mazzucato: who really bears the risk?</h2>
+<section id="sec-schumpeter-mazzucato-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-schumpeter-mazzucato-ch03">Schumpeter and Mazzucato: who really bears the risk?</h2>
 <p>Before turning to the firm’s internal mechanics, the figure of the entrepreneur deserves attention, because the conventional narrative about who creates value and who bears risk shapes how profits and public support are discussed.</p>
 <p>For Schumpeter, the entrepreneur is not an administrator or an inventor but the agent who introduces a <em>rupture</em> in the established productive order. The entrepreneur does not optimise within a given framework; she contributes to constructing it. The capitalist economy progresses not because firms calculate better but because certain actors displace the very boundaries of economic calculation, creating new sectors while rendering old ones obsolete through what Schumpeter called creative destruction.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -493,11 +661,11 @@ From folding table to limited liability company: Si Mohamed’s dilemma
 <hr>
 </section>
 </section>
-<section id="sec-comptes-ch03" class="level1" data-number="7">
-<h1 data-number="7"><span class="header-section-number">7</span> Part II — The Firm from the Inside: Reading the Accounts</h1>
+<section id="sec-comptes-ch03" class="level1">
+<h1>Part II — The Firm from the Inside: Reading the Accounts</h1>
 <p>The firm’s accounts are not a neutral record of activity. They are the numerical translation of strategic choices, distributional outcomes, and governance decisions. Reading them is reading power.</p>
-<section id="sec-valeur-ajoutee-ch03" class="level2" data-number="7.1">
-<h2 data-number="7.1" class="anchored" data-anchor-id="sec-valeur-ajoutee-ch03"><span class="header-section-number">7.1</span> Value added and its distribution</h2>
+<section id="sec-valeur-ajoutee-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-valeur-ajoutee-ch03">Value added and its distribution</h2>
 <p>Value added, as Chapter 2 established, is what the firm adds to what it purchases: revenue minus intermediate inputs. But what happens to this value added once it has been created? It is distributed between three claimants: labour (wages, social contributions, profit-sharing), capital (interest on debt, dividends to shareholders, retained earnings), and the state (corporate taxes, reduced by subsidies or tax credits).</p>
 <p>This distribution is the centre of conflict inside the firm. Whether the profit share grows at the expense of wages, whether investment takes priority over dividends, whether retained earnings go to productive capacity or financial engineering: none of these are purely technical questions. They are political questions in the precise sense: questions about who receives the fruits of common productive effort.</p>
 <div class="callout callout-style-simple callout-caution no-icon callout-titled">
@@ -514,8 +682,8 @@ The political content of a distribution that appears technical
 </div>
 </div>
 </section>
-<section id="sec-compte-resultats-ch03" class="level2" data-number="7.2">
-<h2 data-number="7.2" class="anchored" data-anchor-id="sec-compte-resultats-ch03"><span class="header-section-number">7.2</span> The income statement: from revenue to profit</h2>
+<section id="sec-compte-resultats-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-compte-resultats-ch03">The income statement: from revenue to profit</h2>
 <p>The income statement measures performance over a period. Each line of the cascade answers a distinct question:</p>
 <table class="caption-top table">
 <colgroup>
@@ -578,8 +746,8 @@ The political content of a distribution that appears technical
 <p>Three reading precautions are essential. First, distinguish activity from financing: a high EBIT with a low net profit signals heavy debt, not poor operations. Second, distinguish accounting profit from cash: depreciation reduces the result without an immediate cash outflow, so a loss can coexist with solid cash and a profit with tight cash. The concept of self-financing capacity (CAF = Net profit + Depreciation) is a more faithful measure of the cash actually generated. Third, be suspicious of non-recurring items: a high profit driven by an asset sale or exceptional provision reversal says nothing about ongoing operational performance.</p>
 <p>A worked example anchors the logic. Consider a Moroccan industrial SME with revenue of 10,000 dirhams, intermediate inputs of 4,000, wages and social charges of 3,500, depreciation of 500, interest of 200, and corporate tax of 150. Value added is 6,000 dirhams; EBITDA is 2,500; EBIT is 2,000; net profit is 1,650. If equity is 5,000 dirhams, ROE is 33%, which looks impressive. But if that equity is very small relative to debt, the ROE is being amplified by leverage. If the same EBIT of 2,000 is achieved with total capital employed (equity plus debt) of 15,000, ROCE is only 13.3%. If the interest rate on debt is 6%, the leverage effect is positive, ROCE exceeds the cost of debt, and borrowing is enriching shareholders. If the firm’s ROCE were to fall to 5% while the interest rate stayed at 6%, every additional dirham of debt would destroy shareholder value. Understanding this distinction between operational performance (ROCE) and financial leverage (ROE) is the single most important reading precaution in corporate finance.</p>
 </section>
-<section id="sec-bilan-ch03" class="level2" data-number="7.3">
-<h2 data-number="7.3" class="anchored" data-anchor-id="sec-bilan-ch03"><span class="header-section-number">7.3</span> The balance sheet and financial structure</h2>
+<section id="sec-bilan-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-bilan-ch03">The balance sheet and financial structure</h2>
 <p>The balance sheet is a photograph at a point in time: on one side, what the firm owns (assets); on the other, who financed those assets (liabilities: equity from shareholders, debt from creditors). The identity Assets = Liabilities is not an accounting curiosity but an economic reality: every dirham the firm possesses has been financed by someone, either shareholders (equity) or creditors (debt).</p>
 <p>The relationship between equity and debt defines the <strong>financial leverage effect</strong>, one of the most important relationships in corporate finance:</p>
 <p><span class="math display">\[ROE \approx ROCE + (ROCE - i) \times \frac{D}{E}\]</span></p>
@@ -600,11 +768,11 @@ Reading OCP’s accounts in an exceptional year
 <hr>
 </section>
 </section>
-<section id="sec-gouvernance-ch03" class="level1" data-number="8">
-<h1 data-number="8"><span class="header-section-number">8</span> Part III — Governance, Contracts, and Power</h1>
+<section id="sec-gouvernance-ch03" class="level1">
+<h1>Part III — Governance, Contracts, and Power</h1>
 <p>The accounts reveal results. Governance reveals the decision processes that produced them, and the conflicts of interest that sometimes distorted them.</p>
-<section id="sec-separation-ch03" class="level2" data-number="8.1">
-<h2 data-number="8.1" class="anchored" data-anchor-id="sec-separation-ch03"><span class="header-section-number">8.1</span> The separation of ownership and control</h2>
+<section id="sec-separation-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-separation-ch03">The separation of ownership and control</h2>
 <p>The large modern firm was born of a financing need that families and close circles could no longer satisfy alone. The great maritime trading companies of the 17th century, the Dutch VOC, the British East India Company, were the first to solve this problem: financing costly, risky, long-horizon expeditions by aggregating the savings of hundreds of investors through tradeable titles. The modern joint-stock company was born there, two centuries before the railways.</p>
 <p>What changed in the 19th century was scale. Building a railway network cost tens of millions of dollars, a sum far beyond any individual or restricted group. The solution was the joint-stock company with standardised, tradeable shares and limited liability. This device mobilises the savings of thousands of investors for projects of an entirely different scale. But it immediately creates a new problem: dispersed shareholders cannot manage the firm themselves. They delegate this task to professional managers. And the moment management is delegated, the question arises: how do you ensure that managers act in shareholders’ interests?</p>
 <p>This is the <strong>agency problem</strong>: a situation where one party (the principal, the shareholder) delegates a decision to another (the agent, the manager) whose interests may diverge and who possesses superior information. The agency problem is not a marginal accident of modern capitalism; it is its normal consequence whenever one wants simultaneously to mobilise large amounts of capital and delegate management to specialists.</p>
@@ -612,8 +780,8 @@ Reading OCP’s accounts in an exceptional year
 <p>Formally defined, the <strong>agency problem</strong> is: a situation where one party (the principal, the shareholder) delegates a decision to another (the agent, the manager) whose interests may diverge and who possesses superior information. The agency problem is not a marginal accident of modern capitalism; it is its normal consequence whenever one wants simultaneously to mobilise large amounts of capital and delegate management to specialists.</p>
 <p>Why do interests diverge? A professional manager is not necessarily dishonest. But her situation structurally exposes her to different incentives. She receives a fixed salary and bonuses whose link to firm value is indirect and often short-term. Her career depends on her managerial reputation, which can lead her to avoid risky but highly profitable projects, nobody wants to be the one who lost money, even for good reasons. She may prefer the <em>size</em> of the organisation (prestige, managerial empire, number of subordinates) to its <em>profitability</em>. And above all, she holds information that the shareholder does not: she sees the firm’s interior, the real problems, the real margins, the real risks, and can use this asymmetry to her advantage, consciously or not.</p>
 </section>
-<section id="sec-mecanismes-gouvernance-ch03" class="level2" data-number="8.2">
-<h2 data-number="8.2" class="anchored" data-anchor-id="sec-mecanismes-gouvernance-ch03"><span class="header-section-number">8.2</span> Governance mechanisms</h2>
+<section id="sec-mecanismes-gouvernance-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-mecanismes-gouvernance-ch03">Governance mechanisms</h2>
 <p>Corporate governance is the institutional response to the agency problem. It organises around three types of instruments.</p>
 <p><strong>Financial incentives</strong>, bonuses linked to performance, stock options, free shares, attempt to align interests by making the manager a shareholder herself. The limit: this can push her to privilege the short term or to manipulate accounting indicators to hit targets.</p>
 <p><strong>Internal control mechanisms</strong>, the board of directors (strategic oversight, appointment and dismissal of managers), specialised committees (audit, remuneration, nominations), statutory auditors, internal audit, provide the formal counterweights to managerial discretion.</p>
@@ -645,8 +813,8 @@ Governance in Morocco: the formal-effective gap
 </div>
 </div>
 </section>
-<section id="sec-contrats-incomplets-ch03" class="level2" data-number="8.3">
-<h2 data-number="8.3" class="anchored" data-anchor-id="sec-contrats-incomplets-ch03"><span class="header-section-number">8.3</span> Incomplete contracts and labour</h2>
+<section id="sec-contrats-incomplets-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-contrats-incomplets-ch03">Incomplete contracts and labour</h2>
 <p>The firm is a space of contracts, but contracts of a particular type: <strong>incomplete contracts</strong>. It is impossible to specify in advance all the tasks, contingencies, and adaptations that future activity will require. The employment contract engages a person in a durable relationship whose precise terms cannot be fully codified at signing. This incompleteness is not a drafting defect; it is a structural property. The world is too uncertain, situations too varied, effort too difficult to observe and measure for everything to be contractually locked down.</p>
 <p>This structural incompleteness has important consequences. It means that authority within the firm, the employer’s power to give directions within the limits of the employment contract, is not a residual that markets could replace; it is an essential coordinating mechanism precisely because contracts cannot specify everything. It also means that the distribution of bargaining power within the firm, who can credibly threaten to leave, who has outside options, who controls information about performance, shapes the actual distribution of value created, often in ways that formal contracts do not reveal.</p>
 <p>The Moroccan labour market illustrates this sharply. The formal sector is segmented between large public enterprises and banks, where collective agreements, pension supplements, and profit-sharing create a substantially different compensation package, and private SMEs where effective union density is below 10% and the minimum wage (SMIG) sets the de facto ceiling for many categories of workers. In 2023, the SMIG stood at approximately 3,100 dirhams per month in the non-agricultural sector, well below the median wage in large formal enterprises and well above effective wages in much informal employment. The gap between these labour market segments is not merely a distributional curiosity; it shapes the investment decisions of firms. A formal firm in an exposed sector facing competition from informal producers carries payroll taxes, social security contributions (CNSS), and regulated dismissal costs that an informal competitor does not. The effective labour cost differential can reach 30-40% when all mandatory charges are included, creating a persistent competitive pressure that limits what formal firms in labour-intensive sectors can pay while remaining solvent.</p>
@@ -654,18 +822,18 @@ Governance in Morocco: the formal-effective gap
 <hr>
 </section>
 </section>
-<section id="sec-paradigmes-ch03" class="level1" data-number="9">
-<h1 data-number="9"><span class="header-section-number">9</span> Part IV — Alternative Paradigms: The Firm as Historical Institution</h1>
+<section id="sec-paradigmes-ch03" class="level1">
+<h1>Part IV — Alternative Paradigms: The Firm as Historical Institution</h1>
 <p>The standard model of the firm, a rational profit-maximiser with no internal friction, is an analytically useful tool and an imperfect description. The managerial, evolutionary, and institutional traditions offer a more realistic picture of what happens inside organisations, and above all of how they learn and change.</p>
-<section id="sec-technostructure-ch03" class="level2" data-number="9.1">
-<h2 data-number="9.1" class="anchored" data-anchor-id="sec-technostructure-ch03"><span class="header-section-number">9.1</span> The technostructure: Galbraith’s correction</h2>
+<section id="sec-technostructure-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-technostructure-ch03">The technostructure: Galbraith’s correction</h2>
 <p>John Kenneth Galbraith observed that power in the large modern firm belongs neither to an owner nor to a single heroic manager. It resides in an <strong>organised set of specialists</strong>: engineers, planners, financial analysts, lawyers, middle managers, data analysts. This <em>technostructure</em> produces the information on which all important decisions rest, prepares the trade-offs, and stabilises procedures. Power becomes collective and bureaucratised.</p>
 <p>An organisation governed by the technostructure does not behave like a pure profit-maximiser. It values above all <strong>predictability</strong>: no shock should destabilise multi-year plans. It seeks <strong>controlled growth</strong> rather than immediate returns, because more administered resources mean more internal power. And it privileges <strong>organisational security</strong>: avoiding situations that threaten the organisation itself, even at the cost of a short-term gain opportunity.</p>
 <p>Herbert Simon’s concept of <strong>bounded rationality</strong> provides the microfoundation. Organisations do not maximise; they <em>satisfice</em>. Lacking perfect information and unlimited computational capacity, they seek solutions that are good enough, not the theoretically optimal solution. This is why large organisations operate through rules, procedures, and routines rather than by permanent recalculation at each decision. The practical implication is important: a large firm facing a new strategic challenge does not solve it from first principles. It reaches for the nearest available template, the most recent successful analogy, the procedure that was developed in a previous comparable situation. This produces stability and coordination, but it also produces institutional inertia: established procedures resist change even when the environment demands it.</p>
 <p>William Baumol and Robin Marris formalised this insight in the 1960s. In Marris’s model, managers of large firms pursue <em>growth</em> rather than profit maximisation: in terms of revenue, headcount, acquisitions. Not because they are dishonest, but because their prestige, remuneration, and internal power tend to correlate more with the size of the empire they administer than with the return on equity they do not personally hold. In Baumol’s model, some firms behave as <em>revenue maximisers</em> subject to a minimum profit constraint: the priority is to conquer or maintain market share, even if margins are compressed to the minimum acceptable to shareholders. These models do not say that profit is irrelevant, it remains a binding constraint. But it is not the unique objective, and this changes predictions: a managerial firm will invest more, diversify further, and sacrifice more short-term profitability than a pure owner-managed firm. This contrast is visible in Morocco: family-owned businesses where the founder remains the manager tend to be more conservative in financial leverage and more reluctant to list publicly than firms where professional management has taken over from founding families.</p>
 </section>
-<section id="sec-evolutionniste-ch03" class="level2" data-number="9.2">
-<h2 data-number="9.2" class="anchored" data-anchor-id="sec-evolutionniste-ch03"><span class="header-section-number">9.2</span> The evolutionary view: routines, path dependency, and the resource-based firm</h2>
+<section id="sec-evolutionniste-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-evolutionniste-ch03">The evolutionary view: routines, path dependency, and the resource-based firm</h2>
 <p>Nelson and Winter, drawing on evolutionary biology, argue that firms do not optimise at each instant: they act from <strong>routines</strong>, collective procedures, habits, know-how incorporated in the organisation over time. These routines are the result of historical, often tacit, and difficult-to-codify learning.</p>
 <p>Innovation does not result from pure calculation; it proceeds through trial, error, and selection. Firms innovate most often from competences they already possess. They display strong <strong>path dependency</strong>: their future is largely conditioned by their past. A firm cannot simply decide to be innovative tomorrow if it has spent twenty years organising to execute standardised orders without internal R&amp;D.</p>
 <div class="callout callout-style-simple callout-tip no-icon callout-titled">
@@ -684,8 +852,8 @@ Moroccan banks and credit-granting routines
 <p>Edith Penrose’s theory of firm growth adds a complementary dimension. Every firm possesses at any moment productive resources, human, technical, organisational, of which a part is underutilised. These excess resources constitute an endogenous growth capacity: the firm expands by seeking to valorise what it already has but does not fully use. This reverses the standard logic. It is not the market that pulls the firm; the firm actively searches for uses for its resources. Growth creates new resources, which create new opportunities, which push further growth, a cumulative, self-generating process. This insight, taken up by management strategists as the <em>Resource-Based View</em> of competitive advantage, implies that durable competitive advantage stems not from market position alone but from internal resources that are rare, difficult to imitate, and non-substitutable. Applied to OCP, this framework explains why the competitive advantage of Morocco’s phosphate giant is not merely about market share but about the non-replicable combination of geological resource, integrated technical capabilities, logistics infrastructure, agronomic research network, and African commercial relationships that no competitor could assemble on the same timeline even with equivalent capital.</p>
 <p>Path dependency explains a frequently observed paradox in developing economies: large firms inherited from the colonial period or the first decades of industrialisation often retain organisational structures, managerial practices, and corporate cultures that reflect their origins rather than current requirements. In Morocco, family groups founded in the 1960s-1980s developed routines of centralised management, family control, and personal relationships with administrations that were effective in the administered economy of that era but now hamper the delegation, upgrading, and open innovation that new global value chains demand. This is not a matter of will; it is a matter of organisational routines deeply embedded in history and culture.</p>
 </section>
-<section id="sec-chandler-ch03" class="level2" data-number="9.3">
-<h2 data-number="9.3" class="anchored" data-anchor-id="sec-chandler-ch03"><span class="header-section-number">9.3</span> Chandler and the visible hand</h2>
+<section id="sec-chandler-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-chandler-ch03">Chandler and the visible hand</h2>
 <p>Alfred Chandler’s <em>The Visible Hand</em> (1977) asks how the large modern firm was concretely invented. His answer begins with the American railways of the 1840s-1880s, not because railways are interesting in themselves, but because they combined, for the first time, a continuous network technology requiring real-time coordination, massive capital impossible to mobilise without dispersed ownership, and operational complexity that made management by a single owner-manager impossible.</p>
 <p>The result: an entirely new organisation had to be invented. The railways required a formal hierarchy with layers of professional managers, systematic reporting, and accounting systems capable of tracking costs across multiple divisions and geographical areas. Latrobe at the B&amp;O Railroad introduced a dual hierarchy separating rail operations from finance. McCallum at the Erie Railroad formalised individual decentralised accountability and invented the organisational chart, the first known example in business history. Thomson at the Pennsylvania Railroad systematised the line-and-staff model, an operational line of command alongside functional specialist services in law, procurement, and human resources, that remains the template for large enterprises to this day.</p>
 <p>Chandler identifies five transformations that define the modern firm. First, the separation of capital from management: railway networks required capital in the tens of millions of dollars, forcing dispersed ownership through listed shares, and owners who could no longer manage delegated to professional managers, from which the managerial career was born. Second, formal hierarchy and reporting: coordinating rail operations in real time required a strict chain of command and systematic written reports flowing upward, and the telegraph made near-real-time information aggregation possible, creating the infrastructure for what we now call management information systems. Third, management accounting: railways had to know the cost of each ton-mile by segment, by locomotive, by season, and Chandler documents how the Pennsylvania Railroad developed cost accounting systems in the 1850s more sophisticated than anything available to manufacturing firms of the period. Fourth, standardisation: interchangeable parts, standard operating procedures, uniform training, without standardisation, a network cannot function at scale. Fifth, career ladders: professional management brought internal labour markets and structured promotion paths, permanently separating the employment relationship from the ownership relationship.</p>
@@ -705,30 +873,30 @@ ONCF and OCP as Chandlerian contrasts
 </div>
 </div>
 </section>
-<section id="sec-isomorphisme-ch03" class="level2" data-number="9.4">
-<h2 data-number="9.4" class="anchored" data-anchor-id="sec-isomorphisme-ch03"><span class="header-section-number">9.4</span> Isomorphism: why firms resemble each other</h2>
+<section id="sec-isomorphisme-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-isomorphisme-ch03">Isomorphism: why firms resemble each other</h2>
 <p>Internal routines are not formed only in response to internal problems; they are also shaped by the <strong>external environment</strong>. Firms tend to adopt organisational forms judged <em>legitimate</em>, <em>modern</em>, or <em>appropriate</em> by their environment, a phenomenon DiMaggio and Powell called <strong>organisational isomorphism</strong>, operating through three mechanisms.</p>
 <p><em>Coercive isomorphism</em>: pressure from laws, regulators, and lead firms that impose organisational forms through constraint. When Morocco’s AMMC requires listed companies to have audit committees with independent members, it is creating isomorphic pressure on corporate governance forms. <em>Mimetic isomorphism</em>: in uncertainty, organisations copy firms perceived as effective or prestigious, the logic of “if McKinsey recommends it, we should do it.” <em>Normative isomorphism</em>: professional standards diffuse through business schools, consultancies, and professional associations, so what is “serious” and “modern” progressively imposes itself as obvious.</p>
 <p>This explains why, worldwide, large firms resemble each other in their organisational charts, reporting systems, audit procedures, and governance codes, not because there is only one efficient form, but because they evolve in the same institutional environment that prescribes and valorises certain forms.</p>
 <hr>
 </section>
 </section>
-<section id="sec-firme-marocaine-ch03" class="level1" data-number="10">
-<h1 data-number="10"><span class="header-section-number">10</span> Part V — The Moroccan Firm: Structures, Dualities, and the Missing Middle</h1>
+<section id="sec-firme-marocaine-ch03" class="level1">
+<h1>Part V — The Moroccan Firm: Structures, Dualities, and the Missing Middle</h1>
 <p>Moroccan productive tissue exhibits a configuration typical of emerging economies: concentrated ownership in family groups or state holdings, often organised in pyramidal structures; a large informal sector absorbing a massive share of employment; a relatively shallow stock market; and an absence of a dense layer of medium-sized innovative firms between the public giants and the micro-informal enterprises.</p>
-<section id="sec-pyramides-ch03" class="level2" data-number="10.1">
-<h2 data-number="10.1" class="anchored" data-anchor-id="sec-pyramides-ch03"><span class="header-section-number">10.1</span> Pyramidal structures and the Al Mada model</h2>
+<section id="sec-pyramides-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-pyramides-ch03">Pyramidal structures and the Al Mada model</h2>
 <p>In a pyramidal structure, a family or anchor shareholder controls a holding company, which controls another holding, which controls the operating subsidiaries. At each tier, a minority capital contribution suffices to exercise majority control. With 20% of holding A’s capital, one can effectively control firms representing ten to twenty times that initial stake. This structure has two important consequences: it allows the mobilisation of external capital while retaining strategic control, but it creates a systematic risk of <strong>rent extraction</strong> at the expense of minority shareholders through intragroup transfer pricing, related-party contracts, and financial guarantees that may benefit the controlling shareholder at the expense of consolidated profitability.</p>
 <p>Groups like Al Mada (formerly ONA/SNI), Akwa, and Holmarcom embody this model. In terms of the theories reviewed above, these structures represent a solution to the Moroccan institutional environment: in a context of relatively shallow capital markets, limited contractual enforceability, and relational lending by banks, concentrated family control reduces the agency problem between owners and managers (the controlling family is both owner and manager) while creating a different agency problem between the controlling family and minority shareholders.</p>
 </section>
-<section id="sec-informel-ch03" class="level2" data-number="10.2">
-<h2 data-number="10.2" class="anchored" data-anchor-id="sec-informel-ch03"><span class="header-section-number">10.2</span> The informal sector and the formalisation dilemma</h2>
+<section id="sec-informel-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-informel-ch03">The informal sector and the formalisation dilemma</h2>
 <p>Between 30% and 40% of Morocco’s non-agricultural employment is informal, according to HCP estimates. The informal firm avoids taxes, social contributions, labour code obligations, and regulatory compliance. This is not simply a cost advantage; it is a structural feature of an economy where the formal registration process imposes real burdens that many small producers cannot absorb.</p>
 <p>The consequences for the formal sector are substantial. Formal firms face competitive pressure from informal producers who do not bear the same costs. The pressure is most acute in labour-intensive sectors, construction, retail trade, small-scale food processing, where the wage differential between formal and informal employment is directly visible in product prices. This explains part of the observed wage gap between sectors and the persistent weakness of collective bargaining in formal private SMEs: the informal labour market sets an effective wage floor below what unions could negotiate.</p>
 <p>For the entrepreneur, the formalisation dilemma is real. Informal activity is flexible and free but hits a ceiling: it cannot access bank credit for investment, cannot supply large retail chains that require audited invoices, and cannot protect founders if a dispute arises. Formal registration costs but opens doors, to financing, to supply chains, to legal protection. The optimal threshold depends on the specific regulatory burden (which the Moroccan government has progressively reduced through the <em>Registre National des Entreprises</em> and simplified SARL procedures) and on the credit access and market access gains that formalisation unlocks.</p>
 </section>
-<section id="sec-missing-middle-ch03" class="level2" data-number="10.3">
-<h2 data-number="10.3" class="anchored" data-anchor-id="sec-missing-middle-ch03"><span class="header-section-number">10.3</span> The missing middle</h2>
+<section id="sec-missing-middle-ch03" class="level2">
+<h2 class="anchored" data-anchor-id="sec-missing-middle-ch03">The missing middle</h2>
 <p>Perhaps the most consequential structural feature of Morocco’s productive tissue is the absence of a dense layer of medium-sized firms: the <em>missing middle</em>. Large public enterprises (OCP, ONCF, MASEN, the major banks) dominate their sectors. Micro-enterprises and the informal sector absorb the majority of employment. But the intermediate category, firms of 50 to 500 employees, technologically ambitious, capable of upgrading and becoming suppliers to major value chains, is structurally underdeveloped.</p>
 <p>This gap is simultaneously cause and consequence. It is a consequence because institutional constraints and financing barriers prevent small firms from growing: the working capital credit that a growing firm needs to bridge the gap between delivering and being paid is difficult to access for firms without real collateral; the medium-term investment credit that would allow capacity expansion is almost inaccessible for firms below a certain size threshold. According to the World Bank’s Enterprise Survey of Morocco, approximately 30% of formal SMEs identify financing as a major constraint, a figure that rises above 60% for very small enterprises and informal firms. It is also a cause: the absence of large domestic industrial private firms reduces demand for local suppliers, creating a structural chicken-and-egg problem that no individual firm can solve alone.</p>
 <p>The Williamson and Nelson-Winter frameworks help diagnose why this gap persists. A Moroccan SME that wishes to supply a tier-1 automotive supplier like Valeo or Aptiv at the Tanger Med zone must make highly specific investments in equipment, quality certification (IATF 16949), and workforce training. These investments require long-term financing that the firm cannot access without collateral, and the specific assets created give the tier-1 partner leverage to demand price concessions after the investment is made. The hold-up risk is real and known to potential suppliers, which deters the investment in the first place. Breaking this trap requires either a state-backed financing mechanism that de-risks the specific investment (as Tamwilcom partially provides) or a credible commitment mechanism on the part of the buyer (as long-term framework agreements in the automotive ecosystem attempt to provide). Both are institutional solutions to a Williamson problem.</p>
@@ -736,8 +904,8 @@ ONCF and OCP as Chandlerian contrasts
 <hr>
 </section>
 </section>
-<section id="sec-concl-ch03" class="level1" data-number="11">
-<h1 data-number="11"><span class="header-section-number">11</span> Conclusion: The Firm as Economic and Social Institution</h1>
+<section id="sec-concl-ch03" class="level1">
+<h1>Conclusion: The Firm as Economic and Social Institution</h1>
 <p>Starting from the question nobody had thought to ask, why does the firm exist if markets can coordinate everything?, this chapter has arrived at a considerably richer conception. The firm is neither a simple calculator, nor a simple contract, nor a unified agent with a single preference. It must be thought of as a <strong>historical institution</strong>: a space combining administrative coordination, organisational power, expertise, routines, learning, and institutional compromises.</p>
 <p>This institution has a structure of internal power: the technostructure does not maximise, it stabilises, preserves, and plans. It has a memory: its routines are the result of cumulative learning that cannot be erased overnight. It has a trajectory: its future is conditioned by its past. And it is embedded in external institutions that define what constitutes a legitimate and credible organisation in its environment.</p>
 <p>This picture changes profoundly how one thinks about industrial policy and development. Transforming an economy does not mean “correcting prices” or “improving the business climate” in an abstract sense. It means building <em>organisational capabilities</em>: quality routines, competent technostructures, solid professional norms, effective governance institutions. These capabilities are not decreed; they are learned, built, and inherited. The next chapter examines the market environment in which firms operate, the structures of competition and market power that determine how much of the value firms create they are able to keep.</p>
@@ -763,8 +931,8 @@ What this chapter should leave with the reader
 </div>
 <hr>
 </section>
-<section id="sec-biblio-ch03" class="level1 appendix" data-number="12">
-<h1 class="appendix" data-number="12"><span class="header-section-number">12</span> Further Reading</h1>
+<section id="sec-biblio-ch03" class="level1 appendix">
+<h1 class="appendix">Further Reading</h1>
 <p><strong>Coase, R.H. (1937). “The Nature of the Firm.” <em>Economica</em>, 4(16), 386-405.</strong> The founding text of the theory of the firm. One of the most cited papers in economics. Readable in the original.</p>
 <p><strong>Williamson, O.E. (1985). <em>The Economic Institutions of Capitalism</em>. Free Press.</strong> The full elaboration of transaction cost economics. Chapters 1-3 are the core.</p>
 <p><strong>Chandler, A.D. (1977). <em>The Visible Hand: The Managerial Revolution in American Business</em>. Harvard University Press.</strong> The masterwork on the historical invention of the large firm. Chapters 3 and 4 on the railroads are essential reading.</p>
@@ -776,8 +944,67 @@ What this chapter should leave with the reader
 </section>
 
 </main> <!-- /main -->
+<section class="reader-feedback" id="reader-feedback" aria-labelledby="reader-feedback-title">
+  <div class="reader-feedback__heading">
+    <p class="reader-feedback__eyebrow">Reader feedback</p>
+    <h2 id="reader-feedback-title">Comment on this page</h2>
+    <p>Questions, corrections and substantive comments are welcome. Every submission is reviewed privately. It is never published automatically.</p>
+  </div>
+  <form class="reader-feedback__form" id="reader-feedback-form" action="https://formspree.io/f/xqpqyaog" method="post">
+    <div class="reader-feedback__grid">
+      <label for="feedback-first-name">First name
+        <input id="feedback-first-name" name="first_name" type="text" autocomplete="given-name" required="" maxlength="80">
+      </label>
+      <label for="feedback-last-name">Last name
+        <input id="feedback-last-name" name="last_name" type="text" autocomplete="family-name" required="" maxlength="80">
+      </label>
+    </div>
+    <label for="feedback-category">Category
+      <select id="feedback-category" name="category" required="">
+        <option value="" selected="" disabled="">Select the description that fits best</option>
+        <option value="Economist">Economist</option>
+        <option value="Researcher or academic">Researcher or academic</option>
+        <option value="University teacher">University teacher</option>
+        <option value="Student">Student</option>
+        <option value="Public-policy practitioner">Public-policy practitioner</option>
+        <option value="Other reader">Other reader</option>
+      </select>
+    </label>
+    <label for="feedback-email">Email address <span>— kept private</span>
+      <input id="feedback-email" name="email" type="email" autocomplete="email" required="" maxlength="160">
+    </label>
+    <label for="feedback-message">Comment
+      <textarea id="feedback-message" name="message" rows="7" required="" maxlength="5000" placeholder="Please identify the passage or idea you are commenting on when possible."></textarea>
+    </label>
+    <input id="feedback-page-title" name="page_title" type="hidden">
+    <input id="feedback-page-url" name="page_url" type="hidden">
+    <input name="_subject" type="hidden" value="Reader comment — Guide to the Real Economy">
+    <label class="reader-feedback__consent" for="feedback-consent">
+      <input id="feedback-consent" name="moderation_acknowledged" type="checkbox" value="yes" required="">
+      <span>I understand that this comment is sent privately for review and will not appear on the site automatically.</span>
+    </label>
+    <div class="reader-feedback__actions">
+      <button type="submit">Send comment</button>
+      <p class="reader-feedback__status" id="reader-feedback-status" role="status" aria-live="polite"></p>
+    </div>
+  </form>
+</section>
+<script src="feedback.js"></script>
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    // Ensure there is a toggle, if there isn't float one in the top right
+    if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+      const a = window.document.createElement('a');
+      a.classList.add('top-right');
+      a.classList.add('quarto-color-scheme-toggle');
+      a.href = "";
+      a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+      const i = window.document.createElement("i");
+      i.classList.add('bi');
+      a.appendChild(i);
+      window.document.body.appendChild(a);
+    }
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
@@ -1196,13 +1423,13 @@ What this chapter should leave with the reader
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
-<p>Guide to the Real Economy — A Moroccan Perspective</p>
+<p>Guide to the Real Economy — A Moroccan Perspective · Version 0</p>
 </div>   
     <div class="nav-footer-center">
       &nbsp;
     </div>
     <div class="nav-footer-right">
-<p>Farouk Nouri · Development Economist</p>
+<p>© 2026 Farouk Nouri. All rights reserved.</p>
 </div>
   </div>
 </footer>
@@ -1211,5 +1438,3 @@ What this chapter should leave with the reader
 
 
 </body></html>
-
-
